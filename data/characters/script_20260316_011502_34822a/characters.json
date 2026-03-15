@@ -1,0 +1,35 @@
+{
+  "蘇晚（Su Wan）": {
+    "name": "蘇晚（Su Wan）",
+    "gender": "female",
+    "age_range": "28-32",
+    "hair": "黑色長髮盤起新娘髮髻（black hair in bridal updo）",
+    "skin_tone": "白皙",
+    "outfit": "白色魚尾婚紗，腰間繡有姐姐名字縮寫的暗紋（white mermaid wedding gown with hidden monogram embroidery）",
+    "body_type": "纖細",
+    "personality": "外表溫婉柔順，內心極度冷靜，擅長隱忍後致命一擊",
+    "extra": {}
+  },
+  "陸深（Lu Shen）": {
+    "name": "陸深（Lu Shen）",
+    "gender": "male",
+    "age_range": "30-35",
+    "hair": "短髮側分，精心打理（short side-parted hair, well-groomed）",
+    "skin_tone": "小麥色",
+    "outfit": "黑色三件式西裝禮服，胸口白玫瑰胸花（black three-piece tuxedo with white rose boutonniere）",
+    "body_type": "高大挺拔",
+    "personality": "表面儒雅體貼，實則控制欲極強，擅長偽裝情緒",
+    "extra": {}
+  },
+  "蘇遙（Su Yao）": {
+    "name": "蘇遙（Su Yao）",
+    "gender": "female",
+    "age_range": "30-34",
+    "hair": "不出場，僅出現在手機照片中（appears only in phone photos）",
+    "skin_tone": "白皙",
+    "outfit": "照片中穿紅色洋裝（red dress in photo）",
+    "body_type": "與蘇晚相似",
+    "personality": "姐姐，兩年前失蹤",
+    "extra": {}
+  }
+}

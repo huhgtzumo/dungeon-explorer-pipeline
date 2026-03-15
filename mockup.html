@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Short Drama Pipeline</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-tertiary: #1a1a26;
+    --bg-hover: #22222f;
+    --bg-card: #16161f;
+    --border: #2a2a3a;
+    --border-light: #333346;
+    --text-primary: #e8e8f0;
+    --text-secondary: #9090a8;
+    --text-muted: #606078;
+    --accent: #7c5cfc;
+    --accent-light: #9b7eff;
+    --accent-dim: #5a3fd4;
+    --accent-bg: rgba(124, 92, 252, 0.08);
+    --accent-bg-hover: rgba(124, 92, 252, 0.14);
+    --success: #34d399;
+    --success-dim: rgba(52, 211, 153, 0.15);
+    --warning: #fbbf24;
+    --blue: #60a5fa;
+    --radius: 8px;
+    --radius-lg: 12px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.2);
+    --transition: 150ms ease;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'PingFang TC', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+    min-height: 100vh;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border);
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+
+  .sidebar-brand {
+    padding: 0 20px 24px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+  }
+
+  .sidebar-brand h1 {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .sidebar-brand h1 .brand-icon {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .sidebar-brand p {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    padding-left: 36px;
+  }
+
+  .sidebar-section {
+    padding: 0 12px;
+    margin-bottom: 24px;
+  }
+
+  .sidebar-section-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+    padding: 0 8px;
+    margin-bottom: 8px;
+  }
+
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background var(--transition);
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  .sidebar-item:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+  }
+
+  .sidebar-item.active {
+    background: var(--accent-bg);
+    color: var(--accent-light);
+  }
+
+  .sidebar-item .item-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .sidebar-item .item-icon {
+    width: 18px;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.7;
+  }
+
+  .sidebar-item .badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 1px 7px;
+    border-radius: 10px;
+    background: var(--bg-tertiary);
+    color: var(--text-muted);
+    min-width: 22px;
+    text-align: center;
+  }
+
+  .sidebar-item.active .badge {
+    background: rgba(124, 92, 252, 0.2);
+    color: var(--accent-light);
+  }
+
+  .sidebar-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 8px 20px 16px;
+  }
+
+  .sidebar-footer {
+    margin-top: auto;
+    padding: 16px 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  .sidebar-footer .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  .sidebar-footer .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .sidebar-footer .user-name {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .sidebar-footer .user-role {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  /* Main Content */
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  /* Stepper */
+  .stepper-bar {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    transition: background var(--transition);
+    position: relative;
+  }
+
+  .step:hover {
+    background: var(--bg-hover);
+  }
+
+  .step-indicator {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    flex-shrink: 0;
+    transition: all var(--transition);
+  }
+
+  .step.completed .step-indicator {
+    background: var(--success-dim);
+    color: var(--success);
+    border: 2px solid rgba(52, 211, 153, 0.3);
+  }
+
+  .step.active .step-indicator {
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: #fff;
+    border: 2px solid transparent;
+    box-shadow: 0 0 16px rgba(124, 92, 252, 0.35);
+  }
+
+  .step.pending .step-indicator {
+    background: transparent;
+    color: var(--text-muted);
+    border: 2px solid var(--border-light);
+  }
+
+  .step-label {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .step.active .step-label {
+    color: var(--text-primary);
+  }
+
+  .step.completed .step-label {
+    color: var(--text-secondary);
+  }
+
+  .step.pending .step-label {
+    color: var(--text-muted);
+  }
+
+  .step-connector {
+    width: 48px;
+    height: 2px;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+
+  .step-connector.done {
+    background: linear-gradient(90deg, var(--success), var(--accent));
+  }
+
+  /* Content Area */
+  .content-area {
+    flex: 1;
+    display: flex;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  .panel-left {
+    width: 340px;
+    min-width: 340px;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border);
+    padding: 24px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel-right {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    background: var(--bg-primary);
+  }
+
+  .panel-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .panel-title .title-icon {
+    font-size: 14px;
+    opacity: 0.6;
+  }
+
+  /* Form Elements */
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    letter-spacing: 0.2px;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    padding: 9px 12px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    font-size: 13px;
+    font-family: inherit;
+    transition: border-color var(--transition), box-shadow var(--transition);
+    outline: none;
+  }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(124, 92, 252, 0.12);
+  }
+
+  .form-input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .form-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%239090a8' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 20px;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(124, 92, 252, 0.25);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 4px 16px rgba(124, 92, 252, 0.4);
+    transform: translateY(-1px);
+  }
+
+  .btn-block {
+    width: 100%;
+  }
+
+  .btn-sm {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+  }
+
+  .btn-ghost:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+  }
+
+  /* Results Table */
+  .results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .results-header h3 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .results-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .results-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .results-table thead th {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-muted);
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: var(--bg-primary);
+  }
+
+  .results-table tbody tr {
+    transition: background var(--transition);
+  }
+
+  .results-table tbody tr:hover {
+    background: var(--bg-hover);
+  }
+
+  .results-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    vertical-align: middle;
+  }
+
+  .result-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .checkbox {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--border-light);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition);
+    flex-shrink: 0;
+  }
+
+  .checkbox:hover {
+    border-color: var(--accent);
+  }
+
+  .checkbox.checked {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .checkbox.checked::after {
+    content: '✓';
+    font-size: 10px;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .thumbnail {
+    width: 96px;
+    height: 54px;
+    background: var(--bg-tertiary);
+    border-radius: 6px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .thumbnail::after {
+    content: '▶';
+    font-size: 16px;
+    color: var(--text-muted);
+    opacity: 0.4;
+  }
+
+  .thumbnail.t1 { background: linear-gradient(135deg, #1a1a3a, #2a1a3a); }
+  .thumbnail.t2 { background: linear-gradient(135deg, #1a2a2a, #1a2a3a); }
+  .thumbnail.t3 { background: linear-gradient(135deg, #2a1a2a, #3a1a2a); }
+  .thumbnail.t4 { background: linear-gradient(135deg, #1a2a1a, #2a3a1a); }
+  .thumbnail.t5 { background: linear-gradient(135deg, #2a2a1a, #3a2a2a); }
+
+  .video-title {
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+    line-height: 1.3;
+  }
+
+  .video-channel {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .video-link {
+    color: var(--accent-light);
+    text-decoration: none;
+    font-size: 12px;
+    transition: color var(--transition);
+  }
+
+  .video-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .views-count {
+    font-variant-numeric: tabular-nums;
+    color: var(--text-secondary);
+  }
+
+  .duration-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--accent-bg);
+    border: 1px solid rgba(124, 92, 252, 0.15);
+    border-radius: 4px;
+    font-size: 11px;
+    color: var(--accent-light);
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
+
+  /* Analysis Report */
+  .report-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+
+  .report-section h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-light);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .report-section p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  /* Episode Cards */
+  .episode-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+
+  .episode-card:hover {
+    border-color: var(--border-light);
+    background: var(--bg-hover);
+  }
+
+  .episode-card .ep-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .episode-card .ep-number {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .episode-card .ep-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  .episode-card .ep-summary {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+
+  .episode-card .ep-chevron {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  /* Storyboard Grid */
+  .storyboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .storyboard-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition);
+  }
+
+  .storyboard-card:hover {
+    border-color: var(--border-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+  }
+
+  .sb-image {
+    width: 100%;
+    height: 140px;
+    background: var(--bg-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 12px;
+    position: relative;
+  }
+
+  .sb-image .scene-num {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(0,0,0,0.6);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .sb-content {
+    padding: 12px;
+  }
+
+  .sb-content .sb-field {
+    margin-bottom: 6px;
+  }
+
+  .sb-content .sb-field-label {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+  }
+
+  .sb-content .sb-field-value {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+
+  /* Slider */
+  .slider-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .slider {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    outline: none;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(124, 92, 252, 0.3);
+  }
+
+  .slider-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-light);
+    min-width: 28px;
+    text-align: center;
+  }
+
+  /* Log Panel */
+  .log-panel {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    max-height: 160px;
+    overflow: hidden;
+  }
+
+  .log-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 24px;
+    cursor: pointer;
+    transition: background var(--transition);
+  }
+
+  .log-header:hover {
+    background: var(--bg-hover);
+  }
+
+  .log-header h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .log-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--success);
+    animation: pulse 2s ease infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .log-toggle {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .log-body {
+    padding: 0 24px 12px;
+    font-family: 'SF Mono', 'Fira Code', 'Menlo', monospace;
+    font-size: 11px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    max-height: 100px;
+    overflow-y: auto;
+  }
+
+  .log-line {
+    display: flex;
+    gap: 12px;
+  }
+
+  .log-time {
+    color: var(--text-muted);
+    opacity: 0.5;
+    flex-shrink: 0;
+  }
+
+  .log-msg { color: var(--text-secondary); }
+  .log-msg.success { color: var(--success); }
+  .log-msg.info { color: var(--blue); }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--border-light); }
+
+  /* Hidden step panels */
+  .step-panel { display: none; }
+  .step-panel.active { display: flex; }
+
+  /* Status indicator */
+  .status-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: var(--success-dim);
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: var(--success);
+  }
+
+  .status-bar .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--success);
+  }
+
+  /* Selection info bar */
+  .selection-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: var(--accent-bg);
+    border: 1px solid rgba(124, 92, 252, 0.15);
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: var(--accent-light);
+  }
+
+  .selection-bar strong {
+    font-weight: 600;
+  }
+
+  /* Tooltip-like labels */
+  .helper-text {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* Form separator */
+  .form-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 20px 0;
+  }
+
+  /* Empty state */
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .empty-state .empty-icon {
+    font-size: 36px;
+    opacity: 0.3;
+    margin-bottom: 12px;
+  }
+
+  .empty-state p {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <h1><span class="brand-icon">D</span> Drama Pipeline</h1>
+    <p>短劇生成工作台</p>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">工作區</div>
+    <div class="sidebar-item active">
+      <span class="item-left"><span class="item-icon">&#9654;</span> 流程管線</span>
+    </div>
+    <div class="sidebar-item">
+      <span class="item-left"><span class="item-icon">&#9881;</span> 設定</span>
+    </div>
+  </div>
+
+  <div class="sidebar-divider"></div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">資料庫</div>
+    <div class="sidebar-item">
+      <span class="item-left"><span class="item-icon">&#128269;</span> 爬蟲結果</span>
+      <span class="badge">3</span>
+    </div>
+    <div class="sidebar-item">
+      <span class="item-left"><span class="item-icon">&#128200;</span> 分析報告</span>
+      <span class="badge">2</span>
+    </div>
+    <div class="sidebar-item">
+      <span class="item-left"><span class="item-icon">&#128221;</span> 劇本</span>
+      <span class="badge">1</span>
+    </div>
+    <div class="sidebar-item">
+      <span class="item-left"><span class="item-icon">&#127916;</span> 分鏡</span>
+      <span class="badge">0</span>
+    </div>
+  </div>
+
+  <div class="sidebar-footer">
+    <div class="user-info">
+      <div class="avatar">U</div>
+      <div>
+        <div class="user-name">User</div>
+        <div class="user-role">管理員</div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- ===== MAIN ===== -->
+<div class="main">
+
+  <!-- Stepper Bar -->
+  <div class="stepper-bar">
+    <div class="step completed">
+      <div class="step-indicator">&#10003;</div>
+      <div class="step-label">爬蟲搜尋</div>
+    </div>
+    <div class="step-connector done"></div>
+    <div class="step active">
+      <div class="step-indicator">2</div>
+      <div class="step-label">爆款分析</div>
+    </div>
+    <div class="step-connector"></div>
+    <div class="step pending">
+      <div class="step-indicator">3</div>
+      <div class="step-label">劇本生成</div>
+    </div>
+    <div class="step-connector"></div>
+    <div class="step pending">
+      <div class="step-indicator">4</div>
+      <div class="step-label">分鏡拆解</div>
+    </div>
+  </div>
+
+  <!-- Step 1 Content — shown as "completed but viewing results" -->
+  <div class="content-area step-panel active" id="step1">
+
+    <!-- Left Panel: Search Form -->
+    <div class="panel-left">
+      <div class="panel-title"><span class="title-icon">&#128269;</span> 搜尋條件</div>
+
+      <div class="status-bar">
+        <span class="dot"></span> 搜尋完成 — 找到 5 筆結果
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">關鍵字</label>
+        <input type="text" class="form-input" value="霸道總裁 短劇" placeholder="輸入搜尋關鍵字...">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">影片時長</label>
+        <select class="form-select">
+          <option>不限</option>
+          <option>1分鐘</option>
+          <option selected>3分鐘</option>
+          <option>5分鐘</option>
+          <option>10分鐘</option>
+          <option>20分鐘</option>
+          <option>30分鐘</option>
+          <option>1小時</option>
+          <option>2小時</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">最低觀看次數</label>
+        <input type="text" class="form-input" value="100000" placeholder="例: 50000">
+        <div class="helper-text">篩選高流量影片</div>
+      </div>
+
+      <div class="form-divider"></div>
+
+      <button class="btn btn-primary btn-block">&#128269;&nbsp; 重新搜尋</button>
+    </div>
+
+    <!-- Right Panel: Results Table -->
+    <div class="panel-right">
+      <div class="results-header">
+        <h3>搜尋結果</h3>
+        <span class="results-meta">共 5 筆結果 &middot; 已選取 2 部</span>
+      </div>
+
+      <div class="selection-bar">
+        <span>已選取 <strong>2</strong> 部影片</span>
+        <button class="btn btn-sm btn-primary">送入爆款分析 &rarr;</button>
+      </div>
+
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th style="width:36px"></th>
+            <th>影片</th>
+            <th>頻道</th>
+            <th>觀看次數</th>
+            <th>時長</th>
+            <th>連結</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="checkbox checked"></div></td>
+            <td>
+              <div class="result-row">
+                <div class="thumbnail t1"></div>
+                <div>
+                  <div class="video-title">霸道總裁愛上灰姑娘｜第1集｜重生逆襲</div>
+                  <div class="video-channel">短劇精選頻道</div>
+                </div>
+              </div>
+            </td>
+            <td style="color:var(--text-secondary)">短劇精選頻道</td>
+            <td class="views-count">2,450,000</td>
+            <td><span class="duration-badge">3:24</span></td>
+            <td><a href="#" class="video-link">YouTube &#8599;</a></td>
+          </tr>
+          <tr>
+            <td><div class="checkbox checked"></div></td>
+            <td>
+              <div class="result-row">
+                <div class="thumbnail t2"></div>
+                <div>
+                  <div class="video-title">閃婚甜寵：冷面總裁的秘密妻子 EP01</div>
+                  <div class="video-channel">甜蜜劇場</div>
+                </div>
+              </div>
+            </td>
+            <td style="color:var(--text-secondary)">甜蜜劇場</td>
+            <td class="views-count">1,870,000</td>
+            <td><span class="duration-badge">2:58</span></td>
+            <td><a href="#" class="video-link">YouTube &#8599;</a></td>
+          </tr>
+          <tr>
+            <td><div class="checkbox"></div></td>
+            <td>
+              <div class="result-row">
+                <div class="thumbnail t3"></div>
+                <div>
+                  <div class="video-title">重生千金復仇記：你欠我的，十倍奉還</div>
+                  <div class="video-channel">爆款劇場</div>
+                </div>
+              </div>
+            </td>
+            <td style="color:var(--text-secondary)">爆款劇場</td>
+            <td class="views-count">980,000</td>
+            <td><span class="duration-badge">3:12</span></td>
+            <td><a href="#" class="video-link">YouTube &#8599;</a></td>
+          </tr>
+          <tr>
+            <td><div class="checkbox"></div></td>
+            <td>
+              <div class="result-row">
+                <div class="thumbnail t4"></div>
+                <div>
+                  <div class="video-title">替嫁新娘：總裁老公是隱藏大佬</div>
+                  <div class="video-channel">微劇星球</div>
+                </div>
+              </div>
+            </td>
+            <td style="color:var(--text-secondary)">微劇星球</td>
+            <td class="views-count">560,000</td>
+            <td><span class="duration-badge">2:45</span></td>
+            <td><a href="#" class="video-link">YouTube &#8599;</a></td>
+          </tr>
+          <tr>
+            <td><div class="checkbox"></div></td>
+            <td>
+              <div class="result-row">
+                <div class="thumbnail t5"></div>
+                <div>
+                  <div class="video-title">離婚後，前夫追悔莫及｜短劇完整版</div>
+                  <div class="video-channel">追劇工廠</div>
+                </div>
+              </div>
+            </td>
+            <td style="color:var(--text-secondary)">追劇工廠</td>
+            <td class="views-count">340,000</td>
+            <td><span class="duration-badge">3:38</span></td>
+            <td><a href="#" class="video-link">YouTube &#8599;</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- Step 2 Content (hidden by default) -->
+  <div class="content-area step-panel" id="step2">
+    <div class="panel-left">
+      <div class="panel-title"><span class="title-icon">&#128200;</span> 分析設定</div>
+
+      <div class="form-group">
+        <label class="form-label">標籤篩選</label>
+        <select class="form-select">
+          <option>全部標籤</option>
+          <option>霸道總裁</option>
+          <option>重生</option>
+          <option>甜寵</option>
+          <option>復仇</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">已選影片</label>
+        <div style="margin-top:6px;">
+          <div style="display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--border);">
+            <div class="checkbox checked"></div>
+            <span style="font-size:13px;">霸道總裁愛上灰姑娘...</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;padding:8px 0;">
+            <div class="checkbox checked"></div>
+            <span style="font-size:13px;">閃婚甜寵：冷面總裁...</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-divider"></div>
+
+      <button class="btn btn-primary btn-block">&#9889;&nbsp; 開始分析</button>
+    </div>
+
+    <div class="panel-right">
+      <div class="results-header">
+        <h3>爆款分析報告</h3>
+        <span class="results-meta">基於 2 部影片的綜合分析</span>
+      </div>
+
+      <div class="report-section">
+        <h4>&#128214; 劇情結構</h4>
+        <p>兩部影片均採用「低開高走」的敘事結構。開場以女主角處於弱勢地位（灰姑娘/被迫閃婚）為起點，透過一系列戲劇衝突逐步翻轉人物命運。第一集即確立核心矛盾：身份落差與情感張力，有效建立觀眾期待。結構緊湊，每30秒設置一個小高潮。</p>
+      </div>
+
+      <div class="report-section">
+        <h4>&#127928; 節奏分析</h4>
+        <p>節奏設計為「快—慢—快」三段式。前10秒以衝突畫面快速抓住注意力，中段放慢節奏建立人物關係，最後30秒加速推向懸念結尾。平均鏡頭停留時間為2.3秒，符合短影音最佳實踐。BGM在關鍵轉折點切換，強化情緒波動。</p>
+      </div>
+
+      <div class="report-section">
+        <h4>&#128260; 反轉與轉折</h4>
+        <p>每集平均包含2-3個反轉點。常見模式：(1) 身份揭露反轉——看似弱勢的角色實為隱藏身份；(2) 情感反轉——從厭惡到心動的快速切換；(3) 權力反轉——被欺壓者突然獲得籌碼。這些反轉有效維持觀眾黏性。</p>
+      </div>
+
+      <div class="report-section">
+        <h4>&#129693; 鉤子模式</h4>
+        <p>開頭鉤子：以衝突場景或懸念台詞直入主題（「你以為嫁給我就能翻身？」）。結尾鉤子：在最大懸念點戛然而止，配合「下集更精彩」的暗示。標題鉤子：使用「｜」分隔符強調關鍵元素，如身份標籤+劇情動作+情緒暗示。</p>
+      </div>
+
+      <div class="report-section">
+        <h4>&#128147; 情感曲線</h4>
+        <p>情感曲線呈「W型」波動：開場製造壓抑感（受辱/被迫） → 短暫溫情（男主意外溫柔） → 再次跌落（新的阻礙出現） → 小高潮反擊 → 懸念留白。這種設計使觀眾在短時間內經歷完整的情緒旅程，提升完播率和續集點擊率。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 3 Content (hidden by default) -->
+  <div class="content-area step-panel" id="step3">
+    <div class="panel-left">
+      <div class="panel-title"><span class="title-icon">&#128221;</span> 劇本設定</div>
+
+      <div class="form-group">
+        <label class="form-label">選擇分析報告</label>
+        <select class="form-select">
+          <option>霸道總裁系列 — 分析報告 #1</option>
+          <option>重生復仇系列 — 分析報告 #2</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">劇本風格</label>
+        <select class="form-select">
+          <option selected>劇情向</option>
+          <option>喜劇</option>
+          <option>浪漫</option>
+          <option>懸疑</option>
+          <option>動作</option>
+          <option>恐怖</option>
+          <option>生活</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">人為要求</label>
+        <textarea class="form-textarea" placeholder="輸入額外的創作要求或限制...">女主角為職場新人，男主角為集團繼承人。需要有閨蜜背叛的劇情線。結局為HE。</textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">集數 (30-50)</label>
+        <div class="slider-group">
+          <input type="range" class="slider" min="30" max="50" value="40">
+          <span class="slider-value">40</span>
+        </div>
+      </div>
+
+      <div class="form-divider"></div>
+
+      <button class="btn btn-primary btn-block">&#9997;&nbsp; 生成劇本</button>
+    </div>
+
+    <div class="panel-right">
+      <div class="results-header">
+        <h3>劇本預覽</h3>
+        <span class="results-meta">總裁的秘密愛人 &middot; 40集 &middot; 劇情向</span>
+      </div>
+
+      <div class="episode-card">
+        <div class="ep-header">
+          <div>
+            <div class="ep-number">第 1 集</div>
+            <div class="ep-title">命運的安排</div>
+          </div>
+          <span class="ep-chevron">&#9660;</span>
+        </div>
+        <div class="ep-summary">林小暖第一天到宏遠集團報到，因電梯故障與神秘男子困在一起。對方態度冷淡卻在危急時刻保護了她。她不知道，這個男人正是集團總裁顧北辰——也是她即將面對的頂頭上司。</div>
+      </div>
+
+      <div class="episode-card">
+        <div class="ep-header">
+          <div>
+            <div class="ep-number">第 2 集</div>
+            <div class="ep-title">不速之客</div>
+          </div>
+          <span class="ep-chevron">&#9654;</span>
+        </div>
+      </div>
+
+      <div class="episode-card">
+        <div class="ep-header">
+          <div>
+            <div class="ep-number">第 3 集</div>
+            <div class="ep-title">閨蜜的秘密</div>
+          </div>
+          <span class="ep-chevron">&#9654;</span>
+        </div>
+      </div>
+
+      <div class="episode-card">
+        <div class="ep-header">
+          <div>
+            <div class="ep-number">第 4 集</div>
+            <div class="ep-title">暗流湧動</div>
+          </div>
+          <span class="ep-chevron">&#9654;</span>
+        </div>
+      </div>
+
+      <div class="episode-card">
+        <div class="ep-header">
+          <div>
+            <div class="ep-number">第 5 集</div>
+            <div class="ep-title">真相的碎片</div>
+          </div>
+          <span class="ep-chevron">&#9654;</span>
+        </div>
+      </div>
+
+      <div style="text-align:center;padding:16px;color:var(--text-muted);font-size:13px;">
+        ... 顯示 5 / 40 集 ...
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 4 Content (hidden by default) -->
+  <div class="content-area step-panel" id="step4">
+    <div class="panel-left">
+      <div class="panel-title"><span class="title-icon">&#127916;</span> 分鏡設定</div>
+
+      <div class="form-group">
+        <label class="form-label">選擇劇本</label>
+        <select class="form-select">
+          <option>總裁的秘密愛人 — 第1集</option>
+          <option>總裁的秘密愛人 — 第2集</option>
+        </select>
+      </div>
+
+      <div class="form-divider"></div>
+
+      <button class="btn btn-primary btn-block">&#127916;&nbsp; 開始拆分鏡</button>
+    </div>
+
+    <div class="panel-right">
+      <div class="results-header">
+        <h3>分鏡表</h3>
+        <span class="results-meta">第1集 — 命運的安排 &middot; 6 個鏡頭</span>
+      </div>
+
+      <div class="storyboard-grid">
+        <div class="storyboard-card">
+          <div class="sb-image" style="background:linear-gradient(135deg,#1a1a2e,#16213e);">
+            <span class="scene-num">S1</span>
+            <span style="opacity:0.3">1920 x 1080</span>
+          </div>
+          <div class="sb-content">
+            <div class="sb-field"><div class="sb-field-label">鏡頭角度</div><div class="sb-field-value">中景 / 平視</div></div>
+            <div class="sb-field"><div class="sb-field-label">角色描述</div><div class="sb-field-value">林小暖，25歲，穿白色襯衫，手提公事包，表情緊張</div></div>
+            <div class="sb-field"><div class="sb-field-label">提示詞</div><div class="sb-field-value">young woman entering modern office building, nervous expression, morning light</div></div>
+          </div>
+        </div>
+
+        <div class="storyboard-card">
+          <div class="sb-image" style="background:linear-gradient(135deg,#0f3460,#1a1a2e);">
+            <span class="scene-num">S2</span>
+            <span style="opacity:0.3">1920 x 1080</span>
+          </div>
+          <div class="sb-content">
+            <div class="sb-field"><div class="sb-field-label">鏡頭角度</div><div class="sb-field-value">特寫 / 仰角</div></div>
+            <div class="sb-field"><div class="sb-field-label">角色描述</div><div class="sb-field-value">電梯門關閉的瞬間，林小暖驚慌的眼神</div></div>
+            <div class="sb-field"><div class="sb-field-label">提示詞</div><div class="sb-field-value">close-up of woman's face, elevator doors closing, dramatic lighting, panic</div></div>
+          </div>
+        </div>
+
+        <div class="storyboard-card">
+          <div class="sb-image" style="background:linear-gradient(135deg,#1a1a2e,#2d1b69);">
+            <span class="scene-num">S3</span>
+            <span style="opacity:0.3">1920 x 1080</span>
+          </div>
+          <div class="sb-content">
+            <div class="sb-field"><div class="sb-field-label">鏡頭角度</div><div class="sb-field-value">全景 / 俯角</div></div>
+            <div class="sb-field"><div class="sb-field-label">角色描述</div><div class="sb-field-value">昏暗電梯內，顧北辰西裝筆挺靠牆站立，冷漠表情</div></div>
+            <div class="sb-field"><div class="sb-field-label">提示詞</div><div class="sb-field-value">two people trapped in dark elevator, man in suit leaning against wall, dim emergency light</div></div>
+          </div>
+        </div>
+
+        <div class="storyboard-card">
+          <div class="sb-image" style="background:linear-gradient(135deg,#533483,#1a1a2e);">
+            <span class="scene-num">S4</span>
+            <span style="opacity:0.3">1920 x 1080</span>
+          </div>
+          <div class="sb-content">
+            <div class="sb-field"><div class="sb-field-label">鏡頭角度</div><div class="sb-field-value">中景 / 側面</div></div>
+            <div class="sb-field"><div class="sb-field-label">角色描述</div><div class="sb-field-value">電梯突然晃動，顧北辰伸手護住小暖</div></div>
+            <div class="sb-field"><div class="sb-field-label">提示詞</div><div class="sb-field-value">man protecting woman in shaking elevator, dramatic angle, motion blur</div></div>
+          </div>
+        </div>
+
+        <div class="storyboard-card">
+          <div class="sb-image" style="background:linear-gradient(135deg,#1a1a2e,#1b4332);">
+            <span class="scene-num">S5</span>
+            <span style="opacity:0.3">1920 x 1080</span>
+          </div>
+          <div class="sb-content">
+            <div class="sb-field"><div class="sb-field-label">鏡頭角度</div><div class="sb-field-value">特寫 / 平視</div></div>
+            <div class="sb-field"><div class="sb-field-label">角色描述</div><div class="sb-field-value">兩人四目相對，距離極近，空氣凝結</div></div>
+            <div class="sb-field"><div class="sb-field-label">提示詞</div><div class="sb-field-value">extreme close-up, two faces very close, eye contact, tension, cinematic</div></div>
+          </div>
+        </div>
+
+        <div class="storyboard-card">
+          <div class="sb-image" style="background:linear-gradient(135deg,#1a1a2e,#3d0000);">
+            <span class="scene-num">S6</span>
+            <span style="opacity:0.3">1920 x 1080</span>
+          </div>
+          <div class="sb-content">
+            <div class="sb-field"><div class="sb-field-label">鏡頭角度</div><div class="sb-field-value">全景 / 平視</div></div>
+            <div class="sb-field"><div class="sb-field-label">角色描述</div><div class="sb-field-value">電梯門打開，小暖倉皇逃出，回頭望了一眼</div></div>
+            <div class="sb-field"><div class="sb-field-label">提示詞</div><div class="sb-field-value">woman rushing out of elevator, looking back, bright office lobby contrast with dark elevator</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Log Panel -->
+  <div class="log-panel">
+    <div class="log-header">
+      <h4><span class="log-dot"></span> 系統日誌</h4>
+      <span class="log-toggle">&#9660; 收合</span>
+    </div>
+    <div class="log-body">
+      <div class="log-line"><span class="log-time">14:23:01</span><span class="log-msg info">[爬蟲] 開始搜尋: "霸道總裁 短劇" — 時長: 3分鐘, 最低觀看: 100,000</span></div>
+      <div class="log-line"><span class="log-time">14:23:03</span><span class="log-msg">[爬蟲] 正在解析 YouTube 搜尋結果...</span></div>
+      <div class="log-line"><span class="log-time">14:23:05</span><span class="log-msg">[爬蟲] 取得 12 筆原始結果，篩選中...</span></div>
+      <div class="log-line"><span class="log-time">14:23:06</span><span class="log-msg success">[爬蟲] 篩選完成，共 5 筆符合條件的結果</span></div>
+      <div class="log-line"><span class="log-time">14:23:06</span><span class="log-msg">[系統] 結果已快取至本地資料庫</span></div>
+      <div class="log-line"><span class="log-time">14:23:08</span><span class="log-msg info">[系統] 等待使用者選取影片進行下一步分析...</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Minimal JS: only for tab switching so all 4 steps can be previewed -->
+<script>
+document.querySelectorAll('.step').forEach((stepEl, idx) => {
+  stepEl.addEventListener('click', () => {
+    document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+    const panel = document.getElementById('step' + (idx + 1));
+    if (panel) panel.classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>

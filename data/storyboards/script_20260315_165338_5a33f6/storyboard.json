@@ -1,0 +1,229 @@
+[
+  {
+    "frame_number": 1,
+    "scene_number": 1,
+    "duration_sec": 3,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery interior behind a wooden counter. Extreme close-up of a pair of weathered hands covered in burn scars, slowly peeling a faded handwritten menu off a dim wall. The hands belong to a male, 45-50 years old, gray-white short hair slightly disheveled, yellowish healthy skin, lean build with slightly hunched shoulders, wearing a faded navy chef coat with rolled sleeves revealing burn scars on forearms. Warm tungsten lighting from a single overhead bulb casts deep shadows on the wall, leaving a clean rectangular outline where the menu once hung. Shallow depth of field, close-up camera angle, muted earthy tones.",
+    "video_prompt": "The scarred hands slowly peel the last faded handwritten menu sheet off the wall, revealing a clean rectangular outline beneath. The paper curls slightly as it comes away. Subtle dust motes drift in the warm overhead light.",
+    "subtitle_zh": "",
+    "subtitle_en": "",
+    "camera_angle": "extreme close-up",
+    "lighting": "warm tungsten, single overhead bulb",
+    "characters": [
+      "陳默（Mò）"
+    ]
+  },
+  {
+    "frame_number": 2,
+    "scene_number": 1,
+    "duration_sec": 2,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery 'Mo Shi' behind the counter. A male, 45-50 years old, gray-white short hair slightly disheveled, yellowish healthy skin, lean build with slightly hunched shoulders, wearing a faded navy chef coat with rolled sleeves revealing burn scars. He holds a neat stack of folded menus in his scarred hands, his tired gaze directed toward a handwritten 'CLOSED PERMANENTLY' sign hanging on the glass entrance door. The empty counter and bare wall behind him. Close-up on upper body and face, warm dim interior lighting, melancholic and solitary atmosphere.",
+    "video_prompt": "Chen Mo stacks the folded menus neatly, then slowly lifts his gaze toward the 'CLOSED PERMANENTLY' sign on the door. His expression is quiet and resigned. A subtle breath raises his shoulders.",
+    "subtitle_zh": "",
+    "subtitle_en": "",
+    "camera_angle": "close-up",
+    "lighting": "warm dim interior",
+    "characters": [
+      "陳默（Mò）"
+    ]
+  },
+  {
+    "frame_number": 3,
+    "scene_number": 2,
+    "duration_sec": 2,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery 'Mo Shi' entrance. Over-the-shoulder shot from behind a male figure (45-50, gray-white disheveled short hair, faded navy chef coat, slightly hunched shoulders) looking toward the entrance door. The door is ajar, cold blue rain pouring outside. Standing in the doorway is a female, 28-32 years old, wet black long hair draped over her shoulders, pale skin, slender build, wearing a beige trench coat dripping with rainwater, a vivid jade green bracelet on her right wrist catching the light. Cold blue-white exterior rain light contrasts with warm interior. Over-shoulder camera angle, cinematic rain atmosphere.",
+    "video_prompt": "The door pushes open with a chime sound. Cold rain floods into the warm interior. Lin Ruo stands still in the doorway, rainwater dripping from her hair and coat. Wind gently moves her wet hair. Chen Mo's shoulder remains still in the foreground.",
+    "subtitle_zh": "陳默：「打烊了。」",
+    "subtitle_en": "Chen Mo: \"We're closed.\"",
+    "camera_angle": "over-shoulder",
+    "lighting": "cold blue exterior rain light vs warm interior",
+    "characters": [
+      "陳默（Mò）",
+      "林若（Ruò）"
+    ]
+  },
+  {
+    "frame_number": 4,
+    "scene_number": 2,
+    "duration_sec": 3,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery entrance. Medium shot of a female, 28-32 years old, wet black long hair draped over shoulders, pale skin, slender build, wearing a beige trench coat soaked with rain, a vivid jade green bracelet prominent on her right wrist. She stands firm in the open doorway, not leaving, rain falling heavily behind her. Her expression is quiet determination. Cold blue backlight from the rainy street silhouettes her figure, a small door chime visible above. Cinematic rain bokeh in background.",
+    "video_prompt": "Lin Ruo stands motionless in the doorway, rain cascading behind her. Water drips steadily from her hair tips and coat hem onto the floor. She holds her ground, not stepping back. Rain streams down the glass door beside her.",
+    "subtitle_zh": "",
+    "subtitle_en": "",
+    "camera_angle": "medium shot, slight low angle",
+    "lighting": "cold blue backlight, rain",
+    "characters": [
+      "林若（Ruò）"
+    ]
+  },
+  {
+    "frame_number": 5,
+    "scene_number": 3,
+    "duration_sec": 4,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery 'Mo Shi' bar counter. Medium shot across the wooden counter. A female, 28-32 years old, wet black long hair draped over shoulders, pale skin, slender build, wearing a beige trench coat, jade green bracelet on right wrist, sits at the bar counter. Small puddles of rainwater collect on the worn wooden surface where water drips from her hair tips. She speaks with a hesitant expression. Opposite her behind the counter, a male, 45-50, gray-white disheveled short hair, yellowish skin, lean hunched build, faded navy chef coat with rolled sleeves showing burn scars, looks up with guarded eyes. Warm overhead pendant lighting illuminates the counter between them.",
+    "video_prompt": "Rainwater drips from Lin Ruo's hair tips onto the wooden counter surface, forming small pools. She opens her mouth to speak with deliberate pauses. Chen Mo slowly raises his head, eyes narrowing with suspicion and wariness.",
+    "subtitle_zh": "林若：「……我想點一道菜。醬燒豆腐。」",
+    "subtitle_en": "Lin Ruo: \"...I'd like to order something. Braised tofu in sauce.\"",
+    "camera_angle": "medium two-shot",
+    "lighting": "warm overhead pendant light",
+    "characters": [
+      "陳默（Mò）",
+      "林若（Ruò）"
+    ]
+  },
+  {
+    "frame_number": 6,
+    "scene_number": 4,
+    "duration_sec": 3,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery bar counter. Extreme close-up on the face of a male, 45-50 years old, gray-white short hair slightly disheveled, yellowish healthy skin, lean build. His eyes are wide with shock — pupils dilated, breathing visible through slightly parted trembling lips. Folded menu papers are caught mid-fall from his hands in the lower frame. Dramatic side lighting creates harsh shadows across half his face, the other half lit by warm amber light. Shallow depth of field, intense emotional close-up.",
+    "video_prompt": "Chen Mo's entire body freezes. The folded menus slip from his loosening grip and scatter to the floor in slow motion. His pupils dilate visibly, and his breathing becomes rapid and shallow. A micro-tremble runs through his jaw.",
+    "subtitle_zh": "",
+    "subtitle_en": "",
+    "camera_angle": "extreme close-up on eyes and face",
+    "lighting": "dramatic side lighting, harsh shadows",
+    "characters": [
+      "陳默（Mò）"
+    ]
+  },
+  {
+    "frame_number": 7,
+    "scene_number": 4,
+    "duration_sec": 3,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery wall. Close-up of a bare wall section with a faint clean rectangular outline where handwritten menus once hung, surrounded by slightly discolored aged wall. Dramatic moody lighting, shallow depth of field with the clean patch in sharp focus. The shot evokes absence and memory. Warm-to-cool transitional lighting.",
+    "video_prompt": "Quick cut: camera rapidly pushes in on the blank wall where menus once hung, the clean rectangular outline stark against the aged surface. Then snaps back to Chen Mo's face, a single tear forming at the corner of his reddening eye.",
+    "subtitle_zh": "陳默：「……你說什麼？」",
+    "subtitle_en": "Chen Mo: \"...What did you say?\"",
+    "camera_angle": "close-up, quick cut insert",
+    "lighting": "dramatic transitional",
+    "characters": [
+      "陳默（Mò）"
+    ]
+  },
+  {
+    "frame_number": 8,
+    "scene_number": 5,
+    "duration_sec": 6,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery bar counter. Close-up on a trembling male hand gripping a female's right wrist, the vivid jade green bracelet prominent between his scarred fingers. The male, 45-50, gray-white disheveled short hair, yellowish skin, lean slightly hunched build, faded navy chef coat with rolled sleeves revealing burn scars, stands rigid with tension — his body taut as a bowstring. The female, 28-32, pale skin, wet black long hair, beige trench coat, remains still. His knuckles are white, veins visible. Dramatic overhead lighting casts deep shadows, intense emotional confrontation.",
+    "video_prompt": "Chen Mo lunges around the counter and seizes Lin Ruo's right wrist with his trembling scarred hand. He stares intensely at the jade bracelet, turning her wrist slightly. His entire hunched frame trembles with tension. Lin Ruo remains perfectly still, watching him.",
+    "subtitle_zh": "陳默：「這只鐲子……你到底是誰？你怎麼會知道那道菜？」",
+    "subtitle_en": "Chen Mo: \"This bracelet... Who are you? How do you know about that dish?\"",
+    "camera_angle": "close-up on hands and bracelet, then face",
+    "lighting": "dramatic overhead, high contrast",
+    "characters": [
+      "陳默（Mò）",
+      "林若（Ruò）"
+    ]
+  },
+  {
+    "frame_number": 9,
+    "scene_number": 6,
+    "duration_sec": 5,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery bar counter. Medium shot of a female, 28-32 years old, wet black long hair draped over shoulders, pale skin, slender build, wearing a beige trench coat, jade green bracelet on her right wrist (held by someone off-frame). Her free left hand reaches into her coat pocket and pulls out a smartphone. Her expression carries a heavy sense of purpose and solemnity — eyes downcast with weight of mission. Dramatic lighting with warm rim light from behind, face partially in shadow. The phone screen begins to glow in her hand.",
+    "video_prompt": "Lin Ruo remains calm and unflinching as her wrist is held. With deliberate slowness, her left hand reaches into her trench coat pocket and draws out a smartphone. She lifts it between them, her eyes heavy with purpose, and presses the play button. The screen glows to life.",
+    "subtitle_zh": "林若：「……她讓我把這個帶給你。」",
+    "subtitle_en": "Lin Ruo: \"...She asked me to bring you this.\"",
+    "camera_angle": "medium shot",
+    "lighting": "dramatic, warm rim light",
+    "characters": [
+      "林若（Ruò）"
+    ]
+  },
+  {
+    "frame_number": 10,
+    "scene_number": 7,
+    "duration_sec": 4,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery bar counter. Close-up of a male, 45-50 years old, gray-white short hair slightly disheveled, yellowish healthy skin, lean hunched build, faded navy chef coat with rolled sleeves. He has collapsed onto a bar stool, all strength drained from his body. His eyes are red-rimmed, lips trembling, silent tears streaming down his weathered face. A smartphone glowing with an audio waveform is held in a pale female hand in the mid-ground. Cold blue neon light from the rain-streaked window behind creates halos and bokeh. Shallow depth of field on his tear-streaked face.",
+    "video_prompt": "Chen Mo releases Lin Ruo's wrist and crumples backward onto the bar stool as if all strength has left his body. Tears begin to fall silently down his face. His lips tremble. Outside the rain-streaked window, neon signs blur into soft colored halos. His chest rises and falls with shuddering breaths.",
+    "subtitle_zh": "語音：「阿默……不是你的錯。離開，是我能為你做的……最後一件事。」",
+    "subtitle_en": "Voice: \"Mo... it's not your fault. Leaving was the last thing... I could do for you.\"",
+    "camera_angle": "close-up",
+    "lighting": "cold blue neon through rain-streaked window",
+    "characters": [
+      "陳默（Mò）",
+      "林若（Ruò）"
+    ]
+  },
+  {
+    "frame_number": 11,
+    "scene_number": 7,
+    "duration_sec": 4,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery bar counter. Wide close-up of a male, 45-50 years old, gray-white disheveled short hair, yellowish skin, lean hunched build, faded navy chef coat. He sits slumped on a bar stool, head bowed, shoulders shaking with silent sobs. Tears glisten on his cheeks. Rain streaks down the window behind him, neon lights outside blurred into pink, blue, and amber halos through the wet glass. The scene is deeply emotional and still. Cold exterior light mixes with fading warm interior light.",
+    "video_prompt": "Chen Mo's shoulders shake with silent sobs. Tears continue to fall. Outside the window, rain streams down the glass, and neon lights slowly pulse and blur. The audio from the phone continues faintly. His hand slowly reaches up to cover his face.",
+    "subtitle_zh": "語音：「你要好好吃飯。」",
+    "subtitle_en": "Voice: \"Please eat well.\"",
+    "camera_angle": "close-up, slightly wider",
+    "lighting": "cold neon bokeh mixed with fading warm interior",
+    "characters": [
+      "陳默（Mò）"
+    ]
+  },
+  {
+    "frame_number": 12,
+    "scene_number": 8,
+    "duration_sec": 3,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery bar counter. Medium shot of a female, 28-32 years old, wet black long hair draped over shoulders, pale skin, slender build, beige trench coat, jade green bracelet on right wrist. She gently places a small kraft paper envelope on the worn wooden counter surface. Her movement is careful and respectful. A male figure, 45-50, gray-white hair, navy chef coat, sits slumped on a stool in the background, slightly out of focus. Warm soft lighting from above, the envelope is the focal point on the counter.",
+    "video_prompt": "Lin Ruo reaches into her coat and withdraws a small kraft paper envelope. She places it gently on the wooden counter with both hands, a quiet reverence in the gesture. She pauses, then slowly stands from the stool.",
+    "subtitle_zh": "林若：「她說……你會知道什麼時候該打開。」",
+    "subtitle_en": "Lin Ruo: \"She said... you'll know when to open it.\"",
+    "camera_angle": "medium shot",
+    "lighting": "warm soft overhead",
+    "characters": [
+      "陳默（Mò）",
+      "林若（Ruò）"
+    ]
+  },
+  {
+    "frame_number": 13,
+    "scene_number": 8,
+    "duration_sec": 3,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery entrance from inside. Medium shot of a female, 28-32 years old, wet black long hair draped over shoulders, pale skin, slender build, beige trench coat, jade green bracelet on right wrist, seen from behind as she walks toward the glass door. She gives one last look over her shoulder. The door chime hangs above. Beyond the door, rain falls in the dark street. Warm interior light behind her, cold blue outside. The silhouette of the slumped male figure at the counter is reflected faintly in the glass door.",
+    "video_prompt": "Lin Ruo turns and walks toward the door with measured steps. She pauses at the threshold, glancing back one last time over her shoulder. She pushes the door open — the chime rings — steps into the rain, and the door swings shut behind her, muffling the rain to silence.",
+    "subtitle_zh": "",
+    "subtitle_en": "",
+    "camera_angle": "medium shot from behind",
+    "lighting": "warm interior vs cold blue exterior",
+    "characters": [
+      "林若（Ruò）"
+    ]
+  },
+  {
+    "frame_number": 14,
+    "scene_number": 9,
+    "duration_sec": 4,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery entrance interior. Medium shot of a male, 45-50 years old, gray-white short hair slightly disheveled, yellowish healthy skin, lean build with slightly hunched shoulders, faded navy chef coat with rolled sleeves revealing burn scars. He stands at the entrance door, his weathered hand resting on a hanging sign that reads 'CLOSED PERMANENTLY' in handwritten characters. His fingertips trace the paper surface. His eyes are red but carry a glimmer of quiet resolve. Warm golden light from inside the shop. Emotional and contemplative.",
+    "video_prompt": "Chen Mo stands heavily at the door, his hand resting on the 'CLOSED PERMANENTLY' sign. His fingertips slowly trace across the paper surface. He takes a long, deep breath. His expression shifts gradually from grief toward quiet resolve.",
+    "subtitle_zh": "",
+    "subtitle_en": "",
+    "camera_angle": "medium shot",
+    "lighting": "warm golden interior",
+    "characters": [
+      "陳默（Mò）"
+    ]
+  },
+  {
+    "frame_number": 15,
+    "scene_number": 9,
+    "duration_sec": 3,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery entrance. Close-up of a scarred hand flipping a hanging door sign. The sign is mid-flip, transitioning from 'CLOSED PERMANENTLY' to reveal the other side reading 'OPEN'. The hand belongs to a male, 45-50, with burn scars on wrist and forearm, sleeve of a faded navy chef coat rolled up. Warm golden light from inside the eatery spills through the glass door onto the wet street outside. A sense of new beginning and catharsis. Warm hopeful lighting.",
+    "video_prompt": "After a long still moment, Chen Mo's scarred hand decisively flips the door sign. It swings and settles — the word 'OPEN' now facing outward. Warm light from inside the eatery spills through the glass onto the rain-wet street. A sense of quiet release.",
+    "subtitle_zh": "",
+    "subtitle_en": "",
+    "camera_angle": "close-up on hand and sign",
+    "lighting": "warm golden, hopeful",
+    "characters": [
+      "陳默（Mò）"
+    ]
+  },
+  {
+    "frame_number": 16,
+    "scene_number": 10,
+    "duration_sec": 4,
+    "image_prompt": "Cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait. Late-night eatery bar counter. Close-up of a small kraft paper envelope lying untouched on a worn wooden counter surface. Through the slightly translucent corner of the envelope, the faint outline of a photograph is visible inside. Soft warm light from above illuminates the envelope. The surrounding counter is empty — a single water ring stain and faint water droplets nearby. The edges of the frame begin to darken into a vignette, fading to black. Quiet, contemplative, mysterious. Shallow depth of field centered on the envelope.",
+    "video_prompt": "The camera slowly pushes in on the kraft paper envelope resting on the empty counter. The warm light gradually dims. The faint outline of a photograph inside the envelope catches the last of the light. Rain sounds fade to near silence. The image slowly darkens to black from the edges inward.",
+    "subtitle_zh": "",
+    "subtitle_en": "",
+    "camera_angle": "close-up, slow push-in",
+    "lighting": "warm fading to black",
+    "characters": []
+  }
+]

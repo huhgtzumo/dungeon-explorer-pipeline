@@ -1,0 +1,29 @@
+{
+  "id": "kb_styles_20260315_010538_066224",
+  "category": "styles",
+  "subcategory": "",
+  "name": "電競",
+  "name_en": "Esports",
+  "description": "以電子競技為背景，展現職業選手的訓練日常、團隊配合與賽場對決，融合熱血競技與青春愛情，比賽場面緊張刺激，角色成長線勵志向上，擊中年輕觀眾的興趣圈層。",
+  "tags": [
+    "styles"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "退役選手復出帶領新隊伍衝擊冠軍",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "女主偽裝身份混入男子戰隊成為王牌輔助",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:05:38",
+  "updated_at": "2026-03-15 01:05:38"
+}

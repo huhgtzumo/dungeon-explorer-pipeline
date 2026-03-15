@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_f90385",
+  "category": "genres",
+  "subcategory": "",
+  "name": "校園青春",
+  "name_en": "Campus Youth",
+  "description": "圍繞高中或大學校園生活展開，呈現青澀愛情、友情考驗、夢想追逐等主題，風格清新甜美或熱血勵志，喚起觀眾的青春回憶與共鳴",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "學霸與學渣同桌後互相改變彼此人生",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "社團廢柴組隊逆襲拿下全國冠軍",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

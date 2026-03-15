@@ -1,0 +1,108 @@
+{
+  "entries": [],
+  "crawls": [
+    {
+      "id": "crawl_20260315_140611_f9bfa7",
+      "keyword": "復仇",
+      "tags": [
+        "復仇"
+      ],
+      "created_at": "2026-03-15 14:06:11",
+      "count": 10,
+      "file": "data/crawls/crawl_20260315_140611_f9bfa7.json"
+    },
+    {
+      "id": "crawl_20260315_142722_32cf40",
+      "keyword": "復仇",
+      "tags": [
+        "復仇"
+      ],
+      "created_at": "2026-03-15 14:27:22",
+      "count": 10,
+      "file": "data/crawls/crawl_20260315_142722_32cf40.json"
+    },
+    {
+      "id": "crawl_20260315_144025_ff4ea2",
+      "keyword": "重生",
+      "tags": [
+        "重生"
+      ],
+      "created_at": "2026-03-15 14:40:25",
+      "count": 10,
+      "file": "data/crawls/crawl_20260315_144025_ff4ea2.json"
+    },
+    {
+      "id": "crawl_20260315_144052_e03bf9",
+      "keyword": "甜寵",
+      "tags": [
+        "甜寵"
+      ],
+      "created_at": "2026-03-15 14:40:52",
+      "count": 10,
+      "file": "data/crawls/crawl_20260315_144052_e03bf9.json"
+    },
+    {
+      "id": "crawl_20260315_144112_75dc61",
+      "keyword": "穿越",
+      "tags": [
+        "穿越"
+      ],
+      "created_at": "2026-03-15 14:41:12",
+      "count": 10,
+      "file": "data/crawls/crawl_20260315_144112_75dc61.json"
+    },
+    {
+      "id": "crawl_20260315_145705_201721",
+      "keyword": "霸總",
+      "tags": [
+        "霸總"
+      ],
+      "created_at": "2026-03-15 14:57:05",
+      "count": 10,
+      "file": "data/crawls/crawl_20260315_145705_201721.json"
+    }
+  ],
+  "scripts": [
+    {
+      "id": "script_20260315_165338_5a33f6",
+      "title": "最後一道菜",
+      "source_analysis_id": "knowledge_base",
+      "human_requirements": "",
+      "type": "kb-series",
+      "created_at": "2026-03-15 16:54:46",
+      "file": "data/scripts/script_20260315_165338_5a33f6/script.json"
+    },
+    {
+      "id": "script_20260316_011502_34822a",
+      "title": "最後三分鐘",
+      "source_analysis_id": "knowledge_base",
+      "human_requirements": "",
+      "type": "kb-series",
+      "created_at": "2026-03-16 01:16:24",
+      "file": "data/scripts/script_20260316_011502_34822a/script.json"
+    }
+  ],
+  "storyboards": [
+    {
+      "id": "sb_20260315_181915_1fee20",
+      "source_script_id": "script_20260315_165338_5a33f6",
+      "frame_count": 17,
+      "created_at": "2026-03-15 18:19:15",
+      "file": "data/storyboards/script_20260315_165338_5a33f6/storyboard.json"
+    },
+    {
+      "id": "sb_20260316_011303_0a75cd",
+      "source_script_id": "script_20260315_165338_5a33f6",
+      "frame_count": 16,
+      "created_at": "2026-03-16 01:13:03",
+      "file": "data/storyboards/script_20260315_165338_5a33f6/storyboard.json"
+    },
+    {
+      "id": "sb_20260316_011934_a3155e",
+      "source_script_id": "script_20260316_011502_34822a",
+      "frame_count": 16,
+      "created_at": "2026-03-16 01:19:34",
+      "file": "data/storyboards/script_20260316_011502_34822a/storyboard.json"
+    }
+  ]
+}

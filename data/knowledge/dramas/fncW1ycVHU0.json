@@ -1,0 +1,373 @@
+{
+  "video_id": "fncW1ycVHU0",
+  "title": "Girl Transmigrated Unfavored Concubine,Unexpectedly Use Modern Knowledge Raise Baby,Emperor Shock!",
+  "analysis": {
+    "drama_summary": "現代女性穿越成失勢廢后，綁定育兒系統，在冷宮中用現代知識養育皇子、改造冷宮，最終助子登上太子之位並成為皇后的逆襲故事。",
+    "structure": {
+      "type": "三幕式逆襲結構",
+      "type_en": "Three-Act Reversal Structure",
+      "description": "第一幕為困境建立：女主被廢、穿越、綁定系統、冷宮求生；第二幕為逐步逆襲：用現代知識賺錢、改造冷宮、建立人脈、獲得影響力；第三幕為高潮收尾：皇子封太子、女主復位皇后、選擇留下。整體遵循「跌入谷底→積蓄力量→逆襲登頂」的經典爽文弧線，每一階段都有系統任務推動劇情。",
+      "act_breakdown": "第一幕（約20%）：廢后→穿越→綁定系統→冷宮生存危機。第二幕（約55%）：奶粉餵養→刺繡賣錢→毛線玩偶→改造冷宮→化解衝突→種植農作物→逐步獲得影響力。第三幕（約25%）：皇子救駕→驅蟲立功→封太子→復位皇后→選擇留下→大婚結局。",
+      "excerpt": "Welcome host. You are now bound to the Cold Palace motherhood system... The host needs to raise the original owner's child and help him ascend to the position of crown prince... Congratulations, host, on the perfect completion of your mission. 10,000 points have been added to your account."
+    },
+    "hooks": [
+      {
+        "type": "衝突開場",
+        "type_en": "Conflict Opening Hook",
+        "description": "開場即是高烈度的宮廷衝突——皇后下藥被發現、父親被處斬、皇后被廢入冷宮，在極短時間內製造巨大的命運落差，立刻抓住觀眾注意力。",
+        "timing": "開場",
+        "excerpt": "Laura, you dare to drug me? Ever since you made me the queen, you have never touched me for 5 years. I was left with no choice... Thomas Lake is found guilty of forming factions, engaging in bribery, corruption, and disregard for human life. He shall be executed today at the public square. The Empress Laura Lake is hereby stripped of her title, administered a sterility elixir, and confined to the cold palace for reflection."
+      },
+      {
+        "type": "系統綁定懸念",
+        "type_en": "System-Binding Suspense Hook",
+        "description": "穿越後立即綁定育兒系統，任務失敗即死亡的設定製造持續懸念，觀眾想知道女主如何在資源匱乏的冷宮完成任務。系統積分和商店機制也帶來遊戲化的爽感期待。",
+        "timing": "開場後段",
+        "excerpt": "All you need to do is complete the main mission of raising the child in the cold palace, and you can continue to live in this world. But what if I can't complete the mission? You will die on the spot."
+      },
+      {
+        "type": "反差萌開場",
+        "type_en": "Comedic Contrast Hook",
+        "description": "現代女性面對古代哺乳需求時的尷尬反應，製造穿越劇特有的反差喜劇效果，瞬間拉近觀眾距離。",
+        "timing": "開場中段",
+        "excerpt": "My lady, the young prince must be hungry. After you finish your meal, please feed him some milk. Feed him milk. This is a little inappropriate. I'm still an inexperienced young girl."
+      },
+      {
+        "type": "身份反差鉤子",
+        "type_en": "Identity Contrast Hook",
+        "description": "皇帝揭露自己因童年陰影對女性有恐懼症，唯獨對女主例外，這個秘密製造巨大反轉，讓前期所有的冷漠行為獲得全新解讀。",
+        "timing": "中後段",
+        "excerpt": "I suffer from a private ailment... As soon as I get close to a woman, I feel nothing but disgust. If I touch one, I tremble all over, feeling nauseous and sick... However, Laura Lake is the exception. When I am intimate with her, I don't feel disgusted."
+      }
+    ],
+    "elements": {
+      "characters": [
+        {
+          "type": "穿越開掛女主（現代智慧型）",
+          "type_en": "Transmigrated Cheat-Code Heroine (Modern Knowledge Type)",
+          "description": "擁有現代知識和系統外掛的穿越女主，聰明務實、不矯情、有領導力。核心吸引力在於觀眾代入感強——用「我們時代的常識」碾壓古代困境，滿足智力優越感。同時她獨立自主、不依賴男人的態度迎合現代女性價值觀。",
+          "excerpt": "When a woman dresses up, it's not necessarily for men. It's for herself to make herself feel better... I think he's just impotent. Otherwise, why would I have given him medicine?"
+        },
+        {
+          "type": "傲嬌帝王（外冷內熱型）",
+          "type_en": "Tsundere Emperor (Cold Outside Warm Inside)",
+          "description": "表面冷漠無情實則深藏秘密與深情的帝王。前期的冷漠讓觀眾恨，後期秘密揭開後讓觀眾心疼，形成巨大的情感反轉。童年創傷設定增加角色深度。",
+          "excerpt": "I have wanted to keep you as my own possession for a long time... Since you rescued me, you must take full responsibility for me."
+        },
+        {
+          "type": "忠心侍女（後援型）",
+          "type_en": "Loyal Maid (Support Type)",
+          "description": "忠誠的貼身侍女Vivien，是女主在冷宮中的第一個盟友，負責執行、後勤和情感支持，推動日常劇情。",
+          "excerpt": "Please rest assured, my lady. I will absolutely not let anyone else know... My lady, the items you requested have been bought back by the guards."
+        },
+        {
+          "type": "蛇蠍反派（爭寵型）",
+          "type_en": "Scheming Villainess (Favor-Seeker Type)",
+          "description": "Lady Lily作為反派，用巫蠱之術控制皇帝、陷害女主，是經典的後宮爭寵反派。她的存在為女主提供了展示智慧和勇氣的舞台。",
+          "excerpt": "Lily, even if you kill this worm, what good will that do? Guards, hold Lily down... Lily, you have a lot of nerve. How dare you poison the emperor with a worm?"
+        },
+        {
+          "type": "神獸萌娃（奇才型）",
+          "type_en": "Divine Beast Child (Prodigy Type)",
+          "description": "皇子Kitty擁有指揮百獸的神奇能力，是真龍轉世。萌娃設定帶來治癒感，超能力設定在關鍵時刻推動劇情高潮。",
+          "excerpt": "Bad bug, don't you dare bite, father. I, the cat, command you, crawl out... The prince can command all beasts. Getting rid of a tiny worm is a piece of cake."
+        }
+      ],
+      "character_combos": [
+        {
+          "type": "廢后×冷面帝王（先虐後甜）",
+          "type_en": "Deposed Empress × Cold Emperor (Angst-to-Sweet)",
+          "description": "帝王親手廢后→冷宮分離→秘密揭開→重新認識→復位封后。這個組合的化學反應來自極端的權力不對等和情感反轉，從恨到心疼到甜蜜的完整情感弧線讓觀眾欲罷不能。",
+          "excerpt": "Ever since you made me the queen, you have never touched me for 5 years... Your Majesty, you told all the officials that you only had feelings for me. Is that true or false? A ruler's word is law."
+        },
+        {
+          "type": "穿越女主×冷宮姐妹團（互助逆襲）",
+          "type_en": "Transmigrated Heroine × Cold Palace Sisterhood (Mutual Aid Reversal)",
+          "description": "女主帶領冷宮中被遺棄的妃嬪們共同致富、互相扶持，展現女性團結的力量。這個組合打破了後宮劇中女性互鬥的套路，帶來正能量和治癒感。",
+          "excerpt": "We met when we were nothing. I will always be your Laura... Laura, because of you, we have today with you in the palace. Happy souls will only grow in number. Sunshine will bathe whole palace and you will be that light shining on every citizen of Calidori."
+        },
+        {
+          "type": "穿越女主×AI系統（吐槽搭檔）",
+          "type_en": "Transmigrated Heroine × AI System (Comedy Duo)",
+          "description": "女主與系統Mia之間的互動充滿現代感的吐槽和討價還價，製造輕鬆喜劇效果，緩解宮鬥的緊張氛圍。",
+          "excerpt": "One can of formula costs 100 points. You capitalist. Please call me Mia. Mia? What kind of name is that? I'm asking you, can I buy on credit?... And may your system only grow better and better and stay forever bug free."
+        }
+      ],
+      "settings": [
+        {
+          "type": "冷宮（困境與重生之地）",
+          "type_en": "Cold Palace (Place of Adversity and Rebirth)",
+          "description": "冷宮是整部劇的核心場景，既是囚禁之地也是逆襲起點。封閉空間內的資源匱乏製造生存壓力，而女主用現代知識將冷宮改造成繁榮小社會的過程帶來極大的爽感。冷宮的封閉性也讓人物關係更加集中和緊密。",
+          "excerpt": "My lady, this is the cold palace. We don't have anything here. If you don't feed him, he will starve... Side mission activated. Within half a year, you must transform the Cold Palace into a civilized, harmonious, positive, and thriving paradise."
+        },
+        {
+          "type": "朝堂（權力博弈場）",
+          "type_en": "Imperial Court (Power Arena)",
+          "description": "朝堂是皇帝宣布重大決定的場所——封太子、遣散後宮、揭露秘密，每次朝堂戲都是劇情高潮的爆發點。",
+          "excerpt": "I believe that the young prince is your only imperial heir and also a true dragon reborn. He is a lucky star for our calidor and should be named the crown prince."
+        },
+        {
+          "type": "寢宮（親密與危機並存）",
+          "type_en": "Imperial Bedchamber (Intimacy and Crisis)",
+          "description": "寢宮場景承載了巫蠱事件的高潮和帝后重修舊好的撒糖，是危機與情感的交匯點。",
+          "excerpt": "Your Majesty, have you rested enough? Why don't we go for another round? The bed is about to collapse."
+        }
+      ],
+      "relationships": [
+        {
+          "type": "先婚後愛×破鏡重圓",
+          "type_en": "Arranged Marriage to True Love × Reconciliation",
+          "description": "政治聯姻→五年無性婚姻→廢后→穿越後重新開始→互相了解→真情流露→復位。衝突核心在於權力、信任和真實自我的暴露，從制度性結合到真正的情感連結。",
+          "excerpt": "Ever since you made me the queen, you have never touched me for 5 years... However, Laura Lake is the exception. When I am intimate with her, I don't feel disgusted... Since you rescued me, you must take full responsibility for me."
+        },
+        {
+          "type": "主僕情深（忠誠羈絆）",
+          "type_en": "Master-Servant Bond (Loyal Tie)",
+          "description": "女主與侍女Vivien之間超越主僕的真摯情誼，在困境中互相扶持。這種關係為女主提供情感支撐，也讓觀眾感受到人間溫暖。",
+          "excerpt": "My lady, you gave birth to a little prince... Please rest assured, my lady. I will absolutely not let anyone else know."
+        },
+        {
+          "type": "後宮姐妹情（患難之交）",
+          "type_en": "Harem Sisterhood (Bond Through Adversity)",
+          "description": "冷宮中被遺棄的妃嬪們從陌生到互助到深情厚誼，打破後宮互鬥的刻板印象。離別時的真情告白是全劇最感人的段落之一。",
+          "excerpt": "Since coming to the Cold Palace, this is the first time we've had chicken soup... A dozen of us old gals will play mahong, tend our gardens, dance a bit, and live life without a care."
+        },
+        {
+          "type": "母子羈絆（養育使命）",
+          "type_en": "Mother-Son Bond (Nurturing Mission)",
+          "description": "穿越女主從被迫養育到真心愛護皇子的情感轉變，是全劇的核心情感線。最終選擇留下而非離開，正是母子情深的體現。",
+          "excerpt": "Don't cry. I'm not good at comforting children... Kitty. Mother, from now on I will never leave you again."
+        }
+      ]
+    },
+    "payoffs": [
+      {
+        "type": "逆襲翻盤（廢后復位）",
+        "type_en": "Underdog Reversal (Deposed to Empress)",
+        "description": "從被廢入冷宮到重新被封為皇后，完成了從谷底到巔峰的完整逆襲弧線。觀眾看著女主一步步從無到有，積累的情感在這一刻完全釋放，獲得極大的滿足感。",
+        "emotional_impact": "爽快/感動",
+        "excerpt": "Laura Lake is both virtuous and capable, possessing a noble disposition, and is concerned for the welfare of the people and the nation... She is hereby appointed as the empress of the central palace and granted residence at the skyworm keep."
+      },
+      {
+        "type": "打臉復仇（反派落網）",
+        "type_en": "Face-Slapping Revenge (Villain Exposed)",
+        "description": "Lady Lily用巫蠱害皇帝，被女主和皇子當眾揭穿。反派一直囂張跋扈，最終在眾人面前被拆穿，觀眾積壓的憤怒得到釋放。",
+        "emotional_impact": "解氣/爽快",
+        "excerpt": "Lily, you have a lot of nerve. How dare you poison the emperor with a worm? Guards, take her to the Hall of Penance, interrogate her harshly, and await the Emperor's command."
+      },
+      {
+        "type": "真相大白（皇帝秘密揭露）",
+        "type_en": "Truth Revealed (Emperor's Secret Exposed)",
+        "description": "皇帝當朝揭露自己因童年創傷導致的親密恐懼症，唯獨對女主例外。這個真相讓前期所有的冷漠和拒絕都獲得了全新解讀，觀眾從恨皇帝變為心疼皇帝，情感衝擊極大。",
+        "emotional_impact": "震驚/感動",
+        "excerpt": "When I was over 10 years old, the Empress Daager secretly arranged for me a palace maid who was experienced in intimacy... I was terrified back then... I developed a certain affliction. As soon as I get close to a woman, I feel nothing but disgust... However, Laura Lake is the exception."
+      },
+      {
+        "type": "深情告白（離別與選擇）",
+        "type_en": "Emotional Confession (Farewell and Choice)",
+        "description": "冷宮姐妹離別時的深情告白和女主最終選擇留下，觸發觀眾的感動情緒。特別是女主放棄「回到現代」的機會選擇留下，證明了她對這個世界的人和事產生了真正的情感連結。",
+        "emotional_impact": "感動",
+        "excerpt": "We met when we were nothing. I will always be your Laura... Mia, I want to stay. Can a destiny already chosen still be rewritten?... I've loved spending this past year sharing so many moments with you. May the days ahead be smooth sailing and worry-free."
+      },
+      {
+        "type": "萌娃立功（皇子驅蟲救父）",
+        "type_en": "Cute Child Saves the Day (Prince Exorcises Worm)",
+        "description": "年幼的皇子用指揮百獸的能力驅除皇帝體內的蠱蟲，既展現了孩子的可愛與神奇，又直接推動了太子冊封的關鍵劇情轉折。",
+        "emotional_impact": "爽快/感動",
+        "excerpt": "Bad bug, don't you dare bite, father. I, the cat, command you, crawl out... It's crawling out. The worm crawled out."
+      }
+    ],
+    "pacing": {
+      "tempo": "前快後穩、爽點密集",
+      "tension_curve": "開場高衝突（廢后穿越）→短暫舒緩（冷宮日常、系統教學）→中段穩步攀升（賺錢改造、積累實力）→間歇性高潮（冷宮衝突、蠱蟲事件）→終極爆發（封太子、復位皇后）→溫馨收尾（選擇留下、大婚）",
+      "key_beats": [
+        "廢后入冷宮+穿越綁定系統（命運最低點）",
+        "奶粉餵養+刺繡賺錢（生存破局）",
+        "毛線玩偶商業化+冷宮改造（實力積累）",
+        "冷宮老妃嬪搶食衝突（內部危機）",
+        "皇子驅蟲救父（關鍵轉折點）",
+        "皇帝揭露秘密+遣散後宮（真相大白）",
+        "封太子+復位皇后（終極逆襲）",
+        "選擇留下+大婚結局（情感完成）"
+      ],
+      "excerpt": "You will die on the spot... Care received. 10 points added... The side mission reforming the cold palace progress completion is 2%. 100 points added... Congratulations, host, on the perfect completion of your mission. 10,000 points have been added."
+    },
+    "dialogues": [
+      {
+        "type": "威脅型",
+        "type_en": "Threatening Dialogue",
+        "description": "權力者對弱者的壓迫式對白，用命令和威脅製造壓迫感。通常是反派或權力者施壓，為後續的反擊蓄力。",
+        "emotional_function": "製造壓迫/為反擊蓄力",
+        "excerpt": "If you give birth to a princess, Lord Lake will stage a coup... If you know what's good for you, bring out the food and drink to honor us. Otherwise, we will take it ourselves."
+      },
+      {
+        "type": "反擊型",
+        "type_en": "Counter-Attack Dialogue",
+        "description": "女主在壓力下的智慧反擊，不用武力而用邏輯和氣勢壓制對方。這類對白讓觀眾代入女主獲得爽感。",
+        "emotional_function": "爽感/解氣",
+        "excerpt": "You want to sentence me and my child to death other than creating two souls that will haunt this world causing you sleepless nights. What benefit is there for you in this?"
+      },
+      {
+        "type": "吐槽型（現代穿越專屬）",
+        "type_en": "Modern Roast Dialogue (Transmigration Exclusive)",
+        "description": "穿越女主用現代思維和語言吐槽古代事物或系統設定，製造時空反差的喜劇效果。這類對白是穿越劇的標誌性元素。",
+        "emotional_function": "輕鬆/搞笑",
+        "excerpt": "One can of formula costs 100 points. You capitalist... Mia? What kind of name is that? I'm asking you, can I buy on credit?... I think he's just impotent. Otherwise, why would I have given him medicine?"
+      },
+      {
+        "type": "撒糖型",
+        "type_en": "Sweet/Flirty Dialogue",
+        "description": "帝后之間從試探到親密的甜蜜對話，通常帶有撩撥和俏皮的元素。在大量虐戀和宮鬥之後，這類對白像甜點一樣讓觀眾滿足。",
+        "emotional_function": "甜蜜/滿足",
+        "excerpt": "Since you are now my empress, you must protect me. Well, you promised me that. Who said I was going to protect you? Your hands. Since you rescued me, you must take full responsibility for me. Gross."
+      },
+      {
+        "type": "金句型（女性覺醒）",
+        "type_en": "Empowerment Quote Dialogue",
+        "description": "具有現代女性獨立意識的金句對白，傳遞價值觀的同時引發觀眾共鳴和分享衝動。",
+        "emotional_function": "共鳴/激勵",
+        "excerpt": "When a woman dresses up, it's not necessarily for men. It's for herself to make herself feel better."
+      },
+      {
+        "type": "揭露型（朝堂秘密）",
+        "type_en": "Revelation Dialogue (Court Secret)",
+        "description": "皇帝當眾揭露自己最深層的秘密，用極具衝擊力的獨白改變所有人的認知。這類對白是劇情反轉的核心載體。",
+        "emotional_function": "震撼/心疼",
+        "excerpt": "As soon as I pulled back the covers, I saw a palace maid in her 30s, old enough to be a wet nurse, completely undressed right there on my bed. I was terrified back then and ordered her to get out, but she shamelessly kept clinging to me."
+      }
+    ],
+    "visual_scenes": [
+      {
+        "type": "冷宮分娩（困境中的希望）",
+        "type_en": "Cold Palace Childbirth (Hope in Despair)",
+        "description": "在簡陋的冷宮中分娩，條件惡劣、無人關懷，卻誕生了帶有祥瑞之兆的皇子。極端困境與希望並存，視覺反差強烈。",
+        "dramatic_tension": "惡劣環境與新生命的對比，前任皇后死亡與穿越者靈魂進入的生死交替",
+        "excerpt": "My lady, push hard. Push hard. Push. Push... The auspicious omen protecting our Calidori has descended. It's a little prince. He was born in the cold palace."
+      },
+      {
+        "type": "萌娃驅蟲救駕（超能力展示）",
+        "type_en": "Child Exorcism (Supernatural Power Display)",
+        "description": "年幼的皇子站在昏迷的皇帝床前，用稚嫩的童音命令蠱蟲爬出。小孩與可怕蟲子的視覺反差，加上眾人的震驚表情，構成極具衝擊力的場面。",
+        "dramatic_tension": "幼童的弱小外表與強大能力的反差、眾人的質疑與奇蹟發生的對比",
+        "excerpt": "Bad bug, don't you dare bite, father. I, the cat, command you, crawl out... It's crawling out. The worm crawled out."
+      },
+      {
+        "type": "聖旨冊封（登頂時刻）",
+        "type_en": "Imperial Decree Ceremony (Crowning Moment)",
+        "description": "正式的冊封儀式，宣讀聖旨封皇后和太子，配合「瑞光普照」的祥瑞異象，是視覺和情感的雙重高潮。",
+        "dramatic_tension": "從冷宮廢后到中宮皇后的極端反轉在正式儀式中呈現",
+        "excerpt": "She is hereby appointed as the empress of the central palace and granted residence at the skyworm keep... A brilliant aura covers the land. This is a very auspicious sign."
+      },
+      {
+        "type": "冷宮創業（日常治癒）",
+        "type_en": "Cold Palace Entrepreneurship (Healing Daily Life)",
+        "description": "女主們在冷宮中製作毛線玩偶、刺繡、烹飪的日常場景，溫馨且充滿生活氣息，是緊張宮鬥劇情中的治癒調劑。",
+        "dramatic_tension": "被遺棄的女性用雙手創造美好生活的勵志畫面",
+        "excerpt": "Look at this little rabbit. Not only do children like it, even an old woman like me loves it... Exactly. From now on, we will dress up and look gorgeous everyday. Not for others, but just so we can feel better about ourselves."
+      }
+    ],
+    "ending_hooks": [
+      {
+        "type": "情感衝擊型（選擇留下）",
+        "type_en": "Emotional Impact Ending (Choosing to Stay)",
+        "description": "女主在可以離開（等於回歸自由/現代）和留下之間做出選擇，觀眾的情緒隨著倒計時高度緊繃。最終選擇留下意味著她真正認同了這個世界的身份和情感。系統Mia的告別增添了感傷。",
+        "timing": "結局前段，倒計時機制製造緊迫感",
+        "excerpt": "Mia, I want to stay. Can a destiny already chosen still be rewritten?... Once the ending changes, Mia will have to leave the system for good. I'm sure. Rewrite it. The ending is set anew. Mia must leave ahead of time. I've loved spending this past year sharing so many moments with you."
+      },
+      {
+        "type": "甜蜜收束型（撒糖結局）",
+        "type_en": "Sweet Closure Ending (Sugar-Coated Finale)",
+        "description": "大婚場景中帝后的俏皮互動作為全劇最後一個畫面，以輕鬆甜蜜收束整個虐戀故事，讓觀眾帶著幸福感離場。",
+        "timing": "最後幾句台詞",
+        "excerpt": "Since you are now my empress, you must protect me... Since you rescued me, you must take full responsibility for me. Gross."
+      }
+    ],
+    "tension_actions": [
+      {
+        "type": "持刀對峙（弱者反抗）",
+        "type_en": "Knife Confrontation (Underdog Resistance)",
+        "description": "侍女Vivien持刀阻擋來搶食的冷宮妃嬪們，在弱勢一方的絕境中展現保護主人的決心。刀刃的威脅感與侍女的弱小形成張力。",
+        "visual_impact": "孤身持刀面對群體的壓迫場面，寒光閃爍中的堅決表情",
+        "excerpt": "Go ahead and try. This blade's got no eyes. If it takes a hand or a foot, that won't be my fault. Don't you dare mess around."
+      },
+      {
+        "type": "下藥/下毒（宮廷陰謀）",
+        "type_en": "Drugging/Poisoning (Palace Intrigue)",
+        "description": "開場的皇后下藥和中段Lady Lily的巫蠱下毒，都是後宮劇的經典張力行為。觀眾對「毒」和「藥」天然敏感，這類行為立即拉高緊張感。",
+        "visual_impact": "蠱蟲在皮膚下蠕動的恐怖畫面、皇帝昏迷不醒的危急場面",
+        "excerpt": "Laura, you dare to drug me?... What the emperor is suffering from is a parasite curse. We all witnessed that worm crawling beneath his skin."
+      },
+      {
+        "type": "聖旨宣讀（命運裁決）",
+        "type_en": "Imperial Decree Reading (Fate Judgment)",
+        "description": "通過正式聖旨宣讀來改變人物命運，具有不可抗拒的權威感。從開場的廢后聖旨到結尾的封后聖旨，形成完美呼應。",
+        "visual_impact": "莊嚴的儀式感、跪地接旨的畫面、眾人的反應鏡頭",
+        "excerpt": "The Empress Laura Lake is hereby stripped of her title, administered a sterility elixir, and confined to the cold palace for reflection... She is hereby appointed as the empress of the central palace."
+      }
+    ],
+    "genres": [
+      {
+        "type": "古裝宮廷",
+        "type_en": "Historical Palace Drama",
+        "description": "以虛構古代王朝為背景的宮廷劇，包含皇權爭鬥、後宮爭寵、朝堂博弈等經典元素。受眾廣泛，尤其吸引喜歡華服、禮儀、權謀的女性觀眾。"
+      },
+      {
+        "type": "穿越",
+        "type_en": "Transmigration/Isekai",
+        "description": "現代人穿越到古代的設定，核心吸引力在於「用現代知識碾壓古代」的智力優越感和「在新世界重新開始」的代入感。穿越設定天然製造反差喜劇和觀眾認同感。"
+      },
+      {
+        "type": "系統流（遊戲化）",
+        "type_en": "System/Gamification Genre",
+        "description": "綁定「育兒系統」的設定將劇情遊戲化，積分、任務、商店等機制增加互動感和目標驅動力，吸引習慣遊戲化體驗的年輕受眾。"
+      }
+    ],
+    "styles": [
+      {
+        "type": "爽文",
+        "type_en": "Power Fantasy (Shuangwen)",
+        "description": "以主角不斷升級、打臉對手、逆襲翻盤為核心的爽感驅動風格。節奏快、爽點密集，每個階段都有明確的勝利和獎勵反饋。"
+      },
+      {
+        "type": "甜寵",
+        "type_en": "Sweet Romance",
+        "description": "帝后之間從虐到甜的感情線，特別是後期的獨寵設定（遣散後宮只留女主）滿足了「唯一」的浪漫幻想。虐中帶甜、先苦後甜的節奏最為上癮。"
+      },
+      {
+        "type": "治癒",
+        "type_en": "Healing/Wholesome",
+        "description": "冷宮姐妹團的互助生活、萌娃的日常成長、手工創業的溫馨氛圍，都帶有治癒感。在宮鬥和權謀的底色上增添溫暖的人情味，讓劇情張弛有度。"
+      },
+      {
+        "type": "搞笑",
+        "type_en": "Comedy",
+        "description": "穿越女主的現代吐槽、與系統的討價還價、對古代常識的顛覆性反應等喜劇元素貫穿全劇，保持輕鬆愉快的觀看體驗。"
+      }
+    ],
+    "tags": [
+      "穿越",
+      "廢后逆襲",
+      "系統流",
+      "冷宮養娃",
+      "先虐後甜",
+      "現代知識碾壓",
+      "萌娃神獸",
+      "女性互助",
+      "獨寵",
+      "帝后",
+      "宮鬥",
+      "遣散後宮",
+      "創業致富",
+      "真龍轉世",
+      "古裝甜寵",
+      "爽文逆襲"
+    ],
+    "video_id": "fncW1ycVHU0",
+    "title": "Girl Transmigrated Unfavored Concubine,Unexpectedly Use Modern Knowledge Raise Baby,Emperor Shock!"
+  },
+  "video_data": {
+    "channel": "Petal Drama",
+    "views": 442433,
+    "duration": "PT11086S"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "kb_dialogues_20260315_162505_cd47ff",
+  "category": "dialogues",
+  "subcategory": "",
+  "name": "系統提示型（金手指對白）",
+  "name_en": "System Notification Dialogue",
+  "description": "系統面板彈出的任務/獎勵提示音和文字，通常以機械音或特效字幕呈現。這類'對白'的功能是為觀眾提供明確的進度感和期待感，類似遊戲UI的敘事功能。",
+  "tags": [
+    "製造期待/滿足感",
+    "穿越重生",
+    "系統流",
+    "門派經營",
+    "逆襲翻盤",
+    "打臉爽文",
+    "修仙世界觀",
+    "品牌建設",
+    "廢柴變強",
+    "商業競爭",
+    "團隊養成",
+    "降維打擊",
+    "階梯式升級"
+  ],
+  "examples": [
+    {
+      "drama_title": "【FULL】Transmigrated with a System, I Turned a Starving Sect into a Luxury Brand#minidrama",
+      "video_id": "nhXgWajjeyQ",
+      "excerpt": "（字幕資料不足，基於標題推斷）系統流短劇標配的'叮！任務完成，獎勵已發放'式提示對白。",
+      "context": "製造期待/滿足感"
+    }
+  ],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-15 16:25:05",
+  "updated_at": "2026-03-15 16:25:05"
+}

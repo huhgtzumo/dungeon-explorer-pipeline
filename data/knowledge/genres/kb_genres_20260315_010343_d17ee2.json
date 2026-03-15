@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_d17ee2",
+  "category": "genres",
+  "subcategory": "",
+  "name": "喜劇搞笑",
+  "name_en": "Comedy",
+  "description": "以幽默對白、誇張情境、反差萌為核心，追求密集笑點與歡樂氛圍，可搭配愛情、職場等題材，是短視頻平台上完播率極高的輕鬆類型",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "社恐男生意外成為全校最受歡迎的人",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "倒霉體質女主每天都在離譜事件中求生",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "kb_hooks_20260315_152902_b12a9f",
+  "category": "hooks",
+  "subcategory": "",
+  "name": "類型標籤鉤子",
+  "name_en": "Genre Tag Hook",
+  "description": "頻道描述中直接列出受眾最愛的類型關鍵詞，精準命中短劇核心受眾的口味偏好，降低點擊決策成本。",
+  "tags": [
+    "描述區/頻道介紹",
+    "復仇婚姻",
+    "霸道護妻",
+    "家族仇恨",
+    "仇敵變愛人",
+    "假結婚真動心",
+    "豪門恩怨",
+    "逆襲翻盤",
+    "先婚後愛",
+    "禁忌之戀",
+    "甜寵爽文",
+    "身份反轉",
+    "強強聯手"
+  ],
+  "examples": [
+    {
+      "drama_title": "THE ULTIMATE REVENGE MARRIGE: I WED MY FAMILY'S ENEMY! ♟️His Only Rule: \"No One Touches My Wife.❤️‍🔥",
+      "video_id": "kEFShWq9Wh0",
+      "excerpt": "Sweet romance, angst, rebirth, time travel, and more – high-energy updates every day! Plot twists, heart-fluttering moments, non-stop sweetness and no dull moments",
+      "context": "描述區/頻道介紹"
+    }
+  ],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-15 15:29:02",
+  "updated_at": "2026-03-15 15:29:02"
+}

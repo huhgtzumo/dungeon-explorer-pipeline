@@ -1,0 +1,24 @@
+{
+  "陳默（Mò）": {
+    "name": "陳默（Mò）",
+    "gender": "male",
+    "age_range": "45-50",
+    "hair": "灰白短髮，略顯凌亂（Gray-white short hair, slightly disheveled）",
+    "skin_tone": "偏黃的健康膚色",
+    "outfit": "洗舊的深藍色廚師服，袖口捲起露出燙傷疤痕（Faded navy chef coat, rolled sleeves revealing burn scars）",
+    "body_type": "中等偏瘦，肩膀微駝",
+    "personality": "沉默寡言，把所有情感藏進料理中；表面平靜，內心被妻子三年前失蹤的謎團折磨",
+    "extra": {}
+  },
+  "林若（Ruò）": {
+    "name": "林若（Ruò）",
+    "gender": "female",
+    "age_range": "28-32",
+    "hair": "濕漉漉的黑色長髮披肩（Wet black long hair draped over shoulders）",
+    "skin_tone": "蒼白",
+    "outfit": "米色風衣，右手腕戴一只翠綠玉鐲（Beige trench coat, jade bracelet on right wrist）",
+    "body_type": "纖細",
+    "personality": "表面禮貌疏離，眼神中帶著某種使命感；說話時常停頓，像在斟酌每個字",
+    "extra": {}
+  }
+}

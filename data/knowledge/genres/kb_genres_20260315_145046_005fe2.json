@@ -1,0 +1,40 @@
+{
+  "id": "kb_genres_20260315_145046_005fe2",
+  "category": "genres",
+  "subcategory": "",
+  "name": "懸疑",
+  "name_en": "Mystery/Suspense",
+  "description": "真假千金的身份謎團和入獄冤案的真相調查為劇情注入懸疑元素，維持觀眾的推理興趣",
+  "tags": [
+    "真假千金",
+    "復仇逆襲",
+    "身份揭露",
+    "豪門恩怨",
+    "冤獄平反",
+    "打臉爽劇",
+    "浪漫愛情",
+    "都市豪門",
+    "先虐後甜",
+    "女性崛起",
+    "繼承權爭奪",
+    "英語配音短劇"
+  ],
+  "examples": [
+    {
+      "drama_title": "【ENG DUB】From Convict to Heiress: The Real Daughter's Revenge",
+      "video_id": "3EZ75VoTRAI",
+      "excerpt": "真假千金的身份謎團和入獄冤案的真相調查為劇情注入懸疑元素，維持觀眾的推理興趣",
+      "context": ""
+    },
+    {
+      "drama_title": "申浩男&朱丽岚 | 她是秦家灭门案幸存者，化名寻凶复仇时，遇上深不可测的他。二人在试探中相互吸引[MULTI SUB | FULL]#MiniDrama #精彩大陆短剧",
+      "video_id": "oEsKO6n35Gw",
+      "excerpt": "滅門案真相、臥底身份、多重陰謀構成層層懸念，每一集都有新的信息揭露推翻觀眾的認知，驅動持續觀看。",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-15 14:50:46",
+  "updated_at": "2026-03-15 15:01:40"
+}

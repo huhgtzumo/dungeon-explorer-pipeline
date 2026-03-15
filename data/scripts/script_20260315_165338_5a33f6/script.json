@@ -1,0 +1,224 @@
+{
+  "episode_number": 1,
+  "title": "最後一道菜",
+  "title_en": "The Last Dish",
+  "duration_sec": 60,
+  "scenes": [
+    {
+      "scene_number": 1,
+      "duration_sec": 5,
+      "location": "深夜食堂「默食」——吧台內側",
+      "location_en": "Late-night eatery 'Mo Shi' — behind the counter",
+      "characters_present": [
+        "陳默（Mò）"
+      ],
+      "action_zh": "特寫：一雙佈滿燙傷疤痕的手，緩緩將牆上褪色的手寫菜單一張張取下。最後一張被摘掉時，露出牆面上菜單曾經掛過的乾淨痕跡。陳默灰白短髮凌亂，穿著洗舊的深藍色廚師服，袖口捲起。他將菜單疊好，目光停在門口掛著的「結業」紙牌上。",
+      "action_en": "Close-up: a pair of hands covered in burn scars slowly removes faded handwritten menus from the wall one by one. As the last sheet comes off, a clean outline remains. Chen Mo — gray-white disheveled short hair, faded navy chef coat with rolled sleeves — stacks the menus neatly, his gaze drifting to the 'CLOSED PERMANENTLY' sign hanging on the door.",
+      "dialogue_zh": "",
+      "dialogue_en": "",
+      "emotion": "孤寂平靜",
+      "camera_angle": "close-up",
+      "lighting": "warm"
+    },
+    {
+      "scene_number": 2,
+      "duration_sec": 5,
+      "location": "深夜食堂「默食」——門口",
+      "location_en": "Mo Shi — entrance",
+      "characters_present": [
+        "陳默（Mò）",
+        "林若（Ruò）"
+      ],
+      "action_zh": "門鈴「叮」一聲響。陳默頭也不抬：「打烊了。」門推開，雨聲灌入。鏡頭從陳默肩膀越過，拍到林若站在門口——蒼白纖細，濕漉漉的黑色長髮披在肩上，米色風衣滴著水，右手腕一只翠綠玉鐲格外醒目。她沒有離開。",
+      "action_en": "The door chime rings. Without looking up, Chen Mo says: 'We're closed.' The door pushes open; rain floods in. Over-shoulder from Chen Mo reveals Lin Ruo standing in the doorway — pale and slender, wet black long hair draped over her shoulders, beige trench coat dripping, the jade bracelet on her right wrist catching the light. She doesn't leave.",
+      "dialogue_zh": "陳默：「打烊了。」",
+      "dialogue_en": "Chen Mo: 'We're closed.'",
+      "emotion": "警覺試探",
+      "camera_angle": "over-shoulder",
+      "lighting": "cold"
+    },
+    {
+      "scene_number": 3,
+      "duration_sec": 7,
+      "location": "深夜食堂「默食」——吧台",
+      "location_en": "Mo Shi — bar counter",
+      "characters_present": [
+        "陳默（Mò）",
+        "林若（Ruò）"
+      ],
+      "action_zh": "林若在吧台坐下，雨水從髮尾滴落在木台面上。她開口說話時有明顯的停頓，像在斟酌每個字。陳默終於抬頭，眼神防備。",
+      "action_en": "Lin Ruo sits at the counter. Rainwater drips from her hair tips onto the wooden surface. She speaks with deliberate pauses, as if weighing every word. Chen Mo finally looks up, guarded.",
+      "dialogue_zh": "林若：「……我想點一道菜。醬燒豆腐。」",
+      "dialogue_en": "Lin Ruo: '...I'd like to order something. Braised tofu in sauce.'",
+      "emotion": "警覺試探",
+      "camera_angle": "medium",
+      "lighting": "warm"
+    },
+    {
+      "scene_number": 4,
+      "duration_sec": 6,
+      "location": "深夜食堂「默食」——吧台",
+      "location_en": "Mo Shi — bar counter",
+      "characters_present": [
+        "陳默（Mò）"
+      ],
+      "action_zh": "陳默整個人僵住。手中摺好的菜單滑落地面。特寫他的眼睛——瞳孔微微放大，呼吸變得急促。鏡頭快速切到牆面上那個菜單曾掛著的空白處，再切回他的臉。",
+      "action_en": "Chen Mo freezes. The folded menus slip from his hand to the floor. Close-up on his eyes — pupils dilating, breathing quickening. Quick cut to the blank wall where menus once hung, then back to his face.",
+      "dialogue_zh": "陳默：「……你說什麼？」",
+      "dialogue_en": "Chen Mo: '...What did you say?'",
+      "emotion": "震驚",
+      "camera_angle": "close-up",
+      "lighting": "dramatic"
+    },
+    {
+      "scene_number": 5,
+      "duration_sec": 6,
+      "location": "深夜食堂「默食」——吧台",
+      "location_en": "Mo Shi — bar counter",
+      "characters_present": [
+        "陳默（Mò）",
+        "林若（Ruò）"
+      ],
+      "action_zh": "陳默目光猛地鎖定林若右手腕上的翠綠玉鐲。他繞出吧台，一把抓住她的手腕，盯著那只鐲子。他的手在發抖，肩膀微駝的身體繃得像一張弓。",
+      "action_en": "Chen Mo's gaze locks onto the jade bracelet on Lin Ruo's right wrist. He comes around the counter and grabs her wrist, staring at the bracelet. His hands tremble; his slightly hunched frame is taut as a bowstring.",
+      "dialogue_zh": "陳默：「這只鐲子……你到底是誰？你怎麼會知道那道菜？」",
+      "dialogue_en": "Chen Mo: 'This bracelet... Who are you? How do you know about that dish?'",
+      "emotion": "震驚憤怒",
+      "camera_angle": "close-up",
+      "lighting": "dramatic"
+    },
+    {
+      "scene_number": 6,
+      "duration_sec": 5,
+      "location": "深夜食堂「默食」——吧台",
+      "location_en": "Mo Shi — bar counter",
+      "characters_present": [
+        "林若（Ruò）"
+      ],
+      "action_zh": "林若沒有掙脫，也沒有退縮。她用空出的左手從風衣口袋裡掏出手機，眼神帶著某種沉重的使命感。她按下播放鍵。",
+      "action_en": "Lin Ruo doesn't pull away or flinch. With her free left hand, she takes a phone from her coat pocket, eyes carrying a heavy sense of purpose. She presses play.",
+      "dialogue_zh": "林若：「……她讓我把這個帶給你。」",
+      "dialogue_en": "Lin Ruo: '...She asked me to bring you this.'",
+      "emotion": "沉重",
+      "camera_angle": "medium",
+      "lighting": "dramatic"
+    },
+    {
+      "scene_number": 7,
+      "duration_sec": 8,
+      "location": "深夜食堂「默食」——吧台",
+      "location_en": "Mo Shi — bar counter",
+      "characters_present": [
+        "陳默（Mò）",
+        "林若（Ruò）"
+      ],
+      "action_zh": "手機裡傳出一個女人溫柔卻虛弱的聲音。陳默鬆開林若的手腕，像被抽走了所有力氣，跌坐在吧台椅上。鏡頭停在他的臉上——眼眶泛紅，嘴唇顫抖，淚水無聲滑落。窗外霓虹在雨中模糊成光暈。",
+      "action_en": "A woman's gentle but frail voice plays from the phone. Chen Mo releases Lin Ruo's wrist as if all strength has left him, collapsing onto a bar stool. Camera holds on his face — reddening eyes, trembling lips, tears falling silently. Neon lights outside blur into halos in the rain.",
+      "dialogue_zh": "語音（妻子）：「阿默……不是你的錯。離開，是我能為你做的……最後一件事。你要好好吃飯。」",
+      "dialogue_en": "Voice (wife): 'Mo... it's not your fault. Leaving was the last thing... I could do for you. Please eat well.'",
+      "emotion": "崩潰",
+      "camera_angle": "close-up",
+      "lighting": "cold"
+    },
+    {
+      "scene_number": 8,
+      "duration_sec": 6,
+      "location": "深夜食堂「默食」——吧台",
+      "location_en": "Mo Shi — bar counter",
+      "characters_present": [
+        "陳默（Mò）",
+        "林若（Ruò）"
+      ],
+      "action_zh": "林若從風衣內袋取出一個牛皮紙信封，輕輕放在吧台上。她站起身，最後看了陳默一眼，轉身走向門口。門鈴再次響起，雨聲隨著門關上而隔絕。",
+      "action_en": "Lin Ruo takes a kraft paper envelope from inside her coat and places it gently on the counter. She stands, gives Chen Mo one last look, turns, and walks to the door. The chime rings again; the rain is sealed out as the door shuts.",
+      "dialogue_zh": "林若：「她說……你會知道什麼時候該打開。」",
+      "dialogue_en": "Lin Ruo: 'She said... you'll know when to open it.'",
+      "emotion": "哀傷中的使命完成",
+      "camera_angle": "medium",
+      "lighting": "warm"
+    },
+    {
+      "scene_number": 9,
+      "duration_sec": 7,
+      "location": "深夜食堂「默食」——門口",
+      "location_en": "Mo Shi — entrance",
+      "characters_present": [
+        "陳默（Mò）"
+      ],
+      "action_zh": "空蕩的店裡只剩陳默一人。他坐了很久，然後緩緩起身。腳步沉重地走到門口。他的手停在「結業」的紙牌上，指尖摩挲著紙面。漫長的一秒後，他將牌子翻了過去——露出另一面：「營業中」。",
+      "action_en": "The empty shop holds only Chen Mo. He sits for a long moment, then slowly rises. Heavy footsteps carry him to the door. His hand rests on the 'CLOSED PERMANENTLY' sign, fingertips tracing the paper. After a long second, he flips it — revealing the other side: 'OPEN'.",
+      "dialogue_zh": "",
+      "dialogue_en": "",
+      "emotion": "哀傷中的釋然",
+      "camera_angle": "medium",
+      "lighting": "warm"
+    },
+    {
+      "scene_number": 10,
+      "duration_sec": 4,
+      "location": "深夜食堂「默食」——吧台",
+      "location_en": "Mo Shi — bar counter",
+      "characters_present": [],
+      "action_zh": "最後一個鏡頭：吧台上的牛皮紙信封靜靜躺在那裡，未拆開。信封角落隱約透出裡面有照片的輪廓。畫面緩緩變暗，雨聲漸弱。",
+      "action_en": "Final shot: the kraft paper envelope lies untouched on the counter. Through the corner, the faint outline of a photograph is visible inside. The image slowly fades to black as the rain quiets.",
+      "dialogue_zh": "",
+      "dialogue_en": "",
+      "emotion": "懸念",
+      "camera_angle": "close-up",
+      "lighting": "warm"
+    }
+  ],
+  "subtitle_zh": [
+    "（雨夜，「默食」深夜食堂內。陳默沉默地將牆上的菜單一張張摘下。門口掛著「結業」的牌子。）",
+    "（門鈴響起。）陳默：「打烊了。」（門被推開，一名淋著雨的年輕女子站在門口。）",
+    "林若：「……我想點一道菜。醬燒豆腐。」",
+    "（陳默僵住，手中菜單滑落。）陳默：「……你說什麼？」",
+    "（陳默盯著她手腕上的玉鐲。）陳默：「這只鐲子……你到底是誰？你怎麼會知道那道菜？」",
+    "林若：「……她讓我把這個帶給你。」（她按下手機播放鍵。）",
+    "語音：「阿默……不是你的錯。離開，是我能為你做的……最後一件事。你要好好吃飯。」",
+    "（林若放下一個信封。）林若：「她說……你會知道什麼時候該打開。」（林若離開。）",
+    "（陳默走到門口，將「結業」的牌子翻回「營業中」。）",
+    "（吧台上，信封靜靜躺著，未拆開。畫面漸暗。）"
+  ],
+  "subtitle_en": [
+    "(Rainy night inside 'Mo Shi' late-night eatery. Chen Mo silently removes handwritten menus from the wall one by one. A 'CLOSED PERMANENTLY' sign hangs on the door.)",
+    "(Door chime rings.) Chen Mo: 'We're closed.' (The door opens. A rain-soaked young woman stands in the doorway.)",
+    "Lin Ruo: '...I'd like to order something. Braised tofu in sauce.'",
+    "(Chen Mo freezes. The menus slip from his hands.) Chen Mo: '...What did you say?'",
+    "(Chen Mo stares at the jade bracelet on her wrist.) Chen Mo: 'This bracelet... Who are you? How do you know about that dish?'",
+    "Lin Ruo: '...She asked me to bring you this.' (She presses play on her phone.)",
+    "Voice: 'Mo... it's not your fault. Leaving was the last thing... I could do for you. Please eat well.'",
+    "(Lin Ruo sets down an envelope.) Lin Ruo: 'She said... you'll know when to open it.' (Lin Ruo exits.)",
+    "(Chen Mo walks to the door and flips the 'CLOSED PERMANENTLY' sign back to 'OPEN'.)",
+    "(On the counter, the envelope lies untouched. Fade to black.)"
+  ],
+  "characters": [
+    {
+      "name": "陳默（Mò）",
+      "name_en": "Chen Mo",
+      "gender": "male",
+      "age_range": "45-50",
+      "hair": "灰白短髮，略顯凌亂（Gray-white short hair, slightly disheveled）",
+      "skin_tone": "偏黃的健康膚色",
+      "outfit": "洗舊的深藍色廚師服，袖口捲起露出燙傷疤痕（Faded navy chef coat, rolled sleeves revealing burn scars）",
+      "body_type": "中等偏瘦，肩膀微駝",
+      "personality": "沉默寡言，把所有情感藏進料理中；表面平靜，內心被妻子三年前失蹤的謎團折磨",
+      "role": "protagonist",
+      "arc": "從封閉自我、用關店逃避傷痛，到被迫直面真相後選擇繼續活下去"
+    },
+    {
+      "name": "林若（Ruò）",
+      "name_en": "Lin Ruo",
+      "gender": "female",
+      "age_range": "28-32",
+      "hair": "濕漉漉的黑色長髮披肩（Wet black long hair draped over shoulders）",
+      "skin_tone": "蒼白",
+      "outfit": "米色風衣，右手腕戴一只翠綠玉鐲（Beige trench coat, jade bracelet on right wrist）",
+      "body_type": "纖細",
+      "personality": "表面禮貌疏離，眼神中帶著某種使命感；說話時常停頓，像在斟酌每個字",
+      "role": "supporting",
+      "arc": "從偽裝的陌生人，到揭露自己是亡妻最後救助過的病患，帶來妻子最後的訊息"
+    }
+  ],
+  "script_id": "script_20260315_165338_5a33f6"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_84ecd2",
+  "category": "genres",
+  "subcategory": "",
+  "name": "體育競技",
+  "name_en": "Sports",
+  "description": "以某項體育運動為載體，展現運動員的刻苦訓練、團隊合作與賽場逆轉，融合青春熱血與勵志精神，比賽場面緊張刺激，適合燃系觀眾",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "被裁掉的籃球員組建草根隊挑戰職業聯賽",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "花滑天才少女克服傷病重返冰場的故事",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

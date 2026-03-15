@@ -1,0 +1,2283 @@
+"""短劇自動化 Pipeline — Web Dashboard (v2: database-style workflow)
+
+啟動方式: python -m src.web.app
+"""
+
+from __future__ import annotations
+
+import asyncio
+import fcntl
+import json
+import logging
+import os
+import tempfile
+import traceback
+import uuid
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime
+from pathlib import Path
+from typing import Any
+
+import uvicorn
+from fastapi import FastAPI, BackgroundTasks, Request
+from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
+
+from ..utils.config import load_config, PROJECT_ROOT
+from ..utils import index_db
+
+logger = logging.getLogger(__name__)
+
+# ──────────────────────────── Thread Pool for CPU/IO-bound tasks ──────────────
+_executor = ThreadPoolExecutor(max_workers=4)
+
+
+def _run_in_thread(fn, *args):
+    """Run a blocking function in a background thread so it doesn't block the event loop."""
+    import threading
+    t = threading.Thread(target=fn, args=args, daemon=True)
+    t.start()
+
+
+# ──────────────────────────── Video Reviews Helper ────────────────────────────
+
+VIDEO_REVIEWS_PATH = PROJECT_ROOT / "data" / "video_reviews.json"
+PENDING_DIR = PROJECT_ROOT / "data" / "analyses" / "pending"
+
+
+def _read_video_reviews() -> dict:
+    """Read video_reviews.json with shared lock."""
+    VIDEO_REVIEWS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    if not VIDEO_REVIEWS_PATH.exists():
+        return {}
+    with open(VIDEO_REVIEWS_PATH, "r", encoding="utf-8") as f:
+        fcntl.flock(f, fcntl.LOCK_SH)
+        try:
+            data = json.load(f)
+        except json.JSONDecodeError:
+            data = {}
+        finally:
+            fcntl.flock(f, fcntl.LOCK_UN)
+    return data
+
+
+def _write_video_reviews(data: dict) -> None:
+    """Write video_reviews.json atomically: temp file + rename."""
+    VIDEO_REVIEWS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    tmp_fd, tmp_path = tempfile.mkstemp(
+        dir=VIDEO_REVIEWS_PATH.parent, suffix=".tmp", prefix=".reviews_"
+    )
+    try:
+        with os.fdopen(tmp_fd, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        os.replace(tmp_path, VIDEO_REVIEWS_PATH)
+    except BaseException:
+        try:
+            os.unlink(tmp_path)
+        except OSError:
+            pass
+        raise
+
+
+def _update_video_review(video_id: str, updates: dict) -> None:
+    """Atomic read-modify-write for a single video review entry."""
+    VIDEO_REVIEWS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    lock_path = VIDEO_REVIEWS_PATH.with_suffix(".lock")
+    with open(lock_path, "w") as lock_f:
+        fcntl.flock(lock_f, fcntl.LOCK_EX)
+        try:
+            data = _read_video_reviews()
+            if video_id not in data:
+                data[video_id] = {}
+            data[video_id].update(updates)
+            _write_video_reviews(data)
+        finally:
+            fcntl.flock(lock_f, fcntl.LOCK_UN)
+
+app = FastAPI(title="短劇 Pipeline Dashboard", version="2.0.0")
+
+# Static files
+STATIC_DIR = Path(__file__).parent / "static"
+app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
+
+# In-memory task store
+_tasks: dict[str, dict] = {}
+_MAX_TASKS = 200  # Keep at most this many tasks to prevent memory leak
+
+# Cached KnowledgeBase instance (lazy init)
+_kb_instance = None
+
+
+def _get_kb():
+    """Return a cached KnowledgeBase instance."""
+    global _kb_instance
+    if _kb_instance is None:
+        from ..knowledge.knowledge_base import KnowledgeBase
+        _kb_instance = KnowledgeBase()
+    return _kb_instance
+
+
+def _safe_read_json(fpath: Path, default=None):
+    """Read and parse a JSON file, returning default on any error."""
+    try:
+        return json.loads(fpath.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as e:
+        logger.warning("Failed to read JSON file %s: %s", fpath, e)
+        return default
+
+
+def _now() -> str:
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+
+def _cleanup_tasks() -> None:
+    """Remove oldest finished tasks when the store exceeds _MAX_TASKS."""
+    if len(_tasks) <= _MAX_TASKS:
+        return
+    finished = [
+        (tid, t) for tid, t in _tasks.items()
+        if t["status"] in ("done", "error")
+    ]
+    finished.sort(key=lambda x: x[1].get("finished_at") or "")
+    to_remove = len(_tasks) - _MAX_TASKS
+    for tid, _ in finished[:to_remove]:
+        del _tasks[tid]
+
+
+# ──────────────────────────── Pages ────────────────────────────
+
+@app.get("/", response_class=HTMLResponse)
+async def index():
+    return (STATIC_DIR / "index.html").read_text(encoding="utf-8")
+
+
+# ──────────────────────────── Index API ────────────────────────────
+
+@app.get("/api/index")
+async def get_index():
+    """回傳完整 index.json"""
+    return index_db.read_index()
+
+
+@app.get("/api/index/{collection}")
+async def get_collection(collection: str):
+    """回傳某個 collection 的所有條目"""
+    return {"data": index_db.list_entries(collection)}
+
+
+# ──────────────────────────── Crawl API ────────────────────────────
+
+@app.get("/api/crawls")
+async def list_crawls():
+    return {"data": index_db.list_entries("crawls")}
+
+
+@app.get("/api/crawls/{crawl_id}/videos")
+async def get_crawl_videos(crawl_id: str):
+    """回傳某次爬蟲的所有視頻"""
+    entry = index_db.get_entry("crawls", crawl_id)
+    if not entry:
+        return JSONResponse({"error": "爬蟲記錄不存在"}, status_code=404)
+    fpath = PROJECT_ROOT / entry["file"]
+    if not fpath.exists():
+        return {"data": []}
+    return {"data": _safe_read_json(fpath, [])}
+
+
+@app.get("/api/all-videos")
+async def get_all_videos():
+    """Return ALL videos across ALL crawls, with KB status (analyzed or not)."""
+    crawls = index_db.list_entries("crawls")
+    if not crawls:
+        return {"data": []}
+
+    # Load all videos and dedup by video_id
+    seen: dict[str, dict] = {}
+    for crawl in crawls:
+        fpath = PROJECT_ROOT / crawl["file"]
+        if not fpath.exists():
+            continue
+        try:
+            videos = json.loads(fpath.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        for v in videos:
+            vid = v.get("video_id", "")
+            if vid and vid not in seen:
+                seen[vid] = {**v, "_crawl_ids": [crawl["id"]]}
+            elif vid:
+                seen[vid]["_crawl_ids"].append(crawl["id"])
+
+    # Check KB status
+    kb = _get_kb()
+
+    # Check video reviews
+    reviews = _read_video_reviews()
+
+    result = []
+    for vid, v in seen.items():
+        in_kb = kb.has_drama(vid)
+        review = reviews.get(vid, {})
+        review_status = review.get("status", "none")
+        result.append({
+            **v,
+            "kb_analyzed": in_kb,
+            "review_status": review_status,
+        })
+
+    return {"data": result}
+
+
+@app.delete("/api/crawls/{crawl_id}/videos/{video_id}")
+async def delete_crawl_video(crawl_id: str, video_id: str):
+    """從爬蟲結果中刪除指定視頻"""
+    entry = index_db.get_entry("crawls", crawl_id)
+    if not entry:
+        return JSONResponse({"error": "爬蟲記錄不存在"}, status_code=404)
+    fpath = PROJECT_ROOT / entry["file"]
+    if not fpath.exists():
+        return JSONResponse({"error": "爬蟲檔案不存在"}, status_code=404)
+    videos = _safe_read_json(fpath, [])
+    before = len(videos)
+    videos = [v for v in videos if v.get("video_id") != video_id]
+    if len(videos) == before:
+        return JSONResponse({"error": "視頻不存在"}, status_code=404)
+    fpath.write_text(json.dumps(videos, ensure_ascii=False, indent=2), encoding="utf-8")
+    # Update count in index
+    index_db.update_entry("crawls", crawl_id, {"count": len(videos)})
+    return {"success": True, "remaining": len(videos)}
+
+
+@app.post("/api/trigger/crawl")
+async def trigger_crawl(request: Request):
+    """觸發爬蟲：body={keyword, tags}"""
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    keyword = body.get("keyword", "").strip()
+    tags = body.get("tags", [])
+    if keyword and not tags:
+        tags = [keyword]
+
+    task_id = _create_task("crawl", keyword=keyword)
+    _run_in_thread(_run_crawl, task_id, keyword, tags)
+    return {"task_id": task_id, "status": "started"}
+
+
+@app.post("/api/trigger/extract-subtitles")
+async def trigger_extract_subtitles(request: Request):
+    """觸發字幕提取：body={crawl_id, video_ids (optional)}"""
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    crawl_id = body.get("crawl_id", "")
+    video_ids = body.get("video_ids", [])
+
+    if not crawl_id:
+        return JSONResponse({"error": "需要 crawl_id"}, status_code=400)
+
+    task_id = _create_task("subtitle-extract", crawl_id=crawl_id)
+    _run_in_thread(_run_subtitle_extract, task_id, crawl_id, video_ids)
+    return {"task_id": task_id, "status": "started"}
+
+
+@app.post("/api/trigger/whisper-extract")
+async def trigger_whisper_extract(request: Request):
+    """手動觸發 Whisper 轉錄單個視頻：body={crawl_id, video_id}"""
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    crawl_id = body.get("crawl_id", "")
+    video_id = body.get("video_id", "")
+
+    if not crawl_id or not video_id:
+        return JSONResponse({"error": "需要 crawl_id 和 video_id"}, status_code=400)
+
+    task_id = _create_task("whisper-extract", crawl_id=crawl_id, video_id=video_id)
+    _run_in_thread(_run_whisper_extract, task_id, crawl_id, video_id)
+    return {"task_id": task_id, "status": "started"}
+
+
+@app.get("/api/crawls/{crawl_id}/subtitle-status")
+async def get_subtitle_status(crawl_id: str):
+    """回傳某次爬蟲中每個視頻的字幕提取狀態"""
+    entry = index_db.get_entry("crawls", crawl_id)
+    if not entry:
+        return JSONResponse({"error": "爬蟲記錄不存在"}, status_code=404)
+    fpath = PROJECT_ROOT / entry["file"]
+    if not fpath.exists():
+        return {"data": {}}
+    videos = _safe_read_json(fpath, [])
+    status = {}
+    for v in videos:
+        vid = v.get("video_id", "")
+        if not vid:
+            continue
+        sub = v.get("subtitle")
+        if sub and sub.get("text"):
+            status[vid] = {
+                "status": "done",
+                "char_count": len(sub["text"]),
+                "method": sub.get("method_used", ""),
+                "language": sub.get("language", ""),
+            }
+        elif sub and sub.get("status") == "extracting":
+            status[vid] = {"status": "extracting", "char_count": 0}
+        elif sub and sub.get("status") == "pending":
+            status[vid] = {"status": "pending", "char_count": 0, "note": sub.get("note", "")}
+        elif sub and sub.get("status") == "failed":
+            status[vid] = {"status": "failed", "char_count": 0, "error": sub.get("error", "")}
+        else:
+            status[vid] = {"status": "none", "char_count": 0}
+    return {"data": status}
+
+
+@app.get("/api/crawls/{crawl_id}/subtitle-text/{video_id}")
+async def get_subtitle_text(crawl_id: str, video_id: str):
+    """回傳某個視頻的完整字幕文本"""
+    entry = index_db.get_entry("crawls", crawl_id)
+    if not entry:
+        return JSONResponse({"error": "爬蟲記錄不存在"}, status_code=404)
+    fpath = PROJECT_ROOT / entry["file"]
+    if not fpath.exists():
+        return JSONResponse({"error": "檔案不存在"}, status_code=404)
+    videos = _safe_read_json(fpath, [])
+    for v in videos:
+        if v.get("video_id") == video_id:
+            sub = v.get("subtitle", {})
+            return {
+                "text": sub.get("text", ""),
+                "char_count": sub.get("char_count", 0),
+                "method_used": sub.get("method_used", ""),
+            }
+    return JSONResponse({"error": "視頻不存在"}, status_code=404)
+
+
+def _run_crawl(task_id: str, keyword: str, tags: list[str]):
+    task = _tasks[task_id]
+    try:
+        task["logs"].append(f"[{_now()}] 開始爬蟲搜尋...")
+        _set_progress(task, 0, 2, "搜尋中...")
+
+        from ..crawler.youtube_search import batch_search, save_crawl
+        queries = _keyword_to_queries(keyword) if keyword else None
+        if keyword:
+            task["logs"].append(f"[{_now()}] 關鍵詞: {keyword} → 搜尋: {', '.join(queries)}")
+
+        _set_progress(task, 1, 2, "搜尋 YouTube...")
+        results = batch_search(queries=queries, max_results=20, max_duration=0)
+        results = results[:10]
+
+        crawl_id = save_crawl(results, keyword=keyword, tags=tags)
+
+        task["result"] = {
+            "crawl_id": crawl_id,
+            "count": len(results),
+            "titles": [r["title"] for r in results[:5]],
+        }
+        task["logs"].append(f"[{_now()}] 找到 {len(results)} 部短劇 → {crawl_id}")
+
+        # Auto-trigger YouTube subtitle extraction after crawl (YouTube only, no Whisper)
+        if results:
+            task["logs"].append(f"[{_now()}] 開始提取 YouTube 內建字幕...")
+            _set_progress(task, 2, 3, "提取字幕中...")
+            from ..crawler.subtitle_extractor import extract_subtitle
+
+            entry = index_db.get_entry("crawls", crawl_id)
+            fpath = PROJECT_ROOT / entry["file"]
+            videos = _safe_read_json(fpath, [])
+            total_vids = len(videos)
+            extracted = 0
+            for vi, v in enumerate(videos):
+                vid = v.get("video_id", "")
+                if not vid:
+                    continue
+                title_short = v.get("title", vid)[:30]
+                task["logs"].append(f"[{_now()}] [{vi+1}/{total_vids}] 字幕提取: {title_short}")
+                try:
+                    result_sub = extract_subtitle(vid, method="youtube")
+                    text = result_sub.get("text", "")
+                    method_used = result_sub.get("method_used", "none")
+                    lang = result_sub.get("language", "")
+                    if text:
+                        v["subtitle"] = {
+                            "text": text,
+                            "method_used": method_used,
+                            "segment_count": len(result_sub.get("segments", [])),
+                            "char_count": len(text),
+                            "language": lang,
+                            "status": "done",
+                        }
+                        extracted += 1
+                        task["logs"].append(f"[{_now()}]   → ✅ {len(text)} 字 [{lang}]（{method_used}）")
+                    else:
+                        v["subtitle"] = {"status": "pending", "note": f"無字幕（method_used={method_used}）"}
+                        task["logs"].append(f"[{_now()}]   → ⏸ 無字幕（method={method_used}），標記待處理")
+                except Exception as sub_e:
+                    import traceback
+                    tb = traceback.format_exc()
+                    v["subtitle"] = {"status": "pending", "note": f"字幕提取異常: {sub_e}"}
+                    task["logs"].append(f"[{_now()}]   → ⏸ 提取異常: {sub_e}")
+                    task["logs"].append(f"[{_now()}]   traceback: {tb[:200]}")
+                fpath.write_text(json.dumps(videos, ensure_ascii=False, indent=2), encoding="utf-8")
+                # Rate limit: 10 秒間隔防止 YouTube IP 封鎖
+                if vi < total_vids - 1:
+                    import time
+                    time.sleep(10)
+
+            pending_count = total_vids - extracted
+            task["logs"].append(f"[{_now()}] 字幕提取完成: {extracted} 部有內建字幕, {pending_count} 部待 Whisper 轉錄")
+
+        _set_progress(task, 3, 3, "完成")
+        task["status"] = "done"
+    except Exception as e:
+        task["status"] = "error"
+        task["error"] = str(e)
+        task["logs"].append(f"[{_now()}] 錯誤: {e}")
+        logger.error(traceback.format_exc())
+    finally:
+        task["finished_at"] = _now()
+
+
+def _run_subtitle_extract(task_id: str, crawl_id: str, video_ids: list[str]):
+    """Background task: extract subtitles for videos in a crawl."""
+    task = _tasks[task_id]
+    try:
+        entry = index_db.get_entry("crawls", crawl_id)
+        if not entry:
+            raise ValueError(f"爬蟲記錄不存在: {crawl_id}")
+        fpath = PROJECT_ROOT / entry["file"]
+        if not fpath.exists():
+            raise ValueError(f"爬蟲檔案不存在: {fpath}")
+
+        videos = _safe_read_json(fpath, [])
+        if not videos:
+            raise ValueError("爬蟲結果為空")
+
+        # Filter to requested video_ids, or all if not specified
+        targets = []
+        for v in videos:
+            vid = v.get("video_id", "")
+            if not vid:
+                continue
+            if video_ids and vid not in video_ids:
+                continue
+            # Skip already extracted
+            sub = v.get("subtitle")
+            if sub and sub.get("text"):
+                continue
+            targets.append(v)
+
+        if not targets:
+            task["logs"].append(f"[{_now()}] 所有視頻字幕已提取，無需重複")
+            task["status"] = "done"
+            task["result"] = {"extracted": 0, "total": 0}
+            return
+
+        total = len(targets)
+        task["logs"].append(f"[{_now()}] 開始字幕提取，共 {total} 部視頻...")
+
+        from ..crawler.subtitle_extractor import extract_subtitle
+
+        extracted_count = 0
+        for i, target in enumerate(targets):
+            vid = target["video_id"]
+            title = target.get("title", vid)[:40]
+            _set_progress(task, i, total, f"提取字幕: {title}...")
+            task["logs"].append(f"[{_now()}] [{i+1}/{total}] {title}")
+
+            # Mark as extracting in crawl JSON
+            for v in videos:
+                if v.get("video_id") == vid:
+                    v["subtitle"] = {"status": "extracting"}
+                    break
+            fpath.write_text(json.dumps(videos, ensure_ascii=False, indent=2), encoding="utf-8")
+
+            try:
+                result = extract_subtitle(vid, method="auto")
+                text = result.get("text", "")
+                char_count = len(text)
+
+                # Update the video entry in crawl JSON
+                for v in videos:
+                    if v.get("video_id") == vid:
+                        v["subtitle"] = {
+                            "text": text,
+                            "method_used": result.get("method_used", ""),
+                            "segment_count": len(result.get("segments", [])),
+                            "char_count": char_count,
+                            "status": "done",
+                        }
+                        break
+                fpath.write_text(json.dumps(videos, ensure_ascii=False, indent=2), encoding="utf-8")
+                extracted_count += 1
+                task["logs"].append(
+                    f"[{_now()}]   → 字幕提取完畢，總字數：{char_count} 字（{result.get('method_used', '?')}）"
+                )
+            except Exception as e:
+                for v in videos:
+                    if v.get("video_id") == vid:
+                        v["subtitle"] = {"status": "failed", "error": str(e)}
+                        break
+                fpath.write_text(json.dumps(videos, ensure_ascii=False, indent=2), encoding="utf-8")
+                task["logs"].append(f"[{_now()}]   → 字幕提取失敗: {e}")
+
+            # Rate limit: 10 秒間隔防止 YouTube IP 封鎖
+            if i < total - 1:
+                import time
+                time.sleep(10)
+
+        _set_progress(task, total, total, "完成")
+        task["result"] = {"extracted": extracted_count, "total": total}
+        task["logs"].append(
+            f"[{_now()}] 字幕提取完成: {extracted_count}/{total} 部成功"
+        )
+        task["status"] = "done"
+    except Exception as e:
+        task["status"] = "error"
+        task["error"] = str(e)
+        task["logs"].append(f"[{_now()}] 錯誤: {e}")
+        logger.error(traceback.format_exc())
+    finally:
+        task["finished_at"] = _now()
+
+
+def _run_whisper_extract(task_id: str, crawl_id: str, video_id: str):
+    """Background task: Whisper transcribe a single video."""
+    task = _tasks[task_id]
+    try:
+        entry = index_db.get_entry("crawls", crawl_id)
+        if not entry:
+            raise ValueError(f"爬蟲記錄不存在: {crawl_id}")
+        fpath = PROJECT_ROOT / entry["file"]
+        if not fpath.exists():
+            raise ValueError(f"爬蟲檔案不存在: {fpath}")
+
+        videos = _safe_read_json(fpath, [])
+        target = None
+        for v in videos:
+            if v.get("video_id") == video_id:
+                target = v
+                break
+        if not target:
+            raise ValueError(f"視頻不存在: {video_id}")
+
+        title = target.get("title", video_id)[:40]
+        task["logs"].append(f"[{_now()}] 開始 Whisper 轉錄: {title}")
+        _set_progress(task, 0, 1, f"Whisper 轉錄中: {title}...")
+
+        # Mark as extracting
+        target["subtitle"] = {"status": "extracting"}
+        fpath.write_text(json.dumps(videos, ensure_ascii=False, indent=2), encoding="utf-8")
+
+        from ..crawler.subtitle_extractor import extract_subtitle
+        result = extract_subtitle(video_id, method="whisper")
+        text = result.get("text", "")
+        char_count = len(text)
+
+        if text:
+            target["subtitle"] = {
+                "text": text,
+                "method_used": result.get("method_used", "whisper"),
+                "segment_count": len(result.get("segments", [])),
+                "char_count": char_count,
+                "status": "done",
+            }
+            task["logs"].append(f"[{_now()}] ✅ Whisper 轉錄完畢，總字數：{char_count} 字")
+        else:
+            target["subtitle"] = {"status": "failed", "error": "Whisper 轉錄無結果"}
+            task["logs"].append(f"[{_now()}] ❌ Whisper 轉錄無結果")
+
+        fpath.write_text(json.dumps(videos, ensure_ascii=False, indent=2), encoding="utf-8")
+        _set_progress(task, 1, 1, "完成")
+        task["result"] = {"char_count": char_count}
+        task["status"] = "done"
+    except Exception as e:
+        try:
+            entry = index_db.get_entry("crawls", crawl_id)
+            if entry:
+                fpath = PROJECT_ROOT / entry["file"]
+                videos = _safe_read_json(fpath, [])
+                for v in videos:
+                    if v.get("video_id") == video_id:
+                        v["subtitle"] = {"status": "failed", "error": str(e)}
+                        break
+                fpath.write_text(json.dumps(videos, ensure_ascii=False, indent=2), encoding="utf-8")
+        except Exception:
+            pass
+        task["status"] = "error"
+        task["error"] = str(e)
+        task["logs"].append(f"[{_now()}] ❌ Whisper 轉錄失敗: {e}")
+        logger.error(traceback.format_exc())
+    finally:
+        task["finished_at"] = _now()
+
+
+# ──────────────────────────── Analyze API ────────────────────────────
+
+@app.get("/api/analyses")
+async def list_analyses():
+    return {"data": index_db.list_entries("analyses")}
+
+
+@app.get("/api/analyses/pending/{video_id}")
+async def get_pending_analysis(video_id: str):
+    """Return the pending analysis result for preview."""
+    PENDING_DIR.mkdir(parents=True, exist_ok=True)
+    fpath = PENDING_DIR / f"{video_id}.json"
+    if not fpath.exists():
+        return JSONResponse({"error": "尚無待審分析"}, status_code=404)
+    data = _safe_read_json(fpath)
+    if data is None:
+        return JSONResponse({"error": "分析資料損壞"}, status_code=500)
+    return data
+
+
+@app.get("/api/analyses/{analysis_id}")
+async def get_analysis(analysis_id: str):
+    entry = index_db.get_entry("analyses", analysis_id)
+    if not entry:
+        return JSONResponse({"error": "分析不存在"}, status_code=404)
+    fpath = PROJECT_ROOT / entry["file"]
+    if not fpath.exists():
+        return {"data": None}
+    return {"data": _safe_read_json(fpath)}
+
+
+@app.post("/api/trigger/analyze")
+async def trigger_analyze(request: Request):
+    """觸發分析：body={source_crawl_ids, source_video_ids, name}"""
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    source_crawl_ids = body.get("source_crawl_ids", [])
+    source_video_ids = body.get("source_video_ids", [])
+    name = body.get("name", "")
+
+    if not source_crawl_ids:
+        # Fallback: use all crawls
+        crawls = index_db.list_entries("crawls")
+        source_crawl_ids = [c["id"] for c in crawls]
+
+    if not source_crawl_ids:
+        return JSONResponse({"error": "沒有爬蟲資料可供分析，請先執行爬蟲"}, status_code=400)
+
+    task_id = _create_task("analyze")
+    _run_in_thread(
+        _run_analyze, task_id, source_crawl_ids, source_video_ids, name
+    )
+    return {"task_id": task_id, "status": "started"}
+
+
+def _run_analyze(task_id: str, source_crawl_ids: list[str],
+                 source_video_ids: list[str], name: str):
+    task = _tasks[task_id]
+    try:
+        task["logs"].append(f"[{_now()}] 開始爆款分析...")
+        _set_progress(task, 0, 2, "載入資料...")
+
+        # Load videos
+        if source_video_ids:
+            videos = index_db.load_specific_videos(source_crawl_ids, source_video_ids)
+        else:
+            videos = index_db.load_crawl_videos(source_crawl_ids)
+
+        if not videos:
+            raise ValueError("選擇的爬蟲資料中沒有視頻，無法分析")
+
+        task["logs"].append(f"[{_now()}] 載入 {len(videos)} 部視頻")
+        _set_progress(task, 1, 2, "Claude 分析中...")
+
+        from ..crawler.trending_analyzer import analyze_and_save
+        analysis_id, analysis = analyze_and_save(
+            videos, name=name,
+            source_crawl_ids=source_crawl_ids,
+            source_video_ids=source_video_ids,
+        )
+
+        _set_progress(task, 2, 2, "完成")
+        task["result"] = {"analysis_id": analysis_id, "summary": analysis.get("summary", "")}
+        task["logs"].append(f"[{_now()}] 分析完成 → {analysis_id}")
+        task["status"] = "done"
+    except Exception as e:
+        task["status"] = "error"
+        task["error"] = str(e)
+        task["logs"].append(f"[{_now()}] 錯誤: {e}")
+        logger.error(traceback.format_exc())
+    finally:
+        task["finished_at"] = _now()
+
+
+# ──────────────────────────── Script API ────────────────────────────
+
+@app.get("/api/scripts")
+async def list_scripts():
+    return {"data": index_db.list_entries("scripts")}
+
+
+@app.get("/api/scripts/{script_id}")
+async def get_script_detail(script_id: str):
+    entry = index_db.get_entry("scripts", script_id)
+    if not entry:
+        return JSONResponse({"error": "劇本不存在"}, status_code=404)
+    fpath = PROJECT_ROOT / entry["file"]
+    if not fpath.exists():
+        return {"data": None}
+    return {"data": _safe_read_json(fpath), "meta": entry}
+
+
+@app.post("/api/trigger/generate")
+async def trigger_generate(request: Request):
+    """觸發劇本生成：body={source_analysis_id, human_requirements, genre, style}"""
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    source_analysis_id = body.get("source_analysis_id", "")
+    human_requirements = body.get("human_requirements", "")
+    genre = body.get("genre", "都市甜寵")
+    style = body.get("style", "dramatic")
+
+    task_id = _create_task("generate")
+    _run_in_thread(
+        _run_generate, task_id, source_analysis_id,
+        human_requirements, genre, style
+    )
+    return {"task_id": task_id, "status": "started"}
+
+
+def _run_generate(task_id: str, source_analysis_id: str,
+                  human_requirements: str, genre: str, style: str):
+    task = _tasks[task_id]
+    try:
+        task["logs"].append(f"[{_now()}] 開始劇本生成...")
+
+        # Load analysis if specified
+        analysis = {}
+        if source_analysis_id:
+            entry = index_db.get_entry("analyses", source_analysis_id)
+            if entry:
+                fpath = PROJECT_ROOT / entry["file"]
+                if fpath.exists():
+                    analysis = _safe_read_json(fpath, {})
+                    task["logs"].append(f"[{_now()}] 使用分析: {source_analysis_id}")
+
+        if human_requirements:
+            task["logs"].append(f"[{_now()}] 用戶要求: {human_requirements[:100]}")
+
+        from ..scriptwriter.generator import generate_script
+        script = generate_script(
+            trending_analysis=analysis,
+            genre=genre,
+            style=style,
+            human_requirements=human_requirements,
+        )
+
+        # Validate response before saving
+        if script.get("error"):
+            raise ValueError(f"劇本生成失敗: {script.get('error')} — {script.get('raw', '')[:200]}")
+        if not script.get("scenes") and not script.get("episodes"):
+            raise ValueError("劇本生成結果為空（無場景資料），請重試")
+
+        # Save
+        script_id = index_db.generate_id("script")
+        script["script_id"] = script_id
+        script["source_analysis_id"] = source_analysis_id
+        script["human_requirements"] = human_requirements
+
+        script_dir = PROJECT_ROOT / "data" / "scripts" / script_id
+        script_dir.mkdir(parents=True, exist_ok=True)
+        script_file = script_dir / "script.json"
+        script_file.write_text(
+            json.dumps(script, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+
+        # Update index
+        rel_path = str(script_file.relative_to(PROJECT_ROOT))
+        index_db.add_script(
+            script_id,
+            script.get("title", script.get("series_title", "")),
+            source_analysis_id,
+            human_requirements,
+            "single",
+            rel_path,
+        )
+
+        task["result"] = {
+            "script_id": script_id,
+            "title": script.get("title", script.get("series_title", "")),
+        }
+        task["logs"].append(f"[{_now()}] 劇本生成完成: {task['result']['title']}")
+        task["status"] = "done"
+    except Exception as e:
+        task["status"] = "error"
+        task["error"] = str(e)
+        task["logs"].append(f"[{_now()}] 錯誤: {e}")
+        logger.error(traceback.format_exc())
+    finally:
+        task["finished_at"] = _now()
+
+
+# ──────────────────────────── Storyboard API ────────────────────────────
+
+@app.get("/api/storyboards")
+async def list_storyboards():
+    storyboards = index_db.list_entries("storyboards")
+    # Enrich with script title
+    scripts = {s["id"]: s for s in index_db.list_entries("scripts")}
+    for sb in storyboards:
+        sid = sb.get("source_script_id", "")
+        if sid in scripts:
+            sb["script_title"] = scripts[sid].get("title") or scripts[sid].get("series_title", sid)
+        else:
+            sb["script_title"] = sid
+    return {"data": storyboards}
+
+
+@app.get("/api/storyboards/{sb_id}")
+async def get_storyboard_detail(sb_id: str):
+    entry = index_db.get_entry("storyboards", sb_id)
+    if not entry:
+        return JSONResponse({"error": "分鏡不存在"}, status_code=404)
+    fpath = PROJECT_ROOT / entry["file"]
+    if not fpath.exists():
+        return {"data": []}
+    return {"data": _safe_read_json(fpath), "meta": entry}
+
+
+@app.post("/api/trigger/storyboard")
+async def trigger_storyboard(request: Request):
+    """觸發分鏡：body={source_script_id}"""
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    source_script_id = body.get("source_script_id", "")
+
+    if not source_script_id:
+        return JSONResponse({"error": "請指定劇本 ID"}, status_code=400)
+
+    task_id = _create_task("storyboard")
+    _run_in_thread(_run_storyboard, task_id, source_script_id)
+    return {"task_id": task_id, "status": "started"}
+
+
+def _run_storyboard(task_id: str, source_script_id: str):
+    task = _tasks[task_id]
+    try:
+        task["logs"].append(f"[{_now()}] 開始分鏡拆解...")
+
+        # Load script
+        entry = index_db.get_entry("scripts", source_script_id)
+        if not entry:
+            raise FileNotFoundError(f"劇本不存在: {source_script_id}")
+        fpath = PROJECT_ROOT / entry["file"]
+        if not fpath.exists():
+            raise FileNotFoundError(f"劇本檔案不存在: {fpath}")
+        script = _safe_read_json(fpath)
+        if script is None:
+            raise ValueError(f"劇本檔案損壞: {fpath}")
+
+        drama_id = source_script_id
+
+        from ..scriptwriter.storyboard import generate_storyboard, setup_characters, save_storyboard
+        char_manager = setup_characters(script, drama_id)
+        frames = generate_storyboard(script, char_manager)
+        save_storyboard(frames, drama_id)
+
+        # Update index
+        sb_id = index_db.generate_id("sb")
+        sb_dir = PROJECT_ROOT / "data" / "storyboards" / drama_id
+        sb_file = sb_dir / "storyboard.json"
+        rel_path = str(sb_file.relative_to(PROJECT_ROOT))
+        index_db.add_storyboard(sb_id, source_script_id, len(frames), rel_path)
+
+        task["result"] = {
+            "storyboard_id": sb_id,
+            "source_script_id": source_script_id,
+            "frame_count": len(frames),
+        }
+        task["logs"].append(f"[{_now()}] 分鏡完成: {len(frames)} 個畫面")
+        task["status"] = "done"
+    except Exception as e:
+        task["status"] = "error"
+        task["error"] = str(e)
+        task["logs"].append(f"[{_now()}] 錯誤: {e}")
+        logger.error(traceback.format_exc())
+    finally:
+        task["finished_at"] = _now()
+
+
+# ──────────────────────────── Image Generation API ────────────────────────────
+
+GENERATED_IMAGES_DIR = PROJECT_ROOT / "data" / "generated_images"
+
+
+@app.get("/api/image-sets")
+async def list_image_sets():
+    """列出所有已生成的圖片集。"""
+    if not GENERATED_IMAGES_DIR.exists():
+        return {"data": []}
+    sets = []
+    for d in sorted(GENERATED_IMAGES_DIR.iterdir(), reverse=True):
+        if not d.is_dir():
+            continue
+        meta_file = d / "meta.json"
+        if meta_file.exists():
+            meta = _safe_read_json(meta_file, {})
+            meta["id"] = d.name
+            sets.append(meta)
+        else:
+            # Directory exists but no meta — count PNGs
+            pngs = list(d.glob("*.png"))
+            sets.append({
+                "id": d.name,
+                "image_set_id": d.name,
+                "total_frames": len(pngs),
+                "success_count": len(pngs),
+                "error_count": 0,
+            })
+    return {"data": sets}
+
+
+@app.get("/api/image-sets/{set_id}")
+async def get_image_set_detail(set_id: str):
+    """取得圖片集詳情。"""
+    set_dir = GENERATED_IMAGES_DIR / set_id
+    if not set_dir.exists():
+        return JSONResponse({"error": "圖片集不存在"}, status_code=404)
+    meta_file = set_dir / "meta.json"
+    if meta_file.exists():
+        meta = _safe_read_json(meta_file, {})
+    else:
+        pngs = sorted(set_dir.glob("*.png"))
+        meta = {
+            "image_set_id": set_id,
+            "total_frames": len(pngs),
+            "frames": [
+                {"frame_number": i + 1, "image_path": str(p.relative_to(PROJECT_ROOT)), "status": "ok"}
+                for i, p in enumerate(pngs)
+            ],
+        }
+    return {"data": meta}
+
+
+@app.get("/api/images/{set_id}/{filename}")
+async def serve_image(set_id: str, filename: str):
+    """提供已生成的圖片檔案。"""
+    from fastapi.responses import FileResponse
+    img_path = GENERATED_IMAGES_DIR / set_id / filename
+    if not img_path.exists() or not img_path.is_file():
+        return JSONResponse({"error": "圖片不存在"}, status_code=404)
+    return FileResponse(str(img_path), media_type="image/png")
+
+
+@app.post("/api/trigger/generate-images")
+async def trigger_generate_images(request: Request):
+    """觸發分鏡圖生成：body={storyboard_id, style_prefix?}"""
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+
+    storyboard_id = body.get("storyboard_id", "")
+    style_prefix = body.get("style_prefix", "")
+
+    if not storyboard_id:
+        return JSONResponse({"error": "請指定分鏡 ID"}, status_code=400)
+
+    # Verify storyboard exists
+    entry = index_db.get_entry("storyboards", storyboard_id)
+    if not entry:
+        return JSONResponse({"error": "分鏡不存在"}, status_code=404)
+
+    task_id = _create_task("generate-images", storyboard_id=storyboard_id)
+    _run_in_thread(_run_generate_images, task_id, storyboard_id, style_prefix)
+    return {"task_id": task_id, "status": "started"}
+
+
+def _run_generate_images(task_id: str, storyboard_id: str, style_prefix: str):
+    """Background task: generate images for a storyboard using Kling API."""
+    task = _tasks[task_id]
+    try:
+        task["logs"].append(f"[{_now()}] 開始生成分鏡圖（Flux via fal.ai）...")
+
+        # Load storyboard
+        entry = index_db.get_entry("storyboards", storyboard_id)
+        if not entry:
+            raise FileNotFoundError(f"分鏡不存在: {storyboard_id}")
+        fpath = PROJECT_ROOT / entry["file"]
+        if not fpath.exists():
+            raise FileNotFoundError(f"分鏡檔案不存在: {fpath}")
+        frames = _safe_read_json(fpath, [])
+        if not frames:
+            raise ValueError("分鏡表為空")
+
+        # Prepare frames with frame_number
+        for i, f in enumerate(frames):
+            if "frame_number" not in f:
+                f["frame_number"] = i + 1
+
+        image_set_id = f"imgset_{storyboard_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        total = len(frames)
+        task["logs"].append(f"[{_now()}] 共 {total} 個分鏡需要生圖")
+
+        def on_progress(current, total_count, message):
+            _set_progress(task, current, total_count, message)
+            task["logs"].append(f"[{_now()}] [{current}/{total_count}] {message}")
+
+        from ..image_gen.flux_generator import batch_generate as flux_batch_generate
+        results = flux_batch_generate(
+            frames=frames,
+            drama_id=image_set_id,
+            style_prefix=style_prefix,
+            on_progress=on_progress,
+        )
+
+        success_count = sum(1 for r in results if r["status"] == "ok")
+        error_count = sum(1 for r in results if r["status"] == "error")
+
+        task["result"] = {
+            "image_set_id": image_set_id,
+            "storyboard_id": storyboard_id,
+            "total_frames": total,
+            "success_count": success_count,
+            "error_count": error_count,
+        }
+        task["logs"].append(
+            f"[{_now()}] 生圖完成: {success_count} 成功, {error_count} 失敗"
+        )
+        task["status"] = "done"
+    except Exception as e:
+        task["status"] = "error"
+        task["error"] = str(e)
+        task["logs"].append(f"[{_now()}] 錯誤: {e}")
+        logger.error(traceback.format_exc())
+    finally:
+        task["finished_at"] = _now()
+
+
+# ──────────────────────────── Video Generation API ────────────────────────────
+
+GENERATED_VIDEOS_DIR = PROJECT_ROOT / "data" / "generated_videos"
+
+
+@app.get("/api/video-sets")
+async def list_video_sets():
+    """列出所有已生成的視頻集。"""
+    if not GENERATED_VIDEOS_DIR.exists():
+        return {"data": []}
+    sets = []
+    for d in sorted(GENERATED_VIDEOS_DIR.iterdir(), reverse=True):
+        if not d.is_dir():
+            continue
+        meta_file = d / "meta.json"
+        if meta_file.exists():
+            meta = _safe_read_json(meta_file, {})
+            meta["id"] = d.name
+            sets.append(meta)
+        else:
+            mp4s = sorted(d.glob("*.mp4"))
+            sets.append({
+                "id": d.name,
+                "video_set_id": d.name,
+                "total_clips": len(mp4s),
+            })
+    return {"data": sets}
+
+
+@app.get("/api/video-sets/{set_id}")
+async def get_video_set(set_id: str):
+    """取得指定視頻集的詳細資訊。"""
+    set_dir = GENERATED_VIDEOS_DIR / set_id
+    if not set_dir.exists():
+        return JSONResponse({"error": "視頻集不存在"}, status_code=404)
+    meta_file = set_dir / "meta.json"
+    if meta_file.exists():
+        meta = _safe_read_json(meta_file, {})
+    else:
+        mp4s = sorted(set_dir.glob("*.mp4"))
+        meta = {
+            "video_set_id": set_id,
+            "total_clips": len(mp4s),
+            "clips": [
+                {"frame_number": i + 1, "video_path": str(p.relative_to(PROJECT_ROOT)), "status": "ok"}
+                for i, p in enumerate(mp4s)
+            ],
+        }
+    return {"data": meta}
+
+
+@app.get("/api/videos/{set_id}/{filename}")
+async def serve_video(set_id: str, filename: str):
+    """提供已生成的視頻檔案。"""
+    from fastapi.responses import FileResponse
+    vid_path = GENERATED_VIDEOS_DIR / set_id / filename
+    if not vid_path.exists() or not vid_path.is_file():
+        return JSONResponse({"error": "視頻不存在"}, status_code=404)
+    return FileResponse(str(vid_path), media_type="video/mp4")
+
+
+@app.post("/api/trigger/generate-videos")
+async def trigger_generate_videos(request: Request):
+    """觸發視頻生成：body={image_set_id, duration_sec?, mode?}"""
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+
+    image_set_id = body.get("image_set_id", "")
+    duration_sec = body.get("duration_sec", 5)
+    mode = body.get("mode", "std")
+
+    if not image_set_id:
+        return JSONResponse({"error": "請指定圖片集 ID"}, status_code=400)
+
+    # Verify image set exists
+    img_set_dir = GENERATED_IMAGES_DIR / image_set_id
+    if not img_set_dir.exists():
+        return JSONResponse({"error": "圖片集不存在"}, status_code=404)
+
+    task_id = _create_task("generate-videos", image_set_id=image_set_id)
+    _run_in_thread(_run_generate_videos, task_id, image_set_id, duration_sec, mode)
+    return {"task_id": task_id, "status": "started"}
+
+
+def _run_generate_videos(task_id: str, image_set_id: str, duration_sec: int, mode: str):
+    """Background task: generate videos from image set using Kling API."""
+    task = _tasks[task_id]
+    try:
+        task["logs"].append(f"[{_now()}] 開始生成視頻（Kling API, duration={duration_sec}s, mode={mode}）...")
+
+        # Load image set metadata
+        img_set_dir = GENERATED_IMAGES_DIR / image_set_id
+        meta_file = img_set_dir / "meta.json"
+        if meta_file.exists():
+            meta = _safe_read_json(meta_file, {})
+            frames = meta.get("frames", [])
+        else:
+            pngs = sorted(img_set_dir.glob("*.png"))
+            frames = [
+                {"frame_number": i + 1, "image_path": str(p.relative_to(PROJECT_ROOT)), "status": "ok"}
+                for i, p in enumerate(pngs)
+            ]
+
+        # Filter only successful frames
+        frames = [f for f in frames if f.get("status") == "ok" and f.get("image_path")]
+        if not frames:
+            raise ValueError("無可用的分鏡圖")
+
+        # Add video_prompt from image_prompt if missing
+        for f in frames:
+            if "video_prompt" not in f:
+                f["video_prompt"] = f.get("image_prompt", "")
+
+        video_set_id = f"vidset_{image_set_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        total = len(frames)
+        task["logs"].append(f"[{_now()}] 共 {total} 個分鏡圖需要生成視頻")
+
+        def on_progress(current, total_count, message):
+            _set_progress(task, current, total_count, message)
+            task["logs"].append(f"[{_now()}] [{current}/{total_count}] {message}")
+
+        from ..video_gen.kling_video_client import batch_generate as kling_video_batch
+        results = kling_video_batch(
+            frames=frames,
+            drama_id=video_set_id,
+            duration_sec=duration_sec,
+            mode=mode,
+            on_progress=on_progress,
+        )
+
+        success_count = sum(1 for r in results if r["status"] == "ok")
+        error_count = sum(1 for r in results if r["status"] == "error")
+
+        task["result"] = {
+            "video_set_id": video_set_id,
+            "image_set_id": image_set_id,
+            "total_clips": total,
+            "success_count": success_count,
+            "error_count": error_count,
+        }
+        task["logs"].append(
+            f"[{_now()}] 視頻生成完成: {success_count} 成功, {error_count} 失敗"
+        )
+        task["status"] = "done"
+    except Exception as e:
+        task["status"] = "error"
+        task["error"] = str(e)
+        task["logs"].append(f"[{_now()}] 錯誤: {e}")
+        logger.error(traceback.format_exc())
+    finally:
+        task["finished_at"] = _now()
+
+
+# ──────────────────────────── Knowledge Base API ────────────────────────────
+
+@app.get("/api/knowledge/stats")
+async def kb_stats():
+    return _get_kb().get_stats()
+
+
+@app.get("/api/knowledge/search")
+async def kb_search(q: str = ""):
+    if not q.strip():
+        return {"data": []}
+    return {"data": _get_kb().search(q.strip())}
+
+
+@app.get("/api/knowledge/categories")
+async def kb_categories():
+    from ..knowledge.knowledge_base import CATEGORIES, CATEGORY_LABELS
+    return {"data": [{"id": c, "label": CATEGORY_LABELS.get(c, c)} for c in CATEGORIES]}
+
+
+@app.get("/api/knowledge/{category}/{entry_id}")
+async def kb_get_entry(category: str, entry_id: str):
+    """Return a single KB entry by category and ID."""
+    from ..knowledge.knowledge_base import CATEGORIES
+    if category not in CATEGORIES:
+        return JSONResponse({"error": f"Invalid category"}, status_code=400)
+    entry = _get_kb().get_entry(category, entry_id)
+    if not entry:
+        return JSONResponse({"error": "條目不存在"}, status_code=404)
+    return {"data": entry}
+
+
+@app.get("/api/knowledge/{category}")
+async def kb_list_category(category: str, subcategory: str = ""):
+    from ..knowledge.knowledge_base import CATEGORIES
+    if category not in CATEGORIES:
+        return JSONResponse({"error": f"Invalid category. Must be one of {CATEGORIES}"}, status_code=400)
+    return {"data": _get_kb().get_entries(category, subcategory=subcategory or None)}
+
+
+@app.post("/api/trigger/analyze-single")
+async def trigger_analyze_single(request: Request):
+    """Analyze a single drama and extract to knowledge base.
+    body={source_crawl_ids, video_id}
+    """
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    source_crawl_ids = body.get("source_crawl_ids", [])
+    video_id = body.get("video_id", "")
+
+    if not source_crawl_ids or not video_id:
+        return JSONResponse({"error": "需要 source_crawl_ids 和 video_id"}, status_code=400)
+
+    task_id = _create_task("kb-analyze-single", video_id=video_id)
+    _run_in_thread(_run_analyze_single, task_id, source_crawl_ids, video_id)
+    return {"task_id": task_id, "status": "started"}
+
+
+def _run_analyze_single(task_id: str, source_crawl_ids: list[str], video_id: str):
+    task = _tasks[task_id]
+    try:
+        task["logs"].append(f"[{_now()}] 開始單部劇深度分析...")
+        _set_progress(task, 0, 3, "載入視頻資料...")
+
+        videos = index_db.load_specific_videos(source_crawl_ids, [video_id])
+        if not videos:
+            raise ValueError(f"找不到視頻: {video_id}")
+        video_data = videos[0]
+
+        task["logs"].append(f"[{_now()}] 分析: {video_data.get('title', video_id)}")
+        _set_progress(task, 1, 3, "Claude 深度分析中...")
+
+        from ..crawler.trending_analyzer import analyze_single_drama, extract_to_knowledge_base
+        analysis = analyze_single_drama(video_data)
+
+        if analysis.get("error"):
+            raise ValueError(f"分析失敗: {analysis.get('error')}")
+
+        _set_progress(task, 2, 3, "提取知識庫條目...")
+        counts = extract_to_knowledge_base(analysis, video_data)
+
+        _set_progress(task, 3, 3, "完成")
+        task["result"] = {
+            "video_id": video_id,
+            "title": video_data.get("title", ""),
+            "entries_added": counts["added"],
+            "entries_updated": counts["updated"],
+            "categories": counts["categories"],
+        }
+        task["logs"].append(
+            f"[{_now()}] 入庫完成: 新增 {counts['added']} + 更新 {counts['updated']} 條"
+        )
+        task["status"] = "done"
+    except Exception as e:
+        task["status"] = "error"
+        task["error"] = str(e)
+        task["logs"].append(f"[{_now()}] 錯誤: {e}")
+        logger.error(traceback.format_exc())
+    finally:
+        task["finished_at"] = _now()
+
+
+@app.post("/api/trigger/kb-analyze-batch")
+async def trigger_kb_analyze_batch(request: Request):
+    """Alias for analyze-batch — batch analyze and extract to KB.
+    body={video_ids: [...]}
+    """
+    existing = _has_running_task("kb-analyze-batch")
+    if existing:
+        return JSONResponse({"error": f"批量分析已在執行中 (task: {existing})，請等完成後再觸發", "running_task_id": existing}, status_code=409)
+
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    video_ids = body.get("video_ids", [])
+
+    crawls = index_db.list_entries("crawls")
+    source_crawl_ids = [c["id"] for c in crawls]
+    if not source_crawl_ids:
+        return JSONResponse({"error": "沒有爬蟲資料"}, status_code=400)
+
+    task_id = _create_task("kb-analyze-batch")
+    _run_in_thread(_run_analyze_batch, task_id, source_crawl_ids, video_ids)
+    return {"task_id": task_id, "status": "started"}
+
+
+@app.post("/api/trigger/analyze-batch")
+async def trigger_analyze_batch(request: Request):
+    """Batch analyze multiple dramas and extract to KB.
+    body={source_crawl_ids, video_ids (optional — all if empty)}
+    """
+    existing = _has_running_task("kb-analyze-batch")
+    if existing:
+        return JSONResponse({"error": f"批量分析已在執行中 (task: {existing})，請等完成後再觸發", "running_task_id": existing}, status_code=409)
+
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    source_crawl_ids = body.get("source_crawl_ids", [])
+    video_ids = body.get("video_ids", [])
+
+    if not source_crawl_ids:
+        crawls = index_db.list_entries("crawls")
+        source_crawl_ids = [c["id"] for c in crawls]
+    if not source_crawl_ids:
+        return JSONResponse({"error": "沒有爬蟲資料"}, status_code=400)
+
+    task_id = _create_task("kb-analyze-batch")
+    _run_in_thread(_run_analyze_batch, task_id, source_crawl_ids, video_ids)
+    return {"task_id": task_id, "status": "started"}
+
+
+def _run_analyze_batch(task_id: str, source_crawl_ids: list[str], video_ids: list[str]):
+    task = _tasks[task_id]
+    try:
+        task["logs"].append(f"[{_now()}] 開始批量知識庫分析...")
+
+        if video_ids:
+            videos = index_db.load_specific_videos(source_crawl_ids, video_ids)
+        else:
+            videos = index_db.load_crawl_videos(source_crawl_ids)
+
+        if not videos:
+            raise ValueError("沒有找到視頻資料")
+
+        # Dedup: skip videos already in knowledge base
+        kb = _get_kb()
+        filtered_videos = []
+        skipped = 0
+        for v in videos:
+            vid = v.get("video_id", "")
+            if vid and kb.has_drama(vid):
+                task["logs"].append(f"[{_now()}] {v.get('title', vid)[:30]} — 已入庫，跳過")
+                skipped += 1
+            else:
+                filtered_videos.append(v)
+        videos = filtered_videos
+
+        total = len(videos)
+        task["logs"].append(f"[{_now()}] 共 {total} 部待分析（跳過 {skipped} 部已入庫）")
+        total_added = 0
+        total_updated = 0
+
+        from ..crawler.trending_analyzer import analyze_single_drama, extract_to_knowledge_base
+        import concurrent.futures
+        import threading
+
+        PARALLEL_WORKERS = 3
+        completed_count = 0
+        lock = threading.Lock()
+
+        def _analyze_one(idx, video_data):
+            nonlocal total_added, total_updated, completed_count
+            title = video_data.get("title", video_data.get("video_id", "?"))
+            task["logs"].append(f"[{_now()}] [{idx+1}/{total}] 開始分析: {title[:40]}")
+            try:
+                analysis = analyze_single_drama(video_data)
+                if analysis.get("error") == "already_in_kb":
+                    task["logs"].append(f"[{_now()}] [{idx+1}/{total}]   → 已入庫，跳過")
+                elif not analysis.get("error"):
+                    counts = extract_to_knowledge_base(analysis, video_data)
+                    with lock:
+                        total_added += counts["added"]
+                        total_updated += counts["updated"]
+                    task["logs"].append(
+                        f"[{_now()}] [{idx+1}/{total}]   → +{counts['added']} 新增, ~{counts['updated']} 更新"
+                    )
+                else:
+                    task["logs"].append(f"[{_now()}] [{idx+1}/{total}]   → 分析失敗，跳過")
+            except Exception as e:
+                task["logs"].append(f"[{_now()}] [{idx+1}/{total}]   → 錯誤: {e}")
+            finally:
+                with lock:
+                    completed_count += 1
+                    _set_progress(task, completed_count, total, f"已完成 {completed_count}/{total}")
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=PARALLEL_WORKERS) as executor:
+            futures = [executor.submit(_analyze_one, i, v) for i, v in enumerate(videos)]
+            concurrent.futures.wait(futures)
+
+        _set_progress(task, total, total, "完成")
+        task["result"] = {
+            "analyzed": total,
+            "skipped": skipped,
+            "entries_added": total_added,
+            "entries_updated": total_updated,
+        }
+        task["logs"].append(
+            f"[{_now()}] 批量完成: {total} 部分析, +{total_added} 新增, ~{total_updated} 更新, 跳過 {skipped} 部"
+        )
+        task["status"] = "done"
+    except Exception as e:
+        task["status"] = "error"
+        task["error"] = str(e)
+        task["logs"].append(f"[{_now()}] 錯誤: {e}")
+        logger.error(traceback.format_exc())
+    finally:
+        task["finished_at"] = _now()
+
+
+# ──────────────────────────── Video Review Flow API ────────────────────────────
+
+@app.get("/api/video-reviews")
+async def get_video_reviews():
+    """Return full video_reviews.json content."""
+    return _read_video_reviews()
+
+
+@app.post("/api/trigger/analyze-preview")
+async def trigger_analyze_preview(request: Request):
+    """Analyze a single video WITHOUT importing to KB. Saves to pending/.
+    body={source_crawl_ids, video_id}
+    """
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    source_crawl_ids = body.get("source_crawl_ids", [])
+    video_id = body.get("video_id", "")
+
+    if not source_crawl_ids or not video_id:
+        return JSONResponse({"error": "需要 source_crawl_ids 和 video_id"}, status_code=400)
+
+    task_id = _create_task("analyze-preview", video_id=video_id)
+    _run_in_thread(_run_analyze_preview, task_id, source_crawl_ids, video_id)
+    return {"task_id": task_id, "status": "started"}
+
+
+def _run_analyze_preview(task_id: str, source_crawl_ids: list[str], video_id: str):
+    task = _tasks[task_id]
+    try:
+        task["logs"].append(f"[{_now()}] 開始預覽分析（不入庫）...")
+        _set_progress(task, 0, 2, "載入視頻資料...")
+
+        videos = index_db.load_specific_videos(source_crawl_ids, [video_id])
+        if not videos:
+            raise ValueError(f"找不到視頻: {video_id}")
+        video_data = videos[0]
+
+        task["logs"].append(f"[{_now()}] 分析: {video_data.get('title', video_id)}")
+        _set_progress(task, 1, 2, "Claude 深度分析中...")
+
+        from ..crawler.trending_analyzer import analyze_single_drama
+        analysis = analyze_single_drama(video_data)
+
+        if analysis.get("error"):
+            raise ValueError(f"分析失敗: {analysis.get('error')}")
+
+        # Save to pending directory
+        PENDING_DIR.mkdir(parents=True, exist_ok=True)
+        pending_file = PENDING_DIR / f"{video_id}.json"
+        pending_file.write_text(
+            json.dumps(analysis, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+
+        # Update video reviews tracker
+        _update_video_review(video_id, {
+            "status": "pending_review",
+            "analysis_file": str(pending_file.relative_to(PROJECT_ROOT)),
+            "crawl_ids": source_crawl_ids,
+            "title": video_data.get("title", ""),
+            "analyzed_at": _now(),
+        })
+
+        _set_progress(task, 2, 2, "完成")
+        task["result"] = {
+            "video_id": video_id,
+            "title": video_data.get("title", ""),
+            "status": "pending_review",
+        }
+        task["logs"].append(f"[{_now()}] 分析完成，待審核")
+        task["status"] = "done"
+    except Exception as e:
+        task["status"] = "error"
+        task["error"] = str(e)
+        task["logs"].append(f"[{_now()}] 錯誤: {e}")
+        logger.error(traceback.format_exc())
+    finally:
+        task["finished_at"] = _now()
+
+
+@app.post("/api/trigger/confirm-kb")
+async def trigger_confirm_kb(request: Request):
+    """Confirm a pending analysis and import to knowledge base.
+    body={video_id}
+    """
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    video_id = body.get("video_id", "")
+    if not video_id:
+        return JSONResponse({"error": "需要 video_id"}, status_code=400)
+
+    # Read pending analysis
+    pending_file = PENDING_DIR / f"{video_id}.json"
+    if not pending_file.exists():
+        return JSONResponse({"error": "找不到待審分析"}, status_code=404)
+
+    analysis = _safe_read_json(pending_file)
+    if analysis is None:
+        return JSONResponse({"error": "分析資料損壞"}, status_code=500)
+
+    # Load video data from reviews tracker to get crawl_ids
+    reviews = _read_video_reviews()
+    review = reviews.get(video_id, {})
+    crawl_ids = review.get("crawl_ids", [])
+
+    # Load video data
+    videos = index_db.load_specific_videos(crawl_ids, [video_id]) if crawl_ids else []
+    if not videos:
+        # Fallback: try all crawls
+        all_crawls = index_db.list_entries("crawls")
+        all_crawl_ids = [c["id"] for c in all_crawls]
+        videos = index_db.load_specific_videos(all_crawl_ids, [video_id])
+    if not videos:
+        return JSONResponse({"error": f"找不到視頻資料: {video_id}"}, status_code=404)
+
+    video_data = videos[0]
+
+    # Extract to knowledge base
+    from ..crawler.trending_analyzer import extract_to_knowledge_base
+    counts = extract_to_knowledge_base(analysis, video_data)
+
+    # Update review status
+    _update_video_review(video_id, {
+        "status": "confirmed",
+        "confirmed_at": _now(),
+        "entries_added": counts["added"],
+        "entries_updated": counts["updated"],
+    })
+
+    return {
+        "success": True,
+        "video_id": video_id,
+        "entries_added": counts["added"],
+        "entries_updated": counts["updated"],
+        "categories": counts["categories"],
+    }
+
+
+@app.post("/api/trigger/reject-video")
+async def trigger_reject_video(request: Request):
+    """Reject a video — mark as rejected and delete pending analysis.
+    body={video_id, reason}
+    """
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    video_id = body.get("video_id", "")
+    reason = body.get("reason", "")
+    if not video_id:
+        return JSONResponse({"error": "需要 video_id"}, status_code=400)
+
+    # Delete pending analysis file if it exists
+    pending_file = PENDING_DIR / f"{video_id}.json"
+    if pending_file.exists():
+        pending_file.unlink()
+
+    # Update review status
+    _update_video_review(video_id, {
+        "status": "rejected",
+        "reason": reason,
+        "rejected_at": _now(),
+    })
+
+    return {"success": True, "video_id": video_id, "status": "rejected"}
+
+
+@app.post("/api/trigger/generate-kb")
+async def trigger_generate_kb(request: Request):
+    """Generate script from knowledge base.
+    body={genre, style, episode_count, duration_sec, human_requirements, tags, selected_elements}
+    selected_elements: dict mapping category name -> list of entry_id strings
+    """
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    genre = body.get("genre", "")
+    style = body.get("style", "")
+    episode_count = int(body.get("episode_count", 1))
+    duration_sec = int(body.get("duration_sec", 60))
+    human_requirements = body.get("human_requirements", "")
+    tags = body.get("tags", [])
+    selected_elements = body.get("selected_elements", None)
+
+    task_id = _create_task("kb-generate")
+    _run_in_thread(
+        _run_generate_kb, task_id, genre, style, episode_count, duration_sec,
+        human_requirements, tags, selected_elements
+    )
+    return {"task_id": task_id, "status": "started"}
+
+
+def _run_generate_kb(task_id: str, genre: str, style: str, episode_count: int,
+                     duration_sec: int, human_requirements: str, tags: list[str],
+                     selected_elements: dict | None = None):
+    task = _tasks[task_id]
+    try:
+        task["logs"].append(f"[{_now()}] 從知識庫生成劇本...")
+        _set_progress(task, 0, 3, "抽取知識庫元素...")
+
+        from ..scriptwriter.generator import generate_from_knowledge_base, generate_episode_script
+
+        kb = _get_kb()
+        stats = kb.get_stats()
+        task["logs"].append(f"[{_now()}] 知識庫: {stats['total']} 條目")
+        task["logs"].append(f"[{_now()}] 時長: {duration_sec} 秒/集")
+
+        if stats["total"] == 0 and not selected_elements:
+            raise ValueError("知識庫為空，請先分析一些劇目入庫")
+
+        config = {
+            "genre": genre,
+            "style": style,
+            "episode_count": episode_count,
+            "duration_sec": duration_sec,
+            "human_requirements": human_requirements,
+            "tags": tags if tags else None,
+        }
+
+        if selected_elements:
+            sel_count = sum(len(v) for v in selected_elements.values() if isinstance(v, list))
+            sel_cats = [k for k, v in selected_elements.items() if isinstance(v, list) and v]
+            task["logs"].append(f"[{_now()}] 使用用戶選擇的 {sel_count} 個知識庫元素（{', '.join(sel_cats)}）")
+            # Log which categories are left for Claude to decide freely
+            all_cats = ["structures", "hooks", "elements", "payoffs", "pacing", "dialogues", "visual_scenes", "ending_hooks", "tension_actions", "genres", "styles"]
+            free_cats = [c for c in all_cats if c not in sel_cats]
+            if free_cats:
+                task["logs"].append(f"[{_now()}] 其餘分類由 AI 自由發揮：{', '.join(free_cats)}")
+
+        _set_progress(task, 1, 3, "Claude 生成大綱中...")
+        outline = generate_from_knowledge_base(kb, config, selected_elements=selected_elements)
+
+        if outline.get("error"):
+            raise ValueError(f"生成失敗: {outline.get('error')}")
+
+        task["logs"].append(
+            f"[{_now()}] 大綱完成: {outline.get('series_title', '?')} "
+            f"({len(outline.get('episodes', []))} 集)"
+        )
+
+        # Save outline
+        script_id = index_db.generate_id("script")
+        outline["script_id"] = script_id
+        outline["source_type"] = "knowledge_base"
+
+        script_dir = PROJECT_ROOT / "data" / "scripts" / script_id
+        script_dir.mkdir(parents=True, exist_ok=True)
+        outline_file = script_dir / "outline.json"
+        outline_file.write_text(
+            json.dumps(outline, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+
+        # Generate first episode as preview
+        _set_progress(task, 2, 3, "生成第 1 集劇本...")
+        if outline.get("episodes"):
+            ep1 = generate_episode_script(outline, 1)
+            ep1["script_id"] = script_id
+            ep1_file = script_dir / "script.json"
+            ep1_file.write_text(
+                json.dumps(ep1, ensure_ascii=False, indent=2), encoding="utf-8"
+            )
+
+            # Update index
+            rel_path = str(ep1_file.relative_to(PROJECT_ROOT))
+            index_db.add_script(
+                script_id,
+                outline.get("series_title", ""),
+                "knowledge_base",
+                human_requirements,
+                "kb-series",
+                rel_path,
+            )
+            task["logs"].append(f"[{_now()}] 第 1 集劇本已生成")
+
+        _set_progress(task, 3, 3, "完成")
+        task["result"] = {
+            "script_id": script_id,
+            "title": outline.get("series_title", ""),
+            "episodes": len(outline.get("episodes", [])),
+            "kb_elements": outline.get("kb_elements_used", {}),
+            "kb_combination": outline.get("_kb_combination", {}),
+            "kb_user_selected": outline.get("_kb_user_selected", []),
+        }
+        task["status"] = "done"
+    except Exception as e:
+        task["status"] = "error"
+        task["error"] = str(e)
+        task["logs"].append(f"[{_now()}] 錯誤: {e}")
+        logger.error(traceback.format_exc())
+    finally:
+        task["finished_at"] = _now()
+
+
+# ──────────────────────────── Traceability API ────────────────────────────
+
+@app.get("/api/trace/{item_type}/{item_id}")
+async def trace_lineage(item_type: str, item_id: str):
+    """追溯完整上下游鏈"""
+    idx = index_db.read_index()
+    chain = {"target": {"type": item_type, "id": item_id}, "upstream": [], "downstream": []}
+
+    if item_type == "storyboards":
+        entry = index_db.get_entry("storyboards", item_id)
+        if entry:
+            src_script_id = entry.get("source_script_id", "")
+            chain["upstream"].append({"type": "scripts", "id": src_script_id})
+            script_entry = index_db.get_entry("scripts", src_script_id)
+            if script_entry:
+                src_analysis = script_entry.get("source_analysis_id", "")
+                if src_analysis == "knowledge_base":
+                    # KB-generated script: read _kb_combination from outline
+                    script_dir = PROJECT_ROOT / "data" / "scripts" / src_script_id
+                    outline_file = script_dir / "outline.json"
+                    kb_combo = {}
+                    kb_user_sel = []
+                    outline_data = _safe_read_json(outline_file) if outline_file.exists() else None
+                    if outline_data:
+                        kb_combo = outline_data.get("_kb_combination", {})
+                        kb_user_sel = outline_data.get("_kb_user_selected", [])
+                    chain["upstream"].append({
+                        "type": "knowledge_base",
+                        "id": "knowledge_base",
+                        "kb_combination": kb_combo,
+                        "kb_user_selected": kb_user_sel,
+                    })
+                else:
+                    chain["upstream"].append({"type": "analyses", "id": src_analysis})
+
+    elif item_type == "scripts":
+        entry = index_db.get_entry("scripts", item_id)
+        if entry:
+            src_analysis = entry.get("source_analysis_id", "")
+            if src_analysis == "knowledge_base":
+                # KB-generated script: read _kb_combination from outline
+                script_dir = PROJECT_ROOT / "data" / "scripts" / item_id
+                outline_file = script_dir / "outline.json"
+                kb_combo = {}
+                kb_user_sel = []
+                outline_data = _safe_read_json(outline_file) if outline_file.exists() else None
+                if outline_data:
+                    kb_combo = outline_data.get("_kb_combination", {})
+                    kb_user_sel = outline_data.get("_kb_user_selected", [])
+                chain["upstream"].append({
+                    "type": "knowledge_base",
+                    "id": "knowledge_base",
+                    "kb_combination": kb_combo,
+                    "kb_user_selected": kb_user_sel,
+                })
+            else:
+                chain["upstream"].append({"type": "analyses", "id": src_analysis})
+                analysis_entry = index_db.get_entry("analyses", src_analysis)
+                if analysis_entry:
+                    for cid in analysis_entry.get("source_crawl_ids", []):
+                        chain["upstream"].append({"type": "crawls", "id": cid})
+            # downstream: storyboards
+            for sb in idx.get("storyboards", []):
+                if sb.get("source_script_id") == item_id:
+                    chain["downstream"].append({"type": "storyboards", "id": sb["id"]})
+
+    elif item_type == "analyses":
+        entry = index_db.get_entry("analyses", item_id)
+        if entry:
+            for cid in entry.get("source_crawl_ids", []):
+                chain["upstream"].append({"type": "crawls", "id": cid})
+            # downstream: scripts
+            for s in idx.get("scripts", []):
+                if s.get("source_analysis_id") == item_id:
+                    chain["downstream"].append({"type": "scripts", "id": s["id"]})
+
+    elif item_type == "crawls":
+        # downstream: analyses that use this crawl
+        for a in idx.get("analyses", []):
+            if item_id in a.get("source_crawl_ids", []):
+                chain["downstream"].append({"type": "analyses", "id": a["id"]})
+
+    return chain
+
+
+# ──────────────────────────── Storyboard Media API (Steps 5 & 6) ────────────────────────────
+
+@app.post("/api/storyboard/{storyboard_id}/generate-images")
+async def storyboard_generate_images(storyboard_id: str, request: Request):
+    """Step 5: 為指定分鏡表的每個幀生成圖片（Kling AI）。
+    body={style_prefix?}
+    """
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    style_prefix = body.get("style_prefix", "")
+
+    entry = index_db.get_entry("storyboards", storyboard_id)
+    if not entry:
+        return JSONResponse({"error": "分鏡不存在"}, status_code=404)
+
+    # Prevent duplicate runs
+    task_key = f"kling_image_{storyboard_id}"
+    existing = _tasks.get(task_key)
+    if existing and existing.get("status") == "running":
+        return JSONResponse({"error": "生圖任務已在執行中", "task_id": task_key}, status_code=409)
+
+    _tasks[task_key] = {
+        "id": task_key,
+        "stage": "generate-images",
+        "status": "running",
+        "started_at": _now(),
+        "finished_at": None,
+        "result": None,
+        "error": None,
+        "logs": [],
+        "progress": {"current": 0, "total": 0, "percent": 0, "step": ""},
+        "storyboard_id": storyboard_id,
+    }
+    _run_in_thread(_run_storyboard_generate_images, task_key, storyboard_id, style_prefix)
+    return {"task_id": task_key, "status": "started"}
+
+
+def _run_storyboard_generate_images(task_id: str, storyboard_id: str, style_prefix: str):
+    """Background task: generate images for each frame in a storyboard using Kling AI."""
+    task = _tasks[task_id]
+    try:
+        task["logs"].append(f"[{_now()}] 開始分鏡圖生成（Flux via fal.ai, 9:16）...")
+
+        frames = index_db.get_frames_by_storyboard(storyboard_id)
+        if not frames:
+            raise ValueError(f"分鏡表為空或不存在: {storyboard_id}")
+
+        # Ensure frame_number
+        for i, f in enumerate(frames):
+            if "frame_number" not in f:
+                f["frame_number"] = i + 1
+
+        total = len(frames)
+        task["logs"].append(f"[{_now()}] 共 {total} 個分鏡需要生圖")
+        _set_progress(task, 0, total, "準備中...")
+
+        from ..image_gen.flux_generator import generate_image_url
+
+        image_set_id = f"imgset_{storyboard_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        output_dir = GENERATED_IMAGES_DIR / image_set_id
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        import httpx as _httpx
+        results = []
+        success_count = 0
+        error_count = 0
+
+        for i, frame in enumerate(frames):
+            num = frame.get("frame_number", i + 1)
+            raw_prompt = frame.get("image_prompt", "")
+            prompt = f"{style_prefix}, {raw_prompt}" if style_prefix else raw_prompt
+            out_path = output_dir / f"frame_{num:03d}.png"
+
+            _set_progress(task, i, total, f"生成分鏡 #{num} ({i+1}/{total})...")
+            task["logs"].append(f"[{_now()}] [{i+1}/{total}] 生成分鏡 #{num}...")
+
+            try:
+                image_url = generate_image_url(prompt=prompt)
+
+                # Download to local
+                img_resp = _httpx.get(image_url, timeout=60, follow_redirects=True)
+                img_resp.raise_for_status()
+                out_path.write_bytes(img_resp.content)
+
+                # Update frame record in storyboard file
+                index_db.update_frame_image(storyboard_id, num, image_url)
+
+                results.append({
+                    "frame_number": num,
+                    "image_url": image_url,
+                    "image_path": str(out_path.relative_to(PROJECT_ROOT)),
+                    "status": "ok",
+                })
+                success_count += 1
+                task["logs"].append(f"[{_now()}]   -> 成功: {image_url[:60]}")
+            except Exception as e:
+                results.append({
+                    "frame_number": num,
+                    "image_url": None,
+                    "image_path": None,
+                    "status": "error",
+                    "error": str(e),
+                })
+                error_count += 1
+                task["logs"].append(f"[{_now()}]   -> 失敗: {e}")
+
+            # Rate limit
+            if i < total - 1:
+                import time as _time
+                _time.sleep(2)
+
+        # Save image set metadata
+        meta = {
+            "image_set_id": image_set_id,
+            "storyboard_id": storyboard_id,
+            "total_frames": total,
+            "success_count": success_count,
+            "error_count": error_count,
+            "style_prefix": style_prefix,
+            "frames": results,
+        }
+        meta_path = output_dir / "meta.json"
+        meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+
+        _set_progress(task, total, total, "完成")
+        task["result"] = {
+            "image_set_id": image_set_id,
+            "storyboard_id": storyboard_id,
+            "total_frames": total,
+            "success_count": success_count,
+            "error_count": error_count,
+        }
+        task["logs"].append(f"[{_now()}] 生圖完成: {success_count} 成功, {error_count} 失敗")
+        task["status"] = "done"
+    except Exception as e:
+        task["status"] = "error"
+        task["error"] = str(e)
+        task["logs"].append(f"[{_now()}] 錯誤: {e}")
+        logger.error(traceback.format_exc())
+    finally:
+        task["finished_at"] = _now()
+
+
+@app.post("/api/storyboard/{storyboard_id}/generate-videos")
+async def storyboard_generate_videos(storyboard_id: str, request: Request):
+    """Step 6: 為指定分鏡表中有 image_url 的幀生成視頻（Kling AI image-to-video）。
+    body={duration_sec?, mode?}
+    """
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    duration_sec = int(body.get("duration_sec", 5))
+    mode = body.get("mode", "std")
+
+    entry = index_db.get_entry("storyboards", storyboard_id)
+    if not entry:
+        return JSONResponse({"error": "分鏡不存在"}, status_code=404)
+
+    # Prevent duplicate runs
+    task_key = f"kling_video_{storyboard_id}"
+    existing = _tasks.get(task_key)
+    if existing and existing.get("status") == "running":
+        return JSONResponse({"error": "視頻生成任務已在執行中", "task_id": task_key}, status_code=409)
+
+    _tasks[task_key] = {
+        "id": task_key,
+        "stage": "generate-videos",
+        "status": "running",
+        "started_at": _now(),
+        "finished_at": None,
+        "result": None,
+        "error": None,
+        "logs": [],
+        "progress": {"current": 0, "total": 0, "percent": 0, "step": ""},
+        "storyboard_id": storyboard_id,
+    }
+    _run_in_thread(_run_storyboard_generate_videos, task_key, storyboard_id, duration_sec, mode)
+    return {"task_id": task_key, "status": "started"}
+
+
+def _run_storyboard_generate_videos(task_id: str, storyboard_id: str, duration_sec: int, mode: str):
+    """Background task: generate videos from frames that have image_url."""
+    task = _tasks[task_id]
+    try:
+        task["logs"].append(
+            f"[{_now()}] 開始分鏡視頻生成（Kling AI image-to-video, duration={duration_sec}s, mode={mode}）..."
+        )
+
+        frames = index_db.get_frames_by_storyboard(storyboard_id)
+        if not frames:
+            raise ValueError(f"分鏡表為空或不存在: {storyboard_id}")
+
+        # Only process frames that have image_url
+        eligible = [f for f in frames if f.get("image_url")]
+        if not eligible:
+            raise ValueError("分鏡表中沒有已生成圖片的幀，請先執行生圖（Step 5）")
+
+        total = len(eligible)
+        task["logs"].append(f"[{_now()}] 共 {total} 個分鏡圖需要生成視頻")
+        _set_progress(task, 0, total, "準備中...")
+
+        from ..video_gen.kling_video import generate_video_url
+
+        video_set_id = f"vidset_{storyboard_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        output_dir = GENERATED_VIDEOS_DIR / video_set_id
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        import httpx as _httpx
+        results = []
+        success_count = 0
+        error_count = 0
+
+        for i, frame in enumerate(eligible):
+            num = frame.get("frame_number", i + 1)
+            image_url = frame.get("image_url", "")
+            prompt = frame.get("video_prompt", frame.get("image_prompt", ""))
+            out_path = output_dir / f"clip_{num:03d}.mp4"
+
+            _set_progress(task, i, total, f"生成視頻片段 #{num} ({i+1}/{total})...")
+            task["logs"].append(f"[{_now()}] [{i+1}/{total}] 生成視頻片段 #{num}...")
+
+            try:
+                video_url = generate_video_url(
+                    image_url=image_url,
+                    prompt=prompt,
+                    duration=str(duration_sec),
+                    mode=mode,
+                )
+
+                # Download to local
+                vid_resp = _httpx.get(video_url, timeout=120, follow_redirects=True)
+                vid_resp.raise_for_status()
+                out_path.write_bytes(vid_resp.content)
+
+                # Update frame record in storyboard file
+                index_db.update_frame_video(storyboard_id, num, video_url)
+
+                results.append({
+                    "frame_number": num,
+                    "video_url": video_url,
+                    "video_path": str(out_path.relative_to(PROJECT_ROOT)),
+                    "duration_sec": duration_sec,
+                    "status": "ok",
+                })
+                success_count += 1
+                task["logs"].append(f"[{_now()}]   -> 成功: {video_url[:60]}")
+            except Exception as e:
+                results.append({
+                    "frame_number": num,
+                    "video_url": None,
+                    "video_path": None,
+                    "status": "error",
+                    "error": str(e),
+                })
+                error_count += 1
+                task["logs"].append(f"[{_now()}]   -> 失敗: {e}")
+
+            # Rate limit
+            if i < total - 1:
+                import time as _time
+                _time.sleep(3)
+
+        # Save video set metadata
+        meta = {
+            "video_set_id": video_set_id,
+            "storyboard_id": storyboard_id,
+            "total_clips": total,
+            "success_count": success_count,
+            "error_count": error_count,
+            "duration_sec": duration_sec,
+            "mode": mode,
+            "clips": results,
+        }
+        meta_path = output_dir / "meta.json"
+        meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+
+        _set_progress(task, total, total, "完成")
+        task["result"] = {
+            "video_set_id": video_set_id,
+            "storyboard_id": storyboard_id,
+            "total_clips": total,
+            "success_count": success_count,
+            "error_count": error_count,
+        }
+        task["logs"].append(f"[{_now()}] 視頻生成完成: {success_count} 成功, {error_count} 失敗")
+        task["status"] = "done"
+    except Exception as e:
+        task["status"] = "error"
+        task["error"] = str(e)
+        task["logs"].append(f"[{_now()}] 錯誤: {e}")
+        logger.error(traceback.format_exc())
+    finally:
+        task["finished_at"] = _now()
+
+
+@app.get("/api/storyboard/{storyboard_id}/media-status")
+async def storyboard_media_status(storyboard_id: str):
+    """查詢分鏡表的圖片/視頻生成狀態。"""
+    entry = index_db.get_entry("storyboards", storyboard_id)
+    if not entry:
+        return JSONResponse({"error": "分鏡不存在"}, status_code=404)
+
+    frames = index_db.get_frames_by_storyboard(storyboard_id)
+    total = len(frames)
+    images_done = sum(1 for f in frames if f.get("image_url"))
+    videos_done = sum(1 for f in frames if f.get("video_url"))
+
+    image_task_key = f"kling_image_{storyboard_id}"
+    video_task_key = f"kling_video_{storyboard_id}"
+
+    image_task = _tasks.get(image_task_key)
+    video_task = _tasks.get(video_task_key)
+
+    return {
+        "storyboard_id": storyboard_id,
+        "total_frames": total,
+        "images_done": images_done,
+        "videos_done": videos_done,
+        "image_task": {
+            "status": image_task["status"] if image_task else "none",
+            "progress": image_task.get("progress") if image_task else None,
+            "result": image_task.get("result") if image_task else None,
+            "error": image_task.get("error") if image_task else None,
+        } if image_task else {"status": "none"},
+        "video_task": {
+            "status": video_task["status"] if video_task else "none",
+            "progress": video_task.get("progress") if video_task else None,
+            "result": video_task.get("result") if video_task else None,
+            "error": video_task.get("error") if video_task else None,
+        } if video_task else {"status": "none"},
+        "frames_summary": [
+            {
+                "frame_number": f.get("frame_number", i + 1),
+                "has_image": bool(f.get("image_url")),
+                "has_video": bool(f.get("video_url")),
+                "image_url": f.get("image_url"),
+                "video_url": f.get("video_url"),
+            }
+            for i, f in enumerate(frames)
+        ],
+    }
+
+
+# ──────────────────────────── Task API ────────────────────────────
+
+@app.get("/api/tasks")
+async def list_tasks():
+    return list(_tasks.values())
+
+
+@app.get("/api/task/{task_id}")
+async def get_task(task_id: str):
+    task = _tasks.get(task_id)
+    if not task:
+        return JSONResponse({"error": "任務不存在"}, status_code=404)
+    return task
+
+
+# ──────────────────────────── Config API ────────────────────────────
+
+@app.get("/api/config")
+async def get_config():
+    config = load_config()
+    safe = dict(config)
+    if "proxy" in safe:
+        safe["proxy"] = {**safe["proxy"], "api_key": "***" if safe["proxy"].get("api_key") else "(empty)"}
+    for key in ["youtube_api_key", "gemini_api_key"]:
+        if key in safe:
+            safe[key] = "***" if safe[key] else "(empty)"
+    return safe
+
+
+# ──────────────────────────── Helpers ────────────────────────────
+
+def _has_running_task(stage: str) -> str | None:
+    """Return task_id if there's already a running task of the same stage."""
+    for tid, t in _tasks.items():
+        if t["stage"] == stage and t["status"] == "running":
+            return tid
+    return None
+
+
+def _create_task(stage: str, **extra) -> str:
+    _cleanup_tasks()
+    task_id = uuid.uuid4().hex[:8]
+    task = {
+        "id": task_id,
+        "stage": stage,
+        "status": "running",
+        "started_at": _now(),
+        "finished_at": None,
+        "result": None,
+        "error": None,
+        "logs": [],
+        "progress": {"current": 0, "total": 0, "percent": 0, "step": ""},
+        **extra,
+    }
+    _tasks[task_id] = task
+    return task_id
+
+
+def _set_progress(task: dict, current: int, total: int, step: str):
+    pct = int(current / total * 100) if total > 0 else 0
+    task["progress"] = {"current": current, "total": total, "percent": pct, "step": step}
+
+
+def _keyword_to_queries(keyword: str) -> list[str]:
+    # 自動加「短劇」後綴，確保搜到的是短劇而非音樂/MV
+    cn_query = keyword if "短劇" in keyword else f"{keyword} 短劇"
+    queries = [cn_query]
+    try:
+        from ..utils import llm_client
+        en = llm_client.chat(
+            f"把以下中文關鍵詞翻譯成英文（只回傳翻譯結果，不要解釋）：{keyword}",
+            system="你是翻譯助手，只輸出翻譯結果。",
+        ).strip().strip('"').strip("'")
+        if en and en.lower() != keyword.lower():
+            queries.append(f"{en} short drama")
+    except Exception:
+        queries.append(f"{keyword} drama")
+    return queries
+
+
+# ──────────────────────────── Main ────────────────────────────
+
+def main():
+    uvicorn.run(
+        "src.web.app:app",
+        host="0.0.0.0",
+        port=8501,
+        reload=True,
+    )
+
+
+if __name__ == "__main__":
+    main()

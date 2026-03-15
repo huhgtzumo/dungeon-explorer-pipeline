@@ -1,0 +1,366 @@
+{
+  "video_id": "089vHDxVoQs",
+  "title": "姨母為她相看的未來夫君被表妹搶了先，她不爭不搶不哭不鬧默默將渣男拱手相讓，人人都等着看她被退親的笑話，不料等着等着卻等到那位風光霽月的小世子十里紅妝高調求娶，給了她一世榮寵！#古装言情 #重生复仇",
+  "analysis": {
+    "drama_summary": "寄人籬下的孤女石簡離被表妹搶走未婚夫，她不爭不搶巧妙退婚，反而贏得國公府世子真心求娶，最終證清白得一世榮寵。",
+    "structure": {
+      "type": "三幕式反轉遞進結構",
+      "type_en": "Three-act escalating reversal structure",
+      "description": "第一幕建立女主寄人籬下的弱勢處境與退婚危機，第二幕通過多次衝突展現女主的智慧與世子的守護，第三幕以反派陷害失敗、真相大白和婚姻圓滿收束。每一幕都包含一個核心反轉：退婚反轉為女主主動設局、射箭比試反轉為世子維護、祭祖陷害反轉為世子早已掌握證據。整體呈現「被欺壓→智慧反擊→全面翻盤」的爽文遞進。",
+      "act_breakdown": "第一幕（約30%）：石簡離被搶未婚夫，巧妙設局退婚；第二幕（約40%）：射箭衝突、世子守護、情感升溫、明月書多次陷害；第三幕（約30%）：祭祖大戲、反派栽贓失敗、真相大白、求婚圓滿。",
+      "excerpt": "我已經安排好了。不准任何人散布謠言。——體現世子早已佈局的反轉結構"
+    },
+    "hooks": [
+      {
+        "type": "危機逃亡開場",
+        "type_en": "Crisis escape opening",
+        "description": "開場即展現女主幼年喪親、被追殺逃亡的危急場景，迅速建立同情與懸念，觀眾立刻想知道她能否脫險、命運如何。",
+        "timing": "開場",
+        "excerpt": "What should we do? Those people behind us are still trying to catch us. As long as you leave the city. I went to the capital to seek refuge with my aunt."
+      },
+      {
+        "type": "撞破醜聞衝突",
+        "type_en": "Scandal discovery conflict hook",
+        "description": "女主姨母親眼撞見未婚夫與表妹私會，瞬間製造高強度衝突，多方角色立場碰撞，觀眾被捲入道德判斷與情感對立。",
+        "timing": "開場第一幕",
+        "excerpt": "Isn't this Master Qiao? He's going to marry my daughter soon. How to be with the fourth lady of the bushes. Aunt. brute. You are engaged to Ling'er. Actually doing such a shameful thing in broad daylight."
+      },
+      {
+        "type": "身份懸念鉤子",
+        "type_en": "Identity mystery hook",
+        "description": "世子趙歡初登場時身份未明，女主認出他但不確定他是否記得自己，製造「他會不會認出我」的懸念。",
+        "timing": "中段前期",
+        "excerpt": "I'm just an orphan he rescued. After so many years. He should have forgotten."
+      },
+      {
+        "type": "反差認知鉤子",
+        "type_en": "Cognitive dissonance hook",
+        "description": "標題本身就是一個巨大的反差鉤子——人人等著看她被退親的笑話，結果等來了十里紅妝高調求娶，觀眾因好奇「怎麼翻盤」而留下。",
+        "timing": "開場（標題即鉤子）",
+        "excerpt": "人人都等着看她被退親的笑話，不料等着等着卻等到那位風光霽月的小世子十里紅妝高調求娶"
+      }
+    ],
+    "elements": {
+      "characters": [
+        {
+          "type": "隱忍智謀型女主",
+          "type_en": "Enduring and strategic heroine",
+          "description": "表面溫順柔弱、寄人籬下的孤女，實則心思縝密、善於佈局。她不正面硬剛，而是利用局勢讓對手自爆。核心吸引力在於「弱者的智慧」——觀眾對看似無力卻暗中掌控局面的角色天然有認同感。",
+          "excerpt": "Since you already knew Qiao Jinchuan and Miss Shu have an affair. Why not tell Mrs. Qiao directly? ... He may not believe it without any evidence. If Qiao Jingchuan continues to deceive... If he saw it with his own eyes. Breaking off the engagement will solve the problem."
+        },
+        {
+          "type": "深情護妻型男主（風光霽月世子）",
+          "type_en": "Devoted protective noble prince",
+          "description": "國公府世子，身份尊貴、戰功赫赫，對女主一見傾心後全力守護。他的強大是女主逆襲的外部助力，但不喧賓奪主，更多是在關鍵時刻出手。兼具霸道與溫柔。",
+          "excerpt": "Miss Shi is the niece of my second aunt. Naturally, they are my relatives in Mingfu. No one can belittle or humiliate you. ... Since I dare to promise you to marry you as my wife. Then I will definitely convince my parents to agree."
+        },
+        {
+          "type": "嫉妒瘋魔型反派（庶女表妹）",
+          "type_en": "Jealousy-driven villainess (concubine's daughter)",
+          "description": "明月書作為庶出表妹，嫉妒女主得到的一切，從搶未婚夫到僱匪害人到祭祖栽贓，手段不斷升級，最終瘋魔自毀。她的核心驅動力是「為什麼她一個孤女能得到我得不到的」。",
+          "excerpt": "Who made you all favor her? Shi Jianli is an orphan. Why do you all like her? She's the only one in my eyes. I just want to destroy her, destroy her."
+        },
+        {
+          "type": "忠心護主型閨蜜/表兄",
+          "type_en": "Loyal protective sibling ally",
+          "description": "三表哥和表妹靈兒是女主在府中的堅定盟友，在衝突中挺身而出，增加女主陣營的力量感。",
+          "excerpt": "Because Sister Li knows etiquette and shame. You remember. Li Er is my cousin. If you dare to bully or humiliate. I'll take care of you."
+        },
+        {
+          "type": "軟弱渣男型工具人",
+          "type_en": "Weak-willed scumbag ex-fiancé",
+          "description": "喬景川是典型短劇渣男，見利忘義、軟弱無主見，被反派利用又被女主碾壓，存在的意義是讓觀眾出氣和襯托男主的優秀。",
+          "excerpt": "My nephew has always been fond of Sister Shuer. I never liked Li'er's sister. ... If I marry you, Shuer will be my legal wife. You are the co-wife. I think I'm doing you a favor."
+        }
+      ],
+      "character_combos": [
+        {
+          "type": "世子×寄人籬下孤女（門第懸殊真愛組合）",
+          "type_en": "Noble prince × orphan girl under others' roof",
+          "description": "身份地位的巨大落差製造「她配不配」的外部壓力，而男主不顧門第堅持求娶的態度產生強烈甜感和爽感。觀眾代入女主，享受被最頂級的人選中的幻想。",
+          "excerpt": "My family is humble. And you are the prince of the Duke's Mansion. You will inherit the title in the future. Your mother wouldn't agree. ... Since I dare to promise you to marry you as my wife. Then I will definitely convince my parents to agree."
+        },
+        {
+          "type": "庶女表妹×嫡系孤女（嫡庶之爭）",
+          "type_en": "Concubine's daughter × legitimate orphan (status rivalry)",
+          "description": "明月書作為庶女嫉妒「不過是寄養孤女」的石簡離獲得更多認可，這種「明明我才是親生的」的怨念驅動持續衝突，製造觀眾的義憤。",
+          "excerpt": "Shi Jianli, you are indeed an orphan who cannot be on the stage. ... She's just a cousin staying with us. Why do you help her and not me?"
+        },
+        {
+          "type": "強勢母親×堅定兒子（婚事博弈）",
+          "type_en": "Strong mother × determined son (marriage negotiation)",
+          "description": "觀眾擔心婆婆會阻攔婚事，但男主態度堅定甚至以「非她不娶」逼母親同意，製造先抑後揚的甜蜜轉折。",
+          "excerpt": "Mother, I will not marry anyone other than Li'er. I hope you can help me. ... Li Er, this girl, came to the Duke's Mansion when she was 12 years old. I watched her grow up. I don't know her character yet. I like it very much."
+        }
+      ],
+      "settings": [
+        {
+          "type": "祭祖大典（家族權力場景）",
+          "type_en": "Ancestral worship ceremony (clan power scene)",
+          "description": "祭祖是古裝劇的高張力場景——家族核心成員齊聚，身份認同與否在此一舉。反派選擇在此場合揭露女主「汙點」，意圖最大化羞辱效果，反而成為世子反擊的完美舞台。",
+          "excerpt": "It happens that we have to worship our ancestors in the middle of this month. ... Li'er, this is your first time worshipping your ancestors. Wait for Huaer to come. Burn incense with him."
+        },
+        {
+          "type": "射箭比試場（高門技藝比拼）",
+          "type_en": "Archery competition ground (noble skills contest)",
+          "description": "射箭場景既展現角色武力值，又通過「活人靶子」的極端行為將衝突推向道德底線，逼迫各方表態。",
+          "excerpt": "Apple on your head. Stand over there. ... Mingyue said that even if you are willful, there must be a limit. How dare you use a living person as a target?"
+        },
+        {
+          "type": "花燈節（浪漫私密場景）",
+          "type_en": "Lantern festival (romantic intimate scene)",
+          "description": "花燈節提供古裝劇經典的男女私會場景，在公共節慶的歡樂氛圍中穿插私密告白，甜感與危機感並存。",
+          "excerpt": "I never knew. My elder brother's possessiveness is so strong. He wouldn't even look at his cousin. ... Then what wish did you make? May all Yaoyao's wishes come true."
+        },
+        {
+          "type": "退婚對峙場景（喬家）",
+          "type_en": "Engagement cancellation confrontation (Qiao family)",
+          "description": "女主帶人上門退婚，喬家母子百般阻撓，形成「你不還我就毀你」的博弈對峙，場景內權力反覆易手，張力極強。",
+          "excerpt": "If these letters were spread. Uncle Mingyue's reputation is ruined. The Ming family will also suffer. ... I am an orphan. Barefoot is not afraid of wearing shoes. Anyway, I will never marry Qiao Jingchuan. At worst, both sides will be destroyed."
+        }
+      ],
+      "relationships": [
+        {
+          "type": "青梅竹馬暗生情（寄養表兄妹）",
+          "type_en": "Childhood companions to lovers (foster cousins)",
+          "description": "女主寄養在國公府六年，與世子從陌生到熟悉，表兄妹的身份既提供朝夕相處的便利，又因「名義親屬」增加曖昧的禁忌感。衝突核心在於門第差距與身份質疑。",
+          "excerpt": "I still remember the first time we met when you came home. At that time you still called me Miss Stone. ... From that time on, I knew that beneath your gentle appearance. A stubborn and unyielding character."
+        },
+        {
+          "type": "表妹搶親（閨中姐妹反目）",
+          "type_en": "Cousin stealing fiancé (sisters turning enemies)",
+          "description": "明月書搶走石簡離的未婚夫喬景川，從姐妹關係變為情敵。衝突核心不是爭男人，而是「被自己人背叛」的痛感和「你憑什麼」的不忿。",
+          "excerpt": "Aunt, please don't blame Sister Shu'er. It's all my nephew's fault. My nephew has always been fond of Sister Shuer. I never liked Li'er's sister."
+        },
+        {
+          "type": "姨母養女的恩義與利用",
+          "type_en": "Aunt-niece fosterage bond with underlying exploitation",
+          "description": "姨母收養女主有真情也有利用（聯姻鞏固家族勢力），這種複雜的恩義關係讓女主既感恩又不敢反抗，增加了隱忍的合理性。",
+          "excerpt": "Six years ago, your family encountered a sudden change. Both parents are dead. You came to the ember with so much difficulty. Of course I'm going to protect you. Only then can I be worthy of my sister who is in heaven."
+        },
+        {
+          "type": "救命之恩結情緣",
+          "type_en": "Life-saving bond turning to love",
+          "description": "世子幼年救過逃亡中的女主，這段前緣既是情感基礎，也是後來證明女主清白的關鍵證據，一石二鳥。",
+          "excerpt": "It was me who saved Li'er back then. I was the one who sent her back to the capital. I can prove her innocence. ... I followed my father to see the official. Passing by Jiangzhou. Met Li'er who was running away."
+        }
+      ]
+    },
+    "payoffs": [
+      {
+        "type": "智謀退婚打臉",
+        "type_en": "Strategic engagement cancellation face-slap",
+        "description": "女主不是哭鬧著被退婚，而是設局讓姨母親眼撞見渣男出軌，再用「空信威脅」逼喬家交還庚帖。觀眾的爽感來自弱者用智慧碾壓強者，以及渣男渣女自食其果。",
+        "emotional_impact": "爽快/解氣",
+        "excerpt": "White paper, you don't have my letter at all. ... I just want you to hand over my plow iron. ... So awesome. Such a vicious scheme."
+      },
+      {
+        "type": "世子當眾維護身份宣示",
+        "type_en": "Prince's public declaration of protection",
+        "description": "每次女主被欺辱，世子都在關鍵時刻出現並以身份和權力為她撐腰。觀眾的滿足感來自「終於有人為她說話了」的情緒釋放。",
+        "emotional_impact": "爽快/感動",
+        "excerpt": "Miss Shi is the niece of my second aunt. Naturally, they are my relatives in Mingfu. No one can belittle or humiliate you."
+      },
+      {
+        "type": "祭祖栽贓反殺（真相大白）",
+        "type_en": "Ancestral ceremony frame-up backfire (truth revealed)",
+        "description": "反派在祭祖大典上揭露女主「做過小妾」的黑歷史，意圖毀她婚事。結果世子早已掌握全部證據，當場翻盤——救人經過、假證人招供、反派買兇書信一一呈上。觀眾積壓的憤怒在此集中釋放。",
+        "emotional_impact": "震驚/解氣/爽快",
+        "excerpt": "It was me who saved Li'er back then. ... Prince, please spare my life. ... It was him who gave me the money. Let me frame Miss Shi. Miss Shi is actually innocent."
+      },
+      {
+        "type": "求婚告白深情承諾",
+        "type_en": "Proposal confession with deep vow",
+        "description": "世子向母親堅定表態「非她不娶」，母親意外同意，隨後男女主在花燈節互訴衷腸。觀眾在經歷大量虐心和危機後，終於獲得甜蜜的情感回報。",
+        "emotional_impact": "感動/甜蜜",
+        "excerpt": "Mother, I will not marry anyone other than Li'er. ... This life is for you. Not to be disappointed. ... I bear the wind and rain. I worry about trivial matters. As long as you are happy."
+      },
+      {
+        "type": "反派瘋魔自毀",
+        "type_en": "Villain's self-destructive madness",
+        "description": "明月書的罪行全部暴露——僱匪、栽贓、買通假證人——被送往白雲寺削髮為尼，永世不出。觀眾積壓的對反派的厭惡得到徹底宣洩。",
+        "emotional_impact": "解氣",
+        "excerpt": "Such a vicious person. If you forgive him again. Wouldn't that bring disaster to the entire Ming family? ... Escorted to Baiyun Temple for shaving. Always be with the green lamp and ancient Buddha."
+      }
+    ],
+    "pacing": {
+      "tempo": "快節奏密集衝突型，每一幕都有至少一個核心衝突爆發點，中間穿插短暫甜蜜喘息",
+      "tension_curve": "開場中高張力（逃亡+退婚）→ 短暫舒緩（進入國公府）→ 持續攀升（射箭衝突、遇匪、情感糾葛）→ 最高潮（祭祖栽贓反殺）→ 甜蜜收束（告白求婚）",
+      "key_beats": [
+        "撞破未婚夫出軌 → 退婚設局",
+        "射箭場活人靶子衝突 → 世子訓斥維護",
+        "寺廟遇匪危機 → 世子救援",
+        "祭祖大典被栽贓 → 證據反殺真相大白",
+        "母親同意婚事 → 花燈節互訴衷腸",
+        "焚香祭祖 → 成為一家人的象徵性儀式"
+      ],
+      "excerpt": "From 退婚 to 祭祖, the pacing example: I'm not sad, really. Let's shoot arrows now. You will use Qiao Jingchuan as a target in a moment. Try him out. Good at piercing through. — 退婚後立刻切入下一個衝突場景，不給觀眾喘息"
+    },
+    "dialogues": [
+      {
+        "type": "以弱制強反擊型",
+        "type_en": "Underdog counter-attack type",
+        "description": "女主在看似劣勢中拋出致命威脅，用「我是光腳的不怕穿鞋的」邏輯逼迫對方就範。這類對白的套路是先示弱再亮底牌，反差越大越爽。",
+        "emotional_function": "爽感/解氣",
+        "excerpt": "I am an orphan. Barefoot is not afraid of wearing shoes. Anyway, I will never marry Qiao Jingchuan. At worst, both sides will be destroyed."
+      },
+      {
+        "type": "身份碾壓維護型",
+        "type_en": "Status-crushing protective declaration",
+        "description": "男主以自身尊貴身份為女主背書，用「她是我的人」邏輯封住所有質疑。這類對白的核心是權力宣示，讓欺負女主的人瞬間失語。",
+        "emotional_function": "爽感/安全感/甜蜜",
+        "excerpt": "Miss Shi is the niece of my second aunt. Naturally, they are my relatives in Mingfu. No one can belittle or humiliate you."
+      },
+      {
+        "type": "道德審判型",
+        "type_en": "Moral judgment type",
+        "description": "世子站在道德高地對反派進行價值觀審判，引用家族榮譽和做人底線，讓反派無法反駁。這類對白的功能是為懲罰提供正當性。",
+        "emotional_function": "震撼/解氣",
+        "excerpt": "The ancestors of the Ning family swore an oath based on military merit. The cavalry trampled through mountains of corpses and seas of blood. The sword never points to innocent people. But you now. Using living people as targets. Have you ever thought about. If this maid were you."
+      },
+      {
+        "type": "深情告白撒糖型",
+        "type_en": "Sweet romantic confession type",
+        "description": "在衝突解決後，男女主的私密對話中展現深情與承諾。語言樸實但真摯，常用「這一生」「永不辜負」等誓言式表達，滿足觀眾的情感幻想。",
+        "emotional_function": "甜蜜/感動",
+        "excerpt": "This life is for you. Not to be disappointed. ... I bear the wind and rain. I worry about trivial matters. As long as you are happy. ... Holding Your Hand. Grow old with you. I will never let you down in this life."
+      },
+      {
+        "type": "嫉妒瘋魔自白型",
+        "type_en": "Jealousy-driven villain monologue",
+        "description": "反派在崩潰時刻暴露真實動機，用「憑什麼」句式表達嫉妒。這類對白讓觀眾既理解反派又更加厭惡，強化正派陣營的正當性。",
+        "emotional_function": "義憤/解氣",
+        "excerpt": "Who made you all favor her? Shi Jianli is an orphan. Why do you all like her? She's the only one in my eyes. I just want to destroy her, destroy her."
+      }
+    ],
+    "visual_scenes": [
+      {
+        "type": "當眾撞破出軌",
+        "type_en": "Public discovery of infidelity",
+        "description": "姨母親眼看見未婚夫與庶女在一起的場景，多人在場形成公共審判效果，羞恥感和道德壓力被放到最大。",
+        "dramatic_tension": "私密醜聞在公開場合爆發，當事人無處遁逃，圍觀者的反應放大了戲劇效果。",
+        "excerpt": "Isn't this Master Qiao? He's going to marry my daughter soon. How to be with the fourth lady of the bushes."
+      },
+      {
+        "type": "活人靶子射箭",
+        "type_en": "Human target archery scene",
+        "description": "明月書逼女主的丫鬟頂著蘋果當活靶，生死一線的視覺張力極強，角色被迫在勇氣和安全之間抉擇。",
+        "dramatic_tension": "箭在弦上的物理危險與人性考驗並存，觀眾屏息等待結果。",
+        "excerpt": "Apple on your head. Stand over there. ... A maid's life is also a life. She's not your thing. It's not your lucky chance to win favor today. She's just like you and me. It hurts and it's scary."
+      },
+      {
+        "type": "祭祖焚香對峙",
+        "type_en": "Ancestral worship confrontation",
+        "description": "在莊嚴的祭祖大典上，反派當眾揭露女主黑歷史，神聖場合與骯髒指控形成強烈反差，隨後世子逐一拆穿反派陰謀。",
+        "dramatic_tension": "神聖儀式被打斷、家族顏面與個人清白的雙重危機、證據鏈的逐步展開。",
+        "excerpt": "Shi Jianli is unclean. He can't marry the eldest brother. You can't even burn incense to worship your ancestors. ... I have witnesses. Proof that Shi Jianli had been a pedophile."
+      },
+      {
+        "type": "花燈節私會定情",
+        "type_en": "Lantern festival secret rendezvous",
+        "description": "花燈夜色中男女主互訴衷腸、交換信物，浪漫的視覺氛圍與深情對白相映成趣。",
+        "dramatic_tension": "節日歡樂的公共氛圍與兩人私密情感的對比，加上「被發現」的潛在風險。",
+        "excerpt": "When I was little, my dad often took me to play with fireworks. If you like. We can hang out often. After we get married. We'll travel the world together. See the beautiful mountains and rivers."
+      }
+    ],
+    "ending_hooks": [
+      {
+        "type": "甜蜜誓言收束型",
+        "type_en": "Sweet vow closure type",
+        "description": "以男主的深情誓言作為全劇收束，將所有衝突和磨難凝結為「一切都值得」的情感高點。觀眾帶著甜蜜滿足感離開，同時對這對CP的未來充滿期待。",
+        "timing": "最後一段對白，畫面定格在兩人相依的場景",
+        "excerpt": "I bear the wind and rain. I worry about trivial matters. As long as you are happy."
+      },
+      {
+        "type": "前後呼應型（苦盡甘來）",
+        "type_en": "Bookend contrast type (bitterness to sweetness)",
+        "description": "結尾女主回顧自己曾經的恐懼，與現在有人守護的安全感形成對比，首尾呼應開場的逃亡與無助。",
+        "timing": "最後幾句台詞",
+        "excerpt": "I used to feel terrified. High prices, long road ahead. Fear in my heart. But now I have you with me. I feel very safe."
+      }
+    ],
+    "tension_actions": [
+      {
+        "type": "潑婦式摔倒碰瓷",
+        "type_en": "Shrew-style fall and fake injury",
+        "description": "喬母在退婚場景中故意摔倒碰瓷，大喊被打，試圖利用輿論壓力反制。這個行為製造鬧劇般的混亂感，同時展現反派陣營的無底線。",
+        "visual_impact": "成年婦人在地上打滾嚎哭的醜態，與國公府的體面形成強烈反差。",
+        "excerpt": "Someone was beaten! Someone was beaten! Hahahaha, I hit someone. ... Come on, come and take a look. The third son of the Duke of Anguo beat someone up. Ouch. It hurts so much it's killing me."
+      },
+      {
+        "type": "射箭對準活人",
+        "type_en": "Arrow aimed at living person",
+        "description": "明月書將蘋果放在丫鬟頭上要求射箭，用生命威脅製造極端張力。這個行為直接暴露反派的殘忍本性，激發觀眾的義憤。",
+        "visual_impact": "箭尖對準人頭的特寫，被迫站立的丫鬟的恐懼表情，製造窒息般的緊張感。",
+        "excerpt": "Apple on your head. Stand over there. ... How dare you use a living person as a target?"
+      },
+      {
+        "type": "當眾跪地求饒",
+        "type_en": "Public kneeling and begging for mercy",
+        "description": "假證人和反派同謀在世子面前跪地求饒、招供真相，從「理直氣壯指控」到「跪地求饒」的反轉極具視覺衝擊力。",
+        "visual_impact": "原本趾高氣揚的指控者瞬間跪倒，權力關係的視覺翻轉。",
+        "excerpt": "Prince, please spare my life. Prince, please spare my life. ... It was him who gave me the money. Let me frame Miss Shi. Miss Shi is actually innocent."
+      },
+      {
+        "type": "撕毀/交換庚帖文書",
+        "type_en": "Tearing/exchanging engagement documents",
+        "description": "庚帖作為婚約的物理象徵，其交還過程充滿博弈——信件威脅、空白紙詐術，每一步都牽動雙方命運。",
+        "visual_impact": "紙張在手中傳遞、展開、被發現是空白的瞬間表情變化。",
+        "excerpt": "Bring Shi Jianli's plow iron. ... White paper, you don't have my letter at all."
+      }
+    ],
+    "genres": [
+      {
+        "type": "古裝言情",
+        "type_en": "Historical romance",
+        "description": "以古代世家大族為背景，融合家族權力鬥爭與男女情感線。古裝設定提供了嫡庶之分、門第觀念、婚約制度等天然衝突素材，同時華服場景滿足視覺審美。核心受眾為18-35歲女性。"
+      },
+      {
+        "type": "宅鬥",
+        "type_en": "Mansion intrigue",
+        "description": "國公府內部的嫡庶爭鬥、嬸母妯娌間的權力博弈構成主要衝突場域。宅鬥類型的吸引力在於「小空間內的大權謀」，每個人物都有自己的算盤。"
+      }
+    ],
+    "styles": [
+      {
+        "type": "爽文",
+        "type_en": "Power fantasy / Face-slapping",
+        "description": "以「被欺壓→反擊→碾壓」為核心情緒循環，每次衝突都以女主陣營的勝利告終。爽文風格的關鍵是讓觀眾積攢的憤怒得到即時宣洩，節奏快、反轉密、打臉狠。"
+      },
+      {
+        "type": "甜寵",
+        "type_en": "Sweet romance / Doting",
+        "description": "男主對女主的無條件寵愛和守護貫穿全劇，衝突間隙穿插撒糖橋段。甜寵風格滿足觀眾「被全世界最優秀的人獨寵」的情感幻想。"
+      },
+      {
+        "type": "虐戀（輕虐）",
+        "type_en": "Light angst romance",
+        "description": "女主的孤女身世、被陷害的經歷提供適度的虐心元素，但始終有男主和盟友守護，不會真正絕望。輕虐增加情感深度，讓甜蜜更顯珍貴。"
+      }
+    ],
+    "tags": [
+      "古裝言情",
+      "孤女逆襲",
+      "世子寵妻",
+      "退婚打臉",
+      "宅鬥",
+      "嫡庶之爭",
+      "門第懸殊",
+      "青梅竹馬",
+      "真相大白",
+      "爽文",
+      "甜寵",
+      "重生復仇",
+      "以弱制強",
+      "救命之恩",
+      "家族權謀"
+    ],
+    "video_id": "089vHDxVoQs",
+    "title": "姨母為她相看的未來夫君被表妹搶了先，她不爭不搶不哭不鬧默默將渣男拱手相讓，人人都等着看她被退親的笑話，不料等着等着卻等到那位風光霽月的小世子十里紅妝高調求娶，給了她一世榮寵！#古装言情 #重生复仇"
+  },
+  "video_data": {
+    "channel": "青鸾枕夢劇",
+    "views": 508236,
+    "duration": "PT10658S"
+  }
+}

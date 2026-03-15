@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_b3dcd8",
+  "category": "genres",
+  "subcategory": "",
+  "name": "復仇逆襲",
+  "name_en": "Revenge & Comeback",
+  "description": "主角遭受背叛或壓迫後絕地反擊，從谷底一步步翻盤，劇情充滿爽感與正義伸張的快感，節奏緊湊，每集都有打臉惡人的高光時刻",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "被豪門拋棄的私生女歸來掌控家族命運",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "被冤枉入獄十年的男主出獄後逐一清算",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

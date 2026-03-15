@@ -1,0 +1,407 @@
+{
+  "video_id": "3EZ75VoTRAI",
+  "title": "【ENG DUB】From Convict to Heiress: The Real Daughter's Revenge",
+  "analysis": {
+    "drama_summary": "失散千金被親生父母召回替養女頂罪入獄三年，出獄後步步為營奪回豪門繼承權，最終揭露自己是為母復仇的局外人。",
+    "structure": {
+      "type": "環形結構＋多層反轉",
+      "type_en": "Circular structure with layered reversals",
+      "description": "故事以法庭判刑開場，女主以囚犯身份進入故事，經歷被壓迫→隱忍→反擊→奪權→終極反轉的螺旋上升結構。每一幕都包含一次權力翻轉，張力逐層遞進。結尾揭露女主真實身份與動機，與開頭的冤獄形成環形呼應，整個復仇故事本身就是一個更大計謀的一部分。",
+      "act_breakdown": "第一幕（約15%）：冤獄設定與出獄——建立女主被害背景與復仇動機。第二幕（約25%）：回歸家庭與初步衝突——女主與養女、八位未婚夫的對峙，展示壓迫。第三幕（約30%）：職場反擊與權力爭奪——女主在公司步步為營，逐步架空父親。第四幕（約20%）：訂婚宴大反轉——公開揭露養女醜聞，利用遺囑條款奪取繼承權。第五幕（約10%）：終極清算與身份揭露——清算所有人，揭露女主真實身份為替母復仇的外人。",
+      "excerpt": "Defendant Fu Yaining. Involuntary manslaughter charge sustained. Sentenced to fixedterm imprisonment. Three years. ... My story's finished. I should go. ... Who are you really? I'm the daughter seeking justice for her mother."
+    },
+    "hooks": [
+      {
+        "type": "倒敘衝擊開場",
+        "type_en": "In medias res shock opening",
+        "description": "以法庭宣判直接開場，觀眾第一秒就看到女主被判刑，立刻產生疑問：為什麼？她做了什麼？隨後揭露是替人頂罪，瞬間建立同情心和憤怒感，鉤住觀眾。",
+        "timing": "開場前10秒",
+        "excerpt": "Defendant Fu Yaining. Involuntary manslaughter charge sustained. Sentenced to fixedterm imprisonment. Three years."
+      },
+      {
+        "type": "反差陷阱開場",
+        "type_en": "Bait-and-switch reunion trap",
+        "description": "觀眾以為是溫馨的親人團聚，結果立刻揭露是一場精心設計的陷阱——找回親女兒只是為了讓她替養女頂罪。期待與現實的巨大落差製造強烈情緒衝擊。",
+        "timing": "開場第一分鐘內",
+        "excerpt": "Missing for 15 years. Biological parents. My dear parents found me. It would be a joyful family reunion. Never expected. It was a scheme with my eight fiances jointly set up for me. A colossal trap."
+      },
+      {
+        "type": "懸念預告鉤子",
+        "type_en": "Revenge promise hook",
+        "description": "女主出獄時直接宣告復仇意圖，讓觀眾帶著期待感繼續觀看，想看她如何一步步清算每個人。",
+        "timing": "第一幕結尾",
+        "excerpt": "3 years behind bars. My biological parents to save the housekeeper's daughter personally sent me to hell. Now I've served my sentence. Time for reckoning."
+      },
+      {
+        "type": "終極身份懸念",
+        "type_en": "Hidden identity twist hook",
+        "description": "結尾揭露女主並非真正的富家千金，而是為母復仇的外來者，整個故事的前提被顛覆，觀眾被迫重新理解所有劇情。",
+        "timing": "結尾",
+        "excerpt": "Once there was a girl. She lived with her mother depending on each other until one day she saw her mother save her was hit by a car and killed. The girl begged everywhere wanting the murderer to be punished. ... I'm the daughter seeking justice for her mother."
+      }
+    ],
+    "elements": {
+      "characters": [
+        {
+          "type": "隱忍復仇型女主",
+          "type_en": "Patient avenger heroine",
+          "description": "表面隱忍承受冤屈，實際每一步都在佈局。核心吸引力在於觀眾知道她在忍，期待她爆發的那一刻。她既有受害者的可憐，又有復仇者的狠辣，雙面性讓角色極具魅力。",
+          "excerpt": "For someone like me, a struggling rat in the gutter for 3 years, romantic love is a mere accessory. Power alone is the latter to the clouds. ... The three years ago Mi who was controlled by others died in prison long ago."
+        },
+        {
+          "type": "白蓮花型反派（養女）",
+          "type_en": "White lotus villain (adopted sister)",
+          "description": "表面善良柔弱、楚楚可憐，實則工於心計、搶奪一切。她總是當眾示弱博取同情，暗地裡設計陷害女主。這類角色讓觀眾產生強烈的厭惡感，從而更期待她被打臉。",
+          "excerpt": "Sister, I'm sorry. We didn't know it was your birthday today, so we didn't have time to prepare. ... Sister, I know you don't like me. You can even hit or scold me, but you can't ruin my birthday party and tear up the family portrait."
+        },
+        {
+          "type": "偏心父母",
+          "type_en": "Biased parents",
+          "description": "親生父母對養女百般疼愛，對親女兒極盡冷漠甚至迫害。這種極端不公是觀眾憤怒的最大來源，也是女主復仇的最強道德基礎。",
+          "excerpt": "Shut up. We gave you life. Just take Yan's jail sentence. Not asking you to die. ... Ning Ning, you were wrong. How could you bully Yiny?"
+        },
+        {
+          "type": "背叛型未婚夫群體",
+          "type_en": "Traitorous fiancé ensemble",
+          "description": "八位未婚夫集體背叛女主、站隊養女，形成壓倒性的敵對陣營。群體背叛比單人背叛更具衝擊力，也讓女主的孤立無援更加突出。",
+          "excerpt": "The eight of us will never marry her. ... I'll only marry Yin. ... So will we."
+        },
+        {
+          "type": "正義長輩（已故祖父）",
+          "type_en": "Righteous elder (deceased grandfather)",
+          "description": "已故的祖父是唯一真正關心女主的長輩，通過遺囑成為女主逆襲的關鍵助力。雖已去世但影響力貫穿全劇。",
+          "excerpt": "The Fu family fortune belongs solely to Ning Ning. ... The eight scholars we sponsored are orphans of comrades who fought alongside me. Their fiances we've cultivated for Ning Ning."
+        }
+      ],
+      "character_combos": [
+        {
+          "type": "真千金×假千金（親女×養女對決）",
+          "type_en": "Real heiress vs. fake heiress rivalry",
+          "description": "最經典的豪門短劇組合。養女佔據了親女的一切——父母的愛、家庭地位、未婚夫，形成全方位的搶奪與反搶奪。兩人每次交鋒都是身份正統性的較量，觀眾天然站在真千金一邊。",
+          "excerpt": "I just wanted to remind you I am the Foo family's only biological daughter. ... Fu Yin Yin is the housekeeper's daughter. Never expected Fu Ying to be an imposter."
+        },
+        {
+          "type": "孤女×群狼（一對多的壓迫格局）",
+          "type_en": "Lone heroine vs. hostile ensemble",
+          "description": "女主獨自面對養女+八位未婚夫+偏心父母的聯合壓迫，形成一對多的極端不對等局面。這種設定最大化了觀眾的同情心和爽感預期——敵人越多，翻盤越爽。",
+          "excerpt": "Become Ying's servant, obeying her every word or we'll send you to a mental hospital to be tortured to death. Choose one yourself. ... What a pity you mess with me."
+        },
+        {
+          "type": "偏心父母×被拋棄親女",
+          "type_en": "Neglectful parents vs. abandoned biological daughter",
+          "description": "血緣關係的背叛是最具情感殺傷力的衝突。父母本應是最親的人卻成為最大的加害者，這種反差製造了極深的情感創傷和觀眾共情。",
+          "excerpt": "But I'm your real daughter just because you abandoned me. I'm not your daughter just because you for 18 years never raised me. ... In this family photo, there's dad, mom, Fu Yin, and the eight of them. I'm the only one missing."
+        }
+      ],
+      "settings": [
+        {
+          "type": "法庭宣判",
+          "type_en": "Courtroom sentencing",
+          "description": "法庭是最具權威壓迫感的場景，宣判代表女主命運被外力完全掌控。開場用法庭建立了女主的受害者身份，結尾用法庭證詞完成復仇閉環。",
+          "excerpt": "Defendant Fu Yaining. Involuntary manslaughter charge sustained. Sentenced to fixedterm imprisonment. Three years."
+        },
+        {
+          "type": "豪門生日宴會",
+          "type_en": "Mansion birthday banquet",
+          "description": "宴會場景聚集所有角色，提供公開衝突的舞台。生日本應是慶祝，但女主被排斥在慶祝之外，形成強烈的內外對比。",
+          "excerpt": "Yin from Dad. You are birthday gift. A limited edition Rolls-Royce. ... But today is also my birthday. Why isn't anyone celebrating with me?"
+        },
+        {
+          "type": "董事會/公司會議室",
+          "type_en": "Boardroom power struggle",
+          "description": "會議室是權力鬥爭的核心場景，每一次會議都是一次權力洗牌。女主從被嘲諷的前科犯到被推舉為副總裁再到成為董事長，會議室見證了完整的權力逆轉。",
+          "excerpt": "Some lack education or connections. Some have served prison time. If we categorize everyone here into a hierarchy, then she would be at the lowest rank. ... Bought a meeting to vote on electing Miss Fu as a new chairwoman."
+        },
+        {
+          "type": "訂婚宴（公開揭露場）",
+          "type_en": "Engagement banquet (public exposure)",
+          "description": "訂婚宴匯聚所有社會關係，是公開羞辱和反轉的最佳舞台。在眾目睽睽下揭露真相，戲劇張力和社會壓力同時達到頂峰。",
+          "excerpt": "Everyone, today is my daughter's engagement banquet. ... Never thought the second food daughter not only has poor character, but plays so wildly in private."
+        },
+        {
+          "type": "精神病院（終極懲罰場）",
+          "type_en": "Psychiatric hospital (ultimate punishment)",
+          "description": "精神病院代表最極端的社會性死亡和人身自由剝奪，是比監獄更具恐懼感的懲罰場景。養女從豪門千金淪落至此，形成最大的命運反轉。",
+          "excerpt": "I'm not sick. I won't take medicine. I refuse shots. I don't want an injection. ... Mom and Dad. I came to see you."
+        }
+      ],
+      "relationships": [
+        {
+          "type": "親生父母的背叛與利用",
+          "type_en": "Biological parents' betrayal and exploitation",
+          "description": "血緣關係本是最神聖的紐帶，但父母為了養女犧牲親女兒。這種關係的核心衝突在於：血緣的義務vs.養育的感情，觀眾會為這種違背天性的行為感到憤怒。",
+          "excerpt": "Mom and dad couldn't bear me going to jail. Made you come back to take the blame. ... Shut up. We gave you life. Just take Yan's jail sentence."
+        },
+        {
+          "type": "假姐妹真宿敵",
+          "type_en": "Fake sisterhood, true nemesis",
+          "description": "養女表面叫姐姐、裝親近，實際處處搶奪、設計陷害。這種披著親情外衣的敵對關係，比公開的敵人更令人齒冷。",
+          "excerpt": "Sister, I'm sorry. ... Sister, you have no right to choose among the eight of them. ... Sis, I genuinely want to make peace with you."
+        },
+        {
+          "type": "被集體背叛的未婚夫關係",
+          "type_en": "Mass fiancé betrayal",
+          "description": "八位未婚夫本應是女主的守護者（祖父安排），卻全部倒戈養女。女主反過來利用他們的背叛觸發遺囑條款，將背叛轉化為奪權工具。",
+          "excerpt": "The eight of us will never marry her. ... If any fiance betrays you, then without marriage, you inherit immediately."
+        },
+        {
+          "type": "復仇者的偽裝身份",
+          "type_en": "Avenger's disguised identity",
+          "description": "最終揭露女主並非真正的富家女，而是為母復仇假冒身份潛入。整段親情糾葛都是復仇工具，這層關係顛覆了所有先前的情感基礎。",
+          "excerpt": "Once there was a girl ... the girl discovered that this person had a missing daughter. ... Who are you really? I'm the daughter seeking justice for her mother."
+        }
+      ]
+    },
+    "payoffs": [
+      {
+        "type": "公開身份揭露打臉",
+        "type_en": "Public identity exposure face-slap",
+        "description": "在董事會上當眾揭露養女的真實出身（管家女兒），直接粉碎她在公司的地位。公開場合的揭露讓羞辱效果最大化，觀眾長期積累的對養女的厭惡在此刻得到釋放。",
+        "emotional_impact": "爽快/解氣",
+        "excerpt": "Registration date issued by adoption registry. Legally valid. Fu Yin Yin is the housekeeper's daughter. ... Speaking of hierarchy, the housekeeper's daughter status. You belong to the lowest rank."
+      },
+      {
+        "type": "利用敵人完成逆襲（遺囑反轉）",
+        "type_en": "Turning enemies' betrayal into victory (will clause reversal)",
+        "description": "女主故意讓八位未婚夫當眾背叛自己，觸發祖父遺囑中的保護條款，直接繼承全部家產。敵人的攻擊反而成為女主的武器，這種以退為進的策略讓觀眾驚嘆於女主的智慧。",
+        "emotional_impact": "震驚/爽快",
+        "excerpt": "If any fiance betrays you, then without marriage, you inherit immediately. ... You showed my video publicly just to make Brother and Chen betray you to your face. That way, you could inherit the Fu family fortune. Exactly."
+      },
+      {
+        "type": "權力徹底翻轉（奪取董事長之位）",
+        "type_en": "Complete power reversal (seizing chairmanship)",
+        "description": "從被嘲笑的前科犯到掌控整個家族企業，女主完成了從谷底到巔峰的完整逆襲弧線。父親被自己一手培養的高管集體拋棄，權力的諷刺性轉移帶來極大的戲劇快感。",
+        "emotional_impact": "爽快/震驚",
+        "excerpt": "Bought a meeting to vote on electing Miss Fu as a new chairwoman. ... How dare you betray me? ... If it weren't for Miss Fu, we'd never have gotten our chance."
+      },
+      {
+        "type": "祖父遺言揭露真相",
+        "type_en": "Grandfather's posthumous truth reveal",
+        "description": "通過祖父生前錄音揭露父母篡改遺囑、欺騙八位未婚夫的真相。已故長輩的聲音從墳墓中傳來為女主正名，既有情感衝擊又有正義伸張的力量。",
+        "emotional_impact": "震驚/感動",
+        "excerpt": "I have a recording of the old master from when he passed away. Real or fake, you'll know at a glance. ... During his lifetime, he asked you to have the eldest Fu daughter."
+      },
+      {
+        "type": "終極身份反轉",
+        "type_en": "Ultimate identity twist",
+        "description": "結尾揭露女主根本不是富家親女兒，而是為被害母親復仇的局外人。整個故事的前提被顛覆，觀眾意識到女主的每一步都是精心計算的復仇棋局，衝擊力極強。",
+        "emotional_impact": "震驚",
+        "excerpt": "My story's finished. I should go. ... Who are you really? I'm the daughter seeking justice for her mother."
+      },
+      {
+        "type": "反派被送精神病院",
+        "type_en": "Villain committed to psychiatric hospital",
+        "description": "養女曾威脅要把女主送進精神病院，最終自己反而被送進去。以其人之道還治其人之身的報應感讓觀眾極度滿足。",
+        "emotional_impact": "解氣",
+        "excerpt": "I'm not sick. I won't take medicine. I refuse shots. I don't want an injection. ... Oh, sister, I was wrong. Please don't send me away."
+      }
+    ],
+    "pacing": {
+      "tempo": "快節奏連續爆點",
+      "tension_curve": "開場高張力（法庭判刑）→ 短暫鋪墊（出獄回家）→ 持續攀升（生日衝突→公司鬥爭→訂婚宴）→ 多次爆發（揭露身份→奪權→清算）→ 終極反轉（真實身份揭露）。每個場景都包含至少一個衝突爆點，幾乎沒有喘息空間。",
+      "key_beats": [
+        "開場法庭判刑——建立冤屈",
+        "出獄回歸被排擠——積累憤怒",
+        "生日宴搶禮物撕照片——第一次反擊",
+        "董事會揭露養女身份——職場翻盤",
+        "升任副總裁——權力攀升",
+        "訂婚宴揭露養女醜聞——公開羞辱",
+        "遺囑條款觸發繼承——財富逆襲",
+        "奪取董事長之位——權力頂峰",
+        "揭露祖父真實遺言——真相大白",
+        "終極身份揭露——故事顛覆"
+      ],
+      "excerpt": "Time for reckoning. ... Today I'm going to make sure you get all the scene you can handle. ... From now on, I Fu Yining and the Fu family will sever all ties. The Fu assets are mine alone. ... My story's finished."
+    },
+    "dialogues": [
+      {
+        "type": "霸氣反擊型",
+        "type_en": "Dominant counterattack",
+        "description": "女主面對壓迫時不卑不亢、強硬回擊的對白。特點是語言簡短有力，常用反問句和比喻，將對方的攻擊反彈回去。這類對白是爽文短劇的核心，每句話都讓觀眾感到解氣。",
+        "emotional_function": "爽感/解氣",
+        "excerpt": "Bunch of losers couldn't even catch my car's exhaust fumes. Go back to driving school and practice. ... He splashed wine on me. He should have known. I'm not to be messed with."
+      },
+      {
+        "type": "揭露打臉型",
+        "type_en": "Exposure and face-slap",
+        "description": "用事實和證據直接揭露對方的謊言或真實身份，讓對方在眾人面前無地自容。特點是先讓對方得意，再一擊致命地拋出真相。",
+        "emotional_function": "爽感/震撼",
+        "excerpt": "Speaking of hierarchy, the housekeeper's daughter status. You belong to the lowest rank. ... Fu Yin Yin is the housekeeper's daughter. Never expected Fu Ying to be an imposter."
+      },
+      {
+        "type": "威脅壓迫型",
+        "type_en": "Threatening and oppressive",
+        "description": "反派用威脅、恐嚇迫使女主就範的對白。語言充滿居高臨下的傲慢和殘忍，功能是最大化觀眾對反派的厭惡，為後續打臉蓄力。",
+        "emotional_function": "製造壓迫/蓄力",
+        "excerpt": "Become Ying's servant, obeying her every word or we'll send you to a mental hospital to be tortured to death. Choose one yourself. ... Otherwise, your fate will be just like this cup."
+      },
+      {
+        "type": "虛偽溫情型（白蓮花話術）",
+        "type_en": "Fake warmth (white lotus manipulation)",
+        "description": "養女和父母用偽善的關心包裝自私的要求。表面是溫柔的勸說，實質是道德綁架和利益算計。觀眾能看穿虛偽，從而更加憤怒。",
+        "emotional_function": "製造憤怒/反感",
+        "excerpt": "Ning ning. Now, Yinyan did many wrong things before, but she is still your sister after all. ... Ning Ning, Yiny falsely accused you at the company. She was wrong, but it's been so long now. Can't you just forgive her?"
+      },
+      {
+        "type": "冷酷宣告型",
+        "type_en": "Cold declaration",
+        "description": "女主在完成某個關鍵步驟後冷靜宣告自己的立場和行動，語氣平靜但內容殘酷。冷靜的語調反而比憤怒更有力量感。",
+        "emotional_function": "震撼/爽感",
+        "excerpt": "From now on, I Fu Yining and the Fu family will sever all ties. The Fu assets are mine alone. ... Forgive them. The debt they owe me. I haven't settled item by item."
+      },
+      {
+        "type": "算計揭底型",
+        "type_en": "Strategic reveal monologue",
+        "description": "女主在勝利後揭露自己的全盤計劃，讓所有人（包括觀眾）恍然大悟。這類對白是整個佈局的收束點，帶來智力層面的爽感。",
+        "emotional_function": "震撼/智力爽感",
+        "excerpt": "You showed my video publicly just to make Brother and Chen betray you to your face. That way, you could inherit the Fu family fortune. Exactly. ... So, don't try any tricks from the start. You knew everything. Deliberately plotting against Yiny."
+      }
+    ],
+    "visual_scenes": [
+      {
+        "type": "生日宴搶禮物撕照片",
+        "type_en": "Birthday party gift-seizing and photo-tearing",
+        "description": "女主在養女的生日宴上搶走名車和玉項鏈，並當眾撕毀沒有自己的全家福。視覺衝擊力強，象徵女主對被排斥身份的憤怒反抗。",
+        "dramatic_tension": "奢華禮物的物質衝擊 + 全家福照片被撕毀的情感衝擊 + 眾人震驚的反應",
+        "excerpt": "Imperial green jade. Nice stuff. Rolls-Royce. Perfect timing. I need a car for yining. ... In this family photo, there's dad, mom, Fu Yin, and the eight of them. I'm the only one missing."
+      },
+      {
+        "type": "飆車追逐",
+        "type_en": "Car chase confrontation",
+        "description": "女主搶走豪車後瘋狂飆車，讓養女暈車嘔吐，八位未婚夫在後面追趕。速度感和力量感的視覺呈現，展示女主不受控制的野性。",
+        "dramatic_tension": "豪車速度的視覺刺激 + 養女狼狽的反差 + 追趕者的無能",
+        "excerpt": "Parik, don't worry. My driving skills are very steady. ... you did that on purpose. I never meant to be unintentional. ... Bunch of losers couldn't even catch my car's exhaust fumes."
+      },
+      {
+        "type": "訂婚宴大屏幕播放醜聞影片",
+        "type_en": "Engagement banquet scandal video on big screen",
+        "description": "在盛大的訂婚宴上，大屏幕突然播出養女與未婚夫的私密影片。上流社會的體面被瞬間撕碎，公開場合的羞辱製造最大的社會性死亡效果。",
+        "dramatic_tension": "宴會的華麗vs.影片的不堪 + 賓客的震驚反應 + 養女的崩潰",
+        "excerpt": "Look, who is that in the video? Never thought the second food daughter not only has poor character, but plays so wildly in private. ... Why won't it turn off? ... No, it's not like that. Ancient brother, save me."
+      },
+      {
+        "type": "精神病院探望",
+        "type_en": "Psychiatric hospital visit",
+        "description": "女主穿著得體地探望被關在精神病院的父母，以講故事的方式揭露自己的真實身份。環境的壓抑與女主的從容形成強烈對比。",
+        "dramatic_tension": "精神病院的壓抑環境 + 父母的狼狽vs.女主的從容 + 真相揭露的震撼",
+        "excerpt": "Mom and Dad. I came to see you. ... Ning ning. Please take us away from here. I don't want to stay here anymore. ... My story's finished. I should go."
+      }
+    ],
+    "ending_hooks": [
+      {
+        "type": "終極身份反轉型",
+        "type_en": "Ultimate identity reversal ending",
+        "description": "整部劇的最後幾句話徹底顛覆女主身份，觀眾以為的復仇千金其實是一個與富家毫無血緣關係的復仇者。這種結局讓觀眾在故事結束後仍然反覆回味，重新審視每一個情節。",
+        "timing": "最後30秒/最後兩句對白",
+        "excerpt": "Who are you really? I'm the daughter seeking justice for her mother. ... The end."
+      },
+      {
+        "type": "故事中的故事（後設揭露）",
+        "type_en": "Story-within-story meta reveal",
+        "description": "女主用講故事的方式揭露真相，將觀眾從劇情中抽離出來，意識到他們看的整個故事都是更大復仇計畫的一部分。這種後設手法增加了故事的層次感和餘韻。",
+        "timing": "最後一分鐘",
+        "excerpt": "Once there was a girl. She lived with her mother depending on each other until one day she saw her mother save her was hit by a car and killed. The girl begged everywhere wanting the murderer to be punished. But all the lawyers refused to seek justice for the girl's mother until one day the girl discovered that this person had a missing daughter."
+      }
+    ],
+    "tension_actions": [
+      {
+        "type": "打巴掌",
+        "type_en": "Face slapping",
+        "description": "短劇中最經典的肢體衝突動作。打巴掌是直接的尊嚴踐踏，視覺衝擊力強，聲音效果突出。本劇中女主打養女的巴掌是從隱忍到反擊的轉折點。",
+        "visual_impact": "臉部特寫+清脆的掌聲+被打者震驚的表情，瞬間建立力量關係的逆轉",
+        "excerpt": "How dare you hit me spreading lies in public? A slap is the least you deserve."
+      },
+      {
+        "type": "撕毀照片/文件",
+        "type_en": "Tearing up photos/documents",
+        "description": "撕毀全家福照片是對虛假家庭關係的象徵性破壞。撕裂的動作和聲音具有強烈的破壞性美感，代表關係的徹底斷裂。",
+        "visual_impact": "照片碎片飛散+眾人震驚+女主冷靜的表情對比",
+        "excerpt": "Ning baby. Dad, mom, family portrait, housekeeper's daughter. How sweetly she smiles. ... What are you doing? I just wanted to remind you I am the Foo family's only biological daughter."
+      },
+      {
+        "type": "潑酒/摔杯",
+        "type_en": "Splashing wine / smashing glass",
+        "description": "紅酒潑灑是上流社會場景中的經典羞辱動作。液體的飛濺在視覺上極具衝擊力，紅酒的顏色暗示血腥和暴力。",
+        "visual_impact": "紅色液體潑灑的慢動作+衣物被弄髒的狼狽+現場氣氛的驟變",
+        "excerpt": "What a pity. Wasted fine red wine. ... Apologize to brother and Chen now. He splashed wine on me. He should have known. I'm not to be messed with."
+      },
+      {
+        "type": "搶奪豪車飆車",
+        "type_en": "Luxury car seizure and reckless driving",
+        "description": "搶走象徵養女地位的名車並瘋狂飆車，是對物質特權的直接搶奪和對權力秩序的公然挑釁。速度和失控感帶來腎上腺素飆升的觀感。",
+        "visual_impact": "豪車啟動的引擎聲+高速行駛的畫面+追趕者被甩在身後的無力感",
+        "excerpt": "Move aside. ... Why are you getting in the car? ... Damaged R&B Exchange ... Just you wait. Brother Anin is here. You won't get away with this."
+      },
+      {
+        "type": "大屏幕播放私密影片",
+        "type_en": "Playing private video on big screen",
+        "description": "在正式社交場合的大屏幕上播放醜聞影片，是最極端的社會性羞辱。公開性和不可阻擋性（關不掉）製造了最強的尷尬和震撼。",
+        "visual_impact": "大屏幕的視覺壓迫+賓客的竊竊私語+當事人的崩潰",
+        "excerpt": "Look, who is that in the video? ... Why won't it turn off? ... No, it's not like that. Ancient brother, save me."
+      }
+    ],
+    "genres": [
+      {
+        "type": "都市豪門",
+        "type_en": "Urban elite / chaebol family",
+        "description": "以財富、繼承權、家族企業為核心的都市劇。豪門場景提供了奢華的視覺享受，繼承權爭奪提供了天然的高風險衝突。受眾被財富幻想和權力鬥爭雙重吸引。"
+      },
+      {
+        "type": "復仇",
+        "type_en": "Revenge",
+        "description": "以主角遭受不公後逐步清算為主線的類型。復仇類型的核心吸引力在於正義的實現和惡人受罰的快感，觀眾帶著強烈的期待感追看每一步反擊。"
+      },
+      {
+        "type": "懸疑（身份謎團）",
+        "type_en": "Mystery / identity thriller",
+        "description": "結尾的身份反轉為整部劇增加了懸疑層次。觀眾在結尾才意識到女主的真實身份和動機，需要重新解讀所有劇情，這種認知顛覆帶來強烈的智力快感。"
+      }
+    ],
+    "styles": [
+      {
+        "type": "爽文",
+        "type_en": "Power fantasy / face-slapping",
+        "description": "以持續的打臉、逆襲、翻盤為核心節奏的風格。觀眾從女主每次碾壓對手中獲得替代性的權力快感。節奏快、爽點密、情緒峰值頻繁。"
+      },
+      {
+        "type": "暗黑復仇",
+        "type_en": "Dark revenge",
+        "description": "女主不是傳統的善良角色，而是冷酷、算計、不留情面的復仇者。這種暗黑基調讓角色更真實、更具魅力，觀眾為她的狠辣叫好而非同情她的善良。"
+      },
+      {
+        "type": "虐後反轉",
+        "type_en": "Suffering-then-reversal (abuse-to-triumph)",
+        "description": "前期大量鋪陳女主被虐待的情節，積累觀眾的憤怒和同情，後期集中釋放復仇快感。虐得越深，爽得越透。這種先苦後甜的情緒曲線高度成癮。"
+      }
+    ],
+    "tags": [
+      "豪門復仇",
+      "真假千金",
+      "替人頂罪",
+      "遺產爭奪",
+      "白蓮花反派",
+      "集體背叛",
+      "隱忍逆襲",
+      "打臉爽文",
+      "身份反轉",
+      "女性復仇",
+      "家族企業",
+      "繼承權鬥爭",
+      "偏心父母",
+      "以退為進",
+      "終極反轉結局",
+      "精神病院懲罰",
+      "公開羞辱",
+      "遺囑條款",
+      "冤獄出獄",
+      "多角色群像"
+    ],
+    "video_id": "3EZ75VoTRAI",
+    "title": "【ENG DUB】From Convict to Heiress: The Real Daughter's Revenge"
+  },
+  "video_data": {
+    "channel": "Choco Drama",
+    "views": 353595,
+    "duration": "PT5129S"
+  }
+}

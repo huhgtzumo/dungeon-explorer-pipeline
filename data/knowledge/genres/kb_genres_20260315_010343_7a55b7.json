@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_7a55b7",
+  "category": "genres",
+  "subcategory": "",
+  "name": "職場商戰",
+  "name_en": "Workplace & Business",
+  "description": "聚焦企業內部的升職競爭、商業談判與行業內幕，主角從底層逆襲或在高層博弈中周旋，展現職場智慧與人際關係的複雜性",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "被陷害離職的女主創業打敗前東家",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "兩大家族企業併購戰中的間諜暗戰",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

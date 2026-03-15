@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_85c966",
+  "category": "genres",
+  "subcategory": "",
+  "name": "女性獨立",
+  "name_en": "Female Empowerment",
+  "description": "以女性成長與自我覺醒為核心主題，主角打破偏見、拒絕依附、靠自身實力闖出一片天，傳遞獨立自強的價值觀，深受當代女性觀眾推崇",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "離婚後從全職太太蛻變為商業女王",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "被家族輕視的小女兒獨自創業超越所有兄長",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

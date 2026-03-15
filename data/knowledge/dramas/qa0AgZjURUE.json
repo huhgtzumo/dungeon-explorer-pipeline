@@ -1,0 +1,346 @@
+{
+  "video_id": "qa0AgZjURUE",
+  "title": "全家偏愛養女，她過得不如寵物狗，重生後她果斷斷親，嫁給愛她的CEO，從此被護在懷裡，寵成寶 #灰姑娘霸總 #狗血 #好看 #繼承者",
+  "analysis": {
+    "drama_summary": "被全家偏愛養女欺壓的親生女兒因腎衰竭瀕死，被養父母及時救回後以新身份重生，在學術競賽中揭露養女冒名頂替真相，當眾斷親，回歸真正愛她的家人身邊。",
+    "structure": {
+      "type": "雙線交錯＋死而復生反轉結構",
+      "type_en": "Dual-timeline with death-rebirth reversal structure",
+      "description": "第一條線是女主在原生家庭被虐待至死的悲慘經歷（壓抑線），第二條線是女主以新身份歸來後逐步揭露真相、打臉全家（爆發線）。兩條線通過「假死」這個關鍵節點連接，前半段極度壓抑積蓄觀眾憤怒，後半段集中釋放形成強烈爽感。結構核心是「越慘越爽」——前期受的委屈越多，後期反擊的情緒回報越大。",
+      "act_breakdown": "第一幕（約30%）：家庭虐待與偏心展示——蝦過敏被忽視、吃剩飯被罵、高考日無人問津；第二幕（約20%）：女主腎衰竭死亡、屍體腐爛才被發現、全家冷漠處理後事；第三幕（約30%）：以陳晚寧新身份重生、學術競賽登場、逐步揭露真相；第四幕（約20%）：當眾打臉全家、斷親宣言、回歸養父母懷抱。",
+      "excerpt": "我fainted at home. It was my father, my adoptive father, who called me, and found no answer, and knew something had happened to me. So he and my godmother found me together. Fortunately, they found me in time. I successfully survived the college entrance exam. I had a kidney transplant. I survived."
+    },
+    "hooks": [
+      {
+        "type": "衝突開場——偏心虐待",
+        "type_en": "Conflict opening — favoritism abuse",
+        "description": "開場即用「蝦過敏」事件建立核心衝突：母親記得養女不吃薑要一根根挑出來，卻忘了親生女兒吃蝦會有生命危險。用極其具體的生活細節讓觀眾瞬間代入並產生憤怒，這比抽象的敘述有效得多。",
+        "timing": "開場",
+        "excerpt": "Even Shen Nuo doesn't eat ginger she has to pick out one by one. But you forgot I would be in danger if I eat shrimp."
+      },
+      {
+        "type": "懸念鉤子——死亡倒計時",
+        "type_en": "Suspense hook — death countdown",
+        "description": "醫生宣佈女主腎衰竭只剩幾天生命，而高考在即，製造時間壓力和生死懸念。觀眾既擔心她能否活下來，又憤怒於家人的無知和冷漠，雙重情緒驅動觀看。",
+        "timing": "前段",
+        "excerpt": "Your kidney failure indicators have reached a critical value. All your bodily functions are declining rapidly. Can I survive until graduation? Girl, don't hold out too much hope. It's only a few days at most."
+      },
+      {
+        "type": "反差鉤子——屍體腐爛才被發現",
+        "type_en": "Shock contrast hook — body discovered only after decomposition",
+        "description": "女主死在房間裡多日無人發現，全家正在度假狂歡，鄰居聞到臭味才報警。這個極端反差把家庭偏心推到了最殘忍的程度，製造強烈的情感衝擊。",
+        "timing": "中段",
+        "excerpt": "You smell the whole villa area is filled with the stench of your house. How dare you go out and have fun? ... Her parents and were enjoying a vacation with their adopted daughter, They didn't even know she was gone."
+      },
+      {
+        "type": "身份懸念鉤子——死而復生",
+        "type_en": "Identity suspense hook — resurrection mystery",
+        "description": "觀眾已知女主死亡並被火化，卻突然出現一個名為陳晚寧的新角色，製造「她是誰」的身份懸念，驅動後半段劇情。",
+        "timing": "中段轉折點",
+        "excerpt": "If you weren't dead, Who was the body that was cremated three days ago? That was not a human at all. It was just a dummy filled with pork."
+      }
+    ],
+    "elements": {
+      "characters": [
+        {
+          "type": "隱忍重生女主",
+          "type_en": "Enduring reborn heroine",
+          "description": "前期極度隱忍、善良懂事卻不被珍惜，承受所有委屈。重生/獲救後性格轉變，不再忍讓，勇敢反擊。這種前後反差是觀眾最愛的角色弧線——「以前的我已經死了」。",
+          "excerpt": "Give way to your sister. seems to have become a rule I have to abide by for a lifetime. ... I thought of your upbringing before, for fear that you would be disappointed in him sad and angry. So I have been holding back. I'm telling you now today, I'm going to cut off all ties with you."
+        },
+        {
+          "type": "腹黑白蓮花養女",
+          "type_en": "Scheming white lotus adopted daughter",
+          "description": "表面乖巧懂事、人畜無害，實際上陷害女主、冒名頂替、甚至雇人行兇。善於在父母面前表演，讓所有人都覺得她是受害者。這類角色的存在是為了讓觀眾積累憤怒，等待被打臉的高潮。",
+          "excerpt": "Sister, as long as you sincerely apologize, we can all forgive you. ... She just called me. She should have arrived in Qingnan by now. ... He kidnapped me before the game, right? Don't slander me. I didn't."
+        },
+        {
+          "type": "偏心糊塗母親",
+          "type_en": "Biased confused mother",
+          "description": "對養女百般寵愛、對親生女兒百般嫌棄。口口聲聲「為你好」卻從未真正關心過女主。代表了觀眾生活中可能遇到的不公正家庭權威，容易引發共鳴和憤怒。",
+          "excerpt": "I gave birth to you with all my strength. I gave birth to an enemy. ... You can die if you want. If you have the guts, don't go to the exam today. Brat, bah."
+        },
+        {
+          "type": "愧疚覺醒的父親/兄長",
+          "type_en": "Guilt-ridden awakening father/brother",
+          "description": "前期雖然沒有主動施虐，但選擇性失明、和稀泥，助長了不公正。後期得知真相後追悔莫及，試圖彌補。這類角色讓劇情增加層次感，不是純粹的黑白對立。",
+          "excerpt": "Xiaoruo, relationships need to be slowly run in. After all, you've only been back for a short time. ... Xiao Ruo, I used to be your brother. It's my fault. Come home with us."
+        },
+        {
+          "type": "溫暖守護者（養父母）",
+          "type_en": "Warm guardian (adoptive parents)",
+          "description": "沒有血緣關係卻真心愛護女主的養父母，與冷漠的親生家庭形成鮮明對比，傳遞「親情不在血緣而在真心」的主題。",
+          "excerpt": "It was my father, my adoptive father, who called me, and found no answer, and knew something had happened to me. So he and my godmother found me together. ... my dad and I and my godmother are a family."
+        }
+      ],
+      "character_combos": [
+        {
+          "type": "親生女×養女——身份替換對立",
+          "type_en": "Biological daughter × Adopted daughter — identity swap rivalry",
+          "description": "養女佔據了親生女的一切——父母的愛、名字、學歷、前途。兩人的對立是全劇最核心的衝突引擎。養女越得寵，親生女越慘，觀眾的憤怒和期待就越強烈。",
+          "excerpt": "Shen Nuo has been occupying his name and refused to give it back. So, we were forced to change his name. Shen Ruo. ... The champion is his sister Shen Ruo."
+        },
+        {
+          "type": "冷漠原生家庭×溫暖養父母——雙重家庭對比",
+          "type_en": "Cold biological family × Warm adoptive parents — dual family contrast",
+          "description": "有血緣的家人視她如草，無血緣的養父母視她如寶。這個組合直擊「血緣≠親情」的社會議題，讓觀眾反思什麼才是真正的家人。",
+          "excerpt": "Blood relationship before. I naively thought that blood is the most unbreakable thing in the world. But you? you taught me that relatives can be chosen. and you don't deserve to be my relatives. Let's go, dad. Let's go, mom."
+        }
+      ],
+      "settings": [
+        {
+          "type": "家庭餐桌——偏心展示場",
+          "type_en": "Family dining table — favoritism showcase",
+          "description": "餐桌是家庭關係的縮影。誰吃排骨、誰吃蝦、誰的過敏被記住——這些微小的細節比任何台詞都更有說服力地展示偏心。觀眾在日常場景中感受到不公，代入感極強。",
+          "excerpt": "Mom, I still want to eat ribs. Nuonuo has been spoiled by us since she was a child. You should be more considerate as an elder sister. This is the last piece of ribs. is for Nuonuo. Here, eat the shrimp. I'm allergic to shrimp."
+        },
+        {
+          "type": "學術競賽現場——公開打臉場",
+          "type_en": "Academic competition venue — public face-slapping arena",
+          "description": "競賽現場是最佳的「公開處刑」場景——有評委、有觀眾、有攝像機。女主在眾目睽睽下揭露真相，讓反派無處可逃。公共場合的羞辱比私下對質具有更強的爽感。",
+          "excerpt": "Now I announce the winner of this competition is Chen Wan Ning. What? ... The champion is his sister Shen Ruo."
+        },
+        {
+          "type": "警察局/法醫現場——真相揭露場",
+          "type_en": "Police station / forensic scene — truth revelation setting",
+          "description": "法醫報告和警方調查為劇情提供了不可辯駁的「權威證據」，讓反派的謊言徹底崩塌。專業場景增加了劇情的可信度和嚴肅感。",
+          "excerpt": "This is Shen Nuo's autopsy report. The cause of death is severe renal failure. Excluding the possibility of homicide. ... In addition, in his stomach, we found a lot of pica. lots of hair, cardboard, plastic, and broken glass and nails."
+        },
+        {
+          "type": "封閉房間——死亡密室",
+          "type_en": "Locked room — death chamber",
+          "description": "女主死在自己房間多日無人問津，房間成為被遺忘、被拋棄的象徵空間。家人幾次經過門口都不願打開，直到臭味傳遍整個社區。這個場景的壓抑感和窒息感達到極致。",
+          "excerpt": "Xiao Ruo's door is finally... Zhang Ma, don't worry about Shen Ruo. let her reflect in her room. This is Miss Xiao Ruo's room. Don't talk too much. Just do your job. If you interfere again, I'll fire you."
+        }
+      ],
+      "relationships": [
+        {
+          "type": "親生女被棄、養女被寵——錯位親情",
+          "type_en": "Biological daughter abandoned, adopted daughter favored — misplaced kinship",
+          "description": "核心衝突在於「本該屬於我的愛被別人搶走了」。這不僅是物質上的偏心，更是情感上的徹底否定。觀眾對這種不公正有天然的憤怒感。",
+          "excerpt": "Even if I raise a dog, would wag its tail at me. ... A biased person will never admit their favoritism. They will only blame you for not being sensible."
+        },
+        {
+          "type": "養父母的無條件之愛——救贖型親情",
+          "type_en": "Adoptive parents' unconditional love — redemptive kinship",
+          "description": "養父母在女主最絕望時救了她的命、給了她新身份、無條件支持她。這段關係是全劇的情感救贖線，證明「真正的家人不需要血緣」。",
+          "excerpt": "Put Wanning's household registration under my name. You will be my Chen Lu from now on. legitimate daughter. ... the three of us we can just record one household register. Then no one has to fight."
+        },
+        {
+          "type": "兄妹反目與覺醒",
+          "type_en": "Sibling betrayal and awakening",
+          "description": "哥哥前期站在養女一邊，後期看到視頻證據後幡然醒悟，轉而支持親妹妹。這個關係轉變為劇情提供了內部瓦解的戲劇張力。",
+          "excerpt": "Mom, I wasn't deceived. I thought it was Xiao Ruo who lied to me. Until I saw that video. ... I don't have you as my sister."
+        }
+      ]
+    },
+    "payoffs": [
+      {
+        "type": "身份揭露——死而復生打臉",
+        "type_en": "Identity reveal — resurrection face-slap",
+        "description": "全家以為女主已死並火化，她卻以新身份活著歸來。當她當眾宣布「我就是沈若」時，所有曾經傷害她的人都目瞪口呆。這是全劇最核心的爽點——你們以為我死了，但我活得比你們都好。",
+        "emotional_impact": "震驚＋爽快",
+        "excerpt": "Don't you wish every day I'm your sister? Okay, I'll fulfill you. I am Shen Ruo. It's impossible, absolutely impossible. Shen Ruo has been cremated."
+      },
+      {
+        "type": "學術逆襲——真假狀元揭曉",
+        "type_en": "Academic reversal — true champion revealed",
+        "description": "養女一直冒用女主的成績和名譽，享受「狀元」光環。當真相大白——真正的狀元是沈若而非沈諾——養女多年的偽裝瞬間崩塌。觀眾積壓的「憑什麼」終於得到了回答。",
+        "emotional_impact": "解氣＋爽快",
+        "excerpt": "Isn't Shen Nuo the national champion this year? Why is he so bad? ... It's really a mistake. The champion is his sister Shen Ruo."
+      },
+      {
+        "type": "當眾斷親——決絕宣言",
+        "type_en": "Public severance — resolute declaration",
+        "description": "女主不再隱忍，當著所有人的面宣佈與沈家斷絕關係。這個爽點的核心在於「我不再需要你們了」——從求而不得到主動拋棄，權力關係徹底反轉。",
+        "emotional_impact": "爽快＋解氣",
+        "excerpt": "I naively thought that blood is the most unbreakable thing in the world. But you? you taught me that relatives can be chosen. and you don't deserve to be my relatives. Let's go, dad. Let's go, mom."
+      },
+      {
+        "type": "反派當眾被揭穿——白蓮花人設崩塌",
+        "type_en": "Villain publicly exposed — white lotus persona collapse",
+        "description": "養女雇人綁架女主的事被當眾揭露，精心維持的「乖巧懂事」人設徹底崩塌。連一直偏袒她的父母都開始暴打她。從「人人寵愛」到「人人唾棄」的反轉極其解氣。",
+        "emotional_impact": "解氣＋爽快",
+        "excerpt": "If my adoptive father hadn't found me in time, I would have become Shen Xiao the ghost under the iron rod. It just broke your heart, right? ... My son, I'll beat you to death, you bastard. We have been so good to you. You actually did such a thing."
+      }
+    ],
+    "pacing": {
+      "tempo": "前慢後快、先虐後爽——前半段用密集的虐心情節壓抑節奏，後半段快速反轉連環打臉",
+      "tension_curve": "開場中等張力（餐桌偏心）→ 持續攀升（高考無人關心、吃剩飯被罵）→ 第一個高峰（腎衰竭死亡）→ 極端高峰（屍體腐爛被發現）→ 短暫低谷（新身份生活）→ 急速攀升（競賽對決、身份揭露）→ 最終爆發（當眾斷親、全面打臉）",
+      "key_beats": [
+        "蝦過敏事件建立偏心基調",
+        "高考前夜醫生宣佈死期",
+        "母親說「你想死就死」後離開",
+        "屍體腐爛多日全家在度假",
+        "法醫報告揭露異食癖和抑鬱症",
+        "競賽最後十分鐘趕到逆轉",
+        "親子鑑定當眾公布",
+        "假屍體真相——豬肉人偶",
+        "當眾宣佈斷親"
+      ],
+      "excerpt": "I don't have time to talk to you today. You can die if you want. ... There are only ten minutes left. How many questions can he answer? ... Now I announce the winner of this competition is Chen Wan Ning. What?"
+    },
+    "dialogues": [
+      {
+        "type": "壓迫型——母親的語言暴力",
+        "type_en": "Oppressive — mother's verbal abuse",
+        "description": "母親用貶低、嫌棄、威脅的語言持續打壓女主。這類對白的套路是：先否定女主的價值，再抬高養女作對比，最後用「為你好」包裝暴力。讓觀眾感受到窒息般的壓迫感。",
+        "emotional_function": "製造壓迫、積蓄觀眾憤怒",
+        "excerpt": "Look at you. you go to bed as soon as you get home. Pigs are more energetic than you. Look at Nuonuo. as soon as she enters the house, she goes to her room to study. She is on the right track. Look at you."
+      },
+      {
+        "type": "反擊型——女主的斷親宣言",
+        "type_en": "Counter-attack — heroine's severance declaration",
+        "description": "女主不再辯解或求認可，而是冷靜、決絕地宣佈斷絕關係。這類對白的特徵是：語氣平靜但內容犀利，不帶哭腔不帶乞求，用事實說話讓對方無言以對。觀眾從中獲得極大的爽感。",
+        "emotional_function": "爽感釋放、情緒高潮",
+        "excerpt": "I naively thought that blood is the most unbreakable thing in the world. the most unbreakable thing. But you? you taught me that that relatives can be chosen. and you don't deserve to be my relatives."
+      },
+      {
+        "type": "揭露型——真相炸彈",
+        "type_en": "Revelation — truth bomb",
+        "description": "用簡短有力的陳述打破所有人的認知。這類對白往往先拋出一個不可能的事實，再用證據一步步擊碎反對者的質疑。節奏是「宣布—質疑—證據—崩潰」的循環。",
+        "emotional_function": "震撼、打臉",
+        "excerpt": "The pen pal you're looking for is not Shen Nuo at all, but Shen Ruo. ... Shen Ruo has been occupying his name and refused to give it back. So, we were forced to change his name."
+      },
+      {
+        "type": "金句型——扎心獨白",
+        "type_en": "Quotable — piercing monologue",
+        "description": "用簡潔的語言道出深刻的人生感悟，讓觀眾產生共鳴和自我代入。這類台詞往往能被截圖傳播，成為短劇的記憶點。",
+        "emotional_function": "共鳴、感動",
+        "excerpt": "A biased person will never admit their favoritism. They will only blame you for not being sensible. Be more sensible. But am I not sensible enough? And my being sensible what have I gained?"
+      },
+      {
+        "type": "偽善型——養女的表演性台詞",
+        "type_en": "Hypocritical — adopted daughter's performative lines",
+        "description": "養女在人前說體貼話、做懂事狀，實際每句話都暗藏機鋒和陷害。觀眾已知她的真面目，因此她越「善良」觀眾越憤怒，這種反諷張力非常有效。",
+        "emotional_function": "製造厭惡、加深反派形象",
+        "excerpt": "Sister, as long as you sincerely apologize, we can all forgive you. ... Sister, don't say that about Xiaoruo. I'll see how hard his bones are."
+      }
+    ],
+    "visual_scenes": [
+      {
+        "type": "屍體發現——衝擊性場景",
+        "type_en": "Body discovery — shock scene",
+        "description": "打開房門後發現已經腐爛的屍體，視覺上的恐怖感和嗅覺描寫（臭味瀰漫整個別墅區）製造了全劇最強的感官衝擊。這個場景是從「虐」到「慘」的頂點。",
+        "dramatic_tension": "死亡的殘酷與家人的漠不關心形成最強對比",
+        "excerpt": "Look at the floor. What's that thing? This is so disgusting. Shame. Ah ah. Ah, someone died. ... You smell the whole villa area is filled with the stench of your house."
+      },
+      {
+        "type": "競賽最後時刻趕到——絕地反擊場景",
+        "type_en": "Last-minute competition arrival — clutch reversal scene",
+        "description": "所有人都以為女主不會來了，養女一方已經在慶祝勝利。就在宣佈結果的最後一刻，女主推門而入。這是經典的「最後一秒翻盤」視覺場景，極具戲劇張力。",
+        "dramatic_tension": "時間壓力+敵方的提前慶祝+英雄的戲劇性登場",
+        "excerpt": "Since Chen Wanning didn't attend, this competition. the judges unanimously decided that Wait. Chen Wan Ning, why are you here? Where do you think I should be? Teachers, Can I answer the questions?"
+      },
+      {
+        "type": "當眾對質——公開審判場景",
+        "type_en": "Public confrontation — open trial scene",
+        "description": "在眾人面前展示親子鑑定報告、揭露養女的罪行。周圍人的議論聲形成了「輿論法庭」的效果，反派在社會性死亡中崩潰。",
+        "dramatic_tension": "真相在公眾面前無處隱藏，反派的每一次辯解都讓自己更狼狽",
+        "excerpt": "Everyone, take a good look. This is Chen Wan Ning. the paternity test report between Mr. Shen and Chen Wan Ning. It clearly states that They are biological father and daughter."
+      }
+    ],
+    "ending_hooks": [
+      {
+        "type": "溫情團圓型——新家庭的歡樂結尾",
+        "type_en": "Warm reunion — new family happy ending",
+        "description": "養父母爭搶著要把女主登記到自己名下，三人決定共同組成一個戶口本。用喜劇化的溫馨場景結尾，讓觀眾在經歷大量虐心情節後獲得情感治癒，帶著溫暖感離開。",
+        "timing": "最後一段對話",
+        "excerpt": "Put Wanning's household registration under my name. ... Of course, the daughter should be with her mother. ... the three of us we can just record one household register. Then no one has to fight. Let's go."
+      },
+      {
+        "type": "反派崩塌型——惡人受罰的結局暗示",
+        "type_en": "Villain collapse — implied punishment ending",
+        "description": "沈諾被學院除名、永不錄用，沈家聲譽掃地。讓觀眾確認「惡有惡報」，獲得最後的心理滿足。",
+        "timing": "倒數第二段",
+        "excerpt": "Quiet, I declare that Qinglan Research Institute will remove Shen Nuo and will never be reused in the future. Okay, okay. It's over, it's all over."
+      }
+    ],
+    "tension_actions": [
+      {
+        "type": "打巴掌/暴打——肢體暴力爆發",
+        "type_en": "Slapping / beating — physical violence eruption",
+        "description": "母親在崩潰後自述曾經打過女主巴掌、踢過她；後期父母暴打養女。肢體暴力是短劇中最直接的視覺衝擊手段，既展示角色的殘忍/憤怒，也給觀眾帶來強烈的情緒衝擊。",
+        "visual_impact": "直接的身體衝擊，觀眾生理性地感受到疼痛和憤怒",
+        "excerpt": "I slapped her, and kicked her. I slapped her. How painful it was! ... My son, I'll beat you to death, you bastard. We have been so good to you."
+      },
+      {
+        "type": "摔證據/亮文件——真相武器",
+        "type_en": "Evidence reveal / document display — truth weapon",
+        "description": "當眾展示親子鑑定報告、競賽試卷、手機視頻等物證。這個動作的戲劇功能是將抽象的「真相」轉化為具體的、不可否認的物理存在。紙張/螢幕的視覺呈現讓反派的謊言無處遁形。",
+        "visual_impact": "文件特寫+眾人圍觀，權威性證據帶來不可逆的打臉效果",
+        "excerpt": "Everyone, take a good look. This is Chen Wan Ning. the paternity test report between Mr. Shen and Chen Wan Ning. It clearly states that They are biological father and daughter. This is impossible."
+      },
+      {
+        "type": "推搡——情緒對抗升級",
+        "type_en": "Pushing — emotional confrontation escalation",
+        "description": "女主推開養女，拒絕她的虛偽道歉。這個動作標誌著女主從隱忍到反擊的徹底轉變，是「我不再忍你了」的肢體語言表達。",
+        "visual_impact": "從被動承受到主動出手，角色權力關係的物理反轉",
+        "excerpt": "Why did you push her? ... It seems that I cut ties with you before was wrong."
+      },
+      {
+        "type": "綁架/暴力挾持——反派狗急跳牆",
+        "type_en": "Kidnapping / violent restraint — villain's desperate move",
+        "description": "養女派人在比賽前綁架女主，企圖阻止她參賽。這是反派在即將敗露時的極端行為，既製造了「女主能否逃脫」的懸念，也暴露了反派的真實面目。",
+        "visual_impact": "暴力場面+生命威脅，觀眾的緊張感達到頂峰",
+        "excerpt": "What are you doing? You're breaking the law. It's illegal. If you have the ability, send me to jail again. ... I'll kill you. ... If my adoptive father hadn't found me in time, I would have become Shen Xiao the ghost under the iron rod."
+      }
+    ],
+    "genres": [
+      {
+        "type": "都市家庭",
+        "type_en": "Urban family drama",
+        "description": "以都市豪門家庭為背景，聚焦家庭內部的親情矛盾、偏心問題和身份衝突。貼近觀眾的家庭經驗，容易引發「原生家庭創傷」的共鳴。"
+      },
+      {
+        "type": "重生復仇",
+        "type_en": "Rebirth revenge",
+        "description": "女主經歷「死亡」後以新身份歸來，展開復仇和正名之路。重生設定滿足了觀眾「如果能重來」的幻想，復仇路線則提供持續的爽點。"
+      }
+    ],
+    "styles": [
+      {
+        "type": "虐戀→爽文（先虐後爽）",
+        "type_en": "Angst-to-catharsis (suffering then satisfaction)",
+        "description": "前期極致壓抑虐心，後期極致爽快打臉。情緒曲線像過山車——先把觀眾拉到最低谷，再一口氣衝到最高峰。「越慘越爽」是這個風格的核心公式。"
+      },
+      {
+        "type": "狗血",
+        "type_en": "Melodramatic / over-the-top",
+        "description": "情節設定極端化——屍體腐爛才被發現、假屍體是豬肉做的、狀元名字搞混——每個轉折都超出常理但極具戲劇性。狗血的本質是用極端情境放大日常情緒，讓觀眾在安全距離內體驗強烈的情感波動。"
+      },
+      {
+        "type": "暗黑",
+        "type_en": "Dark",
+        "description": "涉及死亡、屍體腐爛、異食癖、抑鬱症等沉重元素，不回避人性的陰暗面。暗黑元素為故事增加了真實感和重量感，讓爽感不顯得廉價。"
+      }
+    ],
+    "tags": [
+      "重生復仇",
+      "親生女vs養女",
+      "偏心家庭",
+      "身份揭露",
+      "當眾打臉",
+      "斷親",
+      "灰姑娘逆襲",
+      "白蓮花反派",
+      "冒名頂替",
+      "豪門恩怨",
+      "學霸女主",
+      "假死歸來",
+      "原生家庭創傷",
+      "虐心轉爽文",
+      "狗血",
+      "腎衰竭",
+      "高考狀元",
+      "養父母真愛"
+    ],
+    "video_id": "qa0AgZjURUE",
+    "title": "全家偏愛養女，她過得不如寵物狗，重生後她果斷斷親，嫁給愛她的CEO，從此被護在懷裡，寵成寶 #灰姑娘霸總 #狗血 #好看 #繼承者"
+  },
+  "video_data": {
+    "channel": "木未剧场NO1LoveDrama",
+    "views": 906238,
+    "duration": "PT5489S"
+  }
+}

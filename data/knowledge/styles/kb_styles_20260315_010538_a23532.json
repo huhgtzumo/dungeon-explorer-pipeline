@@ -1,0 +1,29 @@
+{
+  "id": "kb_styles_20260315_010538_a23532",
+  "category": "styles",
+  "subcategory": "",
+  "name": "群像紀實",
+  "name_en": "Ensemble Realistic",
+  "description": "沒有單一主角，而是展現一群人的生活切面，以真實感和共鳴感取勝，角色各有各的困境與選擇，通過多線交織呈現社會百態，風格克制寫實，重在引發觀眾的思考與共情。",
+  "tags": [
+    "styles"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "同一棟出租屋裡五個租客各自的人生困境",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "深夜急診室裡形形色色病人背後的故事",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:05:38",
+  "updated_at": "2026-03-15 01:05:38"
+}

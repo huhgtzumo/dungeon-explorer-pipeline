@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_b7113e",
+  "category": "genres",
+  "subcategory": "",
+  "name": "民國諜戰",
+  "name_en": "Republican Era Espionage",
+  "description": "設定在民國亂世，地下工作者在敵人心臟潛伏，充滿身份偽裝、情報交鋒與信仰考驗，氣氛緊張壓抑，角色在家國大義與個人情感間掙扎",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "潛伏在敵方高層的臥底面臨身份暴露危機",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "女特工以舞女身份打入敵營竊取情報",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

@@ -1,0 +1,41 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.env
+.venv/
+venv/
+env/
+
+# Data files (generated content)
+data/scripts/*.json
+data/storyboards/*.json
+data/images/*.png
+data/images/*.jpg
+data/videos/*.mp4
+data/output/*.mp4
+data/characters/*.json
+data/characters/*.png
+
+# Keep directory structure
+!data/*/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# YouTube credentials
+client_secret*.json
+token.json

@@ -1,0 +1,352 @@
+{
+  "video_id": "KRYpvdvdm-I",
+  "title": "身懷異香的少女被衆人覬覦，怎知每當有男人靠近她一步上古蛇王就吃醋到失控，清除她身邊所有異性只准看他一人！短劇 #甜寵 #先婚後愛 #總裁灰姑娘",
+  "analysis": {
+    "drama_summary": "身懷異香的苗域準聖女李素素，因上古蛇王夫君福淵跨越十世的守護而無法嫁人，在經歷身份剝奪、陷害與生死劫難後，蛇王化龍成功，二人終於完成十世姻緣。",
+    "structure": {
+      "type": "環形結構＋十世輪迴嵌套",
+      "type_en": "Circular structure with reincarnation nesting",
+      "description": "以第九世婚禮失敗為起點，逐步揭露蛇王身份與十世姻緣的真相，中段插入前世回憶（第一世、第八世），最終回到當世完成圓滿婚禮，形成環形閉合。整體採用『困境→揭秘→危機→高潮→圓滿』的五段式推進，每一段都有身份揭露或反轉作為節點驅動。",
+      "act_breakdown": "第一幕（約15%）：婚禮失敗、聖女身份被剝奪；第二幕（約25%）：貞潔陷害事件、聖地使者登場；第三幕（約20%）：蛇王身份初露、擊退反派；第四幕（約25%）：狼族入侵、化龍劫難、生死危機；第五幕（約15%）：十世回憶揭露、化龍成功、圓滿大婚。",
+      "excerpt": "This is already my / This is the ninth time we've held a wedding. / The previous eight times / The groom on their wedding night / Not a sudden death / It means suddenly becoming mentally unstable. ... Nine Lifetimes of Marriage / Destiny / Matchmaker God / But the husband discovered / I can never get enough of my wife."
+    },
+    "hooks": [
+      {
+        "type": "懸念開場＋詛咒設定",
+        "type_en": "Mystery opening with curse premise",
+        "description": "開場即拋出女主已結婚九次、前八任新郎不是暴死就是瘋癲的驚人設定，製造強烈好奇心：為什麼她嫁不出去？詛咒的真相是什麼？觀眾被迫追看。",
+        "timing": "開場",
+        "excerpt": "This is already my / This is the ninth time we've held a wedding. / The previous eight times / The groom on their wedding night / Not a sudden death / It means suddenly becoming mentally unstable. / He has become a madman / I am a woman cursed by the God of Curses."
+      },
+      {
+        "type": "身份反差鉤子",
+        "type_en": "Identity contrast hook",
+        "description": "神秘男子深夜出現在女主臥房，自稱是她的夫君，觀眾立刻想知道：他到底是誰？為什麼這麼強大？他和女主的真實關係是什麼？",
+        "timing": "開場至中段過渡",
+        "excerpt": "My name is Fu Yuan / tonight / It is this gentleman and his wife / Wedding Night / It's you. / It makes it impossible for me to marry a man. / Unable to succeed to the position of Saintess"
+      },
+      {
+        "type": "危機升級鉤子",
+        "type_en": "Escalating crisis hook",
+        "description": "狼族入侵、蛇王化龍失敗瀕死，將故事張力推向極致，觀眾在情感上已深度投入，無法停止觀看。",
+        "timing": "中後段",
+        "excerpt": "The tribulation failed. / It's all my fault / If it weren't for me... / You will not fail the tribulation. / I am a disaster / Not a disaster / It has never been / In my heart / You are the best wife"
+      }
+    ],
+    "elements": {
+      "characters": [
+        {
+          "type": "被冤屈的天命女主（隱忍反擊型）",
+          "type_en": "Wrongfully persecuted destined heroine",
+          "description": "李素素表面被詛咒、被剝奪身份、被陷害，但骨子裡剛烈不屈，面對侮辱敢於直接反擊。她的核心吸引力在於『明明受盡委屈卻從不認輸』，讓觀眾產生強烈的代入感和保護欲。",
+          "excerpt": "What need is there to prove innocence? ... I am not a quasi-saint now / She is also the clan leader's daughter / You illegitimate daughter / concubine's daughter / The status has been determined. / Who gave you permission to act like this? / So what if I hit him?"
+        },
+        {
+          "type": "深情守護型霸道男主（上古神獸）",
+          "type_en": "Devoted overpowered guardian male lead",
+          "description": "福淵（蛇王）跨越十世守護女主，實力碾壓一切卻甘願為她隱藏身份、吞毒蠱、承受雷劫。核心吸引力在於『全世界最強的人只對你一人溫柔』。",
+          "excerpt": "My woman / Not to suffer the slightest grievance ... I just don't want you / Because of me, I was hurt ... My life, Fu Yuan / My wife is my greatest blessing"
+        },
+        {
+          "type": "腹黑陰險的姐妹反派",
+          "type_en": "Scheming treacherous sister antagonist",
+          "description": "李明珠作為庶女，嫉妒姐姐的聖女地位，收買間諜陷害、聯合狼族背叛苗域。她的存在為故事提供持續的內部衝突壓力。",
+          "excerpt": "Dawn Pearl / If it is proven that this did not happen. ... Li Susu / Her status as a potential saintess was revoked / It really makes you ashamed to face it. ... I now believe in the wolf god. / Enough with the nonsense / today / I will completely destroy the Snake King."
+        },
+        {
+          "type": "忠犬型護衛配角",
+          "type_en": "Loyal guardian subordinate",
+          "description": "龍侍忠心耿耿，既是資訊傳遞者也是關鍵時刻的戰力補充，為男主的強大做側面烘托。",
+          "excerpt": "Dragon Samurai Adult / It's finally here. / The dragon attendant arrived late. / Please forgive me, Your Majesty."
+        }
+      ],
+      "character_combos": [
+        {
+          "type": "上古神獸×苗域聖女（跨越十世的命定CP）",
+          "type_en": "Ancient divine beast × tribal saintess (fated lovers across ten lifetimes)",
+          "description": "男強女也不弱，但核心張力在於身份差距與命運捉弄——最強者守護最被冤屈者，每一世都無法圓滿，製造極強的虐戀甜寵交織感。",
+          "excerpt": "I've been with you for nine lifetimes / This life / I'm going to break my promise. ... Ten more lifetimes / I will never get tired of it."
+        },
+        {
+          "type": "嫡女×庶女宿敵（姐妹反目）",
+          "type_en": "Legitimate daughter × illegitimate daughter rivalry",
+          "description": "同父異母的姐妹關係讓背叛更有戲劇張力，明珠的嫉妒既是個人野心也是身份自卑的投射。",
+          "excerpt": "Are you saying I'm a concubine's daughter? / Today I will present myself as a concubine's daughter. / I'll crush you under my feet. / Never turn over / Completely ascending to the position of Holy Maiden of Miao Region"
+        },
+        {
+          "type": "偽裝夫妻×真狼族間諜",
+          "type_en": "Fake couple × wolf clan spy infiltrator",
+          "description": "明珠的丈夫郎君實為狼族成員，婚姻本身就是陰謀工具，揭露時的衝擊感極強。",
+          "excerpt": "I, Lin Tao, from beginning to end / They only love Mingzhu. / You forced me to join. / Our lives / If it weren't for marrying you / Obtain the position of clan leader / You don't even have the right to marry me."
+        }
+      ],
+      "settings": [
+        {
+          "type": "苗域婚禮大典",
+          "type_en": "Tribal wedding grand ceremony",
+          "description": "婚禮場景天然具有儀式感和公共性，任何意外都會被放大為公開羞辱，適合製造高張力衝突。開場和結尾各一場婚禮形成對比。",
+          "excerpt": "The auspicious time has arrived. / Miao Domain Quasi-Saintess / With Miao people Xu Jie / Hold the wedding ceremony immediately ... Please, Your Majesty and Your Wife / Bowing to the fertile earth / Husband and wife bowing to each other / Ceremony completed"
+        },
+        {
+          "type": "族老議事廳（公開審判場景）",
+          "type_en": "Clan elder tribunal (public trial scene)",
+          "description": "族長和長老們的公開審判場景，把私人矛盾升級為公共事件，增加女主的壓迫感和觀眾的緊張感。",
+          "excerpt": "Li Susu is now being accused. / What else do you have to say? / This is simply... / Our entire Miao region / What a huge scandal!"
+        },
+        {
+          "type": "聖地禁區（神秘力量場域）",
+          "type_en": "Sacred forbidden ground (mystical power domain)",
+          "description": "聖地作為蛇王修煉和化龍的場所，是最終決戰的戰場，空間的神聖性提升了戰鬥的史詩感。",
+          "excerpt": "Mount Jumandai / Snake King emerges from the mountain / The Three Protectors / Ten Thousand Great Mountain Demons / Strictly follow the decree"
+        },
+        {
+          "type": "閨房（私密衝突空間）",
+          "type_en": "Bedchamber (intimate conflict space)",
+          "description": "臥室場景同時承載甜蜜與危機，既有新婚之夜的曖昧，也有被闖入陷害的緊張。",
+          "excerpt": "Why did it appear in / In my bedroom / Why can't I move? / My name is Fu Yuan / tonight / It is this gentleman and his wife / Wedding Night"
+        }
+      ],
+      "relationships": [
+        {
+          "type": "十世姻緣＋守護者隱瞞身份",
+          "type_en": "Ten-lifetime bond with hidden guardian identity",
+          "description": "男主十世守護卻始終隱瞞蛇王身份，女主一直不知道『詛咒』其實是保護。衝突核心在於：愛的方式是否正確？隱瞞是保護還是傷害？",
+          "excerpt": "I just don't want you / Because of me, I was hurt ... She never / Cursed by the God of Gu / Scallop God / He dared not curse the lady. / All of this / They are all rulers / It's just a means to protect the lady."
+        },
+        {
+          "type": "姐妹背叛（血親變仇敵）",
+          "type_en": "Sister betrayal (blood kin turned enemy)",
+          "description": "明珠從爭奪聖女之位到聯合狼族背叛整個苗域，背叛層級不斷升級。最終臨死懺悔增加了悲劇性。",
+          "excerpt": "elder sister / Please / Help me / If only I had known / Why did we have to do it in the first place? / You married Lang Jun / It's like asking a tiger for its skin. / I know I was wrong / I will never do it again."
+        },
+        {
+          "type": "主僕忠誠（龍侍與蛇王）",
+          "type_en": "Lord-servant loyalty (Dragon Servant and Snake King)",
+          "description": "龍侍的絕對忠誠為男主的王者地位做背書，也在關鍵時刻提供資訊和戰力支援。",
+          "excerpt": "Dragon Samurai Adult / It's finally here. / The dragon attendant arrived late. / Please forgive me, Your Majesty. ... By order of the Emperor"
+        }
+      ]
+    },
+    "payoffs": [
+      {
+        "type": "身份揭露＋實力碾壓",
+        "type_en": "Identity reveal with overwhelming power display",
+        "description": "蛇王身份在眾人面前揭露，之前所有欺壓女主的人瞬間跪地，觀眾累積的憤怒得到徹底釋放。身份落差越大，爽感越強。",
+        "emotional_impact": "爽快＋解氣",
+        "excerpt": "Your Majesty / How could he possibly be the emperor? ... That's because the emperor is about to transform into a dragon. / Of those with extraordinary cultivation, only one in ten remained. / Now / You should apologize three times."
+      },
+      {
+        "type": "貞潔驗證打臉（反陷害翻盤）",
+        "type_en": "Virginity verification face-slap (counter-framing reversal)",
+        "description": "明珠設局陷害素素不貞，最終驗身結果證明清白，陷害者自取其辱。觀眾在漫長的壓迫後得到正義伸張的快感。",
+        "emotional_impact": "解氣＋爽快",
+        "excerpt": "It has already been checked. / Miss Su Su / She is a virgin. / How could this be? / impossible ... Miss Mingzhu / Be careful with your words / Slandering the"
+      },
+      {
+        "type": "十世真相大白＋深情告白",
+        "type_en": "Ten-lifetime truth revealed with deep confession",
+        "description": "揭露蛇王十世守護的完整真相，所謂的『蠱神詛咒』其實是蛇王在保護妻子。觀眾此前的所有疑問都得到解答，情感衝擊力極強。",
+        "emotional_impact": "感動＋震驚",
+        "excerpt": "She never / Cursed by the God of Gu ... All of this / They are all rulers / It's just a means to protect the lady. / If anyone dares to do this / Then the ruler / From another world / Capture them and grind their bones to dust."
+      },
+      {
+        "type": "化龍成功＋絕地反殺",
+        "type_en": "Successful dragon transformation with comeback kill",
+        "description": "在所有人認為蛇王必死的情況下，化龍成功歸來，一句反問碾壓反派，將故事高潮推至頂點。",
+        "emotional_impact": "爽快＋震驚",
+        "excerpt": "The emperor has successfully transformed into a dragon. ... Welcome the Dragon King / You seemed to have just said / Who must die today? / How could this be? / Based on your injuries / You absolutely cannot transform into a dragon. / You frog in a well / Of course they wouldn't understand."
+      },
+      {
+        "type": "圓滿大婚（十世夙願達成）",
+        "type_en": "Grand wedding fulfillment (ten-lifetime wish achieved)",
+        "description": "經歷十世波折終於舉行正式婚禮，觀眾陪伴的所有苦難都在這一刻化為甜蜜，情緒價值拉滿。",
+        "emotional_impact": "感動＋甜蜜",
+        "excerpt": "Tenth generation / Ten generations / Honorary Prince / as husband / Neither of them had a wife / To hold a formal wedding / This has always been me / A regret in my heart / This life / It's finally done."
+      }
+    ],
+    "pacing": {
+      "tempo": "前密後爆型——開場密集拋設定和衝突，中段持續施壓與小高潮交替，後段集中爆發所有反轉和情感釋放",
+      "tension_curve": "開場高張力（婚禮失敗+身份剝奪）→短暫舒緩（蛇王出場保護）→持續攀升（陷害+貞潔危機）→小爆發（身份初露）→再攀升（狼族入侵+化龍危機）→最大爆發（化龍成功+反殺）→情感釋放（十世真相+圓滿婚禮）",
+      "key_beats": [
+        "第九次婚禮新郎發瘋——建立詛咒設定",
+        "聖女地位被剝奪——女主跌入谷底",
+        "福淵深夜闖入閨房自稱夫君——核心懸念建立",
+        "貞潔陷害與驗身翻盤——第一次打臉高潮",
+        "聖地使者身份壓制全場——實力展示",
+        "蛇王身份公開揭露——身份反轉高潮",
+        "狼族入侵＋明珠背叛——危機升級到族群層面",
+        "蛇王吞萬毒蠱＋化龍失敗——情感虐點最高峰",
+        "化龍成功歸來反殺——最大爽點爆發",
+        "十世回憶揭露全部真相——情感昇華",
+        "第十世圓滿大婚——完美收尾"
+      ],
+      "excerpt": "This is the ninth time we've held a wedding. ... Immediately strip Miao Yu / Quasi-Saintess Position ... The tribulation failed. ... The emperor has successfully transformed into a dragon. ... Ceremony completed / Nine Lifetimes of Marriage / Destiny"
+    },
+    "dialogues": [
+      {
+        "type": "威脅壓迫型",
+        "type_en": "Threatening/oppressive dialogue",
+        "description": "反派角色對女主施加語言暴力，通過公開羞辱製造壓迫感。套路為：指控→圍觀附和→逼迫表態，用群體壓力放大個人攻擊。",
+        "emotional_function": "製造壓迫感，為後續反擊蓄力",
+        "excerpt": "No wonder he had nine weddings. / The groom did not die on the spot. / It's just going crazy. ... Under long loneliness / It's inevitable to think about men / Shameless / Doing such a dirty thing"
+      },
+      {
+        "type": "硬核反擊型",
+        "type_en": "Fierce counter-attack dialogue",
+        "description": "女主面對壓迫不卑不亢，用身份和邏輯直接回擊。特徵是語氣凌厲、邏輯清晰、直擊對方軟肋。",
+        "emotional_function": "製造爽感，釋放觀眾壓力",
+        "excerpt": "I am not a quasi-saint now / She is also the clan leader's daughter / You illegitimate daughter / concubine's daughter / The status has been determined. / Who gave you permission to act like this? / Elder, you are highly respected in the Miao region / Am I to be suspected ten times? / You have to prove it ten times."
+      },
+      {
+        "type": "霸道宣示型",
+        "type_en": "Dominant declaration dialogue",
+        "description": "男主以絕對實力為底氣，用簡短有力的語言宣示主權。特徵是話少、語氣冷、內容直接，不容置疑。",
+        "emotional_function": "製造甜蜜爽感與安全感",
+        "excerpt": "Did I give permission? ... My woman / Not to suffer the slightest grievance ... Touch my woman / court death ... I, Fu Yuanyi / The Serpent King, Lord of the Ten Thousand Mountains, swore an oath. / Any man who dares to touch Susu / die"
+      },
+      {
+        "type": "深情告白型（虐心撒糖）",
+        "type_en": "Deep emotional confession (bittersweet sweetness)",
+        "description": "在生死關頭的深情表白，將甜寵與虐心完美融合。特徵是語境越絕望、告白越深情，反差製造最大情感衝擊。",
+        "emotional_function": "製造感動與心疼",
+        "excerpt": "In my heart / You are the best wife / My life, Fu Yuan / My wife is my greatest blessing ... I've been with you for nine lifetimes / This life / I'm going to break my promise."
+      },
+      {
+        "type": "碾壓反問型",
+        "type_en": "Crushing rhetorical question dialogue",
+        "description": "在實力反轉後，用反問句讓反派無地自容。簡短有力，一句封喉。",
+        "emotional_function": "爽感爆發的頂點",
+        "excerpt": "You seemed to have just said / Who must die today? / How could this be? / Based on your injuries / You absolutely cannot transform into a dragon. / You frog in a well / Of course they wouldn't understand."
+      }
+    ],
+    "visual_scenes": [
+      {
+        "type": "婚禮大典（開場災難＋結尾圓滿的對比）",
+        "type_en": "Grand wedding ceremony (opening disaster vs ending fulfillment contrast)",
+        "description": "同樣的婚禮儀式在開場是災難（新郎發瘋），在結尾是圓滿（十世大婚），形成強烈視覺與情感對比，首尾呼應增強敘事完整度。",
+        "dramatic_tension": "儀式的莊嚴與突發混亂的對比、十世等待的情感厚度",
+        "excerpt": "The auspicious time has arrived. / Miao Domain Quasi-Saintess / With Miao people Xu Jie / Hold the wedding ceremony immediately ... Husband and wife bowing to each other / Ceremony completed / Nine Lifetimes of Marriage"
+      },
+      {
+        "type": "公開驗身（屈辱與翻盤）",
+        "type_en": "Public virginity examination (humiliation and reversal)",
+        "description": "全族人等待驗身結果的場景極具視覺壓迫感，女主被迫接受檢驗的屈辱與最終清白的反轉，形成強烈情緒擺盪。",
+        "dramatic_tension": "私密之事被公開化的羞恥感與正義伸張的解氣感",
+        "excerpt": "Summon the witch / yes ... Miss Susu / Please lie down comfortably. / bring it on ... It has already been checked. / Miss Su Su / She is a virgin."
+      },
+      {
+        "type": "化龍歸來（絕地反殺）",
+        "type_en": "Dragon transformation return (last-stand comeback)",
+        "description": "眾人以為蛇王必死，突然化龍成功強勢歸來的視覺衝擊，配合反派的驚恐表情，製造最強爽感畫面。",
+        "dramatic_tension": "絕望到希望的180度逆轉",
+        "excerpt": "The emperor has successfully transformed into a dragon. / I knew it / He's definitely fine. / Snake King / The dragon transformation was successful. / Welcome the Dragon King"
+      },
+      {
+        "type": "強吞毒蠱（自我犧牲）",
+        "type_en": "Forced poison consumption (self-sacrifice)",
+        "description": "蛇王為救妻子主動吞下萬毒蠱的場景，視覺上展現肉體痛苦，情感上展現愛的極致。",
+        "dramatic_tension": "觀眾明知毒蠱致命卻眼睜睜看著男主吞下的無力感",
+        "excerpt": "Eat this poisonous Gu. / I let her go. ... Fu Yuan / You're crazy. / This is the Myriad Poison Gu. / Nine-three no birth / Who gave you permission to speak? / I eat"
+      }
+    ],
+    "ending_hooks": [
+      {
+        "type": "圓滿撒糖型（情緒釋放結尾）",
+        "type_en": "Sweet fulfillment ending (emotional release)",
+        "description": "以十世圓滿大婚和撒糖對白收尾，給觀眾完整的情感閉合。所有壓抑的情緒在這一刻被轉化為甜蜜與感動，讓觀眾帶著滿足感結束觀看並主動分享。",
+        "timing": "最後一段對白——男主深情宣言",
+        "excerpt": "I can never get enough of my wife. / The future is still a long time. / I'll keep watching until you get tired of it. / It won't get boring. / Ten more lifetimes / I will never get tired of it. / The long night / As a husband, I want to repay the principal and interest. / They got it back. / The End"
+      },
+      {
+        "type": "前世閃回懸念型（中段分集鉤子）",
+        "type_en": "Past life flashback suspense hook",
+        "description": "在故事中段插入前世回憶片段，每次回憶都揭露部分真相但留下更大懸念，驅動觀眾繼續觀看。這是長篇短劇維持中段吸引力的關鍵手法。",
+        "timing": "中後段——十世回憶開始時",
+        "excerpt": "Dragon Lord / This is the first time. / I met Susu ... The story begins with the eighth generation. ... I've been with you for nine lifetimes / This life / I'm going to break my promise."
+      }
+    ],
+    "tension_actions": [
+      {
+        "type": "當眾掌摑/動手",
+        "type_en": "Public slap/physical confrontation",
+        "description": "女主在被圍攻時直接動手反擊，打破觀眾預期中的忍辱畫面，製造視覺爽感。在古裝苗域設定中，動手更有江湖氣。",
+        "visual_impact": "動作突然、反差強烈——從被審判者變為主動反擊者",
+        "excerpt": "So what if I hit him? ... Come and beat people up / So what if I hit him?"
+      },
+      {
+        "type": "強吞毒物（自我犧牲式威脅）",
+        "type_en": "Forced poison ingestion (self-sacrificial act)",
+        "description": "蛇王在所有人驚恐注視下吞下萬毒蠱，這個動作同時包含威脅、犧牲和深情，視覺衝擊力和情感衝擊力雙重拉滿。",
+        "visual_impact": "毒蠱的恐怖外觀＋男主毫不猶豫吞下的決絕表情",
+        "excerpt": "Fu Yuan / You're crazy. / This is the Myriad Poison Gu. / Nine-three no birth / Who gave you permission to speak? / I eat"
+      },
+      {
+        "type": "跪地求饒（反派崩潰）",
+        "type_en": "Kneeling and begging (villain breakdown)",
+        "description": "之前囂張的反派在蛇王身份揭露後跪地求饒，視覺上的地位反轉給觀眾極大滿足感。",
+        "visual_impact": "從趾高氣昂到跪地磕頭的姿態劇變",
+        "excerpt": "Your Majesty, please spare my life! / I really didn't know you were the emperor. / Your Majesty / Your Majesty, I dare not do it again, please forgive me."
+      },
+      {
+        "type": "萬蛇洞威脅（極端刑罰）",
+        "type_en": "Snake pit threat (extreme punishment)",
+        "description": "以萬蛇洞作為終極懲罰的威脅，具象化的恐怖場景增加壓迫感。",
+        "visual_impact": "萬蛇纏身的恐怖意象",
+        "excerpt": "I will surely cut you into a thousand pieces. / Throw into the snake pit / Life is not as good as three"
+      }
+    ],
+    "genres": [
+      {
+        "type": "仙俠／玄幻古裝",
+        "type_en": "Xianxia / Fantasy Period Drama",
+        "description": "以苗域蠱術、上古蛇王、化龍劫為世界觀核心。玄幻設定允許超自然的情節設計（十世輪迴、蠱神詛咒、實力碾壓），降低邏輯門檻，提升視覺奇觀和情感張力。受眾偏好沉浸式的異世界體驗和力量幻想。"
+      },
+      {
+        "type": "苗域民俗奇幻",
+        "type_en": "Miao Tribal Folk Fantasy",
+        "description": "以苗族文化為背景的獨特亞類型，蠱術、聖女、族老議事等元素提供差異化的文化奇觀。相比常見的仙俠修真，苗域設定更具異域感和神秘感，容易在同類短劇中脫穎而出。"
+      }
+    ],
+    "styles": [
+      {
+        "type": "甜寵虐戀交織",
+        "type_en": "Sweet romance intertwined with angst",
+        "description": "核心是甜寵（蛇王無條件寵愛），但用虐戀（十世無法圓滿、化龍瀕死）製造情感波動。『先虐後甜』的節奏讓甜蜜感加倍，觀眾在心疼後得到的糖更甜。"
+      },
+      {
+        "type": "爽文（打臉復仇流）",
+        "type_en": "Power fantasy (face-slapping revenge)",
+        "description": "密集的打臉橋段——貞潔翻盤、身份碾壓、化龍反殺——每一次都是對之前壓迫的回應。觀眾獲得持續的情緒釋放和正義伸張的滿足感。"
+      },
+      {
+        "type": "史詩宿命感",
+        "type_en": "Epic destined romance",
+        "description": "十世輪迴的設定賦予故事宿命感和史詩厚度，讓一個簡單的愛情故事上升到『跨越時間的執念』層面，增加情感重量。"
+      }
+    ],
+    "tags": [
+      "十世輪迴",
+      "上古蛇王",
+      "苗域蠱術",
+      "聖女之爭",
+      "甜寵",
+      "先婚後愛",
+      "身份隱瞞",
+      "打臉復仇",
+      "化龍劫",
+      "姐妹反目",
+      "深情守護",
+      "實力碾壓",
+      "嫡庶之爭",
+      "狼族入侵",
+      "命定姻緣"
+    ],
+    "video_id": "KRYpvdvdm-I",
+    "title": "身懷異香的少女被衆人覬覦，怎知每當有男人靠近她一步上古蛇王就吃醋到失控，清除她身邊所有異性只准看他一人！短劇 #甜寵 #先婚後愛 #總裁灰姑娘"
+  },
+  "video_data": {
+    "channel": "烈焰短劇ShortTV",
+    "views": 839183,
+    "duration": "PT7552S"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "kb_styles_20260315_010538_86f771",
+  "category": "styles",
+  "subcategory": "",
+  "name": "都市逆襲",
+  "name_en": "Urban Underdog",
+  "description": "聚焦現代都市背景下的小人物翻身故事，從被看不起的底層出發，憑藉隱藏實力或意外機遇一步步攀上頂峰，貼近現實的場景讓觀眾更有代入感。",
+  "tags": [
+    "styles"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "被掃地出門的上門女婿其實是集團繼承人",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "實習生三個月內成為公司最年輕的總監",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:05:38",
+  "updated_at": "2026-03-15 01:05:38"
+}

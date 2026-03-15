@@ -1,0 +1,383 @@
+{
+  "video_id": "sXtOU5dpcC8",
+  "title": "Reel Revenge: Divorced Director Strikes Back | Watch the full episode on the ShortMax app",
+  "analysis": {
+    "drama_summary": "隱忍三年的豪門媳婦在遭受冤屈與鞭刑後決然離婚，最終揭露自己是傳奇導演M與巴克萊家族繼承人的身份，完成華麗逆襲復仇。",
+    "structure": {
+      "type": "環形結構＋三幕式逆襲",
+      "type_en": "Circular Structure with Three-Act Reversal",
+      "description": "劇本以鞭刑場景開場（高潮前置），隨後回溯三年婚姻的屈辱歷程，中段展開離婚與身份重建，最終在頒獎典禮上完成身份揭露與全面逆襲。開頭的鞭刑場景在中段再次完整呈現，形成環形呼應，讓觀眾在理解前因後對同一場景產生完全不同的情感體驗。",
+      "act_breakdown": "第一幕（約20%）：鞭刑高潮前置＋倒敘婚姻背景，揭示Michelle在豪門中的卑微處境；第二幕（約50%）：泳池事件→冤屈→鞭刑→離婚宣言→離開豪門→重啟導演事業→Richard糾纏與Ruth陰謀；第三幕（約30%）：電影完成→頒獎典禮→Ruth挾持→身份揭露→父親登場→求婚→大團圓。",
+      "excerpt": "Keep going. Just say it. Just say it, please. For the love of God, just say it and I can stop. ... I want a divorce. What did you just say? I said I want a divorce."
+    },
+    "hooks": [
+      {
+        "type": "衝突高潮前置開場",
+        "type_en": "In Medias Res Climax Opening",
+        "description": "以最具視覺衝擊力的鞭刑場景開場，觀眾立刻被極端的肢體暴力和情感張力抓住，急切想知道為什麼丈夫會鞭打妻子、事情如何走到這一步。這種先果後因的手法製造了強烈的懸念。",
+        "timing": "開場",
+        "excerpt": "Keep going. Just say it. Just say it, please. For the love of God, just say it and I can stop. You believe everyone but your own wife. For once, could you choose me?"
+      },
+      {
+        "type": "隱藏身份懸念",
+        "type_en": "Hidden Identity Suspense Hook",
+        "description": "早期即暗示Michelle是神秘導演M和巴克萊家族繼承人，但所有角色（包括丈夫）都不知道。觀眾比劇中角色掌握更多資訊，這種「戲劇性反諷」讓觀眾持續期待揭露時刻的到來。",
+        "timing": "中段持續鋪墊",
+        "excerpt": "It's our third anniversary, Richard, and you're absent as usual. You don't even know I'm the director of Love Before Dawn. ... The gallows may be stupid enough to not realize that you're the legendary director M, but we always knew. Plus, you're the only heir to the Barlay Sovereign Bank."
+      },
+      {
+        "type": "反差開場",
+        "type_en": "Contrast Hook",
+        "description": "Michelle在豪門中被當成無用的媳婦，但觀眾很快得知她是獲獎導演。這種巨大的身份反差製造了強烈的認知衝突，驅動觀眾繼續觀看等待翻盤。",
+        "timing": "開場至中段",
+        "excerpt": "You have never been on your own without me, without my family, without our money. How do you think you're going to survive? ... And best picture goes to Love Before Dawn."
+      }
+    ],
+    "elements": {
+      "characters": [
+        {
+          "type": "隱忍女主／隱藏身份天才",
+          "type_en": "Enduring Heroine with Hidden Identity",
+          "description": "核心吸引力在於巨大的身份落差——她明明是頂級導演和豪門千金，卻為了愛情甘願隱忍三年的屈辱。觀眾對她的同情在壓迫中不斷積累，最終在身份揭露時轉化為強烈的爽感。",
+          "excerpt": "I gave up everything for you, Richard. My career, my dreams, all of it. And now I'm left with a husband who chose someone else and walked away from me like I was nothing. ... I am M."
+        },
+        {
+          "type": "愚昧冷酷丈夫／後悔型男主",
+          "type_en": "Oblivious Cruel Husband / Regretful Male Lead",
+          "description": "Richard的角色弧線是從冷酷無情到追悔莫及。他從未了解妻子的真實身份，盲目信任外人，最終在真相大白後跪地求復合。這種角色滿足了觀眾「你不珍惜就會失去」的心理期待。",
+          "excerpt": "We were married for 3 years. You never thought to mention that you're one of the world's most talented new directors. You never even said you like movies. ... Michelle, please. I know I screwed up. Give me another chance."
+        },
+        {
+          "type": "腹黑白蓮花反派",
+          "type_en": "Scheming White Lotus Villain",
+          "description": "Ruth表面善良溫柔，實則自導自演墮胎嫁禍。她每次都以「受害者」姿態出現，讓所有人同情她、攻擊女主。這種偽善角色極度引發觀眾憤怒，使反派被揭穿時的爽感倍增。",
+          "excerpt": "I'm okay. Please don't blame Michelle. She didn't do it on purpose. ... I had reasons. Okay. When Shawn died, I lost everything. My grief was so immense. I couldn't be a mother. ... I know that you went to the doctor and got abortion pills earlier that day."
+        },
+        {
+          "type": "毒舌刻薄小姑",
+          "type_en": "Vicious Sister-in-Law",
+          "description": "Blair是豪門壓迫的具象化角色，用尖酸刻薄的語言持續羞辱女主，是觀眾最直接的怒氣出口。她的存在讓豪門的階級壓迫變得具體而生動。",
+          "excerpt": "Well, look who it is. The girl who decided to show up late for grandfather's 80th birthday. What were you doing? Just sitting around at home on your fat ass while we all set up? ... He married you cuz you look like Ruth."
+        },
+        {
+          "type": "深情守護男二",
+          "type_en": "Devoted Protector Second Male Lead",
+          "description": "Noah是完美的備胎型角色：帥氣、成功、深情、無條件支持女主。他的存在讓觀眾看到女主「本應被如此對待」，加深了對男主的不滿，同時製造了感情線的三角張力。",
+          "excerpt": "I've loved you for 8 years. I'm not leaving now or ever. ... I'm never going to let anyone hurt her again. I swear. ... Will you marry me?"
+        },
+        {
+          "type": "強勢護女父親",
+          "type_en": "Powerful Protective Father",
+          "description": "Scott Barkley在最關鍵時刻登場，用壓倒性的家族權勢為女兒撐腰。這種角色滿足了觀眾對「正義力量從天而降」的幻想。",
+          "excerpt": "Lay a hand on my only daughter and see what happens. ... Michelle is my pride and joy and she's the granddaughter of Jane Barkley, an heir to the Barkley Studios. Of course, you'd know that if you ever asked about her family."
+        }
+      ],
+      "character_combos": [
+        {
+          "type": "隱忍媳婦×腹黑白蓮花嫂子",
+          "type_en": "Enduring Wife × Scheming White Lotus Sister-in-Law",
+          "description": "Michelle和Ruth的對立是全劇核心衝突引擎。Ruth用偽善手段佔據道德高地，Michelle被冤枉卻無人相信。這種「真善vs偽善」的對決讓觀眾產生強烈的代入感和正義渴望。",
+          "excerpt": "Ruth, she tried to hurt you. ... Got the act, Ruth. You know exactly what happened yesterday, just like I do. You know, if you put half as much passion in your acting career as you do your fake little sob stories, you'd be a Hollywood star by now."
+        },
+        {
+          "type": "深情備胎×冷漠丈夫",
+          "type_en": "Devoted Suitor × Neglectful Husband",
+          "description": "Noah和Richard形成鮮明對比——一個默默守護八年，一個三年不聞不問。這種對比讓觀眾既心疼女主又替她感到不值，同時製造「她該選誰」的追劇動力。",
+          "excerpt": "Noah: I've loved you for 8 years. I'm not leaving now or ever. ... Richard: She doesn't want you. I'm her husband. I think I know what she wants. Noah: Yeah, then you would have treated her better."
+        },
+        {
+          "type": "被欺負媳婦×惡婆家全家",
+          "type_en": "Bullied Daughter-in-Law × Entire Hostile In-Law Family",
+          "description": "Michelle一人面對Blair的霸凌、公公的懲罰、Ruth的陷害，形成一對多的壓迫結構。這種不對等的力量對比最大化了觀眾的同情和憤怒。",
+          "excerpt": "This punishment is necessary. Michelle, you will get 30 lashes. ... 30 lashes? That's impossible. She's running a high fever. She can't survive that. ... What about my daughter? What about my dead grandchild?"
+        }
+      ],
+      "settings": [
+        {
+          "type": "豪門壽宴/泳池事故",
+          "type_en": "Mansion Birthday Banquet / Pool Incident",
+          "description": "豪門壽宴本該是歡慶場合，卻成為陷害的舞台。泳池既是物理空間也是命運轉折點——落水事件改變了所有人的關係。奢華場景與殘酷現實的反差增強了戲劇張力。",
+          "excerpt": "Blair. Blair. Blair. Richard, help me. I'm drowning. Richard. Help. You know I can't swim. And you still chose to save her instead of me."
+        },
+        {
+          "type": "頒獎典禮/身份揭露",
+          "type_en": "Award Ceremony / Identity Reveal",
+          "description": "頒獎典禮是最大的公共舞台，在萬眾矚目下揭露身份能產生最大的戲劇效果。Ruth選擇在這裡發難，Michelle也選擇在這裡亮牌，雙方的終極對決在聚光燈下展開。",
+          "excerpt": "Everyone, I am M. ... Scott Barkley. Is she... Michelle is my pride and joy and she's the granddaughter of Jane Barkley, an heir to the Barkley Studios."
+        },
+        {
+          "type": "私人公寓對質",
+          "type_en": "Private Apartment Confrontation",
+          "description": "Richard闖入Michelle的公寓質問出軌，密閉空間內的對質將兩人的矛盾推向極致，私密場景讓情感衝突更加赤裸和激烈。",
+          "excerpt": "You're having an affair. ... Are you sleeping with him? Tell me what does he have that I don't have? ... Where were you, Richard? The last 3 years when I was working myself to the bone for you and your family."
+        },
+        {
+          "type": "鞭刑懲罰場",
+          "type_en": "Whipping Punishment Scene",
+          "description": "極端的肉體懲罰場景在豪門宅邸內進行，家族私刑的野蠻與豪門外表的文明形成強烈反諷，將階級壓迫推到極致。",
+          "excerpt": "This punishment is necessary. Michelle, you will get 30 lashes. ... Keep going. Just say it. Just say it, please. For the love of God, just say it and I can stop."
+        }
+      ],
+      "relationships": [
+        {
+          "type": "替身婚姻（嫁給不愛自己的人）",
+          "type_en": "Substitute Marriage (Married to Someone Who Loves Another)",
+          "description": "Michelle是Ruth的替代品，Richard因為Michelle長得像Ruth才娶她。這種關係的核心痛點是「你愛的不是我，而是我像的那個人」，極度虐心。",
+          "excerpt": "He married you cuz you look like Ruth. ... He's loved you guys since you guys were kids. If Ruth hadn't married her older brother, he would never even looked at you. ... So that's why we've been married all these years."
+        },
+        {
+          "type": "白月光vs正宮（前任/嫂子威脅婚姻）",
+          "type_en": "White Moonlight vs. Legal Wife (First Love Threatening Marriage)",
+          "description": "Ruth作為Richard的初戀（白月光）長期佔據他的心，而Michelle作為正宮妻子卻得不到真心。嫂子的特殊身份讓這段三角關係更加糾結和禁忌。",
+          "excerpt": "If there's nothing going on between the two of you, why didn't you ever tell me she was your first love? Why did you save her first at the pool when we both fell in? I couldn't swim. And you knew that, Richard."
+        },
+        {
+          "type": "事業夥伴暗生情愫",
+          "type_en": "Professional Partners with Hidden Feelings",
+          "description": "Noah和Michelle的關係建立在共同的電影事業上，從專業合作到深情守護。Noah隱藏感情八年只為保護她，這種克制的深情極具浪漫張力。",
+          "excerpt": "There's been a slight misunderstanding. She thinks I'm gay. ... And I thought if I told her I was off limits that I could protect her. I know it's stupid. ... Noah, if you love her, tell her."
+        },
+        {
+          "type": "婆媳同盟（善良婆婆）",
+          "type_en": "Mother-in-Law Alliance (Kind Mother-in-Law)",
+          "description": "Biddy是少數站在Michelle這邊的豪門成員，她的善意在壓迫環境中顯得格外珍貴，也展現了豪門內部並非鐵板一塊。",
+          "excerpt": "Of course not, sweetheart. I know you could never hurt anyone. ... I shouldn't have forced him to marry you. But with the family business slacking, we needed Richard to have a family. ... I know Richard seems indifferent, but I know my son and he really does care about you."
+        }
+      ]
+    },
+    "payoffs": [
+      {
+        "type": "身份揭露逆襲",
+        "type_en": "Identity Reveal Power Reversal",
+        "description": "Michelle在全球直播的頒獎典禮上揭露自己就是傳奇導演M，同時父親Scott Barkley現身揭示她是巴克萊家族繼承人。三年來被當成「無用媳婦」的屈辱在這一刻徹底翻盤，所有輕視她的人目瞪口呆。",
+        "emotional_impact": "爽快＋震驚",
+        "excerpt": "Everyone, I am M. ... No, that's impossible. She's just some random woman. How could she be M? ... Michelle is my pride and joy and she's the granddaughter of Jane Barkley, an heir to the Barkley Studios. Of course, you'd know that if you ever asked about her family."
+      },
+      {
+        "type": "真相大白——反派自食惡果",
+        "type_en": "Truth Revealed — Villain Gets Justice",
+        "description": "Richard發現Ruth自己吃了墮胎藥卻嫁禍Michelle，三年的冤屈終於洗清。白蓮花的真面目被揭穿，觀眾積壓的憤怒得到釋放。",
+        "emotional_impact": "解氣＋震驚",
+        "excerpt": "I know that Michelle didn't kill your baby. I know that you went to the doctor and got abortion pills earlier that day. ... I trusted you. I defended you. I believed your word over my own wife. You betrayed me. ... Pack your bags. Get out. You're not welcome here anymore."
+      },
+      {
+        "type": "離婚宣言打臉",
+        "type_en": "Divorce Declaration Face-Slap",
+        "description": "在鞭刑的極端壓迫下，Michelle不屈服反而主動提出離婚。Richard自信她離不開Gallow家族，但Michelle的決絕打碎了他的傲慢。被壓迫者的反擊永遠是最解氣的時刻。",
+        "emotional_impact": "爽快＋解氣",
+        "excerpt": "I want a divorce. ... You have never been on your own without me, without my family, without our money. How do you think you're going to survive? ... For 3 years, I took everything. Every lonely night, every insult. Turns out I'm the fool. Richard Gallow, it is over."
+      },
+      {
+        "type": "商業碾壓——財力反殺",
+        "type_en": "Financial Power Crush",
+        "description": "Richard威脅投資三億封殺Michelle，結果發現整個片場就是Michelle的產業，他的錢根本不夠格。從經濟弱勢到碾壓式的財力展示，完美滿足了「打臉」快感。",
+        "emotional_impact": "爽快",
+        "excerpt": "I will invest $300 million in this project as long as Michelle is blacklisted. ... This studio belongs to her. ... Unfortunately, Mr. Gallow, you don't have the authority to kick me out. Your measly $300 million just isn't going to cut it. And from what I understand, you're pretty deep in debt right now."
+      },
+      {
+        "type": "深情求婚",
+        "type_en": "Romantic Proposal",
+        "description": "Noah在頒獎典禮上當眾求婚，與Richard跪地求復合形成鮮明對比。守護八年的深情終於得到回報，觀眾的浪漫期待被滿足。",
+        "emotional_impact": "感動＋爽快",
+        "excerpt": "Michelle, I want to protect you for the rest of my life. Will you marry me? ... Richard: Michelle, please. I know I screwed up. Give me another chance. Let's get remarried. ... Noah: Really? Now that you find out that she's the heir to Barclay and M, you want to marry her? He's pathetic."
+      }
+    ],
+    "pacing": {
+      "tempo": "前虐後爽、快節奏高密度",
+      "tension_curve": "開場即高潮（鞭刑）→回溯積壓屈辱（持續升壓）→離婚宣言（第一次釋放）→事業重建期（短暫舒緩＋新衝突交替）→頒獎典禮終極對決（最高潮爆發）→大團圓收束",
+      "key_beats": [
+        "鞭刑場景——極端壓迫建立情感基礎",
+        "泳池事件——冤屈的起點，命運轉折",
+        "離婚宣言——被壓迫者的第一次反擊",
+        "公寓對質——夫妻關係的徹底破裂",
+        "片場碾壓——財力身份的首次暗示",
+        "Ruth真相曝光——洗清三年冤屈",
+        "頒獎典禮身份揭露——全面逆襲高潮",
+        "父親登場護女——終極王牌",
+        "Noah求婚——情感收束"
+      ],
+      "excerpt": "For 3 years, I took everything. Every lonely night, every insult. Turns out I'm the fool. Richard Gallow, it is over. ... [從隱忍到爆發的轉折] ... Everyone, I am M. [最終高潮]"
+    },
+    "dialogues": [
+      {
+        "type": "反擊型——被壓迫者的爆發",
+        "type_en": "Counter-Attack — Oppressed Person's Eruption",
+        "description": "在長期隱忍後，女主用簡短有力的語言回擊壓迫者。這類對白的套路是：先承認過去的痛苦，再宣告決裂，最後用一句話徹底翻盤。語氣從卑微轉為決絕。",
+        "emotional_function": "爽感＋解氣",
+        "excerpt": "For 3 years, I took everything. Every lonely night, every insult. Turns out I'm the fool. Richard Gallow, it is over."
+      },
+      {
+        "type": "威脅型——強權者的傲慢",
+        "type_en": "Threatening — Power Holder's Arrogance",
+        "description": "強勢方用財力、地位、家族權力威脅弱勢方。這類對白的套路是強調對方的無能和依附性，語氣居高臨下。這種對白的功能是拉高觀眾的憤怒值，為之後的打臉蓄能。",
+        "emotional_function": "製造壓迫與憤怒",
+        "excerpt": "You have never been on your own without me, without my family, without our money. How do you think you're going to survive?"
+      },
+      {
+        "type": "揭露型——真相炸彈",
+        "type_en": "Revelation — Truth Bomb",
+        "description": "用簡短直接的語句揭露隱藏的秘密，通常包含證據展示。節奏快、資訊密度高，讓被揭露者無法辯駁。",
+        "emotional_function": "震撼＋解氣",
+        "excerpt": "I know that Michelle didn't kill your baby. I know that you went to the doctor and got abortion pills earlier that day. ... I trusted you. I defended you. I believed your word over my own wife. You betrayed me."
+      },
+      {
+        "type": "碾壓型——實力降維打擊",
+        "type_en": "Crushing — Power Level Domination",
+        "description": "以絕對實力差距讓對方的威脅變成笑話。語氣平淡甚至帶笑，越輕描淡寫越顯示實力差距。",
+        "emotional_function": "爽感",
+        "excerpt": "Unfortunately, Mr. Gallow, you don't have the authority to kick me out. You could buy Barlay Studios, but your measly $300 million just isn't going to cut it. And from what I understand, you're pretty deep in debt right now. Please take me to my car. I don't want to waste any more time on irrelevant people."
+      },
+      {
+        "type": "深情告白型",
+        "type_en": "Heartfelt Confession",
+        "description": "用克制而深沉的語言表達長年累月的感情，不煽情但感人。通常包含時間量詞（八年、一直）來強調深情的厚度。",
+        "emotional_function": "感動＋甜蜜",
+        "excerpt": "I've loved you for 8 years. I'm not leaving now or ever. ... I'm never going to let anyone hurt her again. I swear."
+      },
+      {
+        "type": "質問型——婚姻的靈魂拷問",
+        "type_en": "Interrogation — Soul-Searching Marriage Question",
+        "description": "用連續的反問句逼迫對方面對婚姻中的問題，每一句都擊中要害。這類對白節奏急促、情緒飽滿。",
+        "emotional_function": "虐心＋共鳴",
+        "excerpt": "Where were you, Richard? The last 3 years when I was working myself to the bone for you and your family. Well, they treated me like trash. And now you're accusing me of cheating. What about Ruth? ... Why didn't you ever tell me she was your first love? Why did you save her first at the pool when we both fell in?"
+      }
+    ],
+    "visual_scenes": [
+      {
+        "type": "鞭刑懲罰",
+        "type_en": "Whipping Punishment Scene",
+        "description": "在豪門宅邸中對媳婦施以鞭刑，丈夫在旁觀看猶豫是否制止。這種中世紀式的私刑放在現代豪門背景下，產生強烈的時代錯位感和視覺震撼。",
+        "dramatic_tension": "肉體痛苦的直觀呈現＋丈夫的道德抉擇＋所有人的圍觀形成審判式壓迫",
+        "excerpt": "This punishment is necessary. Michelle, you will get 30 lashes. ... Keep going. Just say it. Just say it, please. For the love of God, just say it and I can stop."
+      },
+      {
+        "type": "泳池落水營救",
+        "type_en": "Pool Drowning and Rescue",
+        "description": "兩個女人同時落水，丈夫只能救一個。這個場景將三角關係的矛盾濃縮成一個生死抉擇，視覺上極具衝擊力。",
+        "dramatic_tension": "生死攸關的二選一＋水的視覺張力＋選擇即態度的符號化表達",
+        "excerpt": "Richard, help me. I'm drowning. Richard. Help. You know I can't swim. And you still chose to save her instead of me."
+      },
+      {
+        "type": "雨中拖行李離家＋豪車接人",
+        "type_en": "Leaving in Rain with Luggage / Luxury Car Pickup",
+        "description": "女主被趕出家門拖著行李箱在雨中，男二恰好開車經過救她。落魄與被拯救的反差製造了強烈的視覺敘事。",
+        "dramatic_tension": "狼狽離場的視覺衝擊＋男二適時出現的浪漫救贖＋新舊生活的分界線",
+        "excerpt": "You are never stepping foot in this house again. Good. It's exactly what I want. ... Need a hand. Noah, you look like you need a ride. Thank you."
+      },
+      {
+        "type": "頒獎典禮武裝挾持＋身份揭露",
+        "type_en": "Award Ceremony Armed Hostage / Identity Reveal",
+        "description": "反派在全球直播的頒獎典禮上帶武裝人員包圍現場，企圖公開毀滅女主，結果反被女主和父親碾壓。大場面、高賭注、全球觀眾的注視下完成逆轉。",
+        "dramatic_tension": "公共場合的高賭注＋武力威脅的緊迫感＋身份揭露的戲劇性＋全球直播的放大效應",
+        "excerpt": "You think I didn't come prepared? I took enough of the Gallup family's money to hire my own army. The building's surrounded. No one leaves. ... Lay a hand on my only daughter and see what happens. ... No talent, no brains. I bought off the entire squad."
+      }
+    ],
+    "ending_hooks": [
+      {
+        "type": "身份揭露型＋終極逆轉",
+        "type_en": "Identity Reveal with Ultimate Reversal",
+        "description": "在全劇高潮處揭露女主的多重隱藏身份（導演M＋巴克萊繼承人），讓所有此前的壓迫和屈辱都得到回報。觀眾在等待整部劇的這一刻，揭露的規模和方式超出預期。",
+        "timing": "最終幕高潮段落",
+        "excerpt": "So, I can't be an award-winning director because I'm a woman. What decade are you living in, Ruth? ... Everyone, I am M."
+      },
+      {
+        "type": "情感選擇型結尾",
+        "type_en": "Emotional Choice Ending",
+        "description": "Noah求婚與Richard求復合同時發生，女主在兩個男人之間做出最終選擇。結尾留有餘韻——女主回憶童年夢想「當導演」，呼應全劇的自我實現主題。",
+        "timing": "最後場景",
+        "excerpt": "Will you marry me? ... Michelle, please. I know I screwed up. Give me another chance. ... What do you want to be when you grow up? A director like you. That's my girl. Grandma, I did it."
+      }
+    ],
+    "tension_actions": [
+      {
+        "type": "鞭打/體罰",
+        "type_en": "Whipping / Corporal Punishment",
+        "description": "豪門家族對媳婦施以30鞭刑作為懲罰，這是全劇最極端的肢體暴力場景。其戲劇功能是將壓迫推到不可忍受的極限，為離婚宣言蓄足動力。",
+        "visual_impact": "每一鞭都是對觀眾情緒的重擊，丈夫執行鞭刑的矛盾表情加深了背叛感",
+        "excerpt": "This punishment is necessary. Michelle, you will get 30 lashes. ... 30 lashes? That's impossible. She's running a high fever. She can't survive that."
+      },
+      {
+        "type": "抓頭髮/肢體拉扯",
+        "type_en": "Hair Grabbing / Physical Struggle",
+        "description": "Blair抓著Michelle的頭髮施暴，以及Richard在公寓中抓住Michelle的手臂質問。肢體暴力直接展示權力不對等和角色的暴戾。",
+        "visual_impact": "身體接觸的侵犯感讓觀眾產生即時的憤怒和保護欲",
+        "excerpt": "Blair had me by the hair and Ruth tried to stop. ... You're hurting me. ... Answer the question. How long have you been screwing around behind my back? Get off of me."
+      },
+      {
+        "type": "推入泳池",
+        "type_en": "Pushing into Pool",
+        "description": "（被冤枉的）推人入泳池事件是全劇核心衝突的導火索。無論真相如何，「推入水中」這個動作本身具有強烈的攻擊性視覺效果。",
+        "visual_impact": "落水的瞬間衝擊＋水花＋掙扎的畫面營造生死感",
+        "excerpt": "Oh my. Did you just push her? She's pregnant with the gallow heir. ... Richard, help me. I'm drowning."
+      },
+      {
+        "type": "下藥/被迫飲酒",
+        "type_en": "Drugging",
+        "description": "Michelle在派對上被下藥，幾乎被陌生男人侵犯。這個情節既是懸疑元素也是情感催化劑，讓Richard再次出手救她。",
+        "visual_impact": "意識模糊的視覺呈現＋危險逼近的緊迫感",
+        "excerpt": "Someone drugged you. ... What do you care? ... Stop pushing me away. This is serious. You could have gotten hurt."
+      },
+      {
+        "type": "揮拳打人",
+        "type_en": "Punching",
+        "description": "Richard在發現Michelle被騷擾時揮拳打人，男性暴力作為「保護」的展示，在短劇中是常見的張力製造手段。",
+        "visual_impact": "拳頭的衝擊力＋保護者姿態的荷爾蒙感",
+        "excerpt": "Touch her again and I'll kill you. ... Dude, what the hell is even that? You're going to punch me for some... She's my wife."
+      }
+    ],
+    "genres": [
+      {
+        "type": "都市豪門",
+        "type_en": "Urban Elite / Wealthy Family",
+        "description": "以現代都市富豪家族為背景，展現階級差異、家族政治、財富權力鬥爭。核心吸引力在於窺探上流社會的光鮮與黑暗，滿足觀眾對豪門生活的想像和對權力遊戲的好奇。"
+      },
+      {
+        "type": "娛樂圈/影視圈",
+        "type_en": "Entertainment Industry / Showbiz",
+        "description": "涉及電影導演、好萊塢明星、頒獎典禮等娛樂圈元素。影視圈的光環和競爭為故事增加了名利場的華麗外衣和行業特有的戲劇性。"
+      }
+    ],
+    "styles": [
+      {
+        "type": "虐戀",
+        "type_en": "Angst Romance",
+        "description": "前期大量的情感虐待（冷暴力、冤屈、背叛）積累觀眾的心疼和憤怒，為後期的爽點釋放蓄能。調性是「越虐越深，越深越爽」。"
+      },
+      {
+        "type": "爽文逆襲",
+        "type_en": "Power Fantasy Revenge",
+        "description": "前期隱忍積壓的所有屈辱在後期以碾壓式的方式一一回報。身份揭露、財力碾壓、真相大白接連爆發，給觀眾持續的多巴胺刺激。節奏明快，爽點密集。"
+      },
+      {
+        "type": "暗黑豪門",
+        "type_en": "Dark Elite Family",
+        "description": "豪門內部的陰謀、嫁禍、私刑展現了權力的黑暗面。不迴避暴力和殘酷，用極端的壓迫手段（鞭刑）製造強烈的情緒衝擊。"
+      }
+    ],
+    "tags": [
+      "豪門復仇",
+      "隱藏身份",
+      "離婚逆襲",
+      "白蓮花反派",
+      "導演M",
+      "鞭刑虐待",
+      "三角關係",
+      "替身婚姻",
+      "身份揭露",
+      "深情男二",
+      "財力碾壓",
+      "冤屈洗清",
+      "頒獎典禮",
+      "好萊塢",
+      "家族企業",
+      "先虐後爽"
+    ],
+    "video_id": "sXtOU5dpcC8",
+    "title": "Reel Revenge: Divorced Director Strikes Back | Watch the full episode on the ShortMax app"
+  },
+  "video_data": {
+    "channel": "ShortMax - Watch Dramas & Show",
+    "views": 806665,
+    "duration": "PT6596S"
+  }
+}

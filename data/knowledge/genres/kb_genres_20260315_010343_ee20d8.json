@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_ee20d8",
+  "category": "genres",
+  "subcategory": "",
+  "name": "狼人吸血鬼",
+  "name_en": "Werewolf & Vampire",
+  "description": "以西方或融合東方元素的超自然種族為設定，狼人、吸血鬼與人類之間的愛恨情仇，黑暗浪漫風格，充滿禁忌之戀與種族衝突的張力",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "人類女孩意外成為狼王的命定伴侶",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "吸血鬼貴族與獵人家族的跨族禁忌之戀",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

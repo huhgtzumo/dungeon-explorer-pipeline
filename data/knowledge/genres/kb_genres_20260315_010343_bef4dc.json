@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_bef4dc",
+  "category": "genres",
+  "subcategory": "",
+  "name": "玄幻異能",
+  "name_en": "Fantasy & Superpower",
+  "description": "主角覺醒特殊異能或進入奇幻世界，以升級打怪、勢力爭霸為主線，世界觀宏大，戰鬥場面炫酷，滿足觀眾對超能力與冒險的想像",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "普通快遞員覺醒SSS級異能碾壓所有人",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "異能者學院中隱藏實力的最強轉學生",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

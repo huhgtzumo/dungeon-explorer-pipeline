@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_f95fa5",
+  "category": "genres",
+  "subcategory": "",
+  "name": "婚姻危機",
+  "name_en": "Marriage Crisis",
+  "description": "聚焦已婚夫妻面臨的信任危機、外遇背叛或價值觀衝突，深入剖析婚姻中的真實痛點，劇情虐心但引人反思，主打已婚受眾群體",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "發現丈夫出軌後妻子的絕地反擊與獨立之路",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "假離婚計劃失控引發的一連串家庭風暴",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

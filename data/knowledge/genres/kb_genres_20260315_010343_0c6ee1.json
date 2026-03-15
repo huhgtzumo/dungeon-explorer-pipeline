@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_0c6ee1",
+  "category": "genres",
+  "subcategory": "",
+  "name": "甜寵溺愛",
+  "name_en": "Sweet Romance",
+  "description": "全程高甜無虐，男主對女主極致寵溺，劇情輕鬆無腦，專注製造心動名場面與撒糖橋段，是壓力社會下觀眾最愛的減壓類型之一",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "冷面財閥繼承人只對契約妻子溫柔",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "失憶後重新追求自己老婆的甜蜜日常",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

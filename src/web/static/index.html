@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Short Drama Pipeline</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <h1><span class="brand-icon">D</span> Drama Pipeline</h1>
+    <p>短劇生成工作台</p>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">工作區</div>
+    <div class="sidebar-item active" data-nav="pipeline" onclick="navTo('pipeline')">
+      <span class="item-left"><span class="item-icon">&#9654;</span> 流程管線</span>
+    </div>
+    <div class="sidebar-item" data-nav="knowledge" onclick="navTo('knowledge')">
+      <span class="item-left"><span class="item-icon">&#128218;</span> 知識庫</span>
+    </div>
+  </div>
+
+  <div class="sidebar-divider"></div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">資料庫</div>
+    <div class="sidebar-item" data-nav="step1" onclick="navTo('pipeline');goStep(1)">
+      <span class="item-left"><span class="item-icon">&#128269;</span> 爬蟲結果</span>
+      <span class="badge" id="badge-crawls">0</span>
+    </div>
+    <div class="sidebar-item" data-nav="analyses" onclick="navTo('analyses')">
+      <span class="item-left"><span class="item-icon">&#128200;</span> 分析報告</span>
+      <span class="badge" id="badge-analyses">0</span>
+    </div>
+    <div class="sidebar-item" data-nav="scripts" onclick="navTo('scripts')">
+      <span class="item-left"><span class="item-icon">&#128221;</span> 劇本</span>
+      <span class="badge" id="badge-scripts">0</span>
+    </div>
+    <div class="sidebar-item" data-nav="step4" onclick="navTo('pipeline');goStep(4)">
+      <span class="item-left"><span class="item-icon">&#127916;</span> 分鏡</span>
+      <span class="badge" id="badge-storyboards">0</span>
+    </div>
+    <div class="sidebar-item" data-nav="step5" onclick="navTo('pipeline');goStep(5)">
+      <span class="item-left"><span class="item-icon">&#128444;</span> 分鏡圖</span>
+      <span class="badge" id="badge-images">0</span>
+    </div>
+    <div class="sidebar-item" data-nav="step6" onclick="navTo('pipeline');goStep(6)">
+      <span class="item-left"><span class="item-icon">&#127909;</span> 視頻</span>
+      <span class="badge" id="badge-videos">0</span>
+    </div>
+    <div class="sidebar-item" data-nav="step7" onclick="navTo('pipeline');goStep(7)">
+      <span class="item-left"><span class="item-icon">&#9986;</span> 後製</span>
+      <span class="badge" id="badge-postprod">0</span>
+    </div>
+    <div class="sidebar-item" data-nav="step8" onclick="navTo('pipeline');goStep(8)">
+      <span class="item-left"><span class="item-icon">&#128228;</span> 發布</span>
+      <span class="badge" id="badge-publish">0</span>
+    </div>
+    <div class="sidebar-item" data-nav="knowledge-db" onclick="navTo('knowledge')">
+      <span class="item-left"><span class="item-icon">&#128161;</span> 知識庫</span>
+      <span class="badge" id="badge-kb">0</span>
+    </div>
+  </div>
+
+  <div class="sidebar-footer">
+    <div class="user-info">
+      <div class="avatar">U</div>
+      <div>
+        <div class="user-name">User</div>
+        <div class="user-role">管理員</div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- ===== MAIN ===== -->
+<div class="main">
+
+  <!-- Stepper Bar (always visible) -->
+  <div class="stepper-bar">
+      <div class="step active" onclick="goStep(1)">
+        <div class="step-indicator">1</div>
+        <div class="step-label">爬蟲搜尋</div>
+      </div>
+      <div class="step-connector" id="conn-1"></div>
+      <div class="step pending" onclick="goStep(2)">
+        <div class="step-indicator">2</div>
+        <div class="step-label">爆款分析</div>
+      </div>
+      <div class="step-connector" id="conn-2"></div>
+      <div class="step pending" onclick="goStep(3)">
+        <div class="step-indicator">3</div>
+        <div class="step-label">劇本生成</div>
+      </div>
+      <div class="step-connector" id="conn-3"></div>
+      <div class="step pending" onclick="goStep(4)">
+        <div class="step-indicator">4</div>
+        <div class="step-label">分鏡拆解</div>
+      </div>
+      <div class="step-connector" id="conn-4"></div>
+      <div class="step pending" onclick="goStep(5)">
+        <div class="step-indicator">5</div>
+        <div class="step-label">分鏡圖</div>
+      </div>
+      <div class="step-connector" id="conn-5"></div>
+      <div class="step pending" onclick="goStep(6)">
+        <div class="step-indicator">6</div>
+        <div class="step-label">視頻生成</div>
+      </div>
+      <div class="step-connector" id="conn-6"></div>
+      <div class="step pending" onclick="goStep(7)">
+        <div class="step-indicator">7</div>
+        <div class="step-label">後製合成</div>
+      </div>
+      <div class="step-connector" id="conn-7"></div>
+      <div class="step pending" onclick="goStep(8)">
+        <div class="step-indicator">8</div>
+        <div class="step-label">發布上傳</div>
+      </div>
+    </div>
+
+  <!-- ===== PIPELINE VIEW ===== -->
+  <div id="view-pipeline">
+    <!-- Step 1: Crawl -->
+    <div class="content-area step-panel active" id="step1">
+      <div class="panel-left">
+        <div class="panel-title"><span class="title-icon">&#128269;</span> 搜尋條件</div>
+        <div id="crawl-status"></div>
+        <div class="form-group">
+          <label class="form-label">關鍵字</label>
+          <input type="text" class="form-input" id="crawl-keyword" placeholder="輸入搜尋關鍵字...">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tags（逗號分隔，選填）</label>
+          <input type="text" class="form-input" id="crawl-tags" placeholder="霸總, 復仇, 甜寵">
+        </div>
+        <div class="form-group">
+          <label class="form-label">最低觀看次數</label>
+          <input type="text" class="form-input" id="crawl-min-views" placeholder="例: 50000">
+          <div class="helper-text">篩選高流量影片</div>
+        </div>
+        <div class="form-divider"></div>
+        <button class="btn btn-primary btn-block" id="btn-crawl" onclick="doCrawl()">&#128269;&nbsp; 開始搜尋</button>
+
+        <div class="form-divider"></div>
+        <div class="panel-title" style="margin-top:8px"><span class="title-icon">&#128203;</span> 歷史紀錄</div>
+        <div id="crawl-history" class="sidebar-history"></div>
+      </div>
+
+      <div class="panel-right">
+        <div class="results-header">
+          <h3>搜尋結果</h3>
+          <span class="results-meta" id="crawl-results-meta"></span>
+        </div>
+        <div id="crawl-selection-bar" style="display:none" class="selection-bar">
+          <span>已選取 <strong id="crawl-selected-count">0</strong> 部影片</span>
+          <button class="btn btn-sm btn-primary" id="btn-batch-analyze" onclick="doBatchAnalyzeSelected()">批量分析入庫 &rarr;</button>
+        </div>
+        <div id="crawl-results">
+          <div class="empty-state">
+            <div class="empty-icon">&#128269;</div>
+            <p>輸入關鍵字開始搜尋</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2: Analyze -->
+    <div class="content-area step-panel" id="step2">
+      <div class="panel-left">
+        <div class="panel-title"><span class="title-icon">&#128200;</span> 爆款分析</div>
+
+        <!-- Single report generation -->
+        <div class="form-group">
+          <label class="form-label">生成分析報告（單個）</label>
+          <div class="form-group" style="margin-bottom:8px">
+            <input type="text" class="form-input" id="analysis-name" placeholder="分析名稱（選填）...">
+          </div>
+          <button class="btn btn-sm btn-primary btn-block" id="btn-step2-report" onclick="doStep2GenerateReport()">&#128202; 生成分析報告（單個）</button>
+        </div>
+
+        <div class="form-divider"></div>
+        <div class="panel-title" style="margin-top:8px"><span class="title-icon">&#128203;</span> 分析紀錄</div>
+        <div id="analysis-history-sidebar" class="sidebar-history"></div>
+      </div>
+
+      <div class="panel-right">
+        <!-- Filter bar -->
+        <div class="step2-filter-bar">
+          <div class="results-header" style="margin-bottom:0;border-bottom:none;padding-bottom:0">
+            <h3>視頻列表</h3>
+            <div style="display:flex;align-items:center;gap:10px">
+              <select class="form-select" id="step2-filter" onchange="filterStep2Videos()" style="width:160px;padding:5px 8px;font-size:12px">
+                <option value="ready" selected>待分析（有字幕）</option>
+                <option value="all">全部</option>
+                <option value="unanalyzed">尚未分析</option>
+                <option value="analyzed">已分析</option>
+                <option value="no-subtitle">無字幕</option>
+              </select>
+              <span class="results-meta" id="step2-video-count"></span>
+            </div>
+          </div>
+
+          <!-- Bulk action bar (shown when any checked) -->
+          <div id="step2-bulk-bar" class="step2-bulk-bar" style="display:none">
+            <label style="display:flex;align-items:center;gap:6px;cursor:pointer">
+              <input type="checkbox" id="step2-select-all-cb" onchange="step2ToggleSelectAll(this.checked)">
+              <span id="step2-selected-count" style="font-size:12px;color:var(--text-secondary)">已選 0 部</span>
+            </label>
+            <button class="btn btn-sm btn-accent" id="btn-step2-kb-batch" onclick="doStep2KBBatchAnalyze()">&#128218; 批量分析入庫</button>
+          </div>
+        </div>
+
+        <!-- Video table -->
+        <div id="step2-video-table" class="step2-video-table">
+          <div class="preview-empty" style="padding:20px 0">載入中...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3: Generate Script -->
+    <div class="content-area step-panel" id="step3">
+      <div class="panel-left">
+        <div class="panel-title"><span class="title-icon">&#128221;</span> 劇本設定</div>
+        <div class="form-group">
+          <label class="form-label">每集時長</label>
+          <div class="duration-selector">
+            <button class="dur-btn active" data-dur="60" onclick="setDuration(60)">1 分鐘</button>
+            <button class="dur-btn" data-dur="180" onclick="setDuration(180)">3 分鐘</button>
+            <button class="dur-btn" data-dur="300" onclick="setDuration(300)">5 分鐘</button>
+          </div>
+          <div class="dur-hint" id="dur-hint">建議選 3-4 個核心元素</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">模式</label>
+          <div class="mode-toggle">
+            <button class="mode-btn active" id="mode-single" onclick="setGenMode('single')">單集</button>
+            <button class="mode-btn" id="mode-series" onclick="setGenMode('series')">連續劇（進階）</button>
+          </div>
+        </div>
+        <div class="form-group" id="series-options" style="display:none">
+          <label class="form-label">集數 (30-50)</label>
+          <div class="slider-group">
+            <input type="range" class="slider" id="gen-episodes" min="30" max="50" value="30" oninput="document.getElementById('gen-ep-val').textContent=this.value">
+            <span class="slider-value" id="gen-ep-val">30</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">補充要求（選填）</label>
+          <textarea class="form-textarea" id="gen-requirements" placeholder="輸入額外的創作要求或限制..."></textarea>
+        </div>
+        <div class="form-divider"></div>
+        <button class="btn btn-accent btn-block" id="btn-generate-kb" onclick="doGenerateKB()">&#128218;&nbsp; 生成劇本</button>
+
+        <div class="form-divider"></div>
+        <div class="panel-title" style="margin-top:8px"><span class="title-icon">&#128203;</span> 劇本紀錄</div>
+        <div id="script-history-sidebar" class="sidebar-history"></div>
+      </div>
+
+      <div class="panel-right">
+        <div class="results-header">
+          <h3>&#128218; 知識庫元素選擇</h3>
+          <span class="results-meta">點選卡片 = 指定元素，不選 = AI 自由發揮。<span style="color:var(--accent)">核心</span>元素建議優先選擇</span>
+        </div>
+        <div id="kb-cards-panel" class="kb-cards-panel">
+          <div class="preview-empty">載入中...</div>
+        </div>
+
+        <!-- Script preview (shown when clicking history) -->
+        <div id="script-preview-section" style="display:none">
+          <div class="results-header" style="margin-top:24px">
+            <h3>劇本預覽</h3>
+            <span class="results-meta" id="script-results-meta"></span>
+          </div>
+          <div id="script-results"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 4: Storyboard -->
+    <div class="content-area step-panel" id="step4">
+      <div class="panel-left">
+        <div class="panel-title"><span class="title-icon">&#127916;</span> 分鏡設定</div>
+        <div class="form-group">
+          <label class="form-label">選擇劇本</label>
+          <select class="form-select" id="sb-script-select">
+            <option value="">-- 選擇劇本 --</option>
+          </select>
+        </div>
+        <div class="form-divider"></div>
+        <button class="btn btn-primary btn-block" id="btn-storyboard" onclick="doStoryboard()">&#127916;&nbsp; 開始拆分鏡</button>
+
+        <div class="form-divider"></div>
+        <div class="panel-title" style="margin-top:8px"><span class="title-icon">&#128203;</span> 分鏡紀錄</div>
+        <div id="storyboard-history-sidebar" class="sidebar-history"></div>
+      </div>
+
+      <div class="panel-right">
+        <div class="results-header">
+          <h3>分鏡表</h3>
+          <span class="results-meta" id="storyboard-results-meta"></span>
+        </div>
+        <div id="storyboard-results">
+          <div class="empty-state">
+            <div class="empty-icon">&#127916;</div>
+            <p>選擇劇本後生成分鏡，或點擊左側紀錄查看</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Step 5: Image Generation -->
+    <div class="content-area step-panel" id="step5">
+      <div class="panel-left">
+        <div class="panel-title"><span class="title-icon">&#128444;</span> 分鏡圖生成</div>
+        <div class="form-group">
+          <label class="form-label">選擇分鏡表</label>
+          <select class="form-select" id="img-storyboard-select">
+            <option value="">-- 選擇分鏡 --</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">生圖引擎</label>
+          <select class="form-select" id="img-engine">
+            <option value="flux" selected>Flux Schnell（fal.ai）</option>
+            <option value="kling" disabled>Kling AI（僅限視頻）</option>
+            <option value="storyboarder" disabled>Storyboarder.ai（即將支援）</option>
+            <option value="sd-lora" disabled>Stable Diffusion + LoRA（即將支援）</option>
+          </select>
+          <div class="helper-text">Flux Schnell：透過 fal.ai API 生成 9:16 豎版分鏡圖（~$0.003/張）</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">風格 Prefix（選填）</label>
+          <textarea class="form-textarea" id="img-style-prefix" placeholder="例：cinematic lighting, realistic photo style, 4K, dramatic shadows..." rows="3"></textarea>
+        </div>
+        <div class="form-divider"></div>
+        <button class="btn btn-primary btn-block" id="btn-gen-images" onclick="doGenerateImages()">&#128444;&nbsp; 開始生圖</button>
+        <div id="img-gen-progress" style="display:none;margin-top:12px">
+          <div class="progress-bar-bg"><div class="progress-bar-fill" id="img-gen-progress-bar" style="width:0%"></div></div>
+          <div class="progress-text" id="img-gen-progress-text" style="font-size:12px;color:var(--text-secondary);margin-top:4px"></div>
+        </div>
+
+        <div class="form-divider"></div>
+        <div class="panel-title" style="margin-top:8px"><span class="title-icon">&#128203;</span> 生圖紀錄</div>
+        <div id="image-history-sidebar" class="sidebar-history">
+          <div class="empty-state" style="padding:20px"><p>尚無生圖紀錄</p></div>
+        </div>
+      </div>
+      <div class="panel-right">
+        <div class="results-header">
+          <h3>分鏡圖預覽</h3>
+          <span class="results-meta" id="image-results-meta"></span>
+        </div>
+        <div id="image-results">
+          <div class="empty-state">
+            <div class="empty-icon">&#128444;</div>
+            <p>選擇分鏡表後點擊「開始生圖」</p>
+            <div style="margin-top:16px;text-align:left;max-width:500px">
+              <div class="report-section">
+                <h4>&#128161; 引擎比較</h4>
+                <table class="data-table">
+                  <thead><tr><th>引擎</th><th>畫質</th><th>角色一致性</th><th>費用</th><th>狀態</th></tr></thead>
+                  <tbody>
+                    <tr style="color:var(--accent)"><td>Flux Schnell</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;</td><td>~$0.003/張</td><td>&#9989; 可用</td></tr>
+                    <tr><td>FLUX 1.1 Pro</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;</td><td>按量計費</td><td>可升級</td></tr>
+                    <tr><td>SD + LoRA</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td><td>免費（需 GPU）</td><td>即將支援</td></tr>
+                    <tr><td>Storyboarder.ai</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td><td>付費</td><td>即將支援</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 6: Video Generation -->
+    <div class="content-area step-panel" id="step6">
+      <div class="panel-left">
+        <div class="panel-title"><span class="title-icon">&#127909;</span> 視頻生成</div>
+        <div class="form-group">
+          <label class="form-label">選擇分鏡圖組</label>
+          <select class="form-select" id="vid-image-select">
+            <option value="">-- 選擇已生成的分鏡圖 --</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">視頻引擎</label>
+          <select class="form-select" id="vid-engine">
+            <option value="kling" selected>Kling AI（API）</option>
+            <option value="veo" disabled>Veo 3.1 API（即將支援）</option>
+            <option value="runway" disabled>Runway Gen-3（即將支援）</option>
+          </select>
+          <div class="helper-text">Kling AI：image-to-video，支援 5 或 10 秒/段</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">每段時長（秒）</label>
+          <div class="duration-selector">
+            <button class="dur-btn active" data-viddur="5" onclick="setVideoDuration(5)">5 秒</button>
+            <button class="dur-btn" data-viddur="10" onclick="setVideoDuration(10)">10 秒</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">品質模式</label>
+          <div class="mode-toggle">
+            <button class="mode-btn active" id="vid-mode-std" onclick="setVideoMode('std')">標準 (std)</button>
+            <button class="mode-btn" id="vid-mode-pro" onclick="setVideoMode('pro')">高品質 (pro)</button>
+          </div>
+        </div>
+        <div class="form-divider"></div>
+        <button class="btn btn-primary btn-block" id="btn-gen-video" onclick="doGenerateVideos()">&#127909;&nbsp; 開始生成視頻</button>
+        <div id="vid-gen-progress" style="display:none;margin-top:12px">
+          <div class="progress-bar-bg"><div class="progress-bar-fill" id="vid-gen-progress-bar" style="width:0%"></div></div>
+          <div class="progress-text" id="vid-gen-progress-text" style="font-size:12px;color:var(--text-secondary);margin-top:4px"></div>
+        </div>
+
+        <div class="form-divider"></div>
+        <div class="panel-title" style="margin-top:8px"><span class="title-icon">&#128203;</span> 視頻紀錄</div>
+        <div id="video-history-sidebar" class="sidebar-history">
+          <div class="empty-state" style="padding:20px"><p>尚無視頻紀錄</p></div>
+        </div>
+      </div>
+      <div class="panel-right">
+        <div class="results-header">
+          <h3>視頻預覽</h3>
+          <span class="results-meta" id="video-results-meta"></span>
+        </div>
+        <div id="video-results">
+          <div class="empty-state">
+            <div class="empty-icon">&#127909;</div>
+            <p>選擇分鏡圖組後點擊「開始生成視頻」</p>
+            <div style="margin-top:12px;font-size:12px;color:var(--text-muted)">Kling AI image-to-video<br>每段 5 或 10 秒，標準或高品質模式</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 7: Post-Production -->
+    <div class="content-area step-panel" id="step7">
+      <div class="panel-left">
+        <div class="panel-title"><span class="title-icon">&#9986;</span> 後製合成</div>
+        <div class="form-group">
+          <label class="form-label">選擇視頻片段組</label>
+          <select class="form-select" id="pp-video-select">
+            <option value="">-- 選擇已生成的視頻 --</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">字幕樣式</label>
+          <select class="form-select" id="pp-subtitle-style">
+            <option value="bottom-center">底部居中（經典）</option>
+            <option value="top-center">頂部居中</option>
+            <option value="dramatic">戲劇化（大字+描邊）</option>
+            <option value="karaoke">卡拉 OK 式（逐字高亮）</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">背景音樂</label>
+          <select class="form-select" id="pp-bgm">
+            <option value="auto">自動匹配（根據劇情類型）</option>
+            <option value="tense">緊張懸疑</option>
+            <option value="romantic">浪漫甜蜜</option>
+            <option value="epic">史詩激昂</option>
+            <option value="none">無背景音樂</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">輸出格式</label>
+          <select class="form-select" id="pp-format">
+            <option value="mp4-1080p">MP4 1080p（YouTube 推薦）</option>
+            <option value="mp4-4k">MP4 4K</option>
+            <option value="shorts-9x16">Shorts 9:16（直式）</option>
+          </select>
+        </div>
+        <div class="form-divider"></div>
+        <button class="btn btn-primary btn-block" id="btn-postprod" disabled>&#9986;&nbsp; 開始合成（即將開放）</button>
+        <div class="helper-text" style="text-align:center;margin-top:8px;color:var(--warning)">&#9888; 此功能尚未接入後端，目前為示意</div>
+
+        <div class="form-divider"></div>
+        <div class="panel-title" style="margin-top:8px"><span class="title-icon">&#128203;</span> 合成紀錄</div>
+        <div id="postprod-history-sidebar" class="sidebar-history">
+          <div class="empty-state" style="padding:20px"><p>尚無合成紀錄</p></div>
+        </div>
+      </div>
+      <div class="panel-right">
+        <div class="results-header">
+          <h3>合成預覽</h3>
+        </div>
+        <div id="postprod-results">
+          <div class="empty-state">
+            <div class="empty-icon">&#9986;</div>
+            <p>FFmpeg 本地處理：拼接視頻片段 + 燒字幕 + 混音</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 8: Publish -->
+    <div class="content-area step-panel" id="step8">
+      <div class="panel-left">
+        <div class="panel-title"><span class="title-icon">&#128228;</span> 發布上傳</div>
+        <div class="form-group">
+          <label class="form-label">選擇成品視頻</label>
+          <select class="form-select" id="pub-video-select">
+            <option value="">-- 選擇已合成的視頻 --</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">YouTube 頻道</label>
+          <select class="form-select" id="pub-channel">
+            <option value="">-- 待設定 --</option>
+          </select>
+          <div class="helper-text">需要先完成 YouTube OAuth 授權</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">標題</label>
+          <input type="text" class="form-input" id="pub-title" placeholder="自動從劇本生成，可手動修改">
+        </div>
+        <div class="form-group">
+          <label class="form-label">描述</label>
+          <textarea class="form-textarea" id="pub-description" placeholder="自動生成 SEO 描述..." rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tags</label>
+          <input type="text" class="form-input" id="pub-tags" placeholder="短劇, 霸總, 復仇...">
+        </div>
+        <div class="form-group">
+          <label class="form-label">排程發布</label>
+          <select class="form-select" id="pub-schedule">
+            <option value="now">立即發布</option>
+            <option value="schedule">排程（選擇時間）</option>
+            <option value="draft">存為草稿</option>
+          </select>
+        </div>
+        <div class="form-divider"></div>
+        <button class="btn btn-primary btn-block" id="btn-publish" disabled>&#128228;&nbsp; 上傳到 YouTube（即將開放）</button>
+        <div class="helper-text" style="text-align:center;margin-top:8px;color:var(--warning)">&#9888; 此功能尚未接入後端，目前為示意</div>
+
+        <div class="form-divider"></div>
+        <div class="panel-title" style="margin-top:8px"><span class="title-icon">&#128203;</span> 發布紀錄</div>
+        <div id="publish-history-sidebar" class="sidebar-history">
+          <div class="empty-state" style="padding:20px"><p>尚無發布紀錄</p></div>
+        </div>
+      </div>
+      <div class="panel-right">
+        <div class="results-header">
+          <h3>發布預覽</h3>
+        </div>
+        <div id="publish-results">
+          <div class="empty-state">
+            <div class="empty-icon">&#128228;</div>
+            <p>YouTube Upload API 自動上傳<br>支援排程發布和批量上傳</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== ANALYSES VIEW ===== -->
+  <div id="view-analyses" style="display:none" class="analyses-view">
+    <div class="analyses-layout">
+      <!-- Left: list panel -->
+      <div class="analyses-list-panel">
+        <div class="analyses-list-header">
+          <h3>&#128200; 分析報告</h3>
+          <span class="results-meta" id="analyses-count"></span>
+        </div>
+        <div id="analyses-list" class="analyses-list">
+          <div class="preview-empty">載入中...</div>
+        </div>
+      </div>
+      <!-- Right: detail panel -->
+      <div class="analyses-detail-panel">
+        <div id="analyses-detail">
+          <div class="empty-state">
+            <div class="empty-icon">&#128200;</div>
+            <p>從左側選擇報告查看詳情</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCRIPTS LIBRARY VIEW ===== -->
+  <div id="view-scripts" style="display:none" class="analyses-view">
+    <div class="analyses-layout">
+      <!-- Left: list panel -->
+      <div class="analyses-list-panel">
+        <div class="analyses-list-header">
+          <h3>&#128221; 劇本庫</h3>
+          <span class="results-meta" id="scripts-lib-count"></span>
+        </div>
+        <div id="scripts-lib-list" class="analyses-list">
+          <div class="preview-empty">載入中...</div>
+        </div>
+      </div>
+      <!-- Right: detail panel -->
+      <div class="analyses-detail-panel">
+        <div id="scripts-lib-detail">
+          <div class="empty-state">
+            <div class="empty-icon">&#128221;</div>
+            <p>從左側選擇劇本查看詳情</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== KNOWLEDGE BASE VIEW ===== -->
+  <div id="view-knowledge" style="display:none" class="kb-view">
+    <div class="kb-header">
+      <h2>&#128218; 知識庫</h2>
+      <p>從分析過的爆款劇中提取的可複用創作元素</p>
+    </div>
+
+    <div id="kb-stats" class="kb-stats-grid"></div>
+
+    <div class="kb-search-bar">
+      <input type="text" class="form-input" id="kb-search-input" placeholder="搜尋知識庫..." style="flex:1">
+      <button class="btn btn-primary" onclick="doKBSearch()">搜尋</button>
+    </div>
+    <div id="kb-search-results"></div>
+
+    <div class="kb-category-tabs" id="kb-cat-tabs">
+      <button class="kb-cat-btn active" data-cat="structures" onclick="switchKBCategory('structures')">架構模板</button>
+      <button class="kb-cat-btn" data-cat="hooks" onclick="switchKBCategory('hooks')">開場鉤子</button>
+      <button class="kb-cat-btn" data-cat="elements" onclick="switchKBCategory('elements')">元素庫</button>
+      <button class="kb-cat-btn" data-cat="payoffs" onclick="switchKBCategory('payoffs')">爽點庫</button>
+      <button class="kb-cat-btn" data-cat="pacing" onclick="switchKBCategory('pacing')">節奏模板</button>
+      <button class="kb-cat-btn" data-cat="dialogues" onclick="switchKBCategory('dialogues')">對白模式</button>
+      <button class="kb-cat-btn" data-cat="visual_scenes" onclick="switchKBCategory('visual_scenes')">視覺場景</button>
+      <button class="kb-cat-btn" data-cat="ending_hooks" onclick="switchKBCategory('ending_hooks')">結尾鉤子</button>
+      <button class="kb-cat-btn" data-cat="tension_actions" onclick="switchKBCategory('tension_actions')">張力行為</button>
+      <button class="kb-cat-btn" data-cat="genres" onclick="switchKBCategory('genres')">劇本類型</button>
+      <button class="kb-cat-btn" data-cat="styles" onclick="switchKBCategory('styles')">風格</button>
+    </div>
+
+    <div id="kb-entries" class="kb-entries-grid"></div>
+  </div>
+
+  <!-- Detail Overlay -->
+  <div class="overlay" id="detail-overlay" style="display:none" onclick="closeDetail()">
+    <div class="overlay-content" onclick="event.stopPropagation()">
+      <div class="overlay-header">
+        <h2 id="detail-title">詳情</h2>
+        <button class="overlay-close" onclick="closeDetail()">&times;</button>
+      </div>
+      <div id="detail-content" class="preview"></div>
+    </div>
+  </div>
+
+  <!-- Trace Overlay -->
+  <div class="overlay" id="trace-overlay" style="display:none" onclick="closeTrace()">
+    <div class="overlay-content overlay-sm" onclick="event.stopPropagation()">
+      <div class="overlay-header">
+        <h2>追溯鏈</h2>
+        <button class="overlay-close" onclick="closeTrace()">&times;</button>
+      </div>
+      <div id="trace-content"></div>
+    </div>
+  </div>
+
+  <!-- Log Panel -->
+  <div class="log-panel" id="log-panel">
+    <div class="log-header" onclick="toggleLogPanel()">
+      <h4><span class="log-dot" id="log-dot"></span> 系統日誌</h4>
+      <span class="log-toggle" id="log-toggle">&#9650; 展開</span>
+    </div>
+    <div class="log-body" id="log-body" style="display:none">
+      <div id="tasks"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+{
+  "video_id": "vPaySGfWlD4",
+  "title": "love drama \"I was tricked into marrying a blind CEO I didn't know\" HD FULL, CEO,ENGSUB,  Episodes",
+  "analysis": {
+    "drama_summary": "女主Ashley被迫頂替雙胞胎姐姐嫁給失明CEO Tristan，從假夫妻到真情相守，最終揭露姐姐陰謀、奪回身份與愛情的豪門逆襲故事。",
+    "structure": {
+      "type": "三幕式反轉＋雙線交錯",
+      "type_en": "Three-act reversal with dual storyline interweaving",
+      "description": "第一幕建立假婚困境與身份錯置，Ashley被迫以Cora身份嫁入豪門；第二幕在日常相處中發展真感情，同時揭露家族陰謀（父親被下藥、Josh製造車禍）；第三幕Ashley被囚禁、Cora冒充取代，最終Ashley逃脫在頒獎典禮上揭露真相、身份反轉完成逆襲。雙線交錯體現在Ashley-Tristan感情線與Cora-Vanessa陰謀線的交替推進。",
+      "act_breakdown": "第一幕（約25%）：被迫替嫁、婚禮尷尬、立規矩；第二幕（約50%）：假夫妻日常、商業合作、發現父親陰謀、Josh對峙、感情升溫；第三幕（約25%）：Ashley被囚、Cora冒充、逃脫揭露、真相大白、求婚結局",
+      "excerpt": "I can't believe I'm marrying a stranger today. / Because we have the same face. / The moment I opened my eyes, I knew she wasn't you. / Today, I'd like to formally propose to you, Miss Ashley Green. Will you marry me again? The real me says yes."
+    },
+    "hooks": [
+      {
+        "type": "懸念＋衝突開場",
+        "type_en": "Suspense and conflict opening",
+        "description": "開場即揭示女主被迫嫁給陌生人的困境，同時拋出雙胞胎替嫁、CEO失明兩大懸念，觀眾立刻想知道：為什麼要替嫁？失明是真是假？他們會怎樣相處？",
+        "timing": "開場",
+        "excerpt": "I can't believe I'm marrying a stranger today. / Why me? It's Cora they want. Why? Because you, my dear sister, have lived comfortably all your life while I suffered in poverty with our mother. Plus, you're the only one that can do this for me. Because we have the same face."
+      },
+      {
+        "type": "身份反差鉤子",
+        "type_en": "Identity contrast hook",
+        "description": "女主實際上是歐洲頂級獨立調香師Victoria，卻以替身妻子身份隱藏在豪門中，觀眾期待身份揭露的爽感時刻。男主的失明也是表面殘障、實則能力超群的反差設計。",
+        "timing": "中段逐步揭露",
+        "excerpt": "Did he actually buy my entire product line? Is this guy a fan of mine? / If only he knew half the perfume products in his house were my designs. He'd be shocked. I have some basic knowledge."
+      },
+      {
+        "type": "危機懸念鉤子",
+        "type_en": "Crisis suspense hook",
+        "description": "Ashley被綁架囚禁，Cora趁機冒充取代她的位置，觀眾擔心女主能否逃脫、男主是否會被騙，製造強烈的緊張感和追看動力。",
+        "timing": "第三幕前段",
+        "excerpt": "If you shut your mouth, I will shut it for you. / Tristan, where are you? Come and save me, please. / If you stay here quietly for a month, I'll let you go."
+      }
+    ],
+    "elements": {
+      "characters": [
+        {
+          "type": "隱忍女主＋隱藏實力型",
+          "type_en": "Enduring heroine with hidden prowess",
+          "description": "Ashley表面被壓迫、被迫替嫁、甚至被當女傭使喚，但實際身份是歐洲頂級調香師Victoria。她隱忍是為了保護父親，但關鍵時刻絕不退縮，兼具溫柔與剛強。",
+          "excerpt": "Tristan may be blind, but he's a genuine, honest man. You, however, have darkness in your heart, even standing in the sunlight. / Yes, I have many identities. You may be familiar with Victoria, but you can also call me by my real name, Ashley Green."
+        },
+        {
+          "type": "外冷內熱殘障霸總",
+          "type_en": "Cold exterior warm interior disabled CEO",
+          "description": "Tristan失明後被家族邊緣化，表面冷漠、對妻子立規矩，實則細膩敏銳（靠氣味辨人、靠聽覺判斷牛排熟度），在感情中逐漸展現溫柔與深情。",
+          "excerpt": "But I can smell. You have a very distinct scent. / Yours is overcooked. How can you tell? I can hear it. / I never would have stopped looking."
+        },
+        {
+          "type": "腹黑雙胞胎反派",
+          "type_en": "Scheming twin villain",
+          "description": "Cora表面是受害者（稱自己從小受苦），實則聯合母親Vanessa策劃一切陰謀：替嫁、抄襲作品、囚禁Ashley、冒充取代，是嫉妒與貪婪的化身。",
+          "excerpt": "She took everything from me and you. I will take everything from her. / Now Josh is useless. Who knew blind Tristan would put up such a good fight? / I want her to disappear from Tristan's side completely."
+        },
+        {
+          "type": "被操控的紈絝弟弟",
+          "type_en": "Manipulated prodigal brother",
+          "description": "Josh被父親的偏心驅動，淪為陰謀工具，製造車禍害兄長失明，但最終也是父權操控的犧牲品，選擇自首贖罪。",
+          "excerpt": "I was just a tool to sharpen Tristan. You used me to train him. / All you've ever cared about is this company. Nothing else. Not even your own sons. / Josh decided to turn himself in."
+        },
+        {
+          "type": "忠心管家/助手",
+          "type_en": "Loyal butler/assistant",
+          "description": "Mark是Tristan的貼身助手，在婚禮上為他導航、照顧日常、收集情報，是推動劇情的功能型角色，也是觀眾的情感代理人。",
+          "excerpt": "Brad approaching 10 ft away. 5. She's there. Turn and face her. / The ring is in your left pocket. / Miss Green, rest assured, he's stable. He just needs rest."
+        }
+      ],
+      "character_combos": [
+        {
+          "type": "殘障霸總×隱藏身份灰姑娘",
+          "type_en": "Disabled CEO × Hidden identity Cinderella",
+          "description": "男主失明需要女主做「眼睛」，女主被迫當「女傭」，形成互相依賴又互相試探的張力。兩人各自隱藏秘密（他的視力恢復、她的Victoria身份），這種雙向隱瞞製造了持續的懸念和甜蜜的反差。",
+          "excerpt": "I could be your eyes. / From now on, you'll continue to be my eyes, and I'll do my best to help you, too. / Miss Green doesn't know. I can only see a little bit. It's probably temporary, so I don't want to get her hopes up."
+        },
+        {
+          "type": "雙胞胎對立×身份替換",
+          "type_en": "Twin rivalry × Identity swap",
+          "description": "同臉不同命的雙胞胎設定天然製造衝突：一個善良隱忍、一個腹黑算計，身份替換帶來「誰是真的」的懸疑感，觀眾代入被冒充的焦慮與被識破的期待。",
+          "excerpt": "It's almost like no one would notice if you replaced me as Tristan's wife. / From now on, I'll be the one by your side. / The moment I opened my eyes, I knew she wasn't you."
+        },
+        {
+          "type": "偏心父親×兄弟鬩牆",
+          "type_en": "Biased father × Fraternal rivalry",
+          "description": "Hamilton父親將兩個兒子當工具培養，偏愛Tristan導致Josh走上極端，父子三人的對峙戲充滿了權力與親情的撕裂。",
+          "excerpt": "How can you compare yourself to Tristan? You've never done anything that satisfied me. / You always told us that you would treat us the same, right? You gave me hope time and time again. And you denied me again and again."
+        }
+      ],
+      "settings": [
+        {
+          "type": "豪門婚禮現場",
+          "type_en": "Elite family wedding ceremony",
+          "description": "婚禮是身份偽裝的第一次公開考驗，失明新郎戴戒指的尷尬、賓客的竊竊私語、險些暴露的危機，將私密困境置於公共場合放大戲劇張力。",
+          "excerpt": "The ring. It drops. Told you Christian is blind. / What's going on with the ring? You missed completely. Are the rumors really true? Is the groom really blind?"
+        },
+        {
+          "type": "商業酒會/社交場",
+          "type_en": "Business mixer/social event",
+          "description": "上流社會社交場景同時推進商業線和感情線，Ashley展現專業知識贏得認可，也面對Cora和Josh的突然出現帶來的身份危機。",
+          "excerpt": "I admire the LC group's dedication to sourcing new natural ingredients from unexplored regions and varieties. As expected by the green family, truly knowledgeable in perfumery. Kindred spirits."
+        },
+        {
+          "type": "密閉囚禁空間",
+          "type_en": "Confined captivity space",
+          "description": "Ashley被綁架囚禁在密閉空間，製造極端壓迫感和逃脫懸念，與外部Cora冒充的雙線剪輯形成強烈對比。",
+          "excerpt": "If you stay here quietly for a month, I'll let you go. Don't bother trying to run away. / Tristan, where are you? Come and save me, please."
+        },
+        {
+          "type": "頒獎典禮舞台",
+          "type_en": "Award ceremony stage",
+          "description": "公開場合的身份揭露最具衝擊力，Ashley以Victoria身份登台，在眾目睽睽下揭穿Cora的冒充，將私人恩怨轉化為公共審判。",
+          "excerpt": "Yes, I have many identities. You may be familiar with Victoria, but you can also call me by my real name, Ashley Green. / I stand here today because someone plagiarized my work and tried to steal my life. I will not let her succeed."
+        },
+        {
+          "type": "浴室/私密空間",
+          "type_en": "Bathroom/intimate private space",
+          "description": "假夫妻在私密空間的互動天然帶有曖昧張力，幫忙洗澡的設定製造身體接觸的尷尬與心動，推進感情升溫。",
+          "excerpt": "Help me undress. Whatever. It's not like he's taking advantage of me. Well, look who has abs. / Pass me the body wash. It's the last one on the right. Did he actually buy my entire product line?"
+        }
+      ],
+      "relationships": [
+        {
+          "type": "假夫妻真動心（契約婚姻）",
+          "type_en": "Fake marriage real feelings (contract marriage)",
+          "description": "從被迫結婚、互相防備，到日常相處中逐漸依賴和心動，契約婚姻是短劇最經典的感情發展框架，每一次破防都讓觀眾心動。",
+          "excerpt": "Since we're in the same boat, we could work something out. I could be your eyes. / I actually kind of like you, too. / Today, I'd like to formally propose to you, Miss Ashley Green. Will you marry me again? The real me says yes."
+        },
+        {
+          "type": "雙胞胎姐妹背叛＋身份掠奪",
+          "type_en": "Twin sister betrayal and identity theft",
+          "description": "Cora利用雙胞胎的相同外貌進行身份替換，從最初的替嫁操控到後期的直接囚禁冒充，是最極端的「親人變仇人」關係，觀眾的憤怒值持續累積直到揭露時爆發。",
+          "excerpt": "She took everything from me and you. I will take everything from her. / I want her to disappear from Tristan's side completely. That way, when Tristan wakes up, the first person he sees is me, the real Cora."
+        },
+        {
+          "type": "兄弟鬩牆（被操控的競爭）",
+          "type_en": "Brother against brother (manipulated rivalry)",
+          "description": "Tristan和Josh的對立並非天生仇恨，而是父親的偏心與操控導致，兩人最終都成為父權遊戲的受害者，帶有悲劇色彩。",
+          "excerpt": "I was just a tool to sharpen Tristan. You used me to train him. You still refuse to admit your mistakes. / I let you compete. You were never supposed to hurt each other."
+        },
+        {
+          "type": "主僕變知己（忠僕線）",
+          "type_en": "Master-servant to confidant",
+          "description": "Mark從單純的助手發展為Tristan最信任的人，參與情報收集和計劃執行，是男主身邊不可或缺的支撐。",
+          "excerpt": "Miss Green, I should be thanking you instead. Tristan hasn't smiled ever since his accident. / Don't worry, boss. I didn't see anything. I know you saw everything, Mark. How do you know? Because I can see."
+        }
+      ]
+    },
+    "payoffs": [
+      {
+        "type": "身份揭露＋公開打臉",
+        "type_en": "Identity reveal and public humiliation",
+        "description": "Ashley在GSD頒獎典禮上以Victoria身份登台，當著所有人的面揭穿Cora的抄襲和冒充，是全劇最大的爽點。觀眾積累了整部劇的憤怒在此刻集中釋放。",
+        "emotional_impact": "爽快/解氣",
+        "excerpt": "Yes, I have many identities. You may be familiar with Victoria, but you can also call me by my real name, Ashley Green. / I stand here today because someone plagiarized my work and tried to steal my life. I will not let her succeed."
+      },
+      {
+        "type": "男主早已識破（深情反轉）",
+        "type_en": "Male lead already knew (devotion reveal)",
+        "description": "Tristan揭露他醒來的那一刻就知道身邊的不是Ashley，用細節（不怕黑、手上沒燙傷）證明他對真正的Ashley有多了解，將懸疑線轉化為深情表白。",
+        "emotional_impact": "感動/震驚",
+        "excerpt": "The moment I opened my eyes, I knew she wasn't you. / She wasn't afraid of the dark and she didn't have any burn marks on her hands. / I never would have stopped looking."
+      },
+      {
+        "type": "視力恢復＋重新求婚",
+        "type_en": "Vision recovery and re-proposal",
+        "description": "Tristan視力恢復後正式向Ashley求婚，將「假婚姻」升級為「真選擇」，完成從契約到真愛的閉環，觀眾獲得圓滿的情感滿足。",
+        "emotional_impact": "感動/甜蜜",
+        "excerpt": "Today, I'd like to formally propose to you, Miss Ashley Green. Will you marry me again? The real me says yes."
+      },
+      {
+        "type": "陰謀揭露＋父子對峙",
+        "type_en": "Conspiracy reveal and father-son confrontation",
+        "description": "Tristan用錄音證據當面揭露Josh製造車禍的真相，同時控訴父親的操控，三方情感爆發。觀眾既解氣又感受到家庭悲劇的重量。",
+        "emotional_impact": "震驚/解氣",
+        "excerpt": "It was you who caused the car accident. You who got me kicked out of the company. I'm blind because of you. / For my whole life, all you ever gave a damn about was who I could become for you."
+      },
+      {
+        "type": "反派落網",
+        "type_en": "Villain arrested",
+        "description": "Cora在眾人面前被警察帶走，從囂張到崩潰的轉變讓觀眾的積怨得到宣洩。",
+        "emotional_impact": "解氣/爽快",
+        "excerpt": "Miss Cora, standing in front of the police. Come on. Let go of me. Let go of me. Obviously, all of this is mine. / You're a liar. Get her out of here."
+      }
+    ],
+    "pacing": {
+      "tempo": "快節奏＋密集衝突，每場戲都推進至少一條線索",
+      "tension_curve": "開場高張力（被迫替嫁）→婚後短暫舒緩（日常甜蜜互動）→中段持續攀升（發現陰謀、商業對峙、Josh威脅）→高潮爆發（被囚禁、身份冒充）→終極反轉（頒獎揭露、求婚收尾）",
+      "key_beats": [
+        "替嫁婚禮——戒指掉落險暴露失明",
+        "浴室互動——假夫妻第一次身體接觸破冰",
+        "發現父親被下藥——陰謀線正式啟動",
+        "商業酒會——Ashley展現專業能力獲認可",
+        "助眠香氛夜——感情升溫的關鍵甜蜜時刻",
+        "Josh車禍真相曝光——兄弟對峙父子決裂",
+        "Ashley被囚禁Cora冒充——最大危機",
+        "GSD頒獎典禮身份揭露——全劇高潮",
+        "Tristan揭露早已識破——深情反轉",
+        "重新求婚——圓滿結局"
+      ],
+      "excerpt": "I can't believe I'm marrying a stranger today. / I actually kind of like you, too. / If you shut your mouth, I will shut it for you. / Yes, I have many identities... Ashley Green. / Today, I'd like to formally propose to you."
+    },
+    "dialogues": [
+      {
+        "type": "威脅壓迫型",
+        "type_en": "Threatening/oppressive dialogue",
+        "description": "反派或強勢方用言語壓制女主，強調權力不對等，製造觀眾的代入式憤怒，為後續反擊蓄力。",
+        "emotional_function": "製造壓迫/蓄積觀眾怒氣",
+        "excerpt": "You're no longer the Green heiress in this house. You're nothing more than my maid. Why should I listen to you? The complete marriage agreement. A violation penalty of 5 million."
+      },
+      {
+        "type": "硬核反擊型",
+        "type_en": "Sharp counter-attack dialogue",
+        "description": "女主面對挑釁時以氣勢和智慧回擊，台詞精煉有力，讓觀眾獲得代理爽感。",
+        "emotional_function": "製造爽感/彰顯女主人格魅力",
+        "excerpt": "Tristan may be blind, but he's a genuine, honest man. You, however, have darkness in your heart, even standing in the sunlight."
+      },
+      {
+        "type": "撒糖曖昧型",
+        "type_en": "Sweet/flirty dialogue",
+        "description": "假夫妻間看似鬥嘴實則曖昧的對話，用幽默和小動作傳遞心動，甜而不膩。",
+        "emotional_function": "製造甜蜜/心動感",
+        "excerpt": "That tastes great. Weirdo. I meant the steak. Sure. / I actually kind of like you. I actually kind of like you, too. Is that so? / You're not. Actually, I kind of like you."
+      },
+      {
+        "type": "揭露控訴型",
+        "type_en": "Exposing/accusation dialogue",
+        "description": "角色在關鍵時刻揭露真相、控訴不公，台詞飽含情緒張力，往往是劇情轉折點。",
+        "emotional_function": "製造震撼/推動劇情反轉",
+        "excerpt": "For my whole life, all you ever gave a damn about was who I could become for you. / I was just a tool to sharpen Tristan. You used me to train him. You still refuse to admit your mistakes."
+      },
+      {
+        "type": "深情表白型",
+        "type_en": "Heartfelt confession dialogue",
+        "description": "男主用行動和細節證明深情，不是空洞的情話而是具體的觀察，讓表白更有說服力。",
+        "emotional_function": "製造感動/情感高潮",
+        "excerpt": "The moment I opened my eyes, I knew she wasn't you. She wasn't afraid of the dark and she didn't have any burn marks on her hands. / I never would have stopped looking."
+      }
+    ],
+    "visual_scenes": [
+      {
+        "type": "婚禮戒指危機",
+        "type_en": "Wedding ring crisis scene",
+        "description": "失明新郎在眾目睽睽下找不到新娘的手、戒指掉落，賓客議論紛紛，女主救場幫他戴上戒指。公開場合的尷尬與默契配合形成強烈的視覺戲劇性。",
+        "dramatic_tension": "公眾場合暴露秘密的恐懼 vs 兩人第一次默契配合",
+        "excerpt": "She has a ring hand out. The ring is in your left pocket. Uh, lower, higher, higher. Right there. What's going on with the ring? You missed completely. The ring. It drops. Told you Christian is blind. You're welcome."
+      },
+      {
+        "type": "頒獎典禮身份揭露",
+        "type_en": "Award ceremony identity reveal",
+        "description": "Ashley以Victoria身份登上舞台，聚光燈下揭穿冒充者，台下的Cora驚恐萬狀。舞台與觀眾席的空間對比強化了權力反轉的視覺衝擊。",
+        "dramatic_tension": "被害者登上最高舞台反轉為審判者",
+        "excerpt": "Who's that on the stage? Isn't this Kora? No, Cora is sitting in the audience. / I stand here today because someone plagiarized my work and tried to steal my life."
+      },
+      {
+        "type": "燭光求婚場景",
+        "type_en": "Candlelight proposal scene",
+        "description": "Tristan帶Ashley回到充滿回憶的地方，閉眼牽手走台階（呼應她曾做他的眼睛），最終睜眼求婚。浪漫場景設計與前後呼應製造極強的情感衝擊。",
+        "dramatic_tension": "角色互換的儀式感——曾經她引導他，現在他引導她",
+        "excerpt": "Close your eyes and follow me. What for? Trust me. / Today, I'd like to formally propose to you, Miss Ashley Green. Will you marry me again? The real me says yes."
+      },
+      {
+        "type": "兄弟肢體衝突",
+        "type_en": "Brother physical confrontation",
+        "description": "Josh在父子對峙後情緒失控，與Tristan發生肢體衝突，父親無力阻止。家族會議室從理性空間變為暴力衝突現場，視覺衝擊強烈。",
+        "dramatic_tension": "積壓多年的兄弟矛盾物理化爆發",
+        "excerpt": "I'm going to show you who the real man is. Come on. Let's go. Come on. Stop. Josh, stop. That's enough."
+      }
+    ],
+    "ending_hooks": [
+      {
+        "type": "危機懸念型",
+        "type_en": "Crisis cliffhanger ending",
+        "description": "Ashley被綁架囚禁，Cora趁機以「妻子」身份出現在甦醒的Tristan身邊，觀眾在極度焦慮中被迫等待下一段劇情。",
+        "timing": "囚禁段落結尾",
+        "excerpt": "From now on, I'll be the one by your side. / Tristan, you're awake. / I missed you so much. Tristan, you were in a coma for almost a month. I thought I lost you."
+      },
+      {
+        "type": "情感衝擊＋身份懸念型",
+        "type_en": "Emotional impact with identity suspense ending",
+        "description": "男主甦醒後感覺「不對勁」但未點破，觀眾知道真相卻無法干預，產生強烈的戲劇性反諷（dramatic irony）。",
+        "timing": "Tristan甦醒後與Cora互動的段落結尾",
+        "excerpt": "Why does this feel wrong? / I still feel dizzy. I need to lay down. / Everything is going according to plan. I just have one more thing to do."
+      },
+      {
+        "type": "圓滿收束型（大結局）",
+        "type_en": "Happy resolution ending (finale)",
+        "description": "以重新求婚收束全劇，「真正的我說願意」呼應開場的「被迫嫁給陌生人」，形成完美的敘事閉環，給觀眾充分的情感滿足。",
+        "timing": "全劇最後一場戲",
+        "excerpt": "Today, I'd like to formally propose to you, Miss Ashley Green. Will you marry me again? The real me says yes."
+      }
+    ],
+    "tension_actions": [
+      {
+        "type": "戒指掉落（公開出醜危機）",
+        "type_en": "Ring drop (public embarrassment crisis)",
+        "description": "婚禮上戒指掉落不僅是物理動作，更是「失明秘密即將暴露」的視覺化表達，所有賓客的注視放大了緊張感。",
+        "visual_impact": "安靜的婚禮現場，金屬戒指落地的清脆聲響，所有人的目光聚焦",
+        "excerpt": "The ring. It drops. Told you Christian is blind. / What's going on with the ring? You missed completely."
+      },
+      {
+        "type": "潑水/肢體攻擊",
+        "type_en": "Splash/physical attack",
+        "description": "Josh對Ashley和Tristan的肢體威脅與攻擊行為，直接將言語衝突升級為身體對抗。",
+        "visual_impact": "強勢男性角色對弱勢角色的壓迫性肢體動作",
+        "excerpt": "You're a mouthy little girl, aren't you? Oh, no. No. You know what? I'm done with you, too. / Come on. Let's go. Come on. Stop. Josh, stop."
+      },
+      {
+        "type": "撕合同/展示合同（權力宣示）",
+        "type_en": "Contract display (power assertion)",
+        "description": "Tristan展示婚姻合同中的違約金條款，用一紙文書將Ashley從「千金」降為「女傭」，合同成為權力壓迫的物理道具。",
+        "visual_impact": "紙質合同的特寫鏡頭，白紙黑字的殘酷條款",
+        "excerpt": "The complete marriage agreement. A violation penalty of 5 million. You and your mother were so eager for this marriage. Did you not even read the contract before you signed it?"
+      },
+      {
+        "type": "強制親吻/阻止親吻",
+        "type_en": "Forced kiss / Kiss block",
+        "description": "婚禮上「新郎親吻新娘」的環節，女主阻止並化解尷尬，既製造曖昧張力又強調兩人的假婚姻本質。",
+        "visual_impact": "眾人注視下的親密動作與拒絕的對比",
+        "excerpt": "Now, the groom may kiss the bride. Don't. What are you doing? / Sorry everyone. I just wanted to save the French kiss for the bedroom."
+      }
+    ],
+    "genres": [
+      {
+        "type": "都市豪門",
+        "type_en": "Urban elite/chaebol",
+        "description": "以現代都市為背景，圍繞豪門家族的權力鬥爭、商業競爭和婚姻聯盟展開，核心吸引力在於財富階層的衝突和底層逆襲的代入感。"
+      },
+      {
+        "type": "懸疑陰謀",
+        "type_en": "Mystery/conspiracy",
+        "description": "雙胞胎身份替換、車禍陰謀、父親被下藥等多條懸疑線交織，觀眾在推理真相的過程中保持追看動力。"
+      },
+      {
+        "type": "愛情",
+        "type_en": "Romance",
+        "description": "契約婚姻到真愛的經典框架，甜蜜互動與虐心分離交替，滿足觀眾對理想愛情的幻想。"
+      }
+    ],
+    "styles": [
+      {
+        "type": "爽文",
+        "type_en": "Power fantasy/cathartic",
+        "description": "前期壓迫蓄力、後期爆發逆襲的結構，觀眾的憤怒在揭露和打臉時獲得宣洩，核心情緒是「解氣」和「痛快」。"
+      },
+      {
+        "type": "甜寵",
+        "type_en": "Sweet romance",
+        "description": "假夫妻日常互動充滿甜蜜細節（幫洗澡、共用餐具、聞香識人），在緊張劇情中穿插糖分，調節觀眾情緒。"
+      },
+      {
+        "type": "虐戀",
+        "type_en": "Angst romance",
+        "description": "女主被囚禁、男主昏迷、真假身份錯位帶來的分離之痛，讓觀眾在心疼中更渴望圓滿結局。"
+      }
+    ],
+    "tags": [
+      "替嫁",
+      "雙胞胎",
+      "盲人CEO",
+      "契約婚姻",
+      "假夫妻真動心",
+      "身份隱藏",
+      "豪門陰謀",
+      "隱藏實力女主",
+      "Victoria獨立調香師",
+      "兄弟鬩牆",
+      "復仇逆襲",
+      "身份揭露",
+      "車禍陰謀",
+      "重新求婚",
+      "忠僕助攻"
+    ],
+    "video_id": "vPaySGfWlD4",
+    "title": "love drama \"I was tricked into marrying a blind CEO I didn't know\" HD FULL, CEO,ENGSUB,  Episodes"
+  },
+  "video_data": {
+    "channel": "PocketTheatre",
+    "views": 856123,
+    "duration": "PT5191S"
+  }
+}

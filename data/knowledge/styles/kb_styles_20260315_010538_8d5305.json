@@ -1,0 +1,29 @@
+{
+  "id": "kb_styles_20260315_010538_8d5305",
+  "category": "styles",
+  "subcategory": "",
+  "name": "職場",
+  "name_en": "Workplace Drama",
+  "description": "以現代職場為背景，展現辦公室政治、職業成長和行業內幕，主角在複雜的人際關係中摸爬滾打，既有專業技能的展示也有人情世故的博弈，引發職場人的強烈共鳴。",
+  "tags": [
+    "styles"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "被排擠的新人用專業能力打臉全部門",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "兩個實習生競爭唯一轉正名額的明爭暗鬥",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:05:38",
+  "updated_at": "2026-03-15 01:05:38"
+}

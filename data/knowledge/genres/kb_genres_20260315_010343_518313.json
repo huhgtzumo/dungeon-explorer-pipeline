@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_518313",
+  "category": "genres",
+  "subcategory": "",
+  "name": "神話傳說",
+  "name_en": "Mythology & Legend",
+  "description": "取材自中國或世界各地的神話故事，重新演繹神仙妖魔的經典傳說，融入現代價值觀與情感表達，既有文化底蘊又有新鮮感，適合全年齡觀眾",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "現代版哪吒在都市降妖除魔的搞笑日常",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "月老紅線斷裂後人間愛情陷入混亂",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

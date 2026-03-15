@@ -1,0 +1,29 @@
+{
+  "id": "kb_styles_20260315_010538_d50479",
+  "category": "styles",
+  "subcategory": "",
+  "name": "互動選擇",
+  "name_en": "Interactive Choice",
+  "description": "觀眾可以在關鍵劇情節點做出選擇，不同選擇導向不同的故事走向和結局，打破傳統單向觀看模式，大幅提升觀眾的參與感和重複觀看率，是短劇與互動技術結合的新興形態。",
+  "tags": [
+    "styles"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "你決定女主是原諒渣男還是華麗復仇",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "每集結尾投票決定角色命運走向不同結局",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:05:38",
+  "updated_at": "2026-03-15 01:05:38"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_ee2e8b",
+  "category": "genres",
+  "subcategory": "",
+  "name": "末日生存",
+  "name_en": "Post-Apocalyptic Survival",
+  "description": "世界經歷災難後文明崩塌，主角在資源匱乏、秩序崩壞的環境中求生，探討人性在極端條件下的善惡選擇，氣氛壓抑緊張，充滿生死抉擇",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "喪屍爆發後一家人徒步穿越廢墟城市",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "核冬天中地堡內的權力鬥爭與叛變",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

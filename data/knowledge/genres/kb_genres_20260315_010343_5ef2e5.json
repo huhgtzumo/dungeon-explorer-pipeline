@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_5ef2e5",
+  "category": "genres",
+  "subcategory": "",
+  "name": "都市愛情",
+  "name_en": "Urban Romance",
+  "description": "以現代都市為背景，聚焦男女主角的情感糾葛與成長，常涉及職場、階級差異、誤解與和解等元素，受眾以年輕女性為主，節奏明快，強調心動瞬間與反轉告白",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "霸道總裁意外愛上灰姑娘實習生",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "閃婚後發現對方竟是自己暗戀多年的人",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

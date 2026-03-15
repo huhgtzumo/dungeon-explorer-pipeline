@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_9c48ab",
+  "category": "genres",
+  "subcategory": "",
+  "name": "萌寶親子",
+  "name_en": "Cute Baby & Parenting",
+  "description": "以萌娃為核心角色，圍繞意外當爹當媽、親子相認等劇情展開，小演員的可愛表現是最大賣點，溫馨治愈與搞笑並存，全年齡段通吃",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "天才萌寶幫單親爸爸追回前妻",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "五歲女兒替退役軍人父親找到失散的親人",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

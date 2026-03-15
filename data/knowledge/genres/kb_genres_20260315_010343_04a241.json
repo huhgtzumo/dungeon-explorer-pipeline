@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_04a241",
+  "category": "genres",
+  "subcategory": "",
+  "name": "動物擬人",
+  "name_en": "Anthropomorphic & Pet",
+  "description": "以動物視角或動物擬人化講述故事，或以寵物為情感紐帶連結人物關係，風格溫暖治愈，適合動物愛好者，也常作為親子向內容傳播",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "流浪貓視角見證一對情侶從相識到重逢",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "寵物咖啡店裡每隻動物背後的人間故事",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

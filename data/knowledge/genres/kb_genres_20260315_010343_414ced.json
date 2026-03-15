@@ -1,0 +1,29 @@
+{
+  "id": "kb_genres_20260315_010343_414ced",
+  "category": "genres",
+  "subcategory": "",
+  "name": "科幻未來",
+  "name_en": "Sci-Fi Future",
+  "description": "設定在未來世界或平行時空，融入人工智能、基因改造、星際旅行等科技元素，探討人性與科技的衝突，視覺風格前衛，吸引科幻愛好者",
+  "tags": [
+    "genres"
+  ],
+  "examples": [
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "AI覺醒後愛上了自己的創造者",
+      "context": ""
+    },
+    {
+      "drama_title": "種子數據",
+      "video_id": "",
+      "excerpt": "末日後倖存者在地下城市重建文明",
+      "context": ""
+    }
+  ],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-15 01:03:43",
+  "updated_at": "2026-03-15 01:03:43"
+}

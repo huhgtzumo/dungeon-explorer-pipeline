@@ -1,0 +1,78 @@
+# 短劇 Pipeline 全局設定
+
+pipeline:
+  output_dir: data/output
+  temp_dir: data/temp
+  max_retries: 3
+  log_level: INFO
+
+crawler:
+  # YouTube 搜尋參數
+  search_queries:
+    - "短劇 完整版"
+    - "微短劇 爆款"
+    - "short drama chinese"
+  max_results: 20
+  min_views: 10000
+  language: zh
+  subtitle_method: auto  # auto | whisper | youtube
+
+scriptwriter:
+  # Claude 劇本生成
+  max_scenes: 10
+  target_duration_sec: 60
+  language: zh-TW
+  style: dramatic
+  # 角色卡設定
+  character_card:
+    include_fields:
+      - name
+      - gender
+      - age_range
+      - hair
+      - skin_tone
+      - outfit
+      - body_type
+      - personality
+
+image_gen:
+  # Kling 生圖
+  provider: kling  # gemini_api | gemini_web | kling
+  model: kling-v1
+  style_prefix: "cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait"
+  negative_prompt: "cartoon, anime, low quality, blurry, distorted face"
+  resolution:
+    width: 1080
+    height: 1920
+
+video_gen:
+  # Kling 生視頻
+  provider: kling  # veo_api | flow_web | kling
+  segment_duration_sec: 5
+  fps: 24
+
+postprod:
+  # FFmpeg 後製
+  resolution: 1080x1920
+  fps: 30
+  codec: libx264
+  subtitle:
+    font_size: 42
+    font_color: white
+    outline_color: black
+    outline_width: 2
+    position: bottom  # bottom | center
+    languages:
+      - zh
+      - en
+
+publisher:
+  # YouTube 上傳
+  category: Entertainment
+  privacy: private  # private | unlisted | public
+  tags:
+    - 短劇
+    - 微短劇
+    - short drama
+    - chinese drama
+  schedule_interval_hours: 6  # 每 6 小時發一部

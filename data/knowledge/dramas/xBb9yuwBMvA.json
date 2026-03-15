@@ -1,0 +1,361 @@
+{
+  "video_id": "xBb9yuwBMvA",
+  "title": "💔Reborn! Family listened to my inner thoughts, scheming girl cry!#chinesedrama",
+  "analysis": {
+    "drama_summary": "天界仙人轉世為被調包的豪門真千金，憑藉讀心術和仙法識破假千金陰謀，拯救家族命運並收穫天帝之子的愛情。",
+    "structure": {
+      "type": "多幕漸進式復仇+仙凡雙線交織",
+      "type_en": "Progressive Revenge with Immortal-Mortal Dual Storyline",
+      "description": "以真假千金回歸為起點，通過讀心術逐步揭露假千金和閨蜜的陰謀，每一幕都有一個小高潮（識破車禍騙局→救母→奪回數據→最終對決），仙界身份作為暗線貫穿始終，最終在仙凡大戰中收束，並以仙界團圓作結。整體呈現『回歸→立足→反擊→決戰→飛升』的五幕結構。",
+      "act_breakdown": "第一幕（回歸與初步衝突，約20%）：真千金回家，假千金裝車禍搶風頭；第二幕（站穩腳跟，約20%）：讀心識破陰謀，救母展示能力；第三幕（反擊與浪漫，約25%）：追回實驗數據，與褚少互動；第四幕（清除敵人，約20%）：張慧被捕，假千金反撲；第五幕（終極對決與團圓，約15%）：仙法對決系統，飛升天界，後代祭拜。",
+      "excerpt": "She's my unfortunate descendant whose entire family was wiped out by the fake heiress. / What family annihilation? / Exterminate the whole family"
+    },
+    "hooks": [
+      {
+        "type": "身份反差開場",
+        "type_en": "Identity Contrast Opening",
+        "description": "開場即揭示女主雙重身份——既是被調包的真千金，又是天界仙人轉世下凡。觀眾同時獲得兩層懸念：她如何奪回家族地位？她的仙人身份何時曝光？這種雙重反差製造了強烈的期待感。",
+        "timing": "開場",
+        "excerpt": "I didn't die from the fall. / You Heavenly Emperor! / How dare you kick me down from the mortal realm! / Don't you know I'm afraid of heights?"
+      },
+      {
+        "type": "讀心術懸念鉤",
+        "type_en": "Mind-Reading Suspense Hook",
+        "description": "家人能聽到女主內心獨白這一設定，讓觀眾好奇：女主腦中的未來記憶會如何改變家人的態度？這個機制讓每一次內心獨白都成為推動劇情的關鍵節點，持續製造信息差帶來的爽感。",
+        "timing": "開場至中段",
+        "excerpt": "Could that voice be Xixi's innermost thoughts? / They were truly completely under Xie Qingwan's control. / Xie Qingwan was clearly unharmed. / She, however, made her whole family nervously revolve around her."
+      },
+      {
+        "type": "未來記憶倒敘鉤",
+        "type_en": "Future Memory Flashback Hook",
+        "description": "女主擁有前世記憶，知道家族滅亡的結局，觀眾被『能否改變命運』這一終極懸念牢牢抓住。每次她透露前世信息，都會引發新的緊張感。",
+        "timing": "開場貫穿全劇",
+        "excerpt": "No wonder the real heiress suffered from depression in her past life. / He died in the end. / My daughter is dead? / Is Xixi really going to die?"
+      },
+      {
+        "type": "假千金反撲鉤",
+        "type_en": "Fake Heiress Counter-Attack Hook",
+        "description": "在觀眾以為危機已解除時，假千金突然以系統能力反撲，製造意外的高潮轉折，將張力推向最高點。",
+        "timing": "結尾段",
+        "excerpt": "Haha, Jiannanxi / You didn't expect that, did you? / You still lost to me. / My system can even defy the laws of Heaven."
+      }
+    ],
+    "elements": {
+      "characters": [
+        {
+          "type": "仙人轉世真千金（全知型女主）",
+          "type_en": "Reincarnated Immortal True Heiress (Omniscient Heroine)",
+          "description": "兼具仙人的超凡能力和真千金的身份正義性。她不是被動等待拯救的弱者，而是自帶前世記憶和仙法的『開掛型』女主。吐槽式內心獨白增加喜感，仙人身份增加神秘感，真千金身份增加正義感。三重屬性疊加讓角色極具吸引力。",
+          "excerpt": "I have cultivated in heaven for thousands of years / Even bringing someone back to life is not easy. / How could you, a little star sprite, manage to fool our ancestor?"
+        },
+        {
+          "type": "腹黑白蓮花假千金",
+          "type_en": "Scheming White Lotus Fake Heiress",
+          "description": "表面乖巧懂事，實則處心積慮佔據真千金的位置。擅長裝可憐博取同情，暗中操控全家人的情感。這類角色的核心吸引力在於『觀眾全知但劇中人不知』的信息差帶來的焦慮和期待打臉的快感。",
+          "excerpt": "People say that country folk are simple, honest, and generous. / My older sister grew up in the countryside. / You probably won't hold it against me, right? / What a lovely little white lotus, its fragrance filling the air!"
+        },
+        {
+          "type": "蛇蠍閨蜜（幕後黑手母親）",
+          "type_en": "Treacherous Best Friend (Mastermind Mother)",
+          "description": "以閨蜜身份潛伏多年，實為調包嬰兒的元兇，假千金的親生母親。她的存在讓背叛更具衝擊力——不僅是外人的陰謀，更是最親近的人的背刺。",
+          "excerpt": "I never intended to save you back then. / Fu Xintong, you're really stupid! / I just had my eye on your bracelet."
+        },
+        {
+          "type": "病弱天帝之子（頂級權貴男主）",
+          "type_en": "Sickly Son of Heaven (Supreme Noble Male Lead)",
+          "description": "外表病弱實則身份最為尊貴——天地之子。命格有缺但不影響他的強大與深情。『看似最弱實則最強』的反差設定極具吸引力。",
+          "excerpt": "Chu Wuyuan, who exactly are you? / Son of Heaven and Earth / What is the supreme ruler of the Three Realms?"
+        },
+        {
+          "type": "護妹狂魔兄長團",
+          "type_en": "Overprotective Brother Squad",
+          "description": "多位哥哥組成的護妹聯盟，從爭相送禮到衝出去救妹妹，提供持續的甜蜜感和安全感。兄長團的存在讓女主的『被寵愛』更加具象化。",
+          "excerpt": "This is a gift from your second brother. / Hey, Third Brother is ready too. / As long as my brother is here / I won't let anything happen to you."
+        }
+      ],
+      "character_combos": [
+        {
+          "type": "天帝之子×仙人真千金（神仙眷侶）",
+          "type_en": "Son of Heaven × Immortal True Heiress (Celestial Couple)",
+          "description": "兩人都是仙界頂級存在，在凡間相遇相知。男主能聽到女主心聲這一設定讓互動充滿喜感和曖昧。仙界宿命感+凡間煙火氣的碰撞產生獨特化學反應。",
+          "excerpt": "How do you know I can't? / Why don't you give it a try, Miss Xie? / Xie Nancy, fate has decreed that you will only ever be mine."
+        },
+        {
+          "type": "真千金×白蓮花假千金（正邪對決）",
+          "type_en": "True Heiress × White Lotus Fake Heiress (Good vs Evil Showdown)",
+          "description": "經典的真假千金對決，但因女主擁有前世記憶和仙法而打破了傳統的弱勢真千金模式。觀眾的爽感來自看全知女主如何一步步拆穿假千金的偽裝。",
+          "excerpt": "Haha, I told you so long ago. / I am the master of this world. / My system can even defy the laws of Heaven. / I'm not afraid of a mere moral saint."
+        },
+        {
+          "type": "傻白甜母親×蛇蠍閨蜜（信任崩塌）",
+          "type_en": "Naive Mother × Treacherous Best Friend (Trust Collapse)",
+          "description": "母親對閨蜜的絕對信任與閨蜜的極致背叛形成最大反差。從小一起長大的情誼被揭露為徹頭徹尾的利用，讓觀眾的憤怒和心疼達到頂峰。",
+          "excerpt": "Zhang Hui, if you dare to insult Xixi again... / Don't blame me for not remembering our decades-long sisterhood. / I never intended to save you back then. / Fu Xintong, you're really stupid! / I just had my eye on your bracelet."
+        }
+      ],
+      "settings": [
+        {
+          "type": "豪門宅邸歸家",
+          "type_en": "Mansion Homecoming",
+          "description": "真千金從鄉下初次進入豪門家庭，身份落差（鄉下vs豪門）產生天然戲劇張力。每個家庭成員的不同反應都成為衝突來源，而假千金在場更添暗潮洶湧。",
+          "excerpt": "We're home, ma'am. / Wow / No way! / Cars, houses, jewelry, gold / It's all over, it's all over. / I came to this world for a while."
+        },
+        {
+          "type": "祠堂祭祖",
+          "type_en": "Ancestral Hall Worship",
+          "description": "祠堂場景將家族血脈、仙界身份、命運改寫三條線匯聚。女主作為祖先本人去拜自己的畫像，製造極致荒誕喜感，同時也是假千金最終反撲的地點，神聖空間與邪惡力量的碰撞增強戲劇性。",
+          "excerpt": "Moral True Lord / It can't be something unethical, right? / This painting is actually of my ancestor! / worship myself / That sounds quite interesting!"
+        },
+        {
+          "type": "男主浴室/臥室偶遇",
+          "type_en": "Male Lead Bathroom/Bedroom Encounter",
+          "description": "女主潛入男主家找實驗數據，意外撞見男主出浴。私密空間的偶遇製造曖昧張力，同時推進感情線和主線劇情。",
+          "excerpt": "Wow, I'm such a lucky girl! / You can easily bump into a handsome man emerging from the bath. / The mortal sisters are really tight-lipped. / If this ancestor doesn't descend to the mortal realm... / I had no idea you guys ate so well."
+        }
+      ],
+      "relationships": [
+        {
+          "type": "真假千金身份置換",
+          "type_en": "True vs Fake Heiress Identity Swap",
+          "description": "被調包的真千金回歸，與已經佔據位置的假千金產生不可調和的衝突。核心張力在於家人的情感歸屬——他們會選擇養了多年的假千金還是血緣相連的真千金？",
+          "excerpt": "Xixi is my daughter / The Xie family will naturally take good care of it. / If you ask / Aren't you curious about who your biological parents are?"
+        },
+        {
+          "type": "閨蜜背叛（救命恩人反轉）",
+          "type_en": "Best Friend Betrayal (Savior Reversal)",
+          "description": "母親一直以為閨蜜是自己的救命恩人，多年來傾盡所有回報。最終揭露閨蜜當年根本不是有意救人，只是貪圖手鐲。這種『恩情反轉』將背叛感推到極致。",
+          "excerpt": "I saved your life. / You can't be so heartless / I never intended to save you back then. / I just had my eye on your bracelet."
+        },
+        {
+          "type": "仙界宿命姻緣",
+          "type_en": "Celestial Destined Marriage",
+          "description": "男女主在仙界即有宿命聯繫，下凡歷劫是為了完成情劫。這種『前世註定』的設定讓愛情超越凡間邏輯，增加浪漫感和史詩感。",
+          "excerpt": "Your Highness's love tribulation is me / Xixi, would you like to marry me? / For the next hundred or thousand years / Even ten thousand years / I will treat you well."
+        }
+      ]
+    },
+    "payoffs": [
+      {
+        "type": "讀心術即時打臉",
+        "type_en": "Mind-Reading Instant Face-Slap",
+        "description": "家人通過聽到女主內心獨白，即時識破假千金的偽裝和車禍騙局。觀眾長期積壓的『為什麼你們看不透她』的焦慮被一次性釋放。不需要漫長的證據收集，讀心術讓真相立刻大白。",
+        "emotional_impact": "爽快/解氣",
+        "excerpt": "She wasn't injured? Xixi was right after all! / I think she calculated that today was the day Xixi would come home. / She deliberately tried to steal Xixi's thunder."
+      },
+      {
+        "type": "仙術救母（能力展示型逆襲）",
+        "type_en": "Immortal Healing Saves Mother (Power Display Reversal)",
+        "description": "母親心臟病發作，所有人束手無策，假千金一方趁機抹黑。女主用仙術瞬間救活母親，同時證明自己的價值，從被嫌棄的鄉下丫頭變成救命恩人。",
+        "emotional_impact": "爽快/感動",
+        "excerpt": "I can heal by laying Mom flat on the ground. / I don't feel uncomfortable at all anymore. / My niece really does have some special abilities. / She must be a lucky star sent by heaven to save the Xie family."
+      },
+      {
+        "type": "閨蜜真面目揭露",
+        "type_en": "Best Friend True Face Reveal",
+        "description": "多年閨蜜被揭露是調包嬰兒的元兇，連當年的救命之恩都是假的。多層反轉讓衝擊力層層疊加：不僅是壞人，還是換嬰元兇，連恩情都是偽造的。",
+        "emotional_impact": "震驚/解氣",
+        "excerpt": "I never intended to save you back then. / Fu Xintong, you're really stupid! / I just had my eye on your bracelet. / The kind little girl who saved me back then / How did she become such a vicious person?"
+      },
+      {
+        "type": "仙凡終極對決勝利",
+        "type_en": "Immortal vs System Final Battle Victory",
+        "description": "假千金用系統奪走女主修為，看似女主必敗。但男主以天地之子身份出手，系統積分歸零，假千金被世界抹除。正義陣營的絕對碾壓帶來終極爽感。",
+        "emotional_impact": "爽快/震驚",
+        "excerpt": "Host points were detected to be zero. / Mission failed / Will be immediately wiped out from this world / Xie Jinwan, that's what you call a flurry of actions as fierce as a tiger. / You really are like an idiot."
+      },
+      {
+        "type": "深情告白與仙界婚約",
+        "type_en": "Heartfelt Confession and Celestial Marriage Vow",
+        "description": "男主在女主犧牲修為後深情求婚，跨越凡間與仙界的愛情承諾讓浪漫感達到極致。『百年千年甚至萬年』的時間尺度讓告白超越凡人格局。",
+        "emotional_impact": "感動/甜蜜",
+        "excerpt": "Xixi, would you like to marry me? / I do / For the next hundred or thousand years / Even ten thousand years / I will treat you well. / Stay with you"
+      }
+    ],
+    "pacing": {
+      "tempo": "快節奏密集爽點，每2-3分鐘一個小高潮",
+      "tension_curve": "開場即高張力（身份揭示+讀心術啟動）→ 短暫舒緩（家人態度轉變）→ 持續攀升（張慧偷數據、假千金反撲）→ 終極爆發（仙法對決）→ 溫馨收尾（仙界團圓）",
+      "key_beats": [
+        "真千金回歸+讀心術啟動",
+        "假千金車禍騙局被識破",
+        "仙術救母展示超凡能力",
+        "張慧偷實驗數據被抓現行",
+        "閨蜜救命恩情反轉為騙局",
+        "假千金用系統奪修為終極反撲",
+        "天地之子出手碾壓+仙界求婚",
+        "飛升回天+後代祭拜溫馨結尾"
+      ],
+      "excerpt": "They were counted / They were truly completely under Xie Qingwan's control. → I can heal by laying Mom flat on the ground. → Zhang Hui stole my third brother's experimental data. → My system can even defy the laws of Heaven. → I do / Thank you, Xixi"
+    },
+    "dialogues": [
+      {
+        "type": "吐槽型內心獨白（仙人視角）",
+        "type_en": "Sarcastic Inner Monologue (Immortal Perspective)",
+        "description": "以千年仙人的視角吐槽凡間子孫的愚蠢行為，製造『上帝視角+黑色幽默』的獨特喜感。這類對白既推動劇情（揭露真相），又提供笑料，一箭雙鵰。",
+        "emotional_function": "喜感/爽感/推動劇情",
+        "excerpt": "This must be my silly, sweet-natured mom. / Silly Mom is quite pretty / She's just not very bright. / She lived with the fake heiress for so many years / She couldn't even see through her scheme. / No wonder the Xie family was wiped out."
+      },
+      {
+        "type": "霸氣護妹宣言型",
+        "type_en": "Domineering Sister-Protection Declaration",
+        "description": "母親或兄長對假千金一方發出的強硬警告和最後通牒，明確站隊真千金。這類對白滿足觀眾對『有人撐腰』的心理需求。",
+        "emotional_function": "爽感/安心",
+        "excerpt": "Xie Lan, Xie An / You need to appear in front of Xixi within half an hour. / Otherwise, don't acknowledge me as your mother."
+      },
+      {
+        "type": "白蓮花偽善型",
+        "type_en": "White Lotus Hypocritical Speech",
+        "description": "假千金用看似善良體貼的話暗中貶低真千金。表面關心實則挑釁，每句話都暗藏刀鋒。觀眾能看穿但劇中人被騙，製造焦慮感和期待打臉的快感。",
+        "emotional_function": "製造焦慮/引發憤怒/鋪墊打臉",
+        "excerpt": "Sister, you haven't been in the capital for long. / There are definitely many things I'm not used to. / Mom and my brothers are all very busy / They probably won't have time to care about you. / From now on, just treat this place like your own home."
+      },
+      {
+        "type": "宿命深情告白型",
+        "type_en": "Destined Love Confession",
+        "description": "男主以超越凡間的格局進行告白，將愛情上升到天命和永恆的高度。簡潔有力的承諾比冗長的表白更具衝擊力。",
+        "emotional_function": "甜蜜/感動",
+        "excerpt": "Xie Nancy, fate has decreed that you will only ever be mine. / For the next hundred or thousand years / Even ten thousand years / I will treat you well. / Stay with you"
+      },
+      {
+        "type": "反派得意忘形型（死亡flag）",
+        "type_en": "Villain Overconfident Boast (Death Flag)",
+        "description": "反派在短暫佔據上風時的狂妄宣言，反而預示了其即將到來的覆滅。觀眾知道報應即將降臨，這種『等待打臉』的過程本身就是爽感的一部分。",
+        "emotional_function": "製造壓迫/鋪墊反轉爽感",
+        "excerpt": "My system can even defy the laws of Heaven. / I'm not afraid of a mere moral saint. / I've used up all the points in the system. / You stole the fortune of your Xie family for future generations."
+      }
+    ],
+    "visual_scenes": [
+      {
+        "type": "鄉下女孩豪門變裝",
+        "type_en": "Country Girl Luxury Makeover",
+        "description": "真千金從鄉下素人裝扮換上高定時裝，視覺上完成『灰姑娘變公主』的轉變。這類場景滿足觀眾的變裝幻想，同時用外在變化象徵身份的回歸。",
+        "dramatic_tension": "身份反差的視覺化呈現——從被嘲笑的鄉下丫頭到驚艷全場的真千金",
+        "excerpt": "Go to the haute couture store and choose your favorite piece to change into. / Watch my beautiful girl transformation! / My daughter / You are so beautiful. / Miss Nancy looks just like you when you were young."
+      },
+      {
+        "type": "仙術救人（針灸/法術）",
+        "type_en": "Immortal Healing (Acupressure/Magic)",
+        "description": "母親倒地心臟病發作，眾人慌亂，女主冷靜施展仙術救治。緊急醫療場景本身就有高張力，加上超自然能力的展示，讓場面同時具備緊張感和爽感。",
+        "dramatic_tension": "生死攸關的緊迫感+超自然能力的震撼展示+閒人阻撓的對抗",
+        "excerpt": "We need to get Mom to the hospital right away! / It's too late. / I can heal by laying Mom flat on the ground. / I don't feel uncomfortable at all anymore."
+      },
+      {
+        "type": "祠堂仙凡對決",
+        "type_en": "Ancestral Hall Immortal Battle",
+        "description": "在莊嚴的家族祠堂中，仙人與系統持有者展開終極對決。神聖空間中的超自然戰鬥將視覺衝擊力推到極致。",
+        "dramatic_tension": "神聖祠堂被邪惡力量入侵+修為被奪的絕境+天地之子的逆轉",
+        "excerpt": "Something's wrong, the pond is shaking. / Xie Qingwan, you're not dead. / I've used up all the points in the system. / You stole the fortune of your Xie family for future generations. / And all your cultivation."
+      },
+      {
+        "type": "男主出浴偶遇",
+        "type_en": "Male Lead Post-Bath Encounter",
+        "description": "女主潛入豪宅意外撞見男主出浴的經典曖昧場景。私密空間的偶遇打破社交距離，製造強烈的性張力和喜劇效果。",
+        "dramatic_tension": "闖入私密空間的尷尬+男主完美體態的視覺衝擊+女主仙人身份與少女心態的反差",
+        "excerpt": "Wow, I'm such a lucky girl! / You can easily bump into a handsome man emerging from the bath. / Such a handsome guy, all looks and no substance. / How do you know I can't? / Why don't you give it a try, Miss Xie?"
+      }
+    ],
+    "ending_hooks": [
+      {
+        "type": "溫馨輪迴型結尾",
+        "type_en": "Warm Reincarnation Ending",
+        "description": "女主飛升仙界後，後代在祠堂祭拜，小孫女天真地請求仙姑下凡。女主偷偷下凡被抓回，男主寵溺地追隨。讓觀眾在感動中帶著笑意，對這對神仙眷侶的日常充滿想象。結尾暗示他們會永遠守護家族，給觀眾一個完美的情感閉環。",
+        "timing": "最後一幕，女主偷跑下凡被抓的喜劇場景",
+        "excerpt": "Princess Consort has run away again! / What's the rush? / It's not like we don't know where he went. / Punish you / I hate it when you give me two smart and cute little babies. / Xixi's mom, brother, sister-in-law / My great-grandmother missed you all so much!"
+      },
+      {
+        "type": "家族傳承情感型",
+        "type_en": "Family Legacy Emotional Ending",
+        "description": "透過後代祭祖的場景，將個人故事上升為家族傳承的史詩感。小孫女對著畫像說話，連接過去與未來，給整個故事一個超越時間的意義。",
+        "timing": "結尾段，後代祠堂場景",
+        "excerpt": "Back then, it was because my aunt gave us a child. / That's why your mother came into being. / Why is my aunt in the painting? / That's because your aunt is a fairy! / We've been able to live so well all these years / Thanks to your aunt's blessing"
+      }
+    ],
+    "tension_actions": [
+      {
+        "type": "假車禍裝可憐",
+        "type_en": "Fake Car Accident Playing Victim",
+        "description": "假千金在真千金回家當天謊稱遭遇車禍（實為被兒童滑板車嚇到），企圖將全家注意力從真千金身上轉移。這一行為集中體現了白蓮花的操控手段——用示弱來搶佔道德高地。",
+        "visual_impact": "全家慌亂趕往醫院vs真千金獨自被冷落的對比畫面",
+        "excerpt": "Mom, Qingwan was in a car accident. / She was nearly hit by a child's scooter while taking a walk in the neighborhood. / She wasn't injured, just a little frightened. / She wasn't injured and yet she had the nerve to say it was a car accident."
+      },
+      {
+        "type": "仙術施針救命",
+        "type_en": "Immortal Acupressure Life-Saving",
+        "description": "女主在眾人阻攔下強行為母親施展仙術針灸。反對者的阻撓增加緊迫感，成功救人後的反轉更加有力。動作本身結合了醫療緊張感和超自然力量的展示。",
+        "visual_impact": "眾人慌亂無助中女主冷靜施術的對比+患者瞬間康復的視覺奇蹟",
+        "excerpt": "You brat, you're not allowed to cry out in pain! / Dare to step forward again / Next time I'll poke your eye out. / Wake up, Mom! / I don't feel uncomfortable at all anymore."
+      },
+      {
+        "type": "奪取修為（靈力抽取）",
+        "type_en": "Cultivation Theft (Spiritual Power Extraction)",
+        "description": "假千金用系統能力強行奪走女主千年修為，將戰力對比瞬間逆轉。這是全劇最大的危機時刻，女主從最強變為最弱。",
+        "visual_impact": "仙力被抽離的視覺特效+女主虛弱倒地的衝擊畫面",
+        "excerpt": "I've used up all the points in the system. / You stole the fortune of your Xie family for future generations. / And all your cultivation. / Dare to harm my descendants / My ancestor will fight you to the death!"
+      },
+      {
+        "type": "汽車蓄意撞人",
+        "type_en": "Deliberate Car Attack",
+        "description": "反派派人蓄意駕車撞向女主，兄長挺身保護。肉體暴力的直接威脅製造最原始的恐懼感和緊張感。",
+        "visual_impact": "車輛高速衝來的驚險畫面+兄長護妹的英勇動作",
+        "excerpt": "My sister sat down. / As long as my brother is here / I won't let anything happen to you. / They came for me / Miss Qing'er / The plan failed."
+      }
+    ],
+    "genres": [
+      {
+        "type": "仙俠",
+        "type_en": "Xianxia (Immortal Fantasy)",
+        "description": "以修仙體系為核心設定，包含仙界、天帝、修為、飛升等元素。仙俠類型自帶宏大世界觀和超越凡人的力量體系，為劇情提供更大的想像空間和更高的情感張力。"
+      },
+      {
+        "type": "都市豪門",
+        "type_en": "Urban Elite Family",
+        "description": "豪門家族的權力鬥爭、真假千金的身份爭奪是故事的現實框架。財富與地位的展示滿足觀眾的物質幻想，家族內部的爾虞我詐提供持續的戲劇衝突。"
+      },
+      {
+        "type": "重生復仇",
+        "type_en": "Rebirth Revenge",
+        "description": "女主帶著前世記憶回歸，擁有信息優勢來改變悲劇命運。重生設定讓觀眾獲得『全知視角』的參與感，復仇過程的步步為營帶來持續的爽感。"
+      }
+    ],
+    "styles": [
+      {
+        "type": "爽文",
+        "type_en": "Power Fantasy (Shuangwen)",
+        "description": "女主自帶仙人修為和前世記憶雙重外掛，遇到問題基本能快速解決。節奏明快，不拖泥帶水，壞人報應來得迅速。核心調性是『看主角碾壓一切障礙』的暢快感。"
+      },
+      {
+        "type": "搞笑",
+        "type_en": "Comedy",
+        "description": "仙人視角的吐槽式內心獨白貫穿全劇，將緊張的豪門鬥爭融入大量笑點。千年仙人的傲嬌與凡間瑣事的碰撞製造持續的反差喜感，讓觀眾在爽的同時也能笑。"
+      },
+      {
+        "type": "甜寵",
+        "type_en": "Sweet Romance",
+        "description": "男主深情專一，家人寵愛有加。女主雖然是千年仙人但在感情上依然有少女心態，與男主的互動充滿糖分。家人的溫情與愛情的甜蜜構成雙重治癒線。"
+      }
+    ],
+    "tags": [
+      "真假千金",
+      "重生復仇",
+      "仙人下凡",
+      "讀心術",
+      "豪門恩怨",
+      "白蓮花反派",
+      "護妹兄長團",
+      "閨蜜背叛",
+      "天帝之子",
+      "系統vs仙法",
+      "換嬰陰謀",
+      "身份揭露",
+      "打臉爽劇",
+      "神仙眷侶",
+      "家族傳承"
+    ],
+    "video_id": "xBb9yuwBMvA",
+    "title": "💔Reborn! Family listened to my inner thoughts, scheming girl cry!#chinesedrama"
+  },
+  "video_data": {
+    "channel": "Revenge Movie",
+    "views": 684250,
+    "duration": "PT6764S"
+  }
+}
