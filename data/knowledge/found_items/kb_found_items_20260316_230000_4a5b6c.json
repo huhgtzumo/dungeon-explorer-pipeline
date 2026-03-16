@@ -1,0 +1,14 @@
+{
+  "id": "kb_found_items_20260316_230000_4a5b6c",
+  "category": "found_items",
+  "subcategory": "醫療用品",
+  "name": "DNA樣本管",
+  "name_en": "DNA Sample Tubes",
+  "description": "冷藏箱中殘留的幾支生物樣本管，標籤上只有編號沒有姓名，液態氮已經揮發殆盡。",
+  "tags": ["DNA", "樣本", "醫療"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

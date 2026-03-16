@@ -1,7 +1,7 @@
 """Metadata index system — data/index.json CRUD with file locking.
 
 Acts as a lightweight DB index for all pipeline artifacts:
-crawls, analyses, scripts, storyboards.
+analyses, scripts, storyboards, knowledge_entries.
 """
 
 from __future__ import annotations
@@ -20,7 +20,6 @@ from .config import PROJECT_ROOT, now_str as _now_str
 INDEX_PATH = PROJECT_ROOT / "data" / "index.json"
 
 _EMPTY_INDEX: dict[str, list] = {
-    "crawls": [],
     "analyses": [],
     "scripts": [],
     "storyboards": [],
@@ -29,7 +28,7 @@ _EMPTY_INDEX: dict[str, list] = {
 
 
 def generate_id(prefix: str) -> str:
-    """Generate ID like crawl_20260314_a1b2c3"""
+    """Generate ID like script_20260314_a1b2c3"""
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     rand = uuid.uuid4().hex[:6]
     return f"{prefix}_{ts}_{rand}"
@@ -129,34 +128,6 @@ def update_entry(collection: str, entry_id: str, updates: dict) -> dict | None:
 
 # ── Convenience helpers ──
 
-def add_crawl(crawl_id: str, keyword: str, tags: list[str],
-              count: int, file: str) -> dict:
-    entry = {
-        "id": crawl_id,
-        "keyword": keyword,
-        "tags": tags,
-        "created_at": _now_str(),
-        "count": count,
-        "file": file,
-    }
-    return add_entry("crawls", entry)
-
-
-def add_analysis(analysis_id: str, name: str,
-                 source_crawl_ids: list[str],
-                 source_video_ids: list[str],
-                 file: str) -> dict:
-    entry = {
-        "id": analysis_id,
-        "name": name,
-        "source_crawl_ids": source_crawl_ids,
-        "source_video_ids": source_video_ids,
-        "created_at": _now_str(),
-        "file": file,
-    }
-    return add_entry("analyses", entry)
-
-
 def add_script(script_id: str, title: str,
                source_analysis_id: str,
                human_requirements: str,
@@ -196,34 +167,6 @@ def add_knowledge_entry(kb_entry_id: str, category: str,
         "created_at": _now_str(),
     }
     return add_entry("knowledge_entries", entry)
-
-
-def load_crawl_videos(crawl_ids: list[str]) -> list[dict]:
-    """Load video data from multiple crawl files, return combined list."""
-    idx = read_index()
-    videos = []
-    seen = set()
-    for crawl in idx.get("crawls", []):
-        if crawl["id"] in crawl_ids:
-            fpath = PROJECT_ROOT / crawl["file"]
-            if fpath.exists():
-                data = json.loads(fpath.read_text(encoding="utf-8"))
-                for v in data:
-                    vid = v.get("video_id", "")
-                    if vid and vid not in seen:
-                        seen.add(vid)
-                        videos.append(v)
-    return videos
-
-
-def load_specific_videos(crawl_ids: list[str],
-                         video_ids: list[str]) -> list[dict]:
-    """Load specific videos from specific crawls."""
-    all_videos = load_crawl_videos(crawl_ids)
-    if not video_ids:
-        return all_videos
-    vid_set = set(video_ids)
-    return [v for v in all_videos if v.get("video_id") in vid_set]
 
 
 # ── Storyboard Frame Media Helpers ──

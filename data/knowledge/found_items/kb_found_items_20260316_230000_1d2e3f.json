@@ -1,0 +1,14 @@
+{
+  "id": "kb_found_items_20260316_230000_1d2e3f",
+  "category": "found_items",
+  "subcategory": "神秘物件",
+  "name": "牆上摩斯密碼",
+  "name_en": "Morse Code on Wall",
+  "description": "水泥牆上用尖銳物體刻出的點和線，排列方式符合摩斯密碼的規則，解碼後是一組數字。",
+  "tags": ["摩斯密碼", "牆壁", "訊息"],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "kb_found_items_20260316_230000_3d4e5f",
+  "category": "found_items",
+  "subcategory": "個人物品",
+  "name": "碎裂的眼鏡",
+  "name_en": "Broken Glasses",
+  "description": "一副老式圓框眼鏡，一邊鏡片完全碎裂，另一邊鏡片上有乾涸的紅色指紋。",
+  "tags": ["眼鏡", "碎裂", "指紋"],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

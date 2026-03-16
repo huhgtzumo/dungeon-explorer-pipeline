@@ -1,0 +1,14 @@
+{
+  "id": "kb_found_items_20260316_230000_0a1b2c",
+  "category": "found_items",
+  "subcategory": "文件記錄",
+  "name": "監獄日記",
+  "name_en": "Prison Diary",
+  "description": "用牆壁碎片在紙片上書寫的日記，記錄了被囚禁者每天的絕望心情，最後幾頁字跡越來越潦草。",
+  "tags": ["日記", "囚禁", "絕望"],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

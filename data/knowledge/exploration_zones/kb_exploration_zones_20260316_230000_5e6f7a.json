@@ -1,0 +1,14 @@
+{
+  "id": "kb_exploration_zones_20260316_230000_5e6f7a",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "X光室",
+  "name_en": "X-Ray Room",
+  "description": "牆壁貼著鉛板的密閉房間，巨大的X光機器歪斜地固定在天花板軌道上，觀察窗的鉛玻璃已經破裂。",
+  "tags": ["X光", "醫療", "輻射"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

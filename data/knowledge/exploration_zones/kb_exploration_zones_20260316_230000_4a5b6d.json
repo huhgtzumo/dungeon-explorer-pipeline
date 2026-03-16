@@ -1,0 +1,14 @@
+{
+  "id": "kb_exploration_zones_20260316_230000_4a5b6d",
+  "category": "exploration_zones",
+  "subcategory": "特殊區域",
+  "name": "禁閉病房",
+  "name_en": "Padded Room",
+  "description": "牆壁和地板都覆蓋著撕裂的軟墊，門上有三道鎖，觀察窗的玻璃從內側被砸出蛛網狀裂紋。",
+  "tags": ["精神", "禁閉", "軟墊"],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

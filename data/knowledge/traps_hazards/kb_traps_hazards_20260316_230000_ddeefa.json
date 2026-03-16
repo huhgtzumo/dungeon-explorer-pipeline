@@ -1,0 +1,14 @@
+{
+  "id": "kb_traps_hazards_20260316_230000_ddeefa",
+  "category": "traps_hazards",
+  "subcategory": "機關陷阱",
+  "name": "鏈鎖封鎖出口",
+  "name_en": "Locked Chain on Exit",
+  "description": "唯一的出口被粗重的鐵鏈和掛鎖封死，鏈條上的鏽跡顯示它已經鎖了很長時間。",
+  "tags": ["鎖鏈", "出口", "封鎖"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

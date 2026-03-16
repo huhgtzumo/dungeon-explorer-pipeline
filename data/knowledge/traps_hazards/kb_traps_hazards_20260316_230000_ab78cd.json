@@ -1,0 +1,14 @@
+{
+  "id": "kb_traps_hazards_20260316_230000_ab78cd",
+  "category": "traps_hazards",
+  "subcategory": "心理威脅",
+  "name": "鏡迷宮",
+  "name_en": "Mirror Maze",
+  "description": "房間四面都是鏡子，反射出無限的自己，方向感完全喪失，每面鏡子裡的影像似乎都有微妙的不同。",
+  "tags": ["鏡子", "迷宮", "迷失"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

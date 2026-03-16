@@ -1,0 +1,14 @@
+{
+  "id": "kb_traps_hazards_20260316_230000_cd34ef",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "積水觸電",
+  "name_en": "Electrified Water",
+  "description": "地面的積水中隱藏著裸露的電線，水面偶爾閃過微弱的電火花，空氣中有臭氧的味道。",
+  "tags": ["觸電", "積水", "電線"],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

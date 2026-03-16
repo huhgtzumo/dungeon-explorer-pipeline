@@ -1,0 +1,14 @@
+{
+  "id": "kb_traps_hazards_20260316_230000_dd3e4f",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "碎玻璃地面",
+  "name_en": "Broken Glass Floor",
+  "description": "整個房間地面鋪滿了碎裂的玻璃碎片，在黑暗中每一步都可能踩碎更多，發出刺耳的聲響。",
+  "tags": ["玻璃", "地面", "噪音"],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

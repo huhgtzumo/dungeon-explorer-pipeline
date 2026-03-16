@@ -1,0 +1,14 @@
+{
+  "id": "kb_traps_hazards_20260316_230000_7788ab",
+  "category": "traps_hazards",
+  "subcategory": "生物威脅",
+  "name": "犬吠警報聲",
+  "name_en": "Guard Dog Sounds",
+  "description": "遠處傳來兇猛的犬吠聲，伴隨著金屬鏈條拖曳地面的聲響，聲音正在快速接近。",
+  "tags": ["犬吠", "警報", "接近"],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

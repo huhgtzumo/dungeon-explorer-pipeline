@@ -1,0 +1,14 @@
+{
+  "id": "kb_traps_hazards_20260316_230000_99aacd",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "石綿粉塵",
+  "name_en": "Asbestos Dust",
+  "description": "破損的管線包覆材料釋放出細微的白色纖維粉塵，空氣中瀰漫著看不見的致癌微粒。",
+  "tags": ["石綿", "粉塵", "致癌"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

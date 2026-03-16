@@ -1,0 +1,14 @@
+{
+  "id": "kb_exploration_zones_20260316_230000_3e4f5a",
+  "category": "exploration_zones",
+  "subcategory": "頂層空間",
+  "name": "警衛塔",
+  "name_en": "Guard Tower",
+  "description": "視野開闊的高處瞭望台，破損的探照燈和生鏽的欄杆，地板散落著彈殼和煙蒂。",
+  "tags": ["瞭望", "警衛", "高處"],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

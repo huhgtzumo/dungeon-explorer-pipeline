@@ -1,0 +1,14 @@
+{
+  "id": "kb_found_items_20260316_230000_5c6d7e",
+  "category": "found_items",
+  "subcategory": "神秘物件",
+  "name": "上鎖保險箱",
+  "name_en": "Locked Safe",
+  "description": "厚重的鐵製保險箱被鏈條固定在牆上，密碼鎖盤旁有刮痕，搖晃時裡面有東西在滑動。",
+  "tags": ["保險箱", "鎖", "神秘"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

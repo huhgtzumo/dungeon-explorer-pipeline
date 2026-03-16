@@ -1,0 +1,14 @@
+{
+  "id": "kb_traps_hazards_20260316_230000_ef56ab",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "毒氣洩漏",
+  "name_en": "Toxic Gas Leak",
+  "description": "管線破裂處不斷冒出帶有刺鼻氣味的黃綠色氣體，頭暈和噁心感迅速襲來。",
+  "tags": ["毒氣", "洩漏", "化學"],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

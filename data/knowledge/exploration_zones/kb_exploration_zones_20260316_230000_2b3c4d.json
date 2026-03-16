@@ -1,0 +1,14 @@
+{
+  "id": "kb_exploration_zones_20260316_230000_2b3c4d",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "化學實驗室",
+  "name_en": "Chemistry Lab",
+  "description": "實驗台上殘留著各種燒杯和量筒，通風櫥的玻璃已經碎裂，黑板上還留著複雜的化學方程式。",
+  "tags": ["化學", "實驗", "危險"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

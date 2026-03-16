@@ -1,0 +1,14 @@
+{
+  "id": "kb_exploration_zones_20260316_230000_b4c5d6",
+  "category": "exploration_zones",
+  "subcategory": "特殊區域",
+  "name": "隔離牢房",
+  "name_en": "Isolation Cell",
+  "description": "兩坪大的密閉空間，厚重的鐵門上只有一個小窗口，牆壁上滿是指甲刮出的痕跡和計數的刻痕。",
+  "tags": ["牢房", "隔離", "囚禁"],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

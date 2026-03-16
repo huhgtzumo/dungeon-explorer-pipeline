@@ -1,0 +1,14 @@
+{
+  "id": "kb_exploration_zones_20260316_230000_4c5d6e",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "伺服器機房",
+  "name_en": "Server Room",
+  "description": "過時的伺服器機櫃整齊排列，雖然早已斷電，但角落的UPS偶爾發出微弱的嗡鳴聲。",
+  "tags": ["伺服器", "科技", "數據"],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

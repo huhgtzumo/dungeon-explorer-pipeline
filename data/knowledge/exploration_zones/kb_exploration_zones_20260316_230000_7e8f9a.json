@@ -1,0 +1,14 @@
+{
+  "id": "kb_exploration_zones_20260316_230000_7e8f9a",
+  "category": "exploration_zones",
+  "subcategory": "地下空間",
+  "name": "爬行空間",
+  "name_en": "Crawl Space",
+  "description": "只能匍匐前進的狹窄夾層，管線和電纜從頭頂經過，黑暗中不知通向何方。",
+  "tags": ["爬行", "狹窄", "夾層"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

@@ -33,7 +33,6 @@ def load_config(*, force_reload: bool = False) -> dict:
         "api_key": os.getenv("PROXY_API_KEY", ""),
         "model": os.getenv("PROXY_MODEL", "openai/gpt-4o"),
     }
-    config["youtube_api_key"] = os.getenv("YOUTUBE_API_KEY", "")
     config["gemini_api_key"] = os.getenv("GEMINI_API_KEY", "")
     config["kling_access_key"] = os.getenv("KLING_ACCESS_KEY", "")
     config["kling_secret_key"] = os.getenv("KLING_SECRET_KEY", "")

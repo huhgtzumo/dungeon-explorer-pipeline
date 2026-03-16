@@ -1,0 +1,14 @@
+{
+  "id": "kb_traps_hazards_20260316_230000_1122ab",
+  "category": "traps_hazards",
+  "subcategory": "心理威脅",
+  "name": "密閉空間恐慌",
+  "name_en": "Confined Space Panic",
+  "description": "通道越走越窄，最後只能側身擠過，四周牆壁似乎在不斷收縮，呼吸變得越來越困難。",
+  "tags": ["幽閉", "恐慌", "狹窄"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

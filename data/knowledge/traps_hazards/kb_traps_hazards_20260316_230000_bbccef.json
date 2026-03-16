@@ -1,0 +1,14 @@
+{
+  "id": "kb_traps_hazards_20260316_230000_bbccef",
+  "category": "traps_hazards",
+  "subcategory": "結構危險",
+  "name": "電梯井墜落風險",
+  "name_en": "Elevator Shaft Fall Risk",
+  "description": "電梯門意外打開，門後是深不見底的黑暗電梯井，冷風從下方吹上來，沒有任何防護欄杆。",
+  "tags": ["電梯井", "墜落", "深淵"],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}
