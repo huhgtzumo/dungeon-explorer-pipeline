@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_632b2a",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "電梯自動開關",
+  "name_en": "Elevator Auto Open-Close",
+  "description": "停用的電梯突然自行開門關門，金屬摩擦聲在樓道迴盪。",
+  "tags": [
+    "機械",
+    "電梯",
+    "異常"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

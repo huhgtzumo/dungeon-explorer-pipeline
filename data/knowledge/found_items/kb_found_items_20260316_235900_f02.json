@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_235900_f02",
+  "category": "found_items",
+  "subcategory": "個人物品",
+  "name": "病患手環",
+  "name_en": "Patient Wristband",
+  "description": "住院識別手環，名字和病歷號碼清晰可見，但此人已失蹤多年。",
+  "tags": [
+    "醫療",
+    "身份",
+    "失蹤"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

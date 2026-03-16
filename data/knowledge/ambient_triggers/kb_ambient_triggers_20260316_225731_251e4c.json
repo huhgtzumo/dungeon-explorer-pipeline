@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_251e4c",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "鳥群驚飛",
+  "name_en": "Birds Taking Flight",
+  "description": "突然的聲響驚動了棲息在建築中的鳥群，翅膀拍擊的聲音如爆炸般響起。",
+  "tags": [
+    "鳥",
+    "突然",
+    "驚嚇"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.802673",
+  "updated_at": "2026-03-16T22:57:31.802673"
+}

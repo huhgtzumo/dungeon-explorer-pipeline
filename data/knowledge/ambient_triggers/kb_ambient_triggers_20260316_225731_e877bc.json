@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_e877bc",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "不明振動",
+  "name_en": "Unknown Vibration",
+  "description": "地板和牆壁傳來微弱但持續的振動，像是地底有某種機械在運轉。",
+  "tags": [
+    "振動",
+    "地底",
+    "機械"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.769771",
+  "updated_at": "2026-03-16T22:57:31.769771"
+}

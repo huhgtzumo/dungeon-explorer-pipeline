@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_73a13e",
+  "category": "exploration_zones",
+  "subcategory": "特殊區域",
+  "name": "隔離區",
+  "name_en": "Quarantine Zone",
+  "description": "用塑膠布和警告標誌封鎖的區域，透過破損處可以看到裡面散落的醫療廢棄物。",
+  "tags": [
+    "醫療",
+    "危險",
+    "封鎖"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.571065",
+  "updated_at": "2026-03-16T22:57:30.571065"
+}

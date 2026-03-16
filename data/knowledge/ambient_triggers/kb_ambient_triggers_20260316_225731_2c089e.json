@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_2c089e",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "持續滴水聲",
+  "name_en": "Constant Dripping",
+  "description": "規律的滴水聲在寂靜中格外刺耳，不知道水從哪裡來。",
+  "tags": [
+    "水",
+    "規律",
+    "背景"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.655010",
+  "updated_at": "2026-03-16T22:57:31.655010"
+}

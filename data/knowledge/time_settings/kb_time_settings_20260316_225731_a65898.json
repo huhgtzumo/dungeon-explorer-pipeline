@@ -1,0 +1,18 @@
+{
+  "id": "kb_time_settings_20260316_225731_a65898",
+  "category": "time_settings",
+  "subcategory": "",
+  "name": "月蝕之夜",
+  "name_en": "Lunar Eclipse Night",
+  "description": "血月高掛的夜晚，月光透過雲層投射出暗紅色的光芒。",
+  "tags": [
+    "月蝕",
+    "紅光",
+    "特殊"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.484402",
+  "updated_at": "2026-03-16T22:57:31.484402"
+}

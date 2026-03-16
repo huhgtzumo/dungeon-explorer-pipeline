@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_235900_h12",
+  "category": "traps_hazards",
+  "subcategory": "結構危險",
+  "name": "鏽蝕金屬尖刺",
+  "name_en": "Rusty Metal Spikes",
+  "description": "倒塌的金屬架構形成了密集的尖刺，稍不注意就會刺穿。",
+  "tags": [
+    "金屬",
+    "鏽蝕",
+    "刺傷"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

@@ -1,4 +1,4 @@
-# 短劇 Pipeline 全局設定
+# 廢墟探索 Pipeline 全局設定
 
 pipeline:
   output_dir: data/output
@@ -9,9 +9,15 @@ pipeline:
 crawler:
   # YouTube 搜尋參數
   search_queries:
-    - "短劇 完整版"
-    - "微短劇 爆款"
-    - "short drama chinese"
+    - "廢棄建築探索"
+    - "廢棄醫院探索"
+    - "廢棄工廠探索"
+    - "廢墟探索"
+    - "都市探索"
+    - "abandoned building exploration"
+    - "urban exploration urbex"
+    - "abandoned hospital exploration"
+    - "abandoned factory urbex"
   max_results: 20
   min_views: 10000
   language: zh
@@ -39,7 +45,7 @@ image_gen:
   # Kling 生圖
   provider: kling  # gemini_api | gemini_web | kling
   model: kling-v1
-  style_prefix: "cinematic still frame, realistic, consistent character design, high quality, 1080x1920 portrait"
+  style_prefix: "first-person POV, dark abandoned building, flashlight illumination, found footage style, horror atmosphere, hyper realistic, 1080x1920 portrait"
   negative_prompt: "cartoon, anime, low quality, blurry, distorted face"
   resolution:
     width: 1080
@@ -71,8 +77,8 @@ publisher:
   category: Entertainment
   privacy: private  # private | unlisted | public
   tags:
-    - 短劇
-    - 微短劇
-    - short drama
-    - chinese drama
+    - 廢墟探索
+    - urban exploration
+    - urbex
+    - abandoned places
   schedule_interval_hours: 6  # 每 6 小時發一部

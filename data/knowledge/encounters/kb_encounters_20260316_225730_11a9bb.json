@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_225730_11a9bb",
+  "category": "encounters",
+  "subcategory": "環境異常",
+  "name": "電磁干擾",
+  "name_en": "EMF Interference",
+  "description": "EMF探測器的數值突然飆升，指向一個看似普通的角落。",
+  "tags": [
+    "設備",
+    "電磁",
+    "偵測"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.885899",
+  "updated_at": "2026-03-16T22:57:30.885899"
+}

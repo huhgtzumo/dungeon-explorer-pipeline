@@ -1,0 +1,18 @@
+{
+  "id": "kb_route_paths_20260316_225730_f525f6",
+  "category": "route_paths",
+  "subcategory": "",
+  "name": "屋頂垂降",
+  "name_en": "Rooftop Rappel",
+  "description": "從相鄰建築跳上屋頂，然後通過天井或樓梯間向下探索。",
+  "tags": [
+    "高處",
+    "動作",
+    "刺激"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.677200",
+  "updated_at": "2026-03-16T22:57:30.677200"
+}

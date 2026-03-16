@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_235900_f01",
+  "category": "found_items",
+  "subcategory": "醫療設備",
+  "name": "外科手術手套",
+  "name_en": "Surgical Gloves",
+  "description": "一雙已乾涸的外科手術手套，指尖有疑似血漬的棕色痕跡。",
+  "tags": [
+    "醫療",
+    "手套",
+    "血跡"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

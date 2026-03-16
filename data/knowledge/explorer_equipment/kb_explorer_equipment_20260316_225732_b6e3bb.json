@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_b6e3bb",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "靈魂盒",
+  "name_en": "Spirit Box",
+  "description": "快速掃描FM/AM頻段的裝置，據說能接收靈體的聲音訊息。",
+  "tags": [
+    "超自然",
+    "掃描",
+    "爭議"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.221643",
+  "updated_at": "2026-03-16T22:57:32.221643"
+}

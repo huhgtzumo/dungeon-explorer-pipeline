@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_98633f",
+  "category": "exploration_zones",
+  "subcategory": "地下空間",
+  "name": "鍋爐房",
+  "name_en": "Boiler Room",
+  "description": "巨大的鍋爐如沉睡的怪獸，管線錯綜複雜，空氣中殘留著機油的氣味。",
+  "tags": [
+    "工業",
+    "機械",
+    "悶熱"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.545639",
+  "updated_at": "2026-03-16T22:57:30.545639"
+}

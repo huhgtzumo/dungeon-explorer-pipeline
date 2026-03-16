@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_ded1d2",
+  "category": "exploration_zones",
+  "subcategory": "地下空間",
+  "name": "地下室",
+  "name_en": "Basement",
+  "description": "潮濕陰暗的地下室，天花板管線滴水，牆角堆著用途不明的木箱。",
+  "tags": [
+    "地下",
+    "潮濕",
+    "未知"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.541616",
+  "updated_at": "2026-03-16T22:57:30.541616"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_weather_conditions_20260316_225731_bfe6af",
+  "category": "weather_conditions",
+  "subcategory": "",
+  "name": "遠處雷聲",
+  "name_en": "Distant Thunder",
+  "description": "遠方傳來低沉的雷聲，偶爾閃電照亮天際，暴風雨正在接近。",
+  "tags": [
+    "雷聲",
+    "閃電",
+    "接近"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.582817",
+  "updated_at": "2026-03-16T22:57:31.582817"
+}

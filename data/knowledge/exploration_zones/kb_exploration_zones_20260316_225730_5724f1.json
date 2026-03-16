@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_5724f1",
+  "category": "exploration_zones",
+  "subcategory": "走廊通道",
+  "name": "陰暗走廊",
+  "name_en": "Dark Corridor",
+  "description": "幾乎沒有自然光的長走廊，手電筒照出牆上的水漬和剝落的油漆。",
+  "tags": [
+    "基本",
+    "連接",
+    "壓迫"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.473405",
+  "updated_at": "2026-03-16T22:57:30.473405"
+}

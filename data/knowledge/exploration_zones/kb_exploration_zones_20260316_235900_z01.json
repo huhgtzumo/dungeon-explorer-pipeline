@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_235900_z01",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "解剖室",
+  "name_en": "Autopsy Room",
+  "description": "金屬解剖台、排水溝、強力照明燈，空氣中還殘留著消毒藥水的氣味。",
+  "tags": [
+    "解剖",
+    "醫療",
+    "陰暗"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

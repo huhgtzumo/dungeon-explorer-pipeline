@@ -1,0 +1,18 @@
+{
+  "id": "kb_route_paths_20260316_225730_47973d",
+  "category": "route_paths",
+  "subcategory": "",
+  "name": "停車場入口",
+  "name_en": "Parking Garage Entry",
+  "description": "從地下停車場的車輛出入口走入，逐漸深入建築內部。",
+  "tags": [
+    "地下",
+    "車輛",
+    "漸進"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.765722",
+  "updated_at": "2026-03-16T22:57:30.765722"
+}

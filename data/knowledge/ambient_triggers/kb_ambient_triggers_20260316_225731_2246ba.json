@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_2246ba",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "遠處的警笛",
+  "name_en": "Distant Siren",
+  "description": "遠方隱約傳來警笛或救護車的聲音，提醒你外面的世界仍在運轉。",
+  "tags": [
+    "外部",
+    "警笛",
+    "對比"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.752594",
+  "updated_at": "2026-03-16T22:57:31.752594"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_2f4330",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "金屬碰撞",
+  "name_en": "Metal Clanking",
+  "description": "某處傳來金屬互相碰撞的聲響，像是風吹動懸掛的鏈條。",
+  "tags": [
+    "金屬",
+    "碰撞",
+    "風"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.658774",
+  "updated_at": "2026-03-16T22:57:31.658774"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_235900_e12",
+  "category": "encounters",
+  "subcategory": "環境異常",
+  "name": "地板下有動靜",
+  "name_en": "Movement Under Floor",
+  "description": "踩在地板上時，腳下傳來細微的沙沙聲和輕微震動。",
+  "tags": [
+    "地板",
+    "震動",
+    "不安"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

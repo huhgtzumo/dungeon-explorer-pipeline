@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_30ad4e",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "檔案室",
+  "name_en": "Archive Room",
+  "description": "堆滿文件和檔案的房間，金屬櫃子排列成迷宮，地上散落著泛黃的紙張。",
+  "tags": [
+    "文件",
+    "線索",
+    "搜索"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.502076",
+  "updated_at": "2026-03-16T22:57:30.502076"
+}

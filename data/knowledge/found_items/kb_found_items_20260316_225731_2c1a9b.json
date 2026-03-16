@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_225731_2c1a9b",
+  "category": "found_items",
+  "subcategory": "個人物品",
+  "name": "斷裂的身分證",
+  "name_en": "Broken ID Card",
+  "description": "一張損毀的工作人員證件，照片已看不清，但名字和部門勉強可辨。",
+  "tags": [
+    "身分",
+    "工作人員",
+    "線索"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.070905",
+  "updated_at": "2026-03-16T22:57:31.070905"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "kb_encounters_20260316_230000_0d1e2f",
+  "category": "encounters",
+  "subcategory": "視覺異常",
+  "name": "霧鏡上出現文字",
+  "name_en": "Writing Appears on Fogged Mirror",
+  "description": "浴室鏡面突然起霧，緩慢浮現出手指書寫的文字，內容是求救訊息或警告。",
+  "tags": ["鏡子", "文字", "訊息"],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

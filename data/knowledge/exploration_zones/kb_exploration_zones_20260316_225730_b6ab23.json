@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_b6ab23",
+  "category": "exploration_zones",
+  "subcategory": "特殊區域",
+  "name": "密室",
+  "name_en": "Hidden Room",
+  "description": "隱藏在牆壁後的秘密房間，只有通過特定機關才能進入。",
+  "tags": [
+    "隱藏",
+    "發現",
+    "機關"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.560739",
+  "updated_at": "2026-03-16T22:57:30.560739"
+}

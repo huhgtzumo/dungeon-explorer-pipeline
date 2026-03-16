@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_68d78d",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "鐵鏈拖曳聲",
+  "name_en": "Chain Dragging Sound",
+  "description": "遠處傳來金屬鏈條在地面拖行的聲音，時近時遠。",
+  "tags": [
+    "聲音",
+    "金屬",
+    "驚悚"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

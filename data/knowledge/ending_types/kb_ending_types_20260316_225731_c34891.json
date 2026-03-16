@@ -1,0 +1,18 @@
+{
+  "id": "kb_ending_types_20260316_225731_c34891",
+  "category": "ending_types",
+  "subcategory": "",
+  "name": "失去畫面",
+  "name_en": "Signal Lost",
+  "description": "攝影機突然嚴重干擾，畫面扭曲變形，在雜訊中一閃——然後什麼都沒有了。",
+  "tags": [
+    "技術",
+    "中斷",
+    "失蹤"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.926960",
+  "updated_at": "2026-03-16T22:57:31.926960"
+}

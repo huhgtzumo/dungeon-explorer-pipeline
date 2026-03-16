@@ -1,31 +1,31 @@
-/* ── Reset & Variables (from mockup) ── */
+/* ── Reset & Variables — 探索者計劃 (Horror/Dungeon Theme) ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg-primary: #0a0a0f;
-  --bg-secondary: #12121a;
-  --bg-tertiary: #1a1a26;
-  --bg-hover: #22222f;
-  --bg-card: #16161f;
-  --border: #2a2a3a;
-  --border-light: #333346;
-  --text-primary: #e8e8f0;
-  --text-secondary: #9090a8;
-  --text-muted: #606078;
-  --accent: #7c5cfc;
-  --accent-light: #9b7eff;
-  --accent-dim: #5a3fd4;
-  --accent-bg: rgba(124, 92, 252, 0.08);
-  --accent-bg-hover: rgba(124, 92, 252, 0.14);
-  --success: #34d399;
-  --success-dim: rgba(52, 211, 153, 0.15);
-  --warning: #fbbf24;
-  --red: #e17055;
-  --blue: #60a5fa;
-  --green: #00b894;
+  --bg-primary: #0d0d14;
+  --bg-secondary: #1a1a2e;
+  --bg-tertiary: #16213e;
+  --bg-hover: #1f2b47;
+  --bg-card: #141428;
+  --border: #2a2a4a;
+  --border-light: #333355;
+  --text-primary: #d4d4e8;
+  --text-secondary: #8888a8;
+  --text-muted: #555570;
+  --accent: #e94560;
+  --accent-light: #ff6b81;
+  --accent-dim: #c0334a;
+  --accent-bg: rgba(233, 69, 96, 0.08);
+  --accent-bg-hover: rgba(233, 69, 96, 0.14);
+  --success: #0f3460;
+  --success-dim: rgba(15, 52, 96, 0.25);
+  --warning: #e9a846;
+  --red: #e94560;
+  --blue: #0f3460;
+  --green: #1a5c3a;
   --radius: 8px;
   --radius-lg: 12px;
-  --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.2);
+  --shadow: 0 2px 6px rgba(0,0,0,0.5), 0 6px 20px rgba(0,0,0,0.35);
   --transition: 150ms ease;
 }
 

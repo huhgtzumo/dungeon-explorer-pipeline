@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_754809",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "洪水淹沒",
+  "name_en": "Flood Submersion",
+  "description": "反覆遭受洪水侵襲，地下層永久積水，上層結構因水損而不堪使用。",
+  "tags": [
+    "洪水",
+    "水害",
+    "反覆"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.451173",
+  "updated_at": "2026-03-16T22:57:30.451173"
+}

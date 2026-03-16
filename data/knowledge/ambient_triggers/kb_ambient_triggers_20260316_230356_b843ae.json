@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_b843ae",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "腳步聲回音",
+  "name_en": "Footstep Echo",
+  "description": "自己的腳步在空曠走廊中產生延遲回音，有時回音的節奏似乎不太對。",
+  "tags": [
+    "聲音",
+    "回音",
+    "心理"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_d4854c",
+  "category": "exploration_zones",
+  "subcategory": "地下空間",
+  "name": "地下停車場",
+  "name_en": "Underground Parking",
+  "description": "昏暗的地下停車場，螢光燈管閃爍，幾輛被遺棄的車輛靜靜矗立。",
+  "tags": [
+    "地下",
+    "車輛",
+    "開闊"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.639345",
+  "updated_at": "2026-03-16T22:57:30.639345"
+}

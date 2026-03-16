@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_96e6b6",
+  "category": "exploration_zones",
+  "subcategory": "特殊區域",
+  "name": "監控中心",
+  "name_en": "Surveillance Center",
+  "description": "佈滿監控螢幕的房間，部分螢幕還在閃爍雪花，錄影帶散落一地。",
+  "tags": [
+    "監控",
+    "科技",
+    "窺視"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.581565",
+  "updated_at": "2026-03-16T22:57:30.581565"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "kb_encounters_20260316_230000_2e3f4a",
+  "category": "encounters",
+  "subcategory": "嗅覺異常",
+  "name": "腐爛氣味",
+  "name_en": "Rotting Smell",
+  "description": "打開某個房間的瞬間，一股強烈的腐爛惡臭撲面而來，但房間內找不到任何腐敗物質。",
+  "tags": ["腐爛", "氣味", "無源"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

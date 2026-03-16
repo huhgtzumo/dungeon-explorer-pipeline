@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_235900_f20",
+  "category": "found_items",
+  "subcategory": "工具設備",
+  "name": "夜視儀",
+  "name_en": "Night Vision Goggles",
+  "description": "丟棄的軍用夜視設備，電池還有電，但開機後看到的第一個影像讓人不寒而慄。",
+  "tags": [
+    "夜視",
+    "軍事",
+    "恐怖"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

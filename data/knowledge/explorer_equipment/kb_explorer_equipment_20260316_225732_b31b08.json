@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_b31b08",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "金屬探測器",
+  "name_en": "Metal Detector",
+  "description": "偵測牆壁或地面下隱藏的金屬物品和管線。",
+  "tags": [
+    "偵測",
+    "隱藏",
+    "尋寶"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.185966",
+  "updated_at": "2026-03-16T22:57:32.185966"
+}

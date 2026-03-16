@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_a22890",
+  "category": "building_types",
+  "subcategory": "軍事設施",
+  "name": "蘇聯地下碉堡",
+  "name_en": "Soviet Underground Bunker",
+  "description": "冷戰時期的地下防核掩體，厚重的鐵門後是迷宮般的走廊和指揮中心。",
+  "tags": [
+    "軍事",
+    "地下",
+    "冷戰"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.129794",
+  "updated_at": "2026-03-16T22:57:30.129794"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_motives_20260316_225732_db6275",
+  "category": "exploration_motives",
+  "subcategory": "",
+  "name": "打賭",
+  "name_en": "Bet/Dare",
+  "description": "跟朋友打賭的代價——獨自在廢墟中度過一夜，否則輸掉一筆不小的賭注。",
+  "tags": [
+    "賭注",
+    "朋友",
+    "壓力"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.063750",
+  "updated_at": "2026-03-16T22:57:32.063750"
+}

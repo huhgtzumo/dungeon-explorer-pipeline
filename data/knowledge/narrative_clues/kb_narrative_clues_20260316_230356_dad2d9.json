@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_230356_dad2d9",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "實驗記錄表",
+  "name_en": "Experiment Log Sheet",
+  "description": "記載異常數據的實驗表格，受試者欄位的名字被用黑色墨水塗掉。",
+  "tags": [
+    "實驗",
+    "文件",
+    "機密"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

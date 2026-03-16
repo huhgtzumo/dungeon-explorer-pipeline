@@ -1,0 +1,18 @@
+{
+  "id": "kb_ending_types_20260316_225731_8dc1d1",
+  "category": "ending_types",
+  "subcategory": "",
+  "name": "安全撤離",
+  "name_en": "Safe Extraction",
+  "description": "在最後一刻成功逃出建築，回到外面的世界喘息，但帶著永遠無法忘記的記憶。",
+  "tags": [
+    "逃出",
+    "安全",
+    "喘息"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.888511",
+  "updated_at": "2026-03-16T22:57:31.888511"
+}

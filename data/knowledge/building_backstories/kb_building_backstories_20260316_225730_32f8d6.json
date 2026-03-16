@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_32f8d6",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "神秘火災",
+  "name_en": "Mysterious Fire",
+  "description": "一場原因不明的大火導致建築被廢棄，調查報告被列為機密。殘存的焦痕暗示火勢不自然。",
+  "tags": [
+    "火災",
+    "神秘",
+    "調查"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.327117",
+  "updated_at": "2026-03-16T22:57:30.327117"
+}

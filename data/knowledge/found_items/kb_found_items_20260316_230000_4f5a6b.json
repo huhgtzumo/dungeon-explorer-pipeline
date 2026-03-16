@@ -1,0 +1,14 @@
+{
+  "id": "kb_found_items_20260316_230000_4f5a6b",
+  "category": "found_items",
+  "subcategory": "工具設備",
+  "name": "防毒面具",
+  "name_en": "Gas Mask",
+  "description": "蘇聯時期的軍用防毒面具，橡膠已經龜裂發黃，濾罐內的活性碳散落一地。",
+  "tags": ["面具", "軍事", "防護"],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

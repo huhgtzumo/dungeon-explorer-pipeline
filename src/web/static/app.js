@@ -1,12 +1,12 @@
-/* ── Short Drama Pipeline v5 — Step 2 & 3 Redesign ── */
+/* ── 探索者計劃 — 廢墟探索影片生成器 ── */
 
 const STAGE_LABELS = {
-  crawl: '爬蟲搜尋',
-  analyze: '爆款分析',
-  generate: '劇本生成',
-  storyboard: '分鏡拆解',
-  'generate-images': '分鏡圖生成（Flux）',
-  'generate-videos': '視頻生成（Kling AI）',
+  crawl: '探索素材搜尋',
+  analyze: '素材分析',
+  generate: '探索腳本生成',
+  storyboard: '場景分鏡',
+  'generate-images': '場景圖生成（Flux）',
+  'generate-videos': '探索影片生成（Kling AI）',
   'kb-analyze-single': '知識庫分析（單部）',
   'kb-analyze-batch': '知識庫分析（批量）',
   'kb-generate': '知識庫生成',
@@ -18,7 +18,7 @@ let _pollInterval = 5000;
 let _pollFailCount = 0;
 let currentStep = 1;
 let currentView = 'pipeline'; // 'pipeline' or 'knowledge'
-let currentKBCategory = 'structures';
+let currentKBCategory = 'building_types';
 let _currentCrawlId = null;
 let _logExpanded = false;
 
@@ -38,7 +38,7 @@ let _genMode = 'single';
 let _durationSec = 60;
 
 const DURATION_HINTS = {
-  60:  '建議選 3-4 個核心元素（類型 + 鉤子 + 爽點/結尾鉤子）',
+  60:  '建議選 3-4 個核心元素（建築 + 區域 + 遭遇/結局）',
   180: '建議選 4-6 個元素（核心 3-4 + 輔助 1-2）',
   300: '建議選 5-8 個元素（核心 3-4 + 輔助 2-4）',
 };
@@ -275,7 +275,7 @@ async function doCrawl() {
 function renderCrawlHistory(crawls) {
   const el = document.getElementById('crawl-history');
   if (!crawls.length) {
-    el.innerHTML = '<div class="preview-empty" style="padding:12px 0;font-size:12px">尚無爬蟲紀錄</div>';
+    el.innerHTML = '<div class="preview-empty" style="padding:12px 0;font-size:12px">尚無搜尋紀錄</div>';
     return;
   }
   el.innerHTML = crawls.slice().reverse().map(c => `
@@ -551,7 +551,7 @@ async function doBatchAnalyzeSelected() {
     return;
   }
   if (!_currentCrawlId) {
-    alert('請先選擇一個爬蟲結果');
+    alert('請先選擇一個搜尋結果');
     return;
   }
   if (!confirm(`確認批量分析 ${videoIds.length} 部視頻並入庫？`)) return;
@@ -648,7 +648,7 @@ async function showAnalysisPreview(videoId) {
     html += `
       <div class="review-actions">
         <button class="btn btn-accent review-confirm-btn" onclick="doConfirmKB('${esc(videoId)}')">確認入庫</button>
-        <button class="btn btn-danger review-reject-btn" onclick="doRejectVideo('${esc(videoId)}')">不是短劇</button>
+        <button class="btn btn-danger review-reject-btn" onclick="doRejectVideo('${esc(videoId)}')">不符合探索主題</button>
       </div>`;
     el.innerHTML = html;
   } catch (e) {
@@ -681,7 +681,7 @@ async function doConfirmKB(videoId) {
 }
 
 async function doRejectVideo(videoId) {
-  const reason = prompt('拒絕原因（選填）：', '不是短劇');
+  const reason = prompt('拒絕原因（選填）：', '不符合廢棄建築探索主題');
   if (reason === null) return;
   try {
     const resp = await fetch('/api/trigger/reject-video', {
@@ -882,7 +882,7 @@ async function doStep2KBBatchAnalyze() {
 }
 
 async function doStep2DeleteVideo(videoId, title) {
-  if (!confirm(`確認刪除「${title}」？將從所有爬蟲結果中刪除，此操作不可恢復。`)) return;
+  if (!confirm(`確認刪除「${title}」？將從所有搜尋結果中刪除，此操作不可恢復。`)) return;
   const video = _allVideos.find(v => v.video_id === videoId);
   const crawlIds = (video && video._crawl_ids) || _crawls.map(c => c.id);
   try {
@@ -1192,19 +1192,21 @@ function renderAnalysisReport(data) {
 // All KB categories to show as card rows
 // tier: 'core' = recommended to select, 'aux' = optional
 const KB_CARD_CATEGORIES = [
-  { key: 'genres', label: '劇本類型', tier: 'core', apiUrl: '/api/knowledge/genres' },
-  { key: 'styles', label: '風格', tier: 'core', apiUrl: '/api/knowledge/styles' },
-  { key: 'hooks', label: '開場鉤子', tier: 'core', apiUrl: '/api/knowledge/hooks' },
-  { key: 'payoffs', label: '爽點庫', tier: 'core', apiUrl: '/api/knowledge/payoffs' },
-  { key: 'ending_hooks', label: '結尾鉤子', tier: 'core', apiUrl: '/api/knowledge/ending_hooks' },
-  { key: 'structures', label: '架構模板', tier: 'aux', apiUrl: '/api/knowledge/structures' },
-  { key: 'personas', label: '人設', tier: 'aux', apiUrl: '/api/knowledge/elements?subcategory=人設' },
-  { key: 'scenes', label: '場景', tier: 'aux', apiUrl: '/api/knowledge/elements?subcategory=場景' },
-  { key: 'relationships', label: '關係', tier: 'aux', apiUrl: '/api/knowledge/elements?subcategory=關係' },
-  { key: 'pacing', label: '節奏模板', tier: 'aux', apiUrl: '/api/knowledge/pacing' },
-  { key: 'dialogues', label: '對白模式', tier: 'aux', apiUrl: '/api/knowledge/dialogues' },
-  { key: 'visual_scenes', label: '視覺場景', tier: 'aux', apiUrl: '/api/knowledge/visual_scenes' },
-  { key: 'tension_actions', label: '張力行為', tier: 'aux', apiUrl: '/api/knowledge/tension_actions' },
+  { key: 'building_types', label: '建築類型', tier: 'core', apiUrl: '/api/knowledge/building_types' },
+  { key: 'building_backstories', label: '廢棄原因', tier: 'core', apiUrl: '/api/knowledge/building_backstories' },
+  { key: 'exploration_zones', label: '探索區域', tier: 'core', apiUrl: '/api/knowledge/exploration_zones' },
+  { key: 'route_paths', label: '動線路徑', tier: 'core', apiUrl: '/api/knowledge/route_paths' },
+  { key: 'encounters', label: '遭遇事件', tier: 'core', apiUrl: '/api/knowledge/encounters' },
+  { key: 'found_items', label: '發現物品', tier: 'core', apiUrl: '/api/knowledge/found_items' },
+  { key: 'traps_hazards', label: '陷阱/危險', tier: 'aux', apiUrl: '/api/knowledge/traps_hazards' },
+  { key: 'narrative_clues', label: '敘事線索', tier: 'aux', apiUrl: '/api/knowledge/narrative_clues' },
+  { key: 'time_settings', label: '時間設定', tier: 'aux', apiUrl: '/api/knowledge/time_settings' },
+  { key: 'weather_conditions', label: '天氣狀況', tier: 'aux', apiUrl: '/api/knowledge/weather_conditions' },
+  { key: 'ambient_triggers', label: '氛圍觸發', tier: 'aux', apiUrl: '/api/knowledge/ambient_triggers' },
+  { key: 'tension_curves', label: '張力曲線', tier: 'aux', apiUrl: '/api/knowledge/tension_curves' },
+  { key: 'ending_types', label: '結局類型', tier: 'aux', apiUrl: '/api/knowledge/ending_types' },
+  { key: 'exploration_motives', label: '探索動機', tier: 'aux', apiUrl: '/api/knowledge/exploration_motives' },
+  { key: 'explorer_equipment', label: '探索者裝備', tier: 'aux', apiUrl: '/api/knowledge/explorer_equipment' },
 ];
 
 let _kbSkeletonBuilt = false;
@@ -1265,11 +1267,11 @@ async function loadStep3KBCards() {
 
 // Category emoji map
 const KB_CAT_ICONS = {
-  genres: '&#127916;', styles: '&#127912;',
-  structures: '&#127970;', hooks: '&#129693;', payoffs: '&#127881;',
-  personas: '&#128100;', scenes: '&#127774;', relationships: '&#128145;',
-  pacing: '&#127928;', dialogues: '&#128172;', visual_scenes: '&#127909;',
-  ending_hooks: '&#128517;', tension_actions: '&#9889;',
+  building_types: '&#127970;', building_backstories: '&#128293;', exploration_zones: '&#127759;',
+  route_paths: '&#128739;', encounters: '&#128123;', found_items: '&#128230;',
+  traps_hazards: '&#9888;', narrative_clues: '&#128270;', time_settings: '&#127761;',
+  weather_conditions: '&#127783;', ambient_triggers: '&#127787;', tension_curves: '&#128200;',
+  ending_types: '&#127937;', exploration_motives: '&#128269;', explorer_equipment: '&#128294;',
 };
 
 async function _loadKBCardRow(cat) {
@@ -1310,8 +1312,7 @@ async function _loadKBCardRow(cat) {
 async function expandKBCard(catKey, entryId, event) {
   event.stopPropagation();
   // Map card keys to actual KB category names
-  const catMap = { personas: 'elements', scenes: 'elements', relationships: 'elements' };
-  const apiCat = catMap[catKey] || catKey;
+  const apiCat = catKey;
   try {
     const resp = await fetch('/api/knowledge/' + apiCat + '/' + encodeURIComponent(entryId));
     if (!resp.ok) return;
@@ -1338,7 +1339,7 @@ async function expandKBCard(catKey, entryId, event) {
       html += '<h4 style="color:var(--accent-light);margin-bottom:8px">範例片段</h4>';
       for (const ex of entry.examples) {
         html += `<div class="analysis-section" style="margin-bottom:8px">
-          <div style="font-weight:600;margin-bottom:4px">${esc(ex.drama_title || '未知劇目')}</div>
+          <div style="font-weight:600;margin-bottom:4px">${esc(ex.video_title || ex.drama_title || '未知影片')}</div>
           <div style="font-size:0.85rem;border-left:3px solid var(--accent);padding-left:12px;margin-top:4px">${esc(ex.excerpt || '')}</div>
           ${ex.context ? '<div style="font-size:0.8rem;color:var(--text-muted);margin-top:4px">' + esc(ex.context) + '</div>' : ''}
         </div>`;
@@ -1388,32 +1389,24 @@ function _getSelectedElements() {
   for (const cat of KB_CARD_CATEGORIES) {
     const id = _kbCardSelections[cat.key];
     if (id) {
-      // Map personas/scenes/relationships back to 'elements' category for backend
-      const apiKey = ['personas', 'scenes', 'relationships'].includes(cat.key) ? 'elements' : cat.key;
-      if (!result[apiKey]) result[apiKey] = [];
-      result[apiKey].push(id);
+      if (!result[cat.key]) result[cat.key] = [];
+      result[cat.key].push(id);
     }
-  }
-  // Also set sub-keys for backwards compatibility
-  for (const subKey of ['personas', 'scenes', 'relationships']) {
-    const id = _kbCardSelections[subKey];
-    result[subKey] = id ? [id] : [];
   }
   return result;
 }
 
 function _getSelectedGenreStyle() {
-  // Look up genre/style names from selected KB card IDs
+  // Look up building/zone names from selected KB card IDs
   const result = {};
   for (const cat of KB_CARD_CATEGORIES) {
-    if (cat.key !== 'genres' && cat.key !== 'styles') continue;
+    if (cat.key !== 'buildings' && cat.key !== 'zones') continue;
     const id = _kbCardSelections[cat.key];
     if (id) {
-      // Find card element to get the name
       const row = document.getElementById('kb-row-cards-' + cat.key);
       if (row) {
         const card = row.querySelector(`[data-id="${id}"] .kb-card-item-name`);
-        if (card) result[cat.key === 'genres' ? 'genre' : 'style'] = card.textContent.trim();
+        if (card) result[cat.key] = card.textContent.trim();
       }
     }
   }
@@ -1529,7 +1522,7 @@ function _renderScriptContent(script, meta) {
   }
 
   // KB elements display — prefer _kb_combination (actual entry IDs) over kb_elements_used (text from Claude)
-  const _kbCatLabels = {structures:'架構', hooks:'鉤子', elements:'元素', payoffs:'爽點', pacing:'節奏', dialogues:'對白', visual_scenes:'視覺場景', ending_hooks:'結尾鉤子', tension_actions:'張力行為', genres:'類型', styles:'風格'};
+  const _kbCatLabels = {buildings:'建築', routes:'路線', zones:'區域', encounters:'遭遇', found_items:'發現物品', traps:'陷阱/危機', clues:'線索', atmosphere:'氛圍', endings:'結局', tension_curves:'張力曲線', series_hooks:'系列連結'};
   if (script._kb_combination) {
     const userSel = script._kb_user_selected || [];
     html += '<div style="margin-bottom:12px;padding:8px 12px;background:rgba(0,184,148,0.1);border-radius:6px;font-size:0.85rem">';
@@ -1545,10 +1538,11 @@ function _renderScriptContent(script, meta) {
     html += '<div style="margin-bottom:12px;padding:8px 12px;background:rgba(0,184,148,0.1);border-radius:6px;font-size:0.85rem">';
     html += '<strong>知識庫元素:</strong><br>';
     const kbe = script.kb_elements_used;
-    if (kbe.structure) html += `架構: ${esc(kbe.structure)}<br>`;
-    if (kbe.hooks) html += `鉤子: ${kbe.hooks.map(h => esc(h)).join(', ')}<br>`;
-    if (kbe.elements) html += `元素: ${kbe.elements.map(e => esc(e)).join(', ')}<br>`;
-    if (kbe.payoffs) html += `爽點: ${kbe.payoffs.map(p => esc(p)).join(', ')}`;
+    if (kbe.buildings) html += `建築: ${Array.isArray(kbe.buildings) ? kbe.buildings.map(b => esc(b)).join(', ') : esc(kbe.buildings)}<br>`;
+    if (kbe.zones) html += `區域: ${Array.isArray(kbe.zones) ? kbe.zones.map(z => esc(z)).join(', ') : esc(kbe.zones)}<br>`;
+    if (kbe.encounters) html += `遭遇: ${Array.isArray(kbe.encounters) ? kbe.encounters.map(e => esc(e)).join(', ') : esc(kbe.encounters)}<br>`;
+    if (kbe.found_items) html += `發現物品: ${Array.isArray(kbe.found_items) ? kbe.found_items.map(f => esc(f)).join(', ') : esc(kbe.found_items)}<br>`;
+    if (kbe.traps) html += `陷阱/危機: ${Array.isArray(kbe.traps) ? kbe.traps.map(h => esc(h)).join(', ') : esc(kbe.traps)}`;
     html += '</div>';
   }
 
@@ -2114,17 +2108,17 @@ async function showVideoSetInPanel(setId) {
 // ══════════════════════════════════════════
 
 const KB_CAT_LABELS = {
-  structures: '架構模板',
-  hooks: '鉤子庫',
-  elements: '元素庫',
-  payoffs: '爽點庫',
-  pacing: '節奏模板',
-  dialogues: '對白模式',
-  visual_scenes: '視覺場景',
-  ending_hooks: '結尾鉤子',
-  tension_actions: '張力行為',
-  genres: '劇本類型',
-  styles: '風格',
+  buildings: '建築類型',
+  routes: '路線/動線',
+  zones: '探索區域',
+  encounters: '遭遇事件',
+  found_items: '發現物品',
+  traps: '陷阱/危機',
+  clues: '線索/敘事碎片',
+  atmosphere: '氛圍觸發器',
+  endings: '結局類型',
+  tension_curves: '張力/緊張感曲線',
+  series_hooks: '系列連結',
 };
 
 async function refreshKB() {
@@ -2159,8 +2153,8 @@ function renderKBStats(stats) {
 
   cardsHtml += `
     <div class="kb-stat-card">
-      <div class="kb-stat-num">${stats.dramas || 0}</div>
-      <div class="kb-stat-label">已分析劇目</div>
+      <div class="kb-stat-num">${stats.videos || stats.dramas || 0}</div>
+      <div class="kb-stat-label">已分析影片</div>
     </div>`;
 
   el.innerHTML = cardsHtml;
@@ -2181,7 +2175,7 @@ async function loadKBCategory(category) {
     const resp = await fetch('/api/knowledge/' + category);
     const data = (await resp.json()).data || [];
     if (!data.length) {
-      el.innerHTML = '<div class="preview-empty">此分類尚無條目。請先分析劇目入庫。</div>';
+      el.innerHTML = '<div class="preview-empty">此分類尚無條目。請先分析探索影片入庫。</div>';
       return;
     }
     el.innerHTML = data.map(e => renderKBCard(e)).join('');
@@ -2249,7 +2243,7 @@ async function showKBDetail(category, entryId) {
       html += '<h4 style="color:var(--accent-light);margin-bottom:8px">範例片段</h4>';
       for (const ex of entry.examples) {
         html += `<div class="analysis-section" style="margin-bottom:8px">
-          <div style="font-weight:600;margin-bottom:4px">${esc(ex.drama_title || '未知劇目')}</div>
+          <div style="font-weight:600;margin-bottom:4px">${esc(ex.video_title || ex.drama_title || '未知影片')}</div>
           <div style="font-size:0.85rem;border-left:3px solid var(--accent);padding-left:12px;margin-top:4px">${esc(ex.excerpt || '')}</div>
           ${ex.context ? '<div style="font-size:0.8rem;color:var(--text-muted);margin-top:4px">' + esc(ex.context) + '</div>' : ''}
         </div>`;
@@ -2356,7 +2350,7 @@ async function showTrace(itemType, itemId) {
     const chain = await resp.json();
 
     let html = '<div class="trace-chain">';
-    const _kbLabels = {structures:'架構', hooks:'鉤子', elements:'元素', payoffs:'爽點', pacing:'節奏', dialogues:'對白', visual_scenes:'視覺場景', ending_hooks:'結尾鉤子', tension_actions:'張力行為', genres:'類型', styles:'風格'};
+    const _kbLabels = {buildings:'建築', routes:'路線', zones:'區域', encounters:'遭遇', found_items:'發現物品', traps:'陷阱/危機', clues:'線索', atmosphere:'氛圍', endings:'結局', tension_curves:'張力曲線', series_hooks:'系列連結'};
     const upstream = (chain.upstream || []).slice().reverse();
     let kbDetailHtml = '';
     for (const u of upstream) {

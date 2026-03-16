@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_8142ed",
+  "category": "building_types",
+  "subcategory": "醫療設施",
+  "name": "廢棄太平間",
+  "name_en": "Abandoned Morgue",
+  "description": "醫院地下室的太平間，不鏽鋼抽屜半開，冷藏室的壓縮機早已停止運轉。",
+  "tags": [
+    "醫療",
+    "恐怖",
+    "地下"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.302188",
+  "updated_at": "2026-03-16T22:57:30.302188"
+}

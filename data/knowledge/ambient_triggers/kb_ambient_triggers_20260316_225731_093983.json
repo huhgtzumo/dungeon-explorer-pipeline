@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_093983",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "暖氣管突然膨脹",
+  "name_en": "Heating Pipe Expansion",
+  "description": "廢棄的暖氣系統管線突然發出巨大的膨脹聲，像是某個東西在管子裡移動。",
+  "tags": [
+    "管線",
+    "突然",
+    "膨脹"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.788970",
+  "updated_at": "2026-03-16T22:57:31.788970"
+}

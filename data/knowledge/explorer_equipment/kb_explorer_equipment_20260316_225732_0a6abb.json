@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_0a6abb",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "EMF探測器",
+  "name_en": "EMF Detector",
+  "description": "電磁場探測器，常用於偵測異常的電磁波動。",
+  "tags": [
+    "偵測",
+    "科學",
+    "超自然"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.109002",
+  "updated_at": "2026-03-16T22:57:32.109002"
+}

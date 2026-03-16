@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_235900_z12",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "X 光室",
+  "name_en": "X-Ray Room",
+  "description": "巨型 X 光機器仍然佇立在原處，鉛玻璃觀察窗上有手印。",
+  "tags": [
+    "X光",
+    "醫療",
+    "輻射"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

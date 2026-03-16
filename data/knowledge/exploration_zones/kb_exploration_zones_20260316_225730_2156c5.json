@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_2156c5",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "洗衣房",
+  "name_en": "Laundry Room",
+  "description": "大型工業洗衣機排列成行，地上散落著發霉的衣物和床單。",
+  "tags": [
+    "日常",
+    "潮濕",
+    "氣味"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.625167",
+  "updated_at": "2026-03-16T22:57:30.625167"
+}

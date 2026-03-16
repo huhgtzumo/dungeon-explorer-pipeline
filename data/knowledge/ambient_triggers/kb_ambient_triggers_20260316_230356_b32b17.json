@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_b32b17",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "電話鈴聲",
+  "name_en": "Phone Ringing",
+  "description": "廢棄建築中突然響起的電話鈴聲，接起來只有雜訊。",
+  "tags": [
+    "聲音",
+    "電話",
+    "突發"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

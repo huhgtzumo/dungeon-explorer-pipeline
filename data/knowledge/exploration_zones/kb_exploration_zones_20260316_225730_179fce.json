@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_179fce",
+  "category": "exploration_zones",
+  "subcategory": "走廊通道",
+  "name": "地下隧道",
+  "name_en": "Underground Tunnel",
+  "description": "連接不同區域的地下通道，牆壁滲水，地面積水沒過腳踝。",
+  "tags": [
+    "地下",
+    "潮濕",
+    "連接"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.495343",
+  "updated_at": "2026-03-16T22:57:30.495343"
+}

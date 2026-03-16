@@ -1,0 +1,18 @@
+{
+  "id": "kb_route_paths_20260316_225730_c132f4",
+  "category": "route_paths",
+  "subcategory": "",
+  "name": "管道間",
+  "name_en": "Utility Shaft",
+  "description": "通過外部的設備管道間進入，在管線叢中找到通往內部的通道。",
+  "tags": [
+    "技術",
+    "管道",
+    "狹窄"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.770684",
+  "updated_at": "2026-03-16T22:57:30.770684"
+}

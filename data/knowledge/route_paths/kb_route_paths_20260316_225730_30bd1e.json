@@ -1,0 +1,18 @@
+{
+  "id": "kb_route_paths_20260316_225730_30bd1e",
+  "category": "route_paths",
+  "subcategory": "",
+  "name": "窗戶翻入",
+  "name_en": "Window Climb",
+  "description": "從破碎的窗戶攀爬進入，玻璃碎片在手電筒下閃爍，落地時揚起一陣灰塵。",
+  "tags": [
+    "攀爬",
+    "碎玻璃",
+    "隱蔽"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.657715",
+  "updated_at": "2026-03-16T22:57:30.657715"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_235900_z02",
+  "category": "exploration_zones",
+  "subcategory": "特殊區域",
+  "name": "隔離囚室",
+  "name_en": "Isolation Cell",
+  "description": "四面是軟墊的隔離囚室，門外有觀察窗，地板上有多道抓痕。",
+  "tags": [
+    "隔離",
+    "精神病",
+    "囚禁"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

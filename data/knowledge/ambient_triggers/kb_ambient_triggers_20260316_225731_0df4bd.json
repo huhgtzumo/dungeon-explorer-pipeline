@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_0df4bd",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "電磁嗡嗡聲",
+  "name_en": "Electromagnetic Hum",
+  "description": "一種低頻的嗡嗡聲充斥空間，找不到來源，讓人頭疼。",
+  "tags": [
+    "低頻",
+    "電磁",
+    "不適"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.728421",
+  "updated_at": "2026-03-16T22:57:31.728421"
+}

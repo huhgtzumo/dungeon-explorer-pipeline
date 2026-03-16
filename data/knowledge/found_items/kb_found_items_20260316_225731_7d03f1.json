@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_225731_7d03f1",
+  "category": "found_items",
+  "subcategory": "神秘物件",
+  "name": "壁畫/塗鴉",
+  "name_en": "Wall Mural/Graffiti",
+  "description": "牆上大面積的塗鴉或壁畫，混雜著警告標語、宗教符號和看不懂的圖案。",
+  "tags": [
+    "藝術",
+    "訊息",
+    "前人"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.109248",
+  "updated_at": "2026-03-16T22:57:31.109248"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_235900_z04",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "配電間",
+  "name_en": "Electrical Room",
+  "description": "密密麻麻的老舊電路和斷路器，空氣中有焦味，電線的絕緣層已龜裂。",
+  "tags": [
+    "電力",
+    "配電",
+    "危險"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

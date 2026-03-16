@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_c3605a",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "塵埃光柱",
+  "name_en": "Dust Light Beam",
+  "description": "月光或手電筒穿過縫隙形成光柱，大量灰塵在其中漂浮翻騰。",
+  "tags": [
+    "視覺",
+    "光線",
+    "氛圍"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

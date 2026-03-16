@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_225731_2de626",
+  "category": "traps_hazards",
+  "subcategory": "機關陷阱",
+  "name": "升降梯突然啟動",
+  "name_en": "Elevator Activates",
+  "description": "廢棄的電梯突然運轉起來，金屬摩擦的尖叫聲在電梯井中迴響。",
+  "tags": [
+    "電梯",
+    "機械",
+    "驚嚇"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.239466",
+  "updated_at": "2026-03-16T22:57:31.239466"
+}

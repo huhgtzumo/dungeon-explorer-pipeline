@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_cb4ee4",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "回音放大",
+  "name_en": "Echo Amplification",
+  "description": "自己的腳步和呼吸在空間中被異常放大，彷彿有人在模仿。",
+  "tags": [
+    "回音",
+    "放大",
+    "模仿"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.718731",
+  "updated_at": "2026-03-16T22:57:31.718731"
+}

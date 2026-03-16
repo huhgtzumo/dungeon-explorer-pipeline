@@ -1,0 +1,18 @@
+{
+  "id": "kb_ending_types_20260316_225731_68b742",
+  "category": "ending_types",
+  "subcategory": "",
+  "name": "照片證據",
+  "name_en": "Photo Evidence",
+  "description": "結尾展示探索中拍的照片，放大後每張照片背景都有同一個不該在那裡的東西。",
+  "tags": [
+    "照片",
+    "放大",
+    "發現"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.959156",
+  "updated_at": "2026-03-16T22:57:31.959156"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_weather_conditions_20260316_225731_3b156d",
+  "category": "weather_conditions",
+  "subcategory": "",
+  "name": "沙塵暴",
+  "name_en": "Sandstorm",
+  "description": "黃沙漫天，能見度幾乎為零，沙粒打在皮膚上隱隱作痛。",
+  "tags": [
+    "沙塵",
+    "能見度",
+    "惡劣"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.623609",
+  "updated_at": "2026-03-16T22:57:31.623609"
+}

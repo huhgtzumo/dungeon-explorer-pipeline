@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_8457dc",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "撬棍",
+  "name_en": "Crowbar",
+  "description": "萬用工具——撬門、撬窗、清除障礙物，必要時也是防身武器。",
+  "tags": [
+    "工具",
+    "力量",
+    "多用"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.135588",
+  "updated_at": "2026-03-16T22:57:32.135588"
+}

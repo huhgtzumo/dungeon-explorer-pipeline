@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_235900_e21",
+  "category": "encounters",
+  "subcategory": "視覺異常",
+  "name": "鏡中身影延遲",
+  "name_en": "Mirror Lag",
+  "description": "站在鏡子前，鏡中的自己動作比實際晚了一秒才跟上。",
+  "tags": [
+    "鏡子",
+    "延遲",
+    "恐怖"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

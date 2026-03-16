@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_1a3ebe",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "都市更新失敗",
+  "name_en": "Failed Urban Renewal",
+  "description": "都更計劃中途擱置，居民已搬走但新建設從未開始，留下一片荒涼。",
+  "tags": [
+    "城市",
+    "政策",
+    "經濟"
+  ],
+  "examples": [],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.430682",
+  "updated_at": "2026-03-16T22:57:30.430682"
+}

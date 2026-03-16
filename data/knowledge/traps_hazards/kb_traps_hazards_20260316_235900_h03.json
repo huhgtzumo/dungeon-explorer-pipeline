@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_235900_h03",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "放射性材料",
+  "name_en": "Radioactive Materials",
+  "description": "廢棄的放射性物質標誌警告，輻射計偵測器顯示讀數異常偏高。",
+  "tags": [
+    "輻射",
+    "化學",
+    "危險"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

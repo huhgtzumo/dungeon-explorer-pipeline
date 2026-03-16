@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_235900_e09",
+  "category": "encounters",
+  "subcategory": "物理異常",
+  "name": "時鐘停在特定時間",
+  "name_en": "Stopped Clock",
+  "description": "房間裡的所有時鐘全都停在同一個時間點，電池還是新的。",
+  "tags": [
+    "時鐘",
+    "時間",
+    "詭異"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

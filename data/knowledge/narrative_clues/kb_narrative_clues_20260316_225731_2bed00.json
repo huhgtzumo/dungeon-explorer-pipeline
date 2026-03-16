@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_225731_2bed00",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "逃生路線圖",
+  "name_en": "Escape Route Map",
+  "description": "某人在牆上畫的逃生路線，但路線的終點被用紅色大叉劃掉了。",
+  "tags": [
+    "地圖",
+    "逃生",
+    "失敗"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.335839",
+  "updated_at": "2026-03-16T22:57:31.335839"
+}

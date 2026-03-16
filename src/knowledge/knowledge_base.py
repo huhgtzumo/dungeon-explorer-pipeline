@@ -1,7 +1,10 @@
-"""Knowledge Base system for drama pattern storage and retrieval.
+"""Knowledge Base system for exploration element storage and retrieval.
 
-Stores reusable drama elements (structures, hooks, character archetypes, payoffs, pacing,
-dialogues, visual_scenes, ending_hooks, tension_actions) extracted from analyzed dramas.
+Stores reusable exploration elements across 15 categories (building_types,
+building_backstories, exploration_zones, route_paths, encounters, found_items,
+traps_hazards, narrative_clues, time_settings, weather_conditions,
+ambient_triggers, tension_curves, ending_types, exploration_motives,
+explorer_equipment) for dungeon/urbex exploration script generation.
 Supports weighted random combination for script generation.
 
 Storage: data/knowledge/
@@ -25,35 +28,51 @@ KB_ROOT = PROJECT_ROOT / "data" / "knowledge"
 KB_INDEX_PATH = KB_ROOT / "kb_index.json"
 
 CATEGORIES = (
-    "structures",
-    "hooks",
-    "elements",
-    "payoffs",
-    "pacing",
-    "dialogues",
-    "visual_scenes",
-    "ending_hooks",
-    "tension_actions",
-    "genres",
-    "styles",
+    # 場景層 (Scene Layer)
+    "building_types",
+    "building_backstories",
+    "exploration_zones",
+    "route_paths",
+    # 事件層 (Event Layer)
+    "encounters",
+    "found_items",
+    "traps_hazards",
+    "narrative_clues",
+    # 氛圍層 (Atmosphere Layer)
+    "time_settings",
+    "weather_conditions",
+    "ambient_triggers",
+    # 結構層 (Structure Layer)
+    "tension_curves",
+    "ending_types",
+    "exploration_motives",
+    "explorer_equipment",
 )
 
 CATEGORY_LABELS = {
-    "structures": "架構模板",
-    "hooks": "開場鉤子",
-    "elements": "元素庫",
-    "payoffs": "爽點庫",
-    "pacing": "節奏模板",
-    "dialogues": "對白模式",
-    "visual_scenes": "視覺場景",
-    "ending_hooks": "結尾鉤子",
-    "tension_actions": "張力行為",
-    "genres": "劇本類型",
-    "styles": "風格",
+    "building_types": "建築類型",
+    "building_backstories": "廢棄原因",
+    "exploration_zones": "探索區域",
+    "route_paths": "動線路徑",
+    "encounters": "遭遇事件",
+    "found_items": "發現物品",
+    "traps_hazards": "陷阱危機",
+    "narrative_clues": "敘事線索",
+    "time_settings": "時間設定",
+    "weather_conditions": "天氣狀況",
+    "ambient_triggers": "氛圍觸發",
+    "tension_curves": "張力曲線",
+    "ending_types": "結局類型",
+    "exploration_motives": "探索動機",
+    "explorer_equipment": "探索者裝備",
 }
 
 SUBCATEGORIES = {
-    "elements": ("人設", "場景", "關係", "人設組合", "道具", "職業", "背景設定"),
+    "building_types": ("醫療設施", "軍事設施", "教育設施", "工業設施", "宗教設施", "居住設施", "地下設施", "公共設施", "其他"),
+    "exploration_zones": ("走廊通道", "功能房間", "地下空間", "特殊區域", "頂層空間", "其他"),
+    "encounters": ("視覺異常", "聽覺異常", "物理異常", "環境異常", "心理異常", "其他"),
+    "found_items": ("文件記錄", "個人物品", "工具設備", "神秘物件", "其他"),
+    "traps_hazards": ("結構危險", "環境危險", "機關陷阱", "其他"),
 }
 
 
@@ -68,7 +87,7 @@ def _ensure_dirs() -> None:
     KB_ROOT.mkdir(parents=True, exist_ok=True)
     for cat in CATEGORIES:
         (KB_ROOT / cat).mkdir(exist_ok=True)
-    (KB_ROOT / "dramas").mkdir(exist_ok=True)
+    (KB_ROOT / "videos").mkdir(exist_ok=True)
 
 
 def _read_kb_index() -> list[dict]:
@@ -121,7 +140,7 @@ def _atomic_update_index(updater) -> Any:
 
 
 class KnowledgeBase:
-    """Read/write interface for the drama knowledge base at data/knowledge/."""
+    """Read/write interface for the exploration knowledge base at data/knowledge/."""
 
     def __init__(self) -> None:
         _ensure_dirs()
@@ -199,14 +218,14 @@ class KnowledgeBase:
         return entry
 
     def save_drama(self, video_id: str, data: dict) -> None:
-        """Save a fully analyzed drama record."""
+        """Save a fully analyzed exploration video record."""
         _ensure_dirs()
-        path = KB_ROOT / "dramas" / f"{video_id}.json"
+        path = KB_ROOT / "videos" / f"{video_id}.json"
         path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
     def has_drama(self, video_id: str) -> bool:
-        """Check if a drama has already been analyzed and stored."""
-        path = KB_ROOT / "dramas" / f"{video_id}.json"
+        """Check if a video has already been analyzed and stored."""
+        path = KB_ROOT / "videos" / f"{video_id}.json"
         return path.exists()
 
     # ── Query ──
@@ -284,8 +303,8 @@ class KnowledgeBase:
             count = len(entries)
             stats["total"] += count
             cat_stats: dict[str, Any] = {"count": count, "label": CATEGORY_LABELS.get(cat, cat)}
-            # Subcategory breakdown for elements
-            if cat == "elements" and entries:
+            # Subcategory breakdown for categories that have subcategories
+            if cat in SUBCATEGORIES and entries:
                 sub_counts: dict[str, int] = {}
                 for fpath in entries:
                     try:
@@ -296,22 +315,17 @@ class KnowledgeBase:
                         pass
                 cat_stats["subcategories"] = sub_counts
             stats["categories"][cat] = cat_stats
-        # Drama count
-        dramas_dir = KB_ROOT / "dramas"
-        stats["dramas"] = len(list(dramas_dir.glob("*.json"))) if dramas_dir.exists() else 0
+        # Analyzed video count
+        videos_dir = KB_ROOT / "videos"
+        stats["videos"] = len(list(videos_dir.glob("*.json"))) if videos_dir.exists() else 0
         return stats
 
     def get_random_combination(self, config: dict | None = None) -> dict:
-        """Pick random elements from each category for script generation.
+        """Pick random elements from each category for exploration script generation.
 
         config can contain:
-            tags: list[str] — filter entries by tags
-            structure_count: int (default 1)
-            hook_count: int (default 2-3)
-            element_count: int (default 3-5)
-            payoff_count: int (default 2-3)
-            pacing_count, dialogue_count, visual_scene_count,
-            ending_hook_count, tension_action_count: int
+            tags: list[str] -- filter entries by tags
+            {category}_count: int -- override pick count per category
 
         Selection is weighted by effectiveness_score.
         """
@@ -336,30 +350,28 @@ class KnowledgeBase:
                 pool = [(e, w) for e, w in pool if e["id"] != chosen["id"]]
             return selected
 
-        structure_count = config.get("structure_count", 1)
-        hook_count = config.get("hook_count", random.randint(2, 3))
-        element_count = config.get("element_count", random.randint(3, 5))
-        payoff_count = config.get("payoff_count", random.randint(2, 3))
-        pacing_count = config.get("pacing_count", 1)
-        dialogue_count = config.get("dialogue_count", random.randint(1, 3))
-        visual_scene_count = config.get("visual_scene_count", random.randint(1, 3))
-        ending_hook_count = config.get("ending_hook_count", random.randint(1, 2))
-        tension_action_count = config.get("tension_action_count", random.randint(1, 3))
-        genre_count = config.get("genre_count", 1)
-        style_count = config.get("style_count", 1)
+        # Default pick counts per category
+        defaults = {
+            "building_types": 1,
+            "building_backstories": 1,
+            "exploration_zones": random.randint(3, 5),
+            "route_paths": 1,
+            "encounters": random.randint(3, 5),
+            "found_items": random.randint(1, 3),
+            "traps_hazards": random.randint(1, 2),
+            "narrative_clues": random.randint(1, 3),
+            "time_settings": 1,
+            "weather_conditions": 1,
+            "ambient_triggers": random.randint(2, 3),
+            "tension_curves": 1,
+            "ending_types": 1,
+            "exploration_motives": 1,
+            "explorer_equipment": random.randint(2, 4),
+        }
 
         return {
-            "structures": _pick("structures", structure_count),
-            "hooks": _pick("hooks", hook_count),
-            "elements": _pick("elements", element_count),
-            "payoffs": _pick("payoffs", payoff_count),
-            "pacing": _pick("pacing", pacing_count),
-            "dialogues": _pick("dialogues", dialogue_count),
-            "visual_scenes": _pick("visual_scenes", visual_scene_count),
-            "ending_hooks": _pick("ending_hooks", ending_hook_count),
-            "tension_actions": _pick("tension_actions", tension_action_count),
-            "genres": _pick("genres", genre_count),
-            "styles": _pick("styles", style_count),
+            cat: _pick(cat, config.get(f"{cat}_count", default))
+            for cat, default in defaults.items()
         }
 
     def find_similar(self, category: str, name: str) -> dict | None:

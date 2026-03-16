@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_96364c",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "溫度驟降",
+  "name_en": "Sudden Temperature Drop",
+  "description": "進入特定區域時體感溫度急劇下降，呼出的氣息凝成白霧。",
+  "tags": [
+    "溫度",
+    "體感",
+    "環境"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

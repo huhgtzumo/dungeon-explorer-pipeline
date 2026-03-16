@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_225730_f6325e",
+  "category": "encounters",
+  "subcategory": "物理異常",
+  "name": "手電筒閃爍",
+  "name_en": "Flashlight Flickers",
+  "description": "手電筒突然開始不穩定地閃爍，光束忽明忽暗，但電池是全新的。",
+  "tags": [
+    "燈光",
+    "設備",
+    "不安"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.781462",
+  "updated_at": "2026-03-16T22:57:30.781462"
+}

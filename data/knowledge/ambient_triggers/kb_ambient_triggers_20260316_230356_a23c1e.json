@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_a23c1e",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "鏡面反射異常",
+  "name_en": "Mirror Reflection Anomaly",
+  "description": "破碎鏡面中的倒影似乎有微妙的延遲，或角度不太正確。",
+  "tags": [
+    "視覺",
+    "鏡子",
+    "異常"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

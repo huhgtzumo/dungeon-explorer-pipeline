@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_9ec73a",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "EMF讀數飆升",
+  "name_en": "EMF Spike",
+  "description": "電磁場偵測器突然發出急促的警報聲，讀數瞬間衝到紅區。",
+  "tags": [
+    "設備",
+    "電磁",
+    "偵測"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

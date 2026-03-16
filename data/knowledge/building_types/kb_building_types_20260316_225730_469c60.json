@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_469c60",
+  "category": "building_types",
+  "subcategory": "教育設施",
+  "name": "荒廢學校",
+  "name_en": "Abandoned School",
+  "description": "空蕩的教室裡課桌椅依然排列，黑板上殘留最後一堂課的板書。",
+  "tags": [
+    "教育",
+    "懷舊",
+    "日常"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.148278",
+  "updated_at": "2026-03-16T22:57:30.148278"
+}

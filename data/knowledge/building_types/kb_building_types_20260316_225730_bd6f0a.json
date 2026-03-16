@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_bd6f0a",
+  "category": "building_types",
+  "subcategory": "居住設施",
+  "name": "廢棄豪宅",
+  "name_en": "Abandoned Mansion",
+  "description": "曾經輝煌的大宅，水晶吊燈蒙塵，壁爐前的扶手椅覆蓋著白布。",
+  "tags": [
+    "居住",
+    "豪華",
+    "鬼屋"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.200657",
+  "updated_at": "2026-03-16T22:57:30.200657"
+}

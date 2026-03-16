@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_61b24b",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "水龍頭自轉",
+  "name_en": "Faucet Self-Turn",
+  "description": "廢棄洗手間的水龍頭突然打開，流出鏽紅色的水。",
+  "tags": [
+    "水",
+    "機械",
+    "突發"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

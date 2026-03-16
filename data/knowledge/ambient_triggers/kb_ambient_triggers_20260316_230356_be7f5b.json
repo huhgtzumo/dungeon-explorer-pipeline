@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_be7f5b",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "影子移動",
+  "name_en": "Shadow Movement",
+  "description": "手電筒照不到的角落，影子似乎獨立於光源在移動。",
+  "tags": [
+    "視覺",
+    "影子",
+    "驚悚"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

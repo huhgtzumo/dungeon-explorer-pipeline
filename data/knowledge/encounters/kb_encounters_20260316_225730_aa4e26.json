@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_225730_aa4e26",
+  "category": "encounters",
+  "subcategory": "聽覺異常",
+  "name": "遠處腳步聲",
+  "name_en": "Distant Footsteps",
+  "description": "走廊盡頭傳來清晰的腳步聲，由遠而近，但目光所及之處空無一人。",
+  "tags": [
+    "聲音",
+    "腳步",
+    "接近"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.785741",
+  "updated_at": "2026-03-16T22:57:30.785741"
+}

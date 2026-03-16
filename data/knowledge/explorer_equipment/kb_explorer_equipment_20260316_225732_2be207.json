@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_2be207",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "對講機",
+  "name_en": "Walkie-Talkie",
+  "description": "與留在外面的夥伴保持通訊的對講機，但越深入信號越差。",
+  "tags": [
+    "通訊",
+    "夥伴",
+    "信號"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.118766",
+  "updated_at": "2026-03-16T22:57:32.118766"
+}

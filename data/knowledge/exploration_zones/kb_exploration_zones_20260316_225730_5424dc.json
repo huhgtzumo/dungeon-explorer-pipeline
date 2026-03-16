@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_5424dc",
+  "category": "exploration_zones",
+  "subcategory": "特殊區域",
+  "name": "彈藥庫",
+  "name_en": "Ammunition Storage",
+  "description": "厚重防爆門後的彈藥庫，金屬架上空空如也，但角落似乎還有遺漏的東西。",
+  "tags": [
+    "軍事",
+    "危險",
+    "封鎖"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.627226",
+  "updated_at": "2026-03-16T22:57:30.627226"
+}

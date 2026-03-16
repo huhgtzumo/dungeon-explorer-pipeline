@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_2b98ef",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "窗簾飄動",
+  "name_en": "Curtain Flutter",
+  "description": "殘破的窗簾被看不見的風吹得輕輕飄動，在手電筒光中投射出舞動的影子。",
+  "tags": [
+    "窗簾",
+    "風",
+    "影子"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.734314",
+  "updated_at": "2026-03-16T22:57:31.734314"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_c22912",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "集體自殺",
+  "name_en": "Mass Suicide",
+  "description": "一群人在此地集體結束生命，事件震驚社會。此後無人敢踏入，成為禁忌之地。",
+  "tags": [
+    "死亡",
+    "禁忌",
+    "心理"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.419459",
+  "updated_at": "2026-03-16T22:57:30.419459"
+}

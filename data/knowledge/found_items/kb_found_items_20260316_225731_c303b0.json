@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_225731_c303b0",
+  "category": "found_items",
+  "subcategory": "神秘物件",
+  "name": "神秘符號",
+  "name_en": "Mysterious Symbols",
+  "description": "牆上或地板上刻劃的不明符號，不像任何已知的語言或宗教符號。",
+  "tags": [
+    "符號",
+    "神秘",
+    "儀式"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.016460",
+  "updated_at": "2026-03-16T22:57:31.016460"
+}

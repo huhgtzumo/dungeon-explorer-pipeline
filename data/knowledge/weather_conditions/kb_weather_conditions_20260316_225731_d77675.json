@@ -1,0 +1,18 @@
+{
+  "id": "kb_weather_conditions_20260316_225731_d77675",
+  "category": "weather_conditions",
+  "subcategory": "",
+  "name": "寂靜無風",
+  "name_en": "Dead Calm",
+  "description": "沒有一絲風的夜晚，空氣凝滯不動，寂靜得能聽見自己的心跳。",
+  "tags": [
+    "安靜",
+    "無風",
+    "壓迫"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.572327",
+  "updated_at": "2026-03-16T22:57:31.572327"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_235900_e13",
+  "category": "encounters",
+  "subcategory": "心理異常",
+  "name": "強烈的被監視感",
+  "name_en": "Being Watched",
+  "description": "全身汗毛豎起，強烈感覺到有東西在黑暗中盯著自己看。",
+  "tags": [
+    "心理",
+    "監視",
+    "恐懼"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

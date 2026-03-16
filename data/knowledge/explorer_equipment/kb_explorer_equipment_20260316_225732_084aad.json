@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_084aad",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "雷射測距儀",
+  "name_en": "Laser Rangefinder",
+  "description": "測量空間距離和深度，特別適用於評估地下空間或深坑的深度。",
+  "tags": [
+    "測量",
+    "科技",
+    "評估"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.191689",
+  "updated_at": "2026-03-16T22:57:32.191689"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_235900_z13",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "火化爐間",
+  "name_en": "Cremation Room",
+  "description": "工業用火化爐的金屬門敞開著，爐內壁有白色的殘留物。",
+  "tags": [
+    "火化",
+    "死亡",
+    "煙燻"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

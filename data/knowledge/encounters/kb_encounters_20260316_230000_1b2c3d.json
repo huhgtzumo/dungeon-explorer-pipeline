@@ -1,0 +1,14 @@
+{
+  "id": "kb_encounters_20260316_230000_1b2c3d",
+  "category": "encounters",
+  "subcategory": "聽覺異常",
+  "name": "收音機雜訊中的人聲",
+  "name_en": "Voice in Radio Static",
+  "description": "對講機突然收到不明頻率的訊號，雜訊中隱約可以聽到重複的人聲片段。",
+  "tags": ["收音機", "雜訊", "人聲"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

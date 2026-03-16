@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_dee816",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "醫療醜聞",
+  "name_en": "Medical Scandal",
+  "description": "曝光非法人體實驗或醫療疏失醜聞，媒體風暴下被迫關閉並接受調查。",
+  "tags": [
+    "醫療",
+    "醜聞",
+    "犯罪"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.445732",
+  "updated_at": "2026-03-16T22:57:30.445732"
+}

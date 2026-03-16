@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_235900_z06",
+  "category": "exploration_zones",
+  "subcategory": "地下空間",
+  "name": "爬行通道",
+  "name_en": "Crawl Space",
+  "description": "只能匍匐前進的狹窄空間，裡面的黑暗完全吞噬了手電筒的光線。",
+  "tags": [
+    "爬行",
+    "狹窄",
+    "黑暗"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

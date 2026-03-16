@@ -1,0 +1,18 @@
+{
+  "id": "kb_weather_conditions_20260316_225731_fb85b0",
+  "category": "weather_conditions",
+  "subcategory": "",
+  "name": "暴雨傾盆",
+  "name_en": "Heavy Rain",
+  "description": "持續的大雨讓室外一片朦朧，雨水沿著牆壁裂縫流入建築內部。",
+  "tags": [
+    "雨",
+    "潮濕",
+    "聲音"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.553727",
+  "updated_at": "2026-03-16T22:57:31.553727"
+}

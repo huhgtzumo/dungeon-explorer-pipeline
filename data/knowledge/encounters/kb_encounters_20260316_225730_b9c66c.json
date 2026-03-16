@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_225730_b9c66c",
+  "category": "encounters",
+  "subcategory": "物理異常",
+  "name": "鎖上的門自行開啟",
+  "name_en": "Locked Door Opens",
+  "description": "一扇明明上鎖的門，在你轉身時喀嚓一聲彈開了。",
+  "tags": [
+    "門",
+    "解鎖",
+    "邀請"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.946360",
+  "updated_at": "2026-03-16T22:57:30.946360"
+}

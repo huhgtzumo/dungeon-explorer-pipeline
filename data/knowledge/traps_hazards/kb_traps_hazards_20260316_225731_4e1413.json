@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_225731_4e1413",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "有毒氣體",
+  "name_en": "Toxic Gas",
+  "description": "空氣中開始瀰漫一股刺鼻的化學氣味，頭開始暈眩。",
+  "tags": [
+    "化學",
+    "窒息",
+    "緊急"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.175060",
+  "updated_at": "2026-03-16T22:57:31.175060"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_tension_curves_20260316_225731_7ccd9e",
+  "category": "tension_curves",
+  "subcategory": "",
+  "name": "先平後爆",
+  "name_en": "Calm Then Explosion",
+  "description": "大部分時間維持低張力的探索節奏，在某個瞬間突然爆發極大恐懼。",
+  "tags": [
+    "反差",
+    "突然",
+    "衝擊"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.825926",
+  "updated_at": "2026-03-16T22:57:31.825926"
+}

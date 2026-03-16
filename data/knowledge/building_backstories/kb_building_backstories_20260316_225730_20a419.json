@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_20a419",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "核洩漏",
+  "name_en": "Nuclear Leak",
+  "description": "附近核設施發生洩漏事故，整個區域被劃為禁區，居民永久撤離。",
+  "tags": [
+    "核災",
+    "輻射",
+    "永久"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.384310",
+  "updated_at": "2026-03-16T22:57:30.384310"
+}

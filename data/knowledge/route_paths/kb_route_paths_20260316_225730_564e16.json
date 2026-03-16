@@ -1,0 +1,18 @@
+{
+  "id": "kb_route_paths_20260316_225730_564e16",
+  "category": "route_paths",
+  "subcategory": "",
+  "name": "通風口",
+  "name_en": "Ventilation Opening",
+  "description": "拆開外牆的大型通風口格柵，勉強擠入通風管道系統。",
+  "tags": [
+    "幽閉",
+    "管道",
+    "困難"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.723881",
+  "updated_at": "2026-03-16T22:57:30.723881"
+}

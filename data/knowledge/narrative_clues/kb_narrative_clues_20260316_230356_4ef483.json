@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_230356_4ef483",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "地圖上的標記",
+  "name_en": "Map Markings",
+  "description": "一張手繪地圖，標記出幾個位置並用紅筆畫了大叉。",
+  "tags": [
+    "地圖",
+    "標記",
+    "路線"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

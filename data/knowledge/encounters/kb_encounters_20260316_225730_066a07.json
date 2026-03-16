@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_225730_066a07",
+  "category": "encounters",
+  "subcategory": "物理異常",
+  "name": "被移動的物品",
+  "name_en": "Moved Objects",
+  "description": "回到之前經過的房間，發現桌上的物品位置明顯改變了。",
+  "tags": [
+    "物品",
+    "改變",
+    "不安"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.917337",
+  "updated_at": "2026-03-16T22:57:30.917337"
+}

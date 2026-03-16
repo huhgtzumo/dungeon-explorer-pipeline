@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_235900_h13",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "有毒黴菌孢子",
+  "name_en": "Toxic Mold",
+  "description": "牆壁覆蓋著大量黑色黴菌，呼吸之後喉嚨開始有刺痛感。",
+  "tags": [
+    "黴菌",
+    "毒素",
+    "呼吸"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

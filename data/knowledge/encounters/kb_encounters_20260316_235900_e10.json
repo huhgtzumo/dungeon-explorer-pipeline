@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_235900_e10",
+  "category": "encounters",
+  "subcategory": "視覺異常",
+  "name": "人偶換了位置",
+  "name_en": "Moved Mannequin",
+  "description": "剛才走過時人偶在角落，回頭再看，它站到了走廊中間。",
+  "tags": [
+    "人偶",
+    "移動",
+    "恐怖"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

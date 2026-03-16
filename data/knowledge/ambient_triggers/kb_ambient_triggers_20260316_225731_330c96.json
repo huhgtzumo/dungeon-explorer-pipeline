@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_330c96",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "風灌入裂縫",
+  "name_en": "Wind Through Cracks",
+  "description": "風通過牆壁和窗戶的裂縫擠入，發出低沉的呻吟般的聲音。",
+  "tags": [
+    "風",
+    "呻吟",
+    "建築"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.664523",
+  "updated_at": "2026-03-16T22:57:31.664523"
+}

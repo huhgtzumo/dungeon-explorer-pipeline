@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_235900_z05",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "機房",
+  "name_en": "Server Room",
+  "description": "廢棄的主機架和閃爍的指示燈，某台機器似乎還在以某種方式運作著。",
+  "tags": [
+    "機房",
+    "電腦",
+    "詭異"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

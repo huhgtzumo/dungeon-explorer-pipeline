@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_235900_h11",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "積水電線危險",
+  "name_en": "Flooded Electrical",
+  "description": "地面積水，但牆壁上的電線已經裸露破損，有觸電風險。",
+  "tags": [
+    "積水",
+    "電力",
+    "觸電"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

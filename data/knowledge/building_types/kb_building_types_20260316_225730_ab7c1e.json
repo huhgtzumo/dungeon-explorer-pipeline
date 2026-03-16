@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_ab7c1e",
+  "category": "building_types",
+  "subcategory": "宗教設施",
+  "name": "廢棄神社",
+  "name_en": "Abandoned Shrine",
+  "description": "隱沒在山林中的荒廢神社，鳥居傾斜，石燈籠被藤蔓纏繞。",
+  "tags": [
+    "宗教",
+    "日式",
+    "自然"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.197417",
+  "updated_at": "2026-03-16T22:57:30.197417"
+}

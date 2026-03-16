@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_2ee9ba",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "毒氣外洩",
+  "name_en": "Toxic Gas Leak",
+  "description": "地下管線的有毒氣體外洩事件導致多人中毒，建築被緊急封鎖且從未重新開放。",
+  "tags": [
+    "化學",
+    "危險",
+    "工業"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.421930",
+  "updated_at": "2026-03-16T22:57:30.421930"
+}

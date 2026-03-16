@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_230356_e05eff",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "牆上塗鴉",
+  "name_en": "Wall Graffiti",
+  "description": "潦草的字跡寫著警告或求救信息，有些被人刻意塗抹覆蓋。",
+  "tags": [
+    "文字",
+    "警告",
+    "線索"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_motives_20260316_225732_fa92b5",
+  "category": "exploration_motives",
+  "subcategory": "",
+  "name": "尋寶",
+  "name_en": "Treasure Hunting",
+  "description": "傳聞建築中藏有價值不菲的遺留物品或秘密，值得冒險一探。",
+  "tags": [
+    "寶藏",
+    "貪婪",
+    "回報"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.017801",
+  "updated_at": "2026-03-16T22:57:32.017801"
+}

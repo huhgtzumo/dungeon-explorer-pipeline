@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_225730_4ed96d",
+  "category": "encounters",
+  "subcategory": "物理異常",
+  "name": "設備突然啟動",
+  "name_en": "Equipment Activates",
+  "description": "一台斷電多年的機器突然啟動了幾秒鐘，發出嗡嗡的運轉聲後又歸於沉默。",
+  "tags": [
+    "設備",
+    "電力",
+    "詭異"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.805654",
+  "updated_at": "2026-03-16T22:57:30.805654"
+}

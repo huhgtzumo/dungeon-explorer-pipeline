@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_235900_f15",
+  "category": "found_items",
+  "subcategory": "工具設備",
+  "name": "廢棄急救箱",
+  "name_en": "First Aid Kit",
+  "description": "紅十字標誌的急救箱，裡面的藥品早已過期，但有些東西被拿走了。",
+  "tags": [
+    "醫療",
+    "急救",
+    "謎題"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

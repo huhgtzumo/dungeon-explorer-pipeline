@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_235900_h06",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "大量鼠群",
+  "name_en": "Rat Swarm",
+  "description": "房間裡突然湧出數十隻老鼠，四面八方都是移動的身影和尖叫聲。",
+  "tags": [
+    "老鼠",
+    "動物",
+    "恐慌"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

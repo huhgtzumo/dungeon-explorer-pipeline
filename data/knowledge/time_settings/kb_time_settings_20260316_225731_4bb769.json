@@ -1,0 +1,18 @@
+{
+  "id": "kb_time_settings_20260316_225731_4bb769",
+  "category": "time_settings",
+  "subcategory": "",
+  "name": "午夜",
+  "name_en": "Midnight",
+  "description": "日期交替的時刻，新的一天在黑暗中開始。",
+  "tags": [
+    "午夜",
+    "交替",
+    "標誌"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.463765",
+  "updated_at": "2026-03-16T22:57:31.463765"
+}

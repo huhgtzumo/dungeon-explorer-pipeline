@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_235900_h10",
+  "category": "traps_hazards",
+  "subcategory": "機關陷阱",
+  "name": "鐵鏈封閉出口",
+  "name_en": "Chained Exit",
+  "description": "唯一的出口被厚重的鐵鏈和鎖頭封住，必須找到鑰匙才能離開。",
+  "tags": [
+    "鐵鏈",
+    "被困",
+    "逃脫"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

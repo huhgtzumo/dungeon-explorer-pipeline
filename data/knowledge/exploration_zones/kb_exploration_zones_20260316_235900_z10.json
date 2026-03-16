@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_235900_z10",
+  "category": "exploration_zones",
+  "subcategory": "特殊區域",
+  "name": "亂葬崗",
+  "name_en": "Mass Grave Site",
+  "description": "一片凌亂的土地，地表隆起的規律程度令人不安，插著歪斜的無名墓碑。",
+  "tags": [
+    "墓地",
+    "死亡",
+    "恐怖"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

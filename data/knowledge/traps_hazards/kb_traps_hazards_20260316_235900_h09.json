@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_235900_h09",
+  "category": "traps_hazards",
+  "subcategory": "結構危險",
+  "name": "電梯井墜落風險",
+  "name_en": "Elevator Shaft",
+  "description": "廢棄電梯門大開，門口就是直落數層樓的深井，周圍沒有任何防護。",
+  "tags": [
+    "電梯",
+    "墜落",
+    "致命"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

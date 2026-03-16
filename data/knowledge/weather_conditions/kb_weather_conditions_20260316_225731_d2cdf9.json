@@ -1,0 +1,18 @@
+{
+  "id": "kb_weather_conditions_20260316_225731_d2cdf9",
+  "category": "weather_conditions",
+  "subcategory": "",
+  "name": "萬里無雲",
+  "name_en": "Clear Starry Sky",
+  "description": "異常晴朗的夜空，星光從破損的天花板灑落，形成微弱的自然光。",
+  "tags": [
+    "晴朗",
+    "星光",
+    "寧靜"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.611426",
+  "updated_at": "2026-03-16T22:57:31.611426"
+}

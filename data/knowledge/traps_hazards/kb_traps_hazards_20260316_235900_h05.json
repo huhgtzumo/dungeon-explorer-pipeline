@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_235900_h05",
+  "category": "traps_hazards",
+  "subcategory": "機關陷阱",
+  "name": "假地板",
+  "name_en": "False Floor",
+  "description": "看似堅固的地板下方是空洞，踩上去才發現是薄薄的覆蓋物。",
+  "tags": [
+    "地板",
+    "陷阱",
+    "墜落"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

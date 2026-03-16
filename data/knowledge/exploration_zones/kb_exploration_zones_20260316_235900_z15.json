@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_235900_z15",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "廣播控制室",
+  "name_en": "Broadcasting Room",
+  "description": "廢棄的廣播設備，某個頻道的訊號燈還在微微閃爍。",
+  "tags": [
+    "廣播",
+    "電子",
+    "詭異"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

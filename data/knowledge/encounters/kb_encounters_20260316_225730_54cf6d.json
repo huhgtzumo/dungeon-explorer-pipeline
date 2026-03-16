@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_225730_54cf6d",
+  "category": "encounters",
+  "subcategory": "視覺異常",
+  "name": "文字出現在牆上",
+  "name_en": "Writing Appears on Wall",
+  "description": "回頭時發現剛才乾淨的牆上多了幾個字，字跡模糊但似乎是某種警告。",
+  "tags": [
+    "文字",
+    "牆壁",
+    "警告"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.875799",
+  "updated_at": "2026-03-16T22:57:30.875799"
+}

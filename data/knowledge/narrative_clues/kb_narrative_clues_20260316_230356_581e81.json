@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_230356_581e81",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "保全巡邏日誌",
+  "name_en": "Security Patrol Log",
+  "description": "保全人員的巡邏記錄，最後幾頁的字跡越來越潦草，最終戛然而止。",
+  "tags": [
+    "保全",
+    "日誌",
+    "異常"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

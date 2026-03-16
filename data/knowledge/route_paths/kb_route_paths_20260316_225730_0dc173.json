@@ -1,0 +1,18 @@
+{
+  "id": "kb_route_paths_20260316_225730_0dc173",
+  "category": "route_paths",
+  "subcategory": "",
+  "name": "屋頂天窗",
+  "name_en": "Skylight Entry",
+  "description": "從屋頂破碎的天窗垂降進入，繩索在空曠的大廳上方搖擺。",
+  "tags": [
+    "高處",
+    "垂降",
+    "危險"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.761597",
+  "updated_at": "2026-03-16T22:57:30.761597"
+}

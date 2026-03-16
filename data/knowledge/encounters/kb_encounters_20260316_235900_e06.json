@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_235900_e06",
+  "category": "encounters",
+  "subcategory": "視覺異常",
+  "name": "鏡面文字浮現",
+  "name_en": "Mirror Writing",
+  "description": "起霧的鏡子上出現了文字，像是有人從內側寫上去的。",
+  "tags": [
+    "鏡子",
+    "文字",
+    "恐怖"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

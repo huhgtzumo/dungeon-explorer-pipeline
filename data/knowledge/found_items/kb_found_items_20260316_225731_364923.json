@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_225731_364923",
+  "category": "found_items",
+  "subcategory": "神秘物件",
+  "name": "宗教護身符",
+  "name_en": "Religious Amulet",
+  "description": "某種宗教或民間信仰的護身符，似乎被刻意放在門口或窗台上。",
+  "tags": [
+    "宗教",
+    "保護",
+    "信仰"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.075838",
+  "updated_at": "2026-03-16T22:57:31.075838"
+}

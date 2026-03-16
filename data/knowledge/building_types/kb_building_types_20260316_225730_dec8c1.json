@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_dec8c1",
+  "category": "building_types",
+  "subcategory": "公共設施",
+  "name": "廢棄游泳池",
+  "name_en": "Abandoned Swimming Pool",
+  "description": "乾涸的公共游泳池，瓷磚破裂脫落，更衣室的置物櫃門敞開。",
+  "tags": [
+    "公共",
+    "運動",
+    "詭異"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.230622",
+  "updated_at": "2026-03-16T22:57:30.230622"
+}

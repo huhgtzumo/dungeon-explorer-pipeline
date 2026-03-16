@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_d2b1a7",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "備用電池",
+  "name_en": "Spare Batteries",
+  "description": "大量的備用電池，因為這種地方的設備特別容易莫名其妙地沒電。",
+  "tags": [
+    "電力",
+    "備份",
+    "實用"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.162128",
+  "updated_at": "2026-03-16T22:57:32.162128"
+}

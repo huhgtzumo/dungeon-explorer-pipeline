@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_225731_78b8c6",
+  "category": "traps_hazards",
+  "subcategory": "結構危險",
+  "name": "隱藏的深坑",
+  "name_en": "Hidden Pit",
+  "description": "看似正常的地面覆蓋物下隱藏著一個深坑，一步錯就會掉下去。",
+  "tags": [
+    "陷阱",
+    "隱藏",
+    "墜落"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.262197",
+  "updated_at": "2026-03-16T22:57:31.262197"
+}

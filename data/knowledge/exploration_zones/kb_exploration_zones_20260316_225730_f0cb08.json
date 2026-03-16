@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_f0cb08",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "手術室",
+  "name_en": "Operating Room",
+  "description": "塵封的手術室，無影燈歪斜照向空蕩的手術台，器械托盤上的工具鏽跡斑斑。",
+  "tags": [
+    "醫療",
+    "恐怖",
+    "器具"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.499662",
+  "updated_at": "2026-03-16T22:57:30.499662"
+}

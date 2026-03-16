@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_225730_ff917d",
+  "category": "encounters",
+  "subcategory": "環境異常",
+  "name": "相機異常",
+  "name_en": "Camera Glitch",
+  "description": "GoPro 的畫面突然出現嚴重雜訊和變形，回放時發現有幾幀拍到了不該在那裡的東西。",
+  "tags": [
+    "攝影",
+    "設備",
+    "證據"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.981411",
+  "updated_at": "2026-03-16T22:57:30.981411"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_235900_f13",
+  "category": "found_items",
+  "subcategory": "文件記錄",
+  "name": "監視影像殘片",
+  "name_en": "Security Footage",
+  "description": "半損的安全監控硬碟，裡面的最後一段錄像記錄了某件事發生的全過程。",
+  "tags": [
+    "監控",
+    "影像",
+    "證據"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

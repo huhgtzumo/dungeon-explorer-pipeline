@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_235900_f04",
+  "category": "found_items",
+  "subcategory": "文件記錄",
+  "name": "加密的筆記本",
+  "name_en": "Encrypted Notebook",
+  "description": "密密麻麻的手寫文字，使用了某種不明的替換密碼。",
+  "tags": [
+    "加密",
+    "筆記",
+    "謎題"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

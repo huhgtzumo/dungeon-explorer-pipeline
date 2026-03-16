@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_225731_f6c16b",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "化學品洩漏",
+  "name_en": "Chemical Spill",
+  "description": "架上的舊化學容器傾倒，不明液體流淌一地，接觸皮膚會灼傷。",
+  "tags": [
+    "化學",
+    "危險",
+    "迴避"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.253871",
+  "updated_at": "2026-03-16T22:57:31.253871"
+}

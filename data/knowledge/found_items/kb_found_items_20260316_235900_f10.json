@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_235900_f10",
+  "category": "found_items",
+  "subcategory": "文件記錄",
+  "name": "失蹤者的最後記事",
+  "name_en": "Last Notes",
+  "description": "一份撕裂的便條紙，最後幾行字戛然而止，像是被人打斷。",
+  "tags": [
+    "失蹤",
+    "筆記",
+    "謎題"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

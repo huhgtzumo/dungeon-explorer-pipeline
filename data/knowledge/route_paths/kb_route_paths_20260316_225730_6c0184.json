@@ -1,0 +1,18 @@
+{
+  "id": "kb_route_paths_20260316_225730_6c0184",
+  "category": "route_paths",
+  "subcategory": "",
+  "name": "貨物入口",
+  "name_en": "Loading Dock",
+  "description": "從後方的貨物裝卸區進入，鐵捲門半開，卡車停靠台已經荒廢。",
+  "tags": [
+    "後方",
+    "工業",
+    "大型"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.696721",
+  "updated_at": "2026-03-16T22:57:30.696721"
+}

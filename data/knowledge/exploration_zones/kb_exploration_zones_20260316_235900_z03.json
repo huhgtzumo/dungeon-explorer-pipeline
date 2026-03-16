@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_235900_z03",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "藥品儲藏室",
+  "name_en": "Pharmaceutical Storage",
+  "description": "殘留大量藥瓶和藥品的儲藏室，某些藥物直到今天仍然是管制藥品。",
+  "tags": [
+    "藥品",
+    "儲藏",
+    "醫療"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

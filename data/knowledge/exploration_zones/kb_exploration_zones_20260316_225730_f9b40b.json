@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_f9b40b",
+  "category": "exploration_zones",
+  "subcategory": "地下空間",
+  "name": "地下儲水池",
+  "name_en": "Underground Cistern",
+  "description": "巨大的地下蓄水空間，拱形石柱倒映在漆黑的水面上。",
+  "tags": [
+    "地下",
+    "水域",
+    "壯觀"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.551997",
+  "updated_at": "2026-03-16T22:57:30.551997"
+}

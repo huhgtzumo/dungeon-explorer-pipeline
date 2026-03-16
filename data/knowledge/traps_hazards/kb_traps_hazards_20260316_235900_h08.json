@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_235900_h08",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "石棉粉塵",
+  "name_en": "Asbestos Dust",
+  "description": "牆壁和天花板含有石棉，空氣中漂浮著肉眼可見的白色粉末。",
+  "tags": [
+    "石棉",
+    "毒素",
+    "肺部"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

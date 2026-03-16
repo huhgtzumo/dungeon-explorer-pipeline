@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_73eb10",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "攀爬繩索",
+  "name_en": "Climbing Rope",
+  "description": "20公尺的登山繩索，用於垂降或攀爬無法正常通行的區域。",
+  "tags": [
+    "攀爬",
+    "垂降",
+    "移動"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.128764",
+  "updated_at": "2026-03-16T22:57:32.128764"
+}

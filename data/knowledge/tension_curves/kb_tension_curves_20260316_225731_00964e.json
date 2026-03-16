@@ -1,0 +1,18 @@
+{
+  "id": "kb_tension_curves_20260316_225731_00964e",
+  "category": "tension_curves",
+  "subcategory": "",
+  "name": "漸進升高",
+  "name_en": "Gradual Escalation",
+  "description": "從安靜開場，事件強度逐步遞增，在最後爆發到最高點。",
+  "tags": [
+    "穩定",
+    "漸進",
+    "爆發"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.815946",
+  "updated_at": "2026-03-16T22:57:31.815946"
+}

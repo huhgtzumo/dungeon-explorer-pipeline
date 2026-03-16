@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_31d2af",
+  "category": "building_types",
+  "subcategory": "其他",
+  "name": "廢棄實驗室",
+  "name_en": "Abandoned Laboratory",
+  "description": "不明機構的研究實驗室，試管架上殘留不明液體，白板上的方程式無人能解。",
+  "tags": [
+    "科學",
+    "神秘",
+    "危險"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.260212",
+  "updated_at": "2026-03-16T22:57:30.260212"
+}

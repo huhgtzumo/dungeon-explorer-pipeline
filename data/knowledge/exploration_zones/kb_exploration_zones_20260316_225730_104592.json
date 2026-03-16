@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_104592",
+  "category": "exploration_zones",
+  "subcategory": "其他",
+  "name": "電梯井",
+  "name_en": "Elevator Shaft",
+  "description": "打開的電梯門後是漆黑的深淵，鋼纜在黑暗中輕微晃動。",
+  "tags": [
+    "垂直",
+    "危險",
+    "深淵"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.612112",
+  "updated_at": "2026-03-16T22:57:30.612112"
+}

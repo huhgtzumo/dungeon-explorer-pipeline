@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_72897a",
+  "category": "building_types",
+  "subcategory": "其他",
+  "name": "廢棄水壩",
+  "name_en": "Abandoned Dam",
+  "description": "停止運作的水壩設施，閘門鏽蝕，控制室的儀表板佈滿蜘蛛網。",
+  "tags": [
+    "水利",
+    "壯觀",
+    "戶外"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.267012",
+  "updated_at": "2026-03-16T22:57:30.267012"
+}

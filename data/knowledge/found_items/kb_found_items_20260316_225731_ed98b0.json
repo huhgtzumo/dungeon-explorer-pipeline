@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_225731_ed98b0",
+  "category": "found_items",
+  "subcategory": "工具設備",
+  "name": "手電筒（他人的）",
+  "name_en": "Someone's Flashlight",
+  "description": "地上一支手電筒，不是自己的，電池已耗盡，表面有刮痕。",
+  "tags": [
+    "裝備",
+    "他人",
+    "疑問"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.102865",
+  "updated_at": "2026-03-16T22:57:31.102865"
+}

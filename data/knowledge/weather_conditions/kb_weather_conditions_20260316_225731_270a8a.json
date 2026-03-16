@@ -1,0 +1,18 @@
+{
+  "id": "kb_weather_conditions_20260316_225731_270a8a",
+  "category": "weather_conditions",
+  "subcategory": "",
+  "name": "狂風呼嘯",
+  "name_en": "Howling Wind",
+  "description": "強風灌入建築的每個縫隙，發出像野獸般的呼嘯，門窗劇烈拍打。",
+  "tags": [
+    "風",
+    "聲音",
+    "動態"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.587275",
+  "updated_at": "2026-03-16T22:57:31.587275"
+}

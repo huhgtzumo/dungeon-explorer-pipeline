@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_225731_b84cd2",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "石棉暴露",
+  "name_en": "Asbestos Exposure",
+  "description": "破損的管道包覆層釋放石棉纖維，空氣中的粉塵可能致癌。",
+  "tags": [
+    "健康",
+    "隱形",
+    "長期"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.215902",
+  "updated_at": "2026-03-16T22:57:31.215902"
+}

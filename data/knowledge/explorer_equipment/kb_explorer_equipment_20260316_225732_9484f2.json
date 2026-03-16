@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_9484f2",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "夜視儀",
+  "name_en": "Night Vision Device",
+  "description": "軍用級夜視裝置，在完全黑暗中也能看到周圍環境的綠色影像。",
+  "tags": [
+    "夜視",
+    "科技",
+    "軍事"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.146397",
+  "updated_at": "2026-03-16T22:57:32.146397"
+}

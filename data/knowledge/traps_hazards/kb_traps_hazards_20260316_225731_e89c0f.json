@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_225731_e89c0f",
+  "category": "traps_hazards",
+  "subcategory": "結構危險",
+  "name": "結構不穩",
+  "name_en": "Structural Instability",
+  "description": "天花板發出令人不安的吱嘎聲，混凝土碎片不斷掉落，整個空間似乎隨時會坍塌。",
+  "tags": [
+    "坍塌",
+    "結構",
+    "持續"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.195355",
+  "updated_at": "2026-03-16T22:57:31.195355"
+}

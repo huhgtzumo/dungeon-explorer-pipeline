@@ -1,0 +1,14 @@
+{
+  "id": "kb_encounters_20260316_230000_9a0b1c",
+  "category": "encounters",
+  "subcategory": "物理異常",
+  "name": "時鐘停在特定時間",
+  "name_en": "Clock Stopped at Specific Time",
+  "description": "建築內所有時鐘都停在同一個時間——凌晨三點十五分，電池和機械錶皆如此。",
+  "tags": ["時鐘", "時間", "同步"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

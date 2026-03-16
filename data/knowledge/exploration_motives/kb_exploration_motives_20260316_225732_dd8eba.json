@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_motives_20260316_225732_dd8eba",
+  "category": "exploration_motives",
+  "subcategory": "",
+  "name": "接到匿名訊息",
+  "name_en": "Anonymous Message",
+  "description": "收到一則匿名訊息，只有一個地址和一句話：「來了就知道了。」",
+  "tags": [
+    "匿名",
+    "邀請",
+    "神秘"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.072587",
+  "updated_at": "2026-03-16T22:57:32.072587"
+}

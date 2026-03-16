@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_225731_fc2143",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "牆上的倒數",
+  "name_en": "Wall Countdown",
+  "description": "牆上用粉筆寫的倒數數字：7, 6, 5... 到 2 就停了。",
+  "tags": [
+    "數字",
+    "倒數",
+    "未完成"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.284180",
+  "updated_at": "2026-03-16T22:57:31.284180"
+}

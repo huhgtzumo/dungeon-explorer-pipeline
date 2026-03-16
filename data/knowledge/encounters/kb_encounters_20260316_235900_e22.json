@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_235900_e22",
+  "category": "encounters",
+  "subcategory": "聽覺異常",
+  "name": "自己名字被輕聲呼喚",
+  "name_en": "Name Being Called",
+  "description": "似乎聽到有人用極低的聲音呼喚自己的名字，轉身四周無人。",
+  "tags": [
+    "呼喚",
+    "幻聽",
+    "恐怖"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

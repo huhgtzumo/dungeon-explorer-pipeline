@@ -1,0 +1,14 @@
+{
+  "id": "kb_encounters_20260316_230000_8d9e0f",
+  "category": "encounters",
+  "subcategory": "物理異常",
+  "name": "窗戶自行開關",
+  "name_en": "Windows Open and Close by Themselves",
+  "description": "緊閉的窗戶突然猛烈彈開，冷風灌入後又自行緩緩關上，鎖扣完好無損。",
+  "tags": ["窗戶", "自動", "風"],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

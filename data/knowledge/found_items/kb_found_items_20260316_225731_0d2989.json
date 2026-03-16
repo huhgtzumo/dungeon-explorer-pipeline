@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_225731_0d2989",
+  "category": "found_items",
+  "subcategory": "神秘物件",
+  "name": "骨頭",
+  "name_en": "Bones",
+  "description": "角落裡發現的骨頭，不確定是動物的還是...需要更仔細的檢查。",
+  "tags": [
+    "骨骼",
+    "恐怖",
+    "發現"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.125886",
+  "updated_at": "2026-03-16T22:57:31.125886"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_time_settings_20260316_225731_cc5a4f",
+  "category": "time_settings",
+  "subcategory": "",
+  "name": "停電之後",
+  "name_en": "After Power Outage",
+  "description": "城市大停電的夜晚，整個區域一片漆黑，連街燈都滅了。",
+  "tags": [
+    "停電",
+    "黑暗",
+    "孤立"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.497626",
+  "updated_at": "2026-03-16T22:57:31.497626"
+}

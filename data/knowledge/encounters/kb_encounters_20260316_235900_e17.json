@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_235900_e17",
+  "category": "encounters",
+  "subcategory": "視覺異常",
+  "name": "相機拍出異常影像",
+  "name_en": "Camera Anomaly",
+  "description": "相機螢幕上出現了現場沒有的人影輪廓。",
+  "tags": [
+    "相機",
+    "影像",
+    "詭異"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

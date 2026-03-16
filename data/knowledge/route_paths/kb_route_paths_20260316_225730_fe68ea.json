@@ -1,0 +1,18 @@
+{
+  "id": "kb_route_paths_20260316_225730_fe68ea",
+  "category": "route_paths",
+  "subcategory": "",
+  "name": "電梯維修口",
+  "name_en": "Elevator Maintenance Hatch",
+  "description": "從電梯頂部的維修口進入電梯井，然後通過各層的檢修門進入建築。",
+  "tags": [
+    "垂直",
+    "技術",
+    "危險"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.744038",
+  "updated_at": "2026-03-16T22:57:30.744038"
+}

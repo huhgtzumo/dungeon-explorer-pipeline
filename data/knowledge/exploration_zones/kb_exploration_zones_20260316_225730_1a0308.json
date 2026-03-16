@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_1a0308",
+  "category": "exploration_zones",
+  "subcategory": "頂層空間",
+  "name": "鐘塔",
+  "name_en": "Bell Tower",
+  "description": "螺旋樓梯通往的鐘塔頂端，巨大的銅鐘早已不再敲響。",
+  "tags": [
+    "高處",
+    "垂直",
+    "標誌"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.606254",
+  "updated_at": "2026-03-16T22:57:30.606254"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_7efc25",
+  "category": "building_types",
+  "subcategory": "公共設施",
+  "name": "廢棄戲院",
+  "name_en": "Abandoned Theater",
+  "description": "關閉的老戲院，紅色天鵝絨座椅蒙塵，舞台布幕半拉半垂。",
+  "tags": [
+    "公共",
+    "藝術",
+    "華麗"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.250153",
+  "updated_at": "2026-03-16T22:57:30.250153"
+}

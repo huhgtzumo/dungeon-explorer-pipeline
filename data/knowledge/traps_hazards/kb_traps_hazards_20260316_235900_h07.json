@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_235900_h07",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "蝙蝠群棲息地",
+  "name_en": "Bat Colony",
+  "description": "頂部覆蓋著密密麻麻的倒掛蝙蝠，一旦驚動就會全部衝下來。",
+  "tags": [
+    "蝙蝠",
+    "動物",
+    "黑暗"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

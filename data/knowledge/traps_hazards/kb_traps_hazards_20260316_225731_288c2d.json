@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_225731_288c2d",
+  "category": "traps_hazards",
+  "subcategory": "機關陷阱",
+  "name": "鐵門鎖死",
+  "name_en": "Iron Gate Locks",
+  "description": "通過的門突然關閉並鎖死，找不到任何開啟機制。",
+  "tags": [
+    "困住",
+    "門",
+    "恐慌"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.171843",
+  "updated_at": "2026-03-16T22:57:31.171843"
+}

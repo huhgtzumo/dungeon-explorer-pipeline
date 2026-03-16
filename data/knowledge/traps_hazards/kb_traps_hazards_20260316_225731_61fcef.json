@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_225731_61fcef",
+  "category": "traps_hazards",
+  "subcategory": "機關陷阱",
+  "name": "防盜警報觸發",
+  "name_en": "Security Alarm Triggered",
+  "description": "不小心觸發了殘存的防盜系統，刺耳的警報聲響徹整棟建築。",
+  "tags": [
+    "警報",
+    "噪音",
+    "暴露"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.274054",
+  "updated_at": "2026-03-16T22:57:31.274054"
+}

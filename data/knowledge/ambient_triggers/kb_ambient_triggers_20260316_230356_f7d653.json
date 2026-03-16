@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_f7d653",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "牆壁滲水",
+  "name_en": "Wall Seepage",
+  "description": "牆面不明液體緩慢滲出，顏色在手電筒下呈現詭異的暗紅色。",
+  "tags": [
+    "視覺",
+    "水",
+    "氛圍"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

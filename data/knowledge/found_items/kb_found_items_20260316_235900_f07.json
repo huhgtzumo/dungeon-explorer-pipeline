@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_235900_f07",
+  "category": "found_items",
+  "subcategory": "神秘物件",
+  "name": "損壞的舊相機",
+  "name_en": "Broken Camera",
+  "description": "相機底片還在，沖洗後可能拍到了不應該存在的畫面。",
+  "tags": [
+    "相機",
+    "底片",
+    "謎團"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

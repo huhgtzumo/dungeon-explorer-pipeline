@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_ce1db1",
+  "category": "building_types",
+  "subcategory": "醫療設施",
+  "name": "廢棄醫院",
+  "name_en": "Abandoned Hospital",
+  "description": "停業多年的綜合醫院，手術室的無影燈歪斜，急診室的推車散落一地。",
+  "tags": [
+    "醫療",
+    "城市",
+    "常見"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.121246",
+  "updated_at": "2026-03-16T22:57:30.121246"
+}

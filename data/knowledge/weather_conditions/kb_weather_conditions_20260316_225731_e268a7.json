@@ -1,0 +1,18 @@
+{
+  "id": "kb_weather_conditions_20260316_225731_e268a7",
+  "category": "weather_conditions",
+  "subcategory": "",
+  "name": "雪",
+  "name_en": "Snowfall",
+  "description": "大雪紛飛，白雪覆蓋廢墟如同冰封的墓地，腳印格外清晰。",
+  "tags": [
+    "雪",
+    "白色",
+    "痕跡"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.619068",
+  "updated_at": "2026-03-16T22:57:31.619068"
+}

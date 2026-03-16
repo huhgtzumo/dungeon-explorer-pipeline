@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_6f7859",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "突然的寂靜",
+  "name_en": "Sudden Silence",
+  "description": "所有環境音瞬間消失，連蟲鳴和風聲都停止了。",
+  "tags": [
+    "寂靜",
+    "反差",
+    "心理"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

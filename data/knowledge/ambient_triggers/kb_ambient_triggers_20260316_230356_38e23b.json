@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_38e23b",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "無線電雜訊",
+  "name_en": "Radio Static",
+  "description": "對講機突然收到斷斷續續的雜訊，偶爾似乎混雜著人聲片段。",
+  "tags": [
+    "聲音",
+    "通訊",
+    "異常"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

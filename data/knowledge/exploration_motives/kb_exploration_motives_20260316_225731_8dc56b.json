@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_motives_20260316_225731_8dc56b",
+  "category": "exploration_motives",
+  "subcategory": "",
+  "name": "失蹤者搜索",
+  "name_en": "Missing Person Search",
+  "description": "追蹤一名失蹤者最後出現的地點，帶著手電筒和相機重走他的路線。",
+  "tags": [
+    "失蹤",
+    "搜索",
+    "個人"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.992459",
+  "updated_at": "2026-03-16T22:57:31.992459"
+}

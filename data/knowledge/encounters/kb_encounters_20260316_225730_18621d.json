@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_225730_18621d",
+  "category": "encounters",
+  "subcategory": "聽覺異常",
+  "name": "兒童笑聲",
+  "name_en": "Children Laughing",
+  "description": "從某個房間傳來隱約的兒童笑聲，靠近時卻變成了風聲。",
+  "tags": [
+    "兒童",
+    "笑聲",
+    "經典恐怖"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.905854",
+  "updated_at": "2026-03-16T22:57:30.905854"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_235900_z07",
+  "category": "exploration_zones",
+  "subcategory": "地下空間",
+  "name": "蓄水池",
+  "name_en": "Water Cistern",
+  "description": "龐大的廢棄蓄水池，水面上漂浮著說不清的東西，聲音有奇特的迴響。",
+  "tags": [
+    "水",
+    "地下",
+    "迴響"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

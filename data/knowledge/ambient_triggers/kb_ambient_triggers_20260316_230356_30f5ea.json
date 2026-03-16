@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_30f5ea",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "紙張翻動",
+  "name_en": "Papers Rustling",
+  "description": "沒有明顯風源，桌上散落的文件卻緩慢翻動。",
+  "tags": [
+    "聲音",
+    "紙張",
+    "異常"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

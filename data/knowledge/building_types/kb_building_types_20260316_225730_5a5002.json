@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_5a5002",
+  "category": "building_types",
+  "subcategory": "地下設施",
+  "name": "廢棄下水道系統",
+  "name_en": "Abandoned Sewer System",
+  "description": "城市地下的舊排水系統，拱形磚牆回聲重重，水聲和不明聲響交織。",
+  "tags": [
+    "地下",
+    "城市",
+    "潮濕"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.221400",
+  "updated_at": "2026-03-16T22:57:30.221400"
+}

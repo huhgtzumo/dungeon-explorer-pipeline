@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_225731_50d9bb",
+  "category": "found_items",
+  "subcategory": "文件記錄",
+  "name": "求救信",
+  "name_en": "Distress Letter",
+  "description": "一封寫在任何可用紙張上的求救信，字跡顫抖，內容描述被困的經歷。",
+  "tags": [
+    "求救",
+    "情感",
+    "絕望"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.136065",
+  "updated_at": "2026-03-16T22:57:31.136065"
+}

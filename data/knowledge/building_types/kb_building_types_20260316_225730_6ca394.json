@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_6ca394",
+  "category": "building_types",
+  "subcategory": "醫療設施",
+  "name": "廢棄精神病院",
+  "name_en": "Abandoned Asylum",
+  "description": "荒廢的精神療養院，走廊回蕩著過去的低語。病房門半開，鐵床上的束縛帶鏽跡斑斑。",
+  "tags": [
+    "恐怖",
+    "醫療",
+    "經典"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.111914",
+  "updated_at": "2026-03-16T22:57:30.111914"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_route_paths_20260316_225730_50e1ca",
+  "category": "route_paths",
+  "subcategory": "",
+  "name": "隱藏側門",
+  "name_en": "Hidden Side Door",
+  "description": "在建築側面被藤蔓遮蔽的小門，推開後是一條窄小的服務通道。",
+  "tags": [
+    "隱蔽",
+    "發現",
+    "側面"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.751135",
+  "updated_at": "2026-03-16T22:57:30.751135"
+}

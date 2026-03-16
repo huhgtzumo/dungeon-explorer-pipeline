@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_235900_e14",
+  "category": "encounters",
+  "subcategory": "聽覺異常",
+  "name": "廣播突然響起",
+  "name_en": "Radio Activation",
+  "description": "已經斷電的舊收音機突然發出雜訊，然後播放一段舊歌曲。",
+  "tags": [
+    "收音機",
+    "電子",
+    "詭異"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

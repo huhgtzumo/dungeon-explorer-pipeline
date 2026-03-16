@@ -1,0 +1,18 @@
+{
+  "id": "kb_ending_types_20260316_225731_9e7e65",
+  "category": "ending_types",
+  "subcategory": "",
+  "name": "電話留言",
+  "name_en": "Voicemail",
+  "description": "結尾是探索者探索後留給朋友的語音留言，語氣恐慌，之後再也聯繫不上此人。",
+  "tags": [
+    "語音",
+    "失聯",
+    "偽紀錄"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.969198",
+  "updated_at": "2026-03-16T22:57:31.969198"
+}

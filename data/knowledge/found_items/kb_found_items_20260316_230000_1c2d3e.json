@@ -1,0 +1,14 @@
+{
+  "id": "kb_found_items_20260316_230000_1c2d3e",
+  "category": "found_items",
+  "subcategory": "神秘物件",
+  "name": "裂開的鏡子",
+  "name_en": "Cracked Mirror",
+  "description": "裂紋呈放射狀的圓形鏡子，裂痕中心似乎是被拳頭擊碎的，鏡面反射出扭曲的影像。",
+  "tags": ["鏡子", "破損", "反射"],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "kb_encounters_20260316_230000_9b0c1d",
+  "category": "encounters",
+  "subcategory": "電子干擾",
+  "name": "無線電干擾",
+  "name_en": "Radio Interference",
+  "description": "所有無線通訊設備同時失效，對講機只剩刺耳的電子雜音，GPS定位完全偏移。",
+  "tags": ["無線電", "干擾", "通訊"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

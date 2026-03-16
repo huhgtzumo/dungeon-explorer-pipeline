@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_225731_96e9fd",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "密碼門",
+  "name_en": "Code-Locked Door",
+  "description": "一扇需要密碼的電子鎖門，面板還有電，輸入錯誤會發出警告聲。",
+  "tags": [
+    "密碼",
+    "門",
+    "互動"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.322306",
+  "updated_at": "2026-03-16T22:57:31.322306"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_5639d9",
+  "category": "building_types",
+  "subcategory": "工業設施",
+  "name": "廢棄礦坑",
+  "name_en": "Abandoned Mine",
+  "description": "封閉的地下礦坑，支撐木柱搖搖欲墜，礦車軌道消失在無盡的黑暗中。",
+  "tags": [
+    "地下",
+    "危險",
+    "幽閉"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.183230",
+  "updated_at": "2026-03-16T22:57:30.183230"
+}

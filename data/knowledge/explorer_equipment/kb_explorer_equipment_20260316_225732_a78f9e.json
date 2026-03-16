@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_a78f9e",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "紅外線溫度計",
+  "name_en": "Infrared Thermometer",
+  "description": "用來偵測環境溫度變化，特別是那些不自然的冷點。",
+  "tags": [
+    "溫度",
+    "偵測",
+    "科學"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.152407",
+  "updated_at": "2026-03-16T22:57:32.152407"
+}

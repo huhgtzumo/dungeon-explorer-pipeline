@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_e85004",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "油漆剝落聲",
+  "name_en": "Paint Peeling Sound",
+  "description": "牆面油漆大片剝落，發出細碎的撕裂聲，露出底下的塗鴉。",
+  "tags": [
+    "聲音",
+    "視覺",
+    "衰敗"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

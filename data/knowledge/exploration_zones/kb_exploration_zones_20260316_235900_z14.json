@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_235900_z14",
+  "category": "exploration_zones",
+  "subcategory": "地下空間",
+  "name": "淋浴間群",
+  "name_en": "Shower Block",
+  "description": "排列整齊的集體淋浴間，水管鏽蝕發紅，牆壁上的瓷磚有大片缺損。",
+  "tags": [
+    "淋浴",
+    "集體",
+    "詭異"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

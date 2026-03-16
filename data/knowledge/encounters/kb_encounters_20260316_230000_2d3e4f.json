@@ -1,0 +1,14 @@
+{
+  "id": "kb_encounters_20260316_230000_2d3e4f",
+  "category": "encounters",
+  "subcategory": "視覺異常",
+  "name": "人偶位置改變",
+  "name_en": "Mannequin in Different Position",
+  "description": "離開房間再回來時，角落的人偶頭部轉了方向，面朝著你剛進入的門口。",
+  "tags": ["人偶", "移動", "恐怖"],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

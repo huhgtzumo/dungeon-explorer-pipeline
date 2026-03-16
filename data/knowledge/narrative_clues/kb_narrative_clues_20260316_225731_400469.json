@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_225731_400469",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "最後的廣播",
+  "name_en": "Last Broadcast",
+  "description": "找到的收音機只能收到一個頻率，反覆播放同一段預錄的緊急廣播。",
+  "tags": [
+    "音頻",
+    "循環",
+    "緊急"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.294169",
+  "updated_at": "2026-03-16T22:57:31.294169"
+}

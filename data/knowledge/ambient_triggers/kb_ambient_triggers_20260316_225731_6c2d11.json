@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_6c2d11",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "時鐘滴答聲",
+  "name_en": "Clock Ticking",
+  "description": "某處傳來老式時鐘的滴答聲，在廢棄多年的建築中格外不協調。",
+  "tags": [
+    "時鐘",
+    "計時",
+    "詭異"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.779370",
+  "updated_at": "2026-03-16T22:57:31.779370"
+}

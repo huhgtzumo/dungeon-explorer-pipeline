@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_225731_fc594f",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "日記中的精神崩潰",
+  "name_en": "Journal Mental Breakdown",
+  "description": "日記前段正常，後段字跡越來越亂，最後幾頁只有反覆書寫的同一句話。",
+  "tags": [
+    "文字",
+    "瘋狂",
+    "漸進"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.315871",
+  "updated_at": "2026-03-16T22:57:31.315871"
+}

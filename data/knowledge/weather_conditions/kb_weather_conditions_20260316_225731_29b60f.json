@@ -1,0 +1,18 @@
+{
+  "id": "kb_weather_conditions_20260316_225731_29b60f",
+  "category": "weather_conditions",
+  "subcategory": "",
+  "name": "冰雹",
+  "name_en": "Hailstorm",
+  "description": "冰雹砸在屋頂和窗戶上，發出密集的敲擊聲，像萬千手指同時敲打。",
+  "tags": [
+    "冰雹",
+    "噪音",
+    "暴力"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.596202",
+  "updated_at": "2026-03-16T22:57:31.596202"
+}

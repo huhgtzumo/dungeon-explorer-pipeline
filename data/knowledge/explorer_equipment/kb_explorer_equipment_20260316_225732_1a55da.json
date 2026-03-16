@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_1a55da",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "防刺手套",
+  "name_en": "Cut-Resistant Gloves",
+  "description": "防止被鏽蝕金屬、碎玻璃或鐵絲網割傷的防護手套。",
+  "tags": [
+    "防護",
+    "手部",
+    "實用"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.200050",
+  "updated_at": "2026-03-16T22:57:32.200050"
+}

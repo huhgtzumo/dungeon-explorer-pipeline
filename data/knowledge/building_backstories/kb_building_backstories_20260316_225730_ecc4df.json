@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_ecc4df",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "邪教活動",
+  "name_en": "Cult Activity",
+  "description": "發現有邪教組織在此進行儀式活動後，警方突擊搜查並永久封閉此地。",
+  "tags": [
+    "邪教",
+    "儀式",
+    "犯罪"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.388644",
+  "updated_at": "2026-03-16T22:57:30.388644"
+}

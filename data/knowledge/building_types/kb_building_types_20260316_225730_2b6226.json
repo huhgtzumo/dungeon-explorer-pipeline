@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_2b6226",
+  "category": "building_types",
+  "subcategory": "地下設施",
+  "name": "廢棄地下實驗設施",
+  "name_en": "Underground Research Facility",
+  "description": "政府機密研究所的地下層，需要多重密碼的鐵門後是未知的實驗空間。",
+  "tags": [
+    "地下",
+    "政府",
+    "機密"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.308281",
+  "updated_at": "2026-03-16T22:57:30.308281"
+}

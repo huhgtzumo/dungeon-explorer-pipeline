@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_235900_e11",
+  "category": "encounters",
+  "subcategory": "聽覺異常",
+  "name": "牆壁傳來敲擊聲",
+  "name_en": "Knocking In Walls",
+  "description": "牆壁內部傳來規律的敲擊聲，三下一組，不斷重複。",
+  "tags": [
+    "敲擊",
+    "牆壁",
+    "聽覺"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

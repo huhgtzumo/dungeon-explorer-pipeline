@@ -1,0 +1,18 @@
+{
+  "id": "kb_route_paths_20260316_225730_b9b0e8",
+  "category": "route_paths",
+  "subcategory": "",
+  "name": "地下通道",
+  "name_en": "Underground Passage",
+  "description": "通過建築外的地下入口進入，潮濕的台階向下延伸到黑暗中。",
+  "tags": [
+    "地下",
+    "隱蔽",
+    "潮濕"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.667557",
+  "updated_at": "2026-03-16T22:57:30.667557"
+}

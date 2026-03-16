@@ -1,0 +1,18 @@
+{
+  "id": "kb_tension_curves_20260316_225731_925536",
+  "category": "tension_curves",
+  "subcategory": "",
+  "name": "波浪式",
+  "name_en": "Wave Pattern",
+  "description": "張力如波浪般起伏——緊張、緩和、更緊張、稍緩、最終高潮。",
+  "tags": [
+    "波浪",
+    "起伏",
+    "節奏"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.828709",
+  "updated_at": "2026-03-16T22:57:31.828709"
+}

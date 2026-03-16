@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_225731_7e71c5",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "玻璃碎片區",
+  "name_en": "Glass Shard Field",
+  "description": "地面覆蓋著細碎的玻璃碎片，每一步都嘎吱作響，一不小心就會割傷。",
+  "tags": [
+    "玻璃",
+    "地面",
+    "噪音"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.231606",
+  "updated_at": "2026-03-16T22:57:31.231606"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_f9ce87",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "指南針+紙質地圖",
+  "name_en": "Compass + Paper Map",
+  "description": "不依賴電子設備的導航方案，在信號被干擾時是最後的保障。",
+  "tags": [
+    "導航",
+    "類比",
+    "備份"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.217746",
+  "updated_at": "2026-03-16T22:57:32.217746"
+}

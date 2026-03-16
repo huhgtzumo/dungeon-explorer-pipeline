@@ -1,0 +1,14 @@
+{
+  "id": "kb_encounters_20260316_230000_4d5e6f",
+  "category": "encounters",
+  "subcategory": "電子干擾",
+  "name": "手機瞬間沒電",
+  "name_en": "Phone Battery Dies Instantly",
+  "description": "滿電的手機突然黑屏關機，重新開機顯示電量為零，離開該區域後電量恢復正常。",
+  "tags": ["手機", "電池", "異常"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

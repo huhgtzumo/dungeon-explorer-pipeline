@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_225731_10e31e",
+  "category": "traps_hazards",
+  "subcategory": "結構危險",
+  "name": "電擊危險",
+  "name_en": "Electrical Hazard",
+  "description": "踩入水中時感到腳底微微刺痛——積水中有裸露的電線。",
+  "tags": [
+    "電擊",
+    "水",
+    "隱蔽"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.226131",
+  "updated_at": "2026-03-16T22:57:31.226131"
+}

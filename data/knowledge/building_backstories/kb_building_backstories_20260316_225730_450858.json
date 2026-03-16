@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_450858",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "結構老化",
+  "name_en": "Structural Decay",
+  "description": "年久失修導致建築結構嚴重劣化，被工程師判定為隨時可能坍塌的危樓。",
+  "tags": [
+    "老化",
+    "危險",
+    "時間"
+  ],
+  "examples": [],
+  "effectiveness_score": 5,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.399147",
+  "updated_at": "2026-03-16T22:57:30.399147"
+}

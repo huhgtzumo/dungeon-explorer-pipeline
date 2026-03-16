@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_230356_77df0d",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "異常溫度計",
+  "name_en": "Anomalous Thermometer",
+  "description": "牆上的溫度計顯示不可能的讀數，或在不同房間呈現極端差異。",
+  "tags": [
+    "溫度",
+    "異常",
+    "科學"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

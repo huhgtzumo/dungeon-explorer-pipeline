@@ -1,0 +1,18 @@
+{
+  "id": "kb_route_paths_20260316_225730_8de42f",
+  "category": "route_paths",
+  "subcategory": "",
+  "name": "消防梯",
+  "name_en": "Fire Escape",
+  "description": "從外牆的消防逃生梯攀上，鏽蝕的金屬階梯發出令人不安的聲響。",
+  "tags": [
+    "攀爬",
+    "外牆",
+    "金屬"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.706419",
+  "updated_at": "2026-03-16T22:57:30.706419"
+}

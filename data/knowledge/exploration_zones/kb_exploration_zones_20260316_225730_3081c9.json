@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_3081c9",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "廚房/食堂",
+  "name_en": "Kitchen/Cafeteria",
+  "description": "大型廚房設備生鏽，冰箱門敞開，餐桌上還擺著上一餐的餐盤。",
+  "tags": [
+    "日常",
+    "食物",
+    "生活"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.516377",
+  "updated_at": "2026-03-16T22:57:30.516377"
+}

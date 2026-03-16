@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_225731_a79072",
+  "category": "found_items",
+  "subcategory": "文件記錄",
+  "name": "手繪地圖",
+  "name_en": "Hand-drawn Map",
+  "description": "某人手繪的建築平面圖，上面用紅筆標記了幾個位置，其中一個畫了大叉。",
+  "tags": [
+    "地圖",
+    "標記",
+    "指引"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.056735",
+  "updated_at": "2026-03-16T22:57:31.056735"
+}

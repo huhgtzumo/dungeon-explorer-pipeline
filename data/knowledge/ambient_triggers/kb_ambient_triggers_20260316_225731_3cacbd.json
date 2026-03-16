@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_3cacbd",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "門的吱嘎聲",
+  "name_en": "Creaking Door",
+  "description": "某扇門在氣流中緩慢搖擺，鉸鏈發出令人牙酸的吱嘎聲。",
+  "tags": [
+    "門",
+    "搖擺",
+    "經典"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.710234",
+  "updated_at": "2026-03-16T22:57:31.710234"
+}

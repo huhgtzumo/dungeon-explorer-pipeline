@@ -1,0 +1,18 @@
+{
+  "id": "kb_route_paths_20260316_225730_95c08e",
+  "category": "route_paths",
+  "subcategory": "",
+  "name": "正門突入",
+  "name_en": "Front Door Entry",
+  "description": "從正門進入，門鎖已被破壞，推開沉重的大門，灰塵在光柱中飛舞。",
+  "tags": [
+    "正面",
+    "基本",
+    "大膽"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.647638",
+  "updated_at": "2026-03-16T22:57:30.647638"
+}

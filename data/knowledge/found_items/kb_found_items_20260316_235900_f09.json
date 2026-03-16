@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_235900_f09",
+  "category": "found_items",
+  "subcategory": "神秘物件",
+  "name": "宗教符號",
+  "name_en": "Religious Symbol",
+  "description": "某個不知名宗教的符號被刻在地板上，使用物品和蠟燭在周圍排成圓形。",
+  "tags": [
+    "宗教",
+    "符號",
+    "詭異"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

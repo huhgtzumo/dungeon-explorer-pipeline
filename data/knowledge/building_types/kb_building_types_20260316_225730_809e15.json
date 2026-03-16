@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_809e15",
+  "category": "building_types",
+  "subcategory": "公共設施",
+  "name": "廢棄火車站",
+  "name_en": "Abandoned Train Station",
+  "description": "停用的鐵路車站，月台上的時刻表停在最後一班車的時間。",
+  "tags": [
+    "交通",
+    "懷舊",
+    "開放"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.310829",
+  "updated_at": "2026-03-16T22:57:30.310829"
+}

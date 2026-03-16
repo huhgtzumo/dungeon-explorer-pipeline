@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_256408",
+  "category": "exploration_zones",
+  "subcategory": "走廊通道",
+  "name": "緊急逃生通道",
+  "name_en": "Emergency Escape Route",
+  "description": "狹窄的逃生樓梯間，鐵欄杆鏽蝕，每一步都發出金屬顫鳴。",
+  "tags": [
+    "狹窄",
+    "垂直",
+    "金屬"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.480052",
+  "updated_at": "2026-03-16T22:57:30.480052"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_225731_95f177",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "完全斷電",
+  "name_en": "Total Blackout",
+  "description": "僅存的微弱光源突然消失，連備用手電也不知為何熄滅，陷入完全黑暗。",
+  "tags": [
+    "黑暗",
+    "設備",
+    "恐慌"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.209178",
+  "updated_at": "2026-03-16T22:57:31.209178"
+}

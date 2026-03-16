@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_225731_e8e765",
+  "category": "found_items",
+  "subcategory": "個人物品",
+  "name": "過期罐頭",
+  "name_en": "Expired Canned Food",
+  "description": "角落堆放的過期罐頭和水壺，暗示有人曾在這裡躲藏了一段時間。",
+  "tags": [
+    "食物",
+    "生存",
+    "躲藏"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.141605",
+  "updated_at": "2026-03-16T22:57:31.141605"
+}

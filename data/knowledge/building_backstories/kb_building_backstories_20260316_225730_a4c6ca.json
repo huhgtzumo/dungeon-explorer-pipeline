@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_a4c6ca",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "實驗失控",
+  "name_en": "Experiment Gone Wrong",
+  "description": "秘密實驗發生嚴重事故，倖存者拒絕透露細節，所有研究資料被銷毀。",
+  "tags": [
+    "實驗",
+    "科學",
+    "政府"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.346319",
+  "updated_at": "2026-03-16T22:57:30.346319"
+}

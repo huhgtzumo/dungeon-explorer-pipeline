@@ -1,0 +1,14 @@
+{
+  "id": "kb_encounters_20260316_230000_6e7f8a",
+  "category": "encounters",
+  "subcategory": "物理異常",
+  "name": "蟲群突然出現",
+  "name_en": "Sudden Insect Swarm",
+  "description": "大量不明昆蟲突然從牆壁裂縫中湧出，在手電筒光束中形成黑色漩渦後瞬間消散。",
+  "tags": ["昆蟲", "群聚", "突然"],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

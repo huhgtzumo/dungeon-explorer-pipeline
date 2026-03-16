@@ -1,0 +1,18 @@
+{
+  "id": "kb_traps_hazards_20260316_225731_a419cb",
+  "category": "traps_hazards",
+  "subcategory": "環境危險",
+  "name": "野生動物",
+  "name_en": "Wild Animals",
+  "description": "黑暗中傳來動物的低吼或翅膀拍擊聲，可能是野狗、蝙蝠、或更大的東西。",
+  "tags": [
+    "動物",
+    "威脅",
+    "聲音"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.199313",
+  "updated_at": "2026-03-16T22:57:31.199313"
+}

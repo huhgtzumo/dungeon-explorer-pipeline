@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_2b2b6b",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "戰爭遺留",
+  "name_en": "War Remnant",
+  "description": "戰爭結束後被遺棄的軍事設施或平民建築，牆上彈痕累累。",
+  "tags": [
+    "戰爭",
+    "歷史",
+    "軍事"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.409148",
+  "updated_at": "2026-03-16T22:57:30.409148"
+}

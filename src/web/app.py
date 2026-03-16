@@ -1,4 +1,4 @@
-"""短劇自動化 Pipeline — Web Dashboard (v2: database-style workflow)
+"""探索者計劃 Pipeline — Web Dashboard (v2: database-style workflow)
 
 啟動方式: python -m src.web.app
 """
@@ -94,7 +94,7 @@ def _update_video_review(video_id: str, updates: dict) -> None:
         finally:
             fcntl.flock(lock_f, fcntl.LOCK_UN)
 
-app = FastAPI(title="短劇 Pipeline Dashboard", version="2.0.0")
+app = FastAPI(title="探索者計劃 Explorer Plan Dashboard", version="2.0.0")
 
 # Static files
 STATIC_DIR = Path(__file__).parent / "static"
@@ -378,7 +378,7 @@ def _run_crawl(task_id: str, keyword: str, tags: list[str]):
             "count": len(results),
             "titles": [r["title"] for r in results[:5]],
         }
-        task["logs"].append(f"[{_now()}] 找到 {len(results)} 部短劇 → {crawl_id}")
+        task["logs"].append(f"[{_now()}] 找到 {len(results)} 部探索影片 → {crawl_id}")
 
         # Auto-trigger YouTube subtitle extraction after crawl (YouTube only, no Whisper)
         if results:
@@ -2252,8 +2252,8 @@ def _set_progress(task: dict, current: int, total: int, step: str):
 
 
 def _keyword_to_queries(keyword: str) -> list[str]:
-    # 自動加「短劇」後綴，確保搜到的是短劇而非音樂/MV
-    cn_query = keyword if "短劇" in keyword else f"{keyword} 短劇"
+    # 中文搜尋加「探索」後綴，確保搜到的是廢棄建築探索影片
+    cn_query = keyword if "探索" in keyword else f"{keyword} 探索"
     queries = [cn_query]
     try:
         from ..utils import llm_client
@@ -2262,9 +2262,9 @@ def _keyword_to_queries(keyword: str) -> list[str]:
             system="你是翻譯助手，只輸出翻譯結果。",
         ).strip().strip('"').strip("'")
         if en and en.lower() != keyword.lower():
-            queries.append(f"{en} short drama")
+            queries.append(f"{en} urban exploration urbex")
     except Exception:
-        queries.append(f"{keyword} drama")
+        queries.append(f"{keyword} abandoned building exploration")
     return queries
 
 
@@ -2274,7 +2274,7 @@ def main():
     uvicorn.run(
         "src.web.app:app",
         host="0.0.0.0",
-        port=8501,
+        port=8502,
         reload=True,
     )
 

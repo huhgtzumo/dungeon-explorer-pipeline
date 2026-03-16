@@ -1,0 +1,18 @@
+{
+  "id": "kb_ending_types_20260316_225731_03d70d",
+  "category": "ending_types",
+  "subcategory": "",
+  "name": "續集預告",
+  "name_en": "Sequel Teaser",
+  "description": "結尾出現一張新地點的照片和座標，配上字幕「下一站」，暗示探索還沒結束。",
+  "tags": [
+    "續集",
+    "預告",
+    "系列"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.983101",
+  "updated_at": "2026-03-16T22:57:31.983101"
+}

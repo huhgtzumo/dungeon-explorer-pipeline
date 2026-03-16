@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_254717",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "自動門感應",
+  "name_en": "Auto Door Sensor Trigger",
+  "description": "損壞的自動門突然感應到什麼而開啟，但目視範圍內空無一人。",
+  "tags": [
+    "機械",
+    "門",
+    "異常"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

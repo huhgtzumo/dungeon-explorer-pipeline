@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_225731_f0d1fb",
+  "category": "found_items",
+  "subcategory": "文件記錄",
+  "name": "監控錄影帶",
+  "name_en": "Surveillance Tape",
+  "description": "監控室遺留的錄影帶，標籤寫著事故發生當天的日期。",
+  "tags": [
+    "監控",
+    "證據",
+    "真相"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.084007",
+  "updated_at": "2026-03-16T22:57:31.084007"
+}

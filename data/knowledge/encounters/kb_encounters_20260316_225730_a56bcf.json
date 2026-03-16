@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_225730_a56bcf",
+  "category": "encounters",
+  "subcategory": "環境異常",
+  "name": "溫度驟降",
+  "name_en": "Sudden Temperature Drop",
+  "description": "經過某個區域時，溫度驟然下降數度，呼出的氣都變成白霧。",
+  "tags": [
+    "溫度",
+    "寒冷",
+    "區域"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.800474",
+  "updated_at": "2026-03-16T22:57:30.800474"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_230356_206c44",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "求救字條",
+  "name_en": "Distress Note",
+  "description": "摺疊塞在縫隙中的紙條，寫著不要相信某人或不要打開某扇門。",
+  "tags": [
+    "求救",
+    "警告",
+    "紙條"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

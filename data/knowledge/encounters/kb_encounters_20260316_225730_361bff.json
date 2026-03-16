@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_225730_361bff",
+  "category": "encounters",
+  "subcategory": "視覺異常",
+  "name": "鏡中異象",
+  "name_en": "Mirror Anomaly",
+  "description": "經過一面破碎的鏡子時，餘光瞥見鏡中倒影的動作似乎慢了半拍。",
+  "tags": [
+    "鏡子",
+    "視覺",
+    "自我"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.835897",
+  "updated_at": "2026-03-16T22:57:30.835897"
+}

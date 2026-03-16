@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_225731_4358b2",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "實驗受試者編號",
+  "name_en": "Test Subject Numbers",
+  "description": "牆上噴漆寫著編號：#001 至 #047，每個編號旁有✓或✗標記。",
+  "tags": [
+    "編號",
+    "實驗",
+    "系統性"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.310232",
+  "updated_at": "2026-03-16T22:57:31.310232"
+}

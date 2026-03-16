@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_69ad9b",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "經營破產",
+  "name_en": "Bankruptcy",
+  "description": "經營者突然破產跑路，員工一夜之間消失，留下所有物品原封不動。",
+  "tags": [
+    "經濟",
+    "日常",
+    "突然"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.380051",
+  "updated_at": "2026-03-16T22:57:30.380051"
+}

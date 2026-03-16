@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_225730_1176ce",
+  "category": "encounters",
+  "subcategory": "心理異常",
+  "name": "恐慌感突然襲來",
+  "name_en": "Sudden Panic",
+  "description": "毫無預警地被強烈的恐慌感包圍，每一根神經都在尖叫著要你離開。",
+  "tags": [
+    "心理",
+    "恐慌",
+    "直覺"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.956530",
+  "updated_at": "2026-03-16T22:57:30.956530"
+}

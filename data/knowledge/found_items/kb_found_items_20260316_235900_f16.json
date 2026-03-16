@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_235900_f16",
+  "category": "found_items",
+  "subcategory": "神秘物件",
+  "name": "倒數計時的計時器",
+  "name_en": "Countdown Timer",
+  "description": "計時器上顯示的倒數數字，但不知道倒數結束時會發生什麼。",
+  "tags": [
+    "計時",
+    "謎題",
+    "緊張"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

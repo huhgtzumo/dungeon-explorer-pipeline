@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_398e2b",
+  "category": "building_types",
+  "subcategory": "地下設施",
+  "name": "廢棄地鐵站",
+  "name_en": "Abandoned Subway Station",
+  "description": "被關閉的地鐵站，月台空無一人，隧道深處偶爾傳來氣流的呼嘯。",
+  "tags": [
+    "地下",
+    "城市",
+    "交通"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.218748",
+  "updated_at": "2026-03-16T22:57:30.218748"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_5faf35",
+  "category": "building_types",
+  "subcategory": "工業設施",
+  "name": "廢棄工廠",
+  "name_en": "Abandoned Factory",
+  "description": "停產的重工業工廠，巨大的機械設備如鋼鐵巨獸沉默矗立，地面油漬斑駁。",
+  "tags": [
+    "工業",
+    "大型",
+    "機械"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.166758",
+  "updated_at": "2026-03-16T22:57:30.166758"
+}

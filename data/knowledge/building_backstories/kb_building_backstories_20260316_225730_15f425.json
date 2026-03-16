@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_15f425",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "瘟疫爆發",
+  "name_en": "Plague Outbreak",
+  "description": "一場不明傳染病從這裡爆發，所有人被緊急撤離，建築被永久隔離消毒。",
+  "tags": [
+    "疾病",
+    "隔離",
+    "生物"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.339001",
+  "updated_at": "2026-03-16T22:57:30.339001"
+}

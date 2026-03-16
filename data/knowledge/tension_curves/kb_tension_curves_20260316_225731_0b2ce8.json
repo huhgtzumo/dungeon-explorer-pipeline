@@ -1,0 +1,18 @@
+{
+  "id": "kb_tension_curves_20260316_225731_0b2ce8",
+  "category": "tension_curves",
+  "subcategory": "",
+  "name": "心跳節奏",
+  "name_en": "Heartbeat Rhythm",
+  "description": "事件的發生頻率模仿加速的心跳：開始緩慢，逐漸加快，最後瘋狂。",
+  "tags": [
+    "心跳",
+    "加速",
+    "生理"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.878636",
+  "updated_at": "2026-03-16T22:57:31.878636"
+}

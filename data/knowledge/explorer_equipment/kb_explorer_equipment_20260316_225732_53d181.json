@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_53d181",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "粉筆/噴漆",
+  "name_en": "Chalk/Spray Paint",
+  "description": "在牆上做標記防止迷路，也可以標記已探索和未探索的區域。",
+  "tags": [
+    "標記",
+    "導航",
+    "記錄"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.171807",
+  "updated_at": "2026-03-16T22:57:32.171807"
+}

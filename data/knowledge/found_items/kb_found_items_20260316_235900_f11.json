@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_235900_f11",
+  "category": "found_items",
+  "subcategory": "工具設備",
+  "name": "血跡斑斑的工具袋",
+  "name_en": "Bloody Tool Bag",
+  "description": "醫療或施工用的工具袋，裡面的器具上有疑似血跡的深色汙漬。",
+  "tags": [
+    "工具",
+    "血跡",
+    "恐怖"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

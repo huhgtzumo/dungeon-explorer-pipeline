@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_2fdb01",
+  "category": "building_types",
+  "subcategory": "居住設施",
+  "name": "廢棄公寓大樓",
+  "name_en": "Abandoned Apartment Block",
+  "description": "被迫遷離的大型公寓，每扇門後都是一個被凍結的生活場景。",
+  "tags": [
+    "居住",
+    "城市",
+    "多層"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.207054",
+  "updated_at": "2026-03-16T22:57:30.207054"
+}

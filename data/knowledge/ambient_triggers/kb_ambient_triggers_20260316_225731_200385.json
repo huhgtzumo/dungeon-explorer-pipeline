@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_200385",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "腐木斷裂",
+  "name_en": "Rotting Wood Snapping",
+  "description": "腐朽的木質結構在自身重量下緩慢斷裂，發出沉悶的碎裂聲。",
+  "tags": [
+    "木頭",
+    "斷裂",
+    "結構"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.794897",
+  "updated_at": "2026-03-16T22:57:31.794897"
+}

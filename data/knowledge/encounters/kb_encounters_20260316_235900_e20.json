@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_235900_e20",
+  "category": "encounters",
+  "subcategory": "環境異常",
+  "name": "溫度局部異常",
+  "name_en": "Cold Spot",
+  "description": "走廊某個特定位置比周圍低了十幾度，像一道看不見的冷牆。",
+  "tags": [
+    "溫度",
+    "冷點",
+    "異常"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

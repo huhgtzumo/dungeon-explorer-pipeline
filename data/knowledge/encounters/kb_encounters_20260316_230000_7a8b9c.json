@@ -1,0 +1,14 @@
+{
+  "id": "kb_encounters_20260316_230000_7a8b9c",
+  "category": "encounters",
+  "subcategory": "電子干擾",
+  "name": "指南針旋轉",
+  "name_en": "Compass Spins Wildly",
+  "description": "指南針的指針開始瘋狂旋轉，無法穩定指向任何方向，似乎受到強烈磁場干擾。",
+  "tags": ["指南針", "磁場", "旋轉"],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

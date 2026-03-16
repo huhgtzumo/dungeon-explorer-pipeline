@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_0cad03",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "蟲鳴蛙叫",
+  "name_en": "Insects and Frogs",
+  "description": "建築被自然收復的痕跡——蟲鳴和蛙叫取代了人類活動的聲音。",
+  "tags": [
+    "自然",
+    "接管",
+    "生命"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.761143",
+  "updated_at": "2026-03-16T22:57:31.761143"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_230356_a5bfeb",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "被撕毀的藍圖",
+  "name_en": "Torn Blueprint",
+  "description": "建築藍圖被人故意撕碎，拼起來發現有一層未標示的地下結構。",
+  "tags": [
+    "藍圖",
+    "建築",
+    "隱藏"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

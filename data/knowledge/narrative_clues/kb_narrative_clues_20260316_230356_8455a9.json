@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_230356_8455a9",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "員工證件",
+  "name_en": "Employee ID Badge",
+  "description": "遺落的員工證件，照片已褪色，但姓名和部門仍可辨認。",
+  "tags": [
+    "證件",
+    "身份",
+    "線索"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

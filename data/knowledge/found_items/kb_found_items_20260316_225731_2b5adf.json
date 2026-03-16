@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_225731_2b5adf",
+  "category": "found_items",
+  "subcategory": "工具設備",
+  "name": "老式收音機",
+  "name_en": "Old Radio",
+  "description": "一台老式短波收音機，旋鈕調到一個特定頻率，接上電源可能還能用。",
+  "tags": [
+    "電子",
+    "通訊",
+    "頻率"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.151642",
+  "updated_at": "2026-03-16T22:57:31.151642"
+}

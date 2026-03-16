@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_235900_z09",
+  "category": "exploration_zones",
+  "subcategory": "宗教設施",
+  "name": "地下禮拜堂",
+  "name_en": "Underground Chapel",
+  "description": "隱藏在地下的小型禮拜堂，祭壇上的蠟燭燒到一半就停止了。",
+  "tags": [
+    "禮拜堂",
+    "宗教",
+    "地下"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

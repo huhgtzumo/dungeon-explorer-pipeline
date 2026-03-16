@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_9f8194",
+  "category": "building_types",
+  "subcategory": "醫療設施",
+  "name": "廢棄療養院",
+  "name_en": "Abandoned Sanatorium",
+  "description": "山上的結核病療養院，長廊的盡頭是大片落地窗，病床朝向已經看不見的風景。",
+  "tags": [
+    "醫療",
+    "山區",
+    "歷史"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.292498",
+  "updated_at": "2026-03-16T22:57:30.292498"
+}

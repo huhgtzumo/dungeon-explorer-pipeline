@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_3fe9cc",
+  "category": "exploration_zones",
+  "subcategory": "頂層空間",
+  "name": "屋頂",
+  "name_en": "Rooftop",
+  "description": "風很大的屋頂，可以俯瞰周圍的荒涼景象，邊緣沒有護欄。",
+  "tags": [
+    "高處",
+    "開闊",
+    "危險"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.595956",
+  "updated_at": "2026-03-16T22:57:30.595956"
+}

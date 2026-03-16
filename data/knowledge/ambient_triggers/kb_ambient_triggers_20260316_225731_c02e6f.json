@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_c02e6f",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "燈泡明滅",
+  "name_en": "Flickering Bulb",
+  "description": "某處一顆燈泡不知為何還在通電，忽明忽暗地閃爍。",
+  "tags": [
+    "燈光",
+    "電力",
+    "閃爍"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.669661",
+  "updated_at": "2026-03-16T22:57:31.669661"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_5ac12e",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "病房",
+  "name_en": "Patient Ward",
+  "description": "排列著鐵製病床的病房，窗簾在穿堂風中輕搖，床頭櫃的抽屜裡留有私人物品。",
+  "tags": [
+    "醫療",
+    "個人",
+    "悲傷"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.533814",
+  "updated_at": "2026-03-16T22:57:30.533814"
+}

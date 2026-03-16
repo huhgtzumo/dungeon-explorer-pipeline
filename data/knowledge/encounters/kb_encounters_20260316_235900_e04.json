@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_235900_e04",
+  "category": "encounters",
+  "subcategory": "物理異常",
+  "name": "手機電量驟降",
+  "name_en": "Battery Drain",
+  "description": "手機電量突然從80%直接跌到3%，毫無預警。",
+  "tags": [
+    "電子",
+    "電池",
+    "異常"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

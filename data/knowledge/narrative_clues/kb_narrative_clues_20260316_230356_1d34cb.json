@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_230356_1d34cb",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "倒數刻痕",
+  "name_en": "Countdown Tally Marks",
+  "description": "牆上用指甲或銳器刻下的正字計數，從某天開始突然停止。",
+  "tags": [
+    "計數",
+    "囚禁",
+    "時間"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

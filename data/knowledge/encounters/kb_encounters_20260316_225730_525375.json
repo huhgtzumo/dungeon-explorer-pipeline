@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_225730_525375",
+  "category": "encounters",
+  "subcategory": "物理異常",
+  "name": "東西從架上掉落",
+  "name_en": "Object Falls from Shelf",
+  "description": "經過時，架上一個物品突然掉落地面，打破令人窒息的寂靜。",
+  "tags": [
+    "物品",
+    "墜落",
+    "驚嚇"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.893917",
+  "updated_at": "2026-03-16T22:57:30.893917"
+}

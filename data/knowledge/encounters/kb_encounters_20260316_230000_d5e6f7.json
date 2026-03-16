@@ -1,0 +1,14 @@
+{
+  "id": "kb_encounters_20260316_230000_d5e6f7",
+  "category": "encounters",
+  "subcategory": "電子干擾",
+  "name": "電梯自行運作",
+  "name_en": "Elevator Operates by Itself",
+  "description": "已經斷電的電梯突然亮起樓層指示燈，門緩緩打開又關上，按鈕上有新鮮的指紋。",
+  "tags": ["電梯", "自動", "斷電"],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

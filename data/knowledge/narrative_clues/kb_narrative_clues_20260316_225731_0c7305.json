@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_225731_0c7305",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "錄音機留言",
+  "name_en": "Recorder Message",
+  "description": "找到一台小型錄音機，按下播放後是一段充滿恐懼的口述記錄。",
+  "tags": [
+    "音頻",
+    "個人",
+    "記錄"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.345953",
+  "updated_at": "2026-03-16T22:57:31.345953"
+}

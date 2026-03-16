@@ -1,0 +1,18 @@
+{
+  "id": "kb_time_settings_20260316_225731_70038d",
+  "category": "time_settings",
+  "subcategory": "",
+  "name": "日落時分",
+  "name_en": "Sunset",
+  "description": "最後一縷陽光從窗戶照入，隨著太陽下山，室內逐漸被黑暗吞噬。",
+  "tags": [
+    "日落",
+    "過渡",
+    "漸變"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.515896",
+  "updated_at": "2026-03-16T22:57:31.515896"
+}

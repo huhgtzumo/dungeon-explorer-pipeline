@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_6f5594",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "鬧鬼傳說",
+  "name_en": "Haunting Legend",
+  "description": "多次有人目擊超自然現象後，口耳相傳的鬧鬼傳說讓所有租戶搬離。",
+  "tags": [
+    "超自然",
+    "傳說",
+    "恐怖"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.435709",
+  "updated_at": "2026-03-16T22:57:30.435709"
+}

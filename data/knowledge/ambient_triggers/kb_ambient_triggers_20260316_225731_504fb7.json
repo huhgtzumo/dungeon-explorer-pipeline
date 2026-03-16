@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_504fb7",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "老鼠竄逃",
+  "name_en": "Rats Scurrying",
+  "description": "腳邊突然竄過的小動物影子和細碎的爪子刮地聲。",
+  "tags": [
+    "動物",
+    "突然",
+    "地面"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.700158",
+  "updated_at": "2026-03-16T22:57:31.700158"
+}

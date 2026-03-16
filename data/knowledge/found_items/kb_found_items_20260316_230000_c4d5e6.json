@@ -1,0 +1,14 @@
+{
+  "id": "kb_found_items_20260316_230000_c4d5e6",
+  "category": "found_items",
+  "subcategory": "醫療用品",
+  "name": "病患識別手環",
+  "name_en": "Patient ID Bracelet",
+  "description": "塑膠手環上印著模糊的姓名和病房號碼，手環扣環處有被用力扯斷的痕跡。",
+  "tags": ["手環", "身份", "病患"],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:00:00.000000",
+  "updated_at": "2026-03-16T23:00:00.000000"
+}

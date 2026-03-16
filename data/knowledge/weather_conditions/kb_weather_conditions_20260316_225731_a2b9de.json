@@ -1,0 +1,18 @@
+{
+  "id": "kb_weather_conditions_20260316_225731_a2b9de",
+  "category": "weather_conditions",
+  "subcategory": "",
+  "name": "起霧散去循環",
+  "name_en": "Fog Cycles",
+  "description": "霧氣一陣一陣地湧入又散去，視野在清晰和朦朧間不斷切換。",
+  "tags": [
+    "霧",
+    "循環",
+    "不穩定"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.645384",
+  "updated_at": "2026-03-16T22:57:31.645384"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_225731_faa375",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "玻璃碎裂",
+  "name_en": "Glass Breaking",
+  "description": "遠處傳來玻璃破碎的清脆聲響，迴響在空蕩的走廊中。",
+  "tags": [
+    "玻璃",
+    "突然",
+    "遠處"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.679938",
+  "updated_at": "2026-03-16T22:57:31.679938"
+}

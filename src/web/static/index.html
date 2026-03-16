@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Short Drama Pipeline</title>
+  <title>探索者計劃 - 廢墟探索影片生成器</title>
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
@@ -11,8 +11,8 @@
 <!-- ===== SIDEBAR ===== -->
 <aside class="sidebar">
   <div class="sidebar-brand">
-    <h1><span class="brand-icon">D</span> Drama Pipeline</h1>
-    <p>短劇生成工作台</p>
+    <h1><span class="brand-icon">E</span> 探索者計劃</h1>
+    <p>廢墟探索影片生成器</p>
   </div>
 
   <div class="sidebar-section">
@@ -30,7 +30,7 @@
   <div class="sidebar-section">
     <div class="sidebar-section-label">資料庫</div>
     <div class="sidebar-item" data-nav="step1" onclick="navTo('pipeline');goStep(1)">
-      <span class="item-left"><span class="item-icon">&#128269;</span> 爬蟲結果</span>
+      <span class="item-left"><span class="item-icon">&#128269;</span> 探索素材</span>
       <span class="badge" id="badge-crawls">0</span>
     </div>
     <div class="sidebar-item" data-nav="analyses" onclick="navTo('analyses')">
@@ -38,7 +38,7 @@
       <span class="badge" id="badge-analyses">0</span>
     </div>
     <div class="sidebar-item" data-nav="scripts" onclick="navTo('scripts')">
-      <span class="item-left"><span class="item-icon">&#128221;</span> 劇本</span>
+      <span class="item-left"><span class="item-icon">&#128221;</span> 探索腳本</span>
       <span class="badge" id="badge-scripts">0</span>
     </div>
     <div class="sidebar-item" data-nav="step4" onclick="navTo('pipeline');goStep(4)">
@@ -85,32 +85,32 @@
   <div class="stepper-bar">
       <div class="step active" onclick="goStep(1)">
         <div class="step-indicator">1</div>
-        <div class="step-label">爬蟲搜尋</div>
+        <div class="step-label">探索素材搜尋</div>
       </div>
       <div class="step-connector" id="conn-1"></div>
       <div class="step pending" onclick="goStep(2)">
         <div class="step-indicator">2</div>
-        <div class="step-label">爆款分析</div>
+        <div class="step-label">素材分析</div>
       </div>
       <div class="step-connector" id="conn-2"></div>
       <div class="step pending" onclick="goStep(3)">
         <div class="step-indicator">3</div>
-        <div class="step-label">劇本生成</div>
+        <div class="step-label">探索腳本生成</div>
       </div>
       <div class="step-connector" id="conn-3"></div>
       <div class="step pending" onclick="goStep(4)">
         <div class="step-indicator">4</div>
-        <div class="step-label">分鏡拆解</div>
+        <div class="step-label">場景分鏡</div>
       </div>
       <div class="step-connector" id="conn-4"></div>
       <div class="step pending" onclick="goStep(5)">
         <div class="step-indicator">5</div>
-        <div class="step-label">分鏡圖</div>
+        <div class="step-label">場景圖生成</div>
       </div>
       <div class="step-connector" id="conn-5"></div>
       <div class="step pending" onclick="goStep(6)">
         <div class="step-indicator">6</div>
-        <div class="step-label">視頻生成</div>
+        <div class="step-label">探索影片生成</div>
       </div>
       <div class="step-connector" id="conn-6"></div>
       <div class="step pending" onclick="goStep(7)">
@@ -137,7 +137,7 @@
         </div>
         <div class="form-group">
           <label class="form-label">Tags（逗號分隔，選填）</label>
-          <input type="text" class="form-input" id="crawl-tags" placeholder="霸總, 復仇, 甜寵">
+          <input type="text" class="form-input" id="crawl-tags" placeholder="廢墟, 醫院, 地下室">
         </div>
         <div class="form-group">
           <label class="form-label">最低觀看次數</label>
@@ -173,7 +173,7 @@
     <!-- Step 2: Analyze -->
     <div class="content-area step-panel" id="step2">
       <div class="panel-left">
-        <div class="panel-title"><span class="title-icon">&#128200;</span> 爆款分析</div>
+        <div class="panel-title"><span class="title-icon">&#128200;</span> 素材分析</div>
 
         <!-- Single report generation -->
         <div class="form-group">
@@ -226,7 +226,7 @@
     <!-- Step 3: Generate Script -->
     <div class="content-area step-panel" id="step3">
       <div class="panel-left">
-        <div class="panel-title"><span class="title-icon">&#128221;</span> 劇本設定</div>
+        <div class="panel-title"><span class="title-icon">&#128221;</span> 探索腳本設定</div>
         <div class="form-group">
           <label class="form-label">每集時長</label>
           <div class="duration-selector">
@@ -285,7 +285,7 @@
     <!-- Step 4: Storyboard -->
     <div class="content-area step-panel" id="step4">
       <div class="panel-left">
-        <div class="panel-title"><span class="title-icon">&#127916;</span> 分鏡設定</div>
+        <div class="panel-title"><span class="title-icon">&#127916;</span> 場景分鏡設定</div>
         <div class="form-group">
           <label class="form-label">選擇劇本</label>
           <select class="form-select" id="sb-script-select">
@@ -316,7 +316,7 @@
     <!-- Step 5: Image Generation -->
     <div class="content-area step-panel" id="step5">
       <div class="panel-left">
-        <div class="panel-title"><span class="title-icon">&#128444;</span> 分鏡圖生成</div>
+        <div class="panel-title"><span class="title-icon">&#128444;</span> 場景圖生成</div>
         <div class="form-group">
           <label class="form-label">選擇分鏡表</label>
           <select class="form-select" id="img-storyboard-select">
@@ -381,7 +381,7 @@
     <!-- Step 6: Video Generation -->
     <div class="content-area step-panel" id="step6">
       <div class="panel-left">
-        <div class="panel-title"><span class="title-icon">&#127909;</span> 視頻生成</div>
+        <div class="panel-title"><span class="title-icon">&#127909;</span> 探索影片生成</div>
         <div class="form-group">
           <label class="form-label">選擇分鏡圖組</label>
           <select class="form-select" id="vid-image-select">
@@ -526,7 +526,7 @@
         </div>
         <div class="form-group">
           <label class="form-label">Tags</label>
-          <input type="text" class="form-input" id="pub-tags" placeholder="短劇, 霸總, 復仇...">
+          <input type="text" class="form-input" id="pub-tags" placeholder="廢墟探索, 都市傳說, 探險...">
         </div>
         <div class="form-group">
           <label class="form-label">排程發布</label>
@@ -592,7 +592,7 @@
       <!-- Left: list panel -->
       <div class="analyses-list-panel">
         <div class="analyses-list-header">
-          <h3>&#128221; 劇本庫</h3>
+          <h3>&#128221; 探索腳本庫</h3>
           <span class="results-meta" id="scripts-lib-count"></span>
         </div>
         <div id="scripts-lib-list" class="analyses-list">
@@ -615,7 +615,7 @@
   <div id="view-knowledge" style="display:none" class="kb-view">
     <div class="kb-header">
       <h2>&#128218; 知識庫</h2>
-      <p>從分析過的爆款劇中提取的可複用創作元素</p>
+      <p>從探索素材中提取的可複用場景與敘事元素</p>
     </div>
 
     <div id="kb-stats" class="kb-stats-grid"></div>
@@ -627,17 +627,21 @@
     <div id="kb-search-results"></div>
 
     <div class="kb-category-tabs" id="kb-cat-tabs">
-      <button class="kb-cat-btn active" data-cat="structures" onclick="switchKBCategory('structures')">架構模板</button>
-      <button class="kb-cat-btn" data-cat="hooks" onclick="switchKBCategory('hooks')">開場鉤子</button>
-      <button class="kb-cat-btn" data-cat="elements" onclick="switchKBCategory('elements')">元素庫</button>
-      <button class="kb-cat-btn" data-cat="payoffs" onclick="switchKBCategory('payoffs')">爽點庫</button>
-      <button class="kb-cat-btn" data-cat="pacing" onclick="switchKBCategory('pacing')">節奏模板</button>
-      <button class="kb-cat-btn" data-cat="dialogues" onclick="switchKBCategory('dialogues')">對白模式</button>
-      <button class="kb-cat-btn" data-cat="visual_scenes" onclick="switchKBCategory('visual_scenes')">視覺場景</button>
-      <button class="kb-cat-btn" data-cat="ending_hooks" onclick="switchKBCategory('ending_hooks')">結尾鉤子</button>
-      <button class="kb-cat-btn" data-cat="tension_actions" onclick="switchKBCategory('tension_actions')">張力行為</button>
-      <button class="kb-cat-btn" data-cat="genres" onclick="switchKBCategory('genres')">劇本類型</button>
-      <button class="kb-cat-btn" data-cat="styles" onclick="switchKBCategory('styles')">風格</button>
+      <button class="kb-cat-btn active" data-cat="building_types" onclick="switchKBCategory('building_types')">建築類型</button>
+      <button class="kb-cat-btn" data-cat="building_backstories" onclick="switchKBCategory('building_backstories')">廢棄原因</button>
+      <button class="kb-cat-btn" data-cat="exploration_zones" onclick="switchKBCategory('exploration_zones')">探索區域</button>
+      <button class="kb-cat-btn" data-cat="route_paths" onclick="switchKBCategory('route_paths')">動線路徑</button>
+      <button class="kb-cat-btn" data-cat="encounters" onclick="switchKBCategory('encounters')">遭遇事件</button>
+      <button class="kb-cat-btn" data-cat="found_items" onclick="switchKBCategory('found_items')">發現物品</button>
+      <button class="kb-cat-btn" data-cat="traps_hazards" onclick="switchKBCategory('traps_hazards')">陷阱/危險</button>
+      <button class="kb-cat-btn" data-cat="narrative_clues" onclick="switchKBCategory('narrative_clues')">敘事線索</button>
+      <button class="kb-cat-btn" data-cat="time_settings" onclick="switchKBCategory('time_settings')">時間設定</button>
+      <button class="kb-cat-btn" data-cat="weather_conditions" onclick="switchKBCategory('weather_conditions')">天氣狀況</button>
+      <button class="kb-cat-btn" data-cat="ambient_triggers" onclick="switchKBCategory('ambient_triggers')">氛圍觸發</button>
+      <button class="kb-cat-btn" data-cat="tension_curves" onclick="switchKBCategory('tension_curves')">張力曲線</button>
+      <button class="kb-cat-btn" data-cat="ending_types" onclick="switchKBCategory('ending_types')">結局類型</button>
+      <button class="kb-cat-btn" data-cat="exploration_motives" onclick="switchKBCategory('exploration_motives')">探索動機</button>
+      <button class="kb-cat-btn" data-cat="explorer_equipment" onclick="switchKBCategory('explorer_equipment')">探索者裝備</button>
     </div>
 
     <div id="kb-entries" class="kb-entries-grid"></div>

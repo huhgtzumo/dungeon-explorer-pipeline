@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_57ceaf",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "自然災害",
+  "name_en": "Natural Disaster",
+  "description": "地震/颱風/洪水造成嚴重結構損壞，被判定為危樓後遭到廢棄。",
+  "tags": [
+    "災害",
+    "結構",
+    "天災"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.374466",
+  "updated_at": "2026-03-16T22:57:30.374466"
+}

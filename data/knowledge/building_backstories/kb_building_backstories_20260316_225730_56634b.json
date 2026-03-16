@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_backstories_20260316_225730_56634b",
+  "category": "building_backstories",
+  "subcategory": "",
+  "name": "輻射汙染",
+  "name_en": "Radiation Contamination",
+  "description": "在建築內發現異常輻射值，來源不明，環保單位下令永久封鎖。",
+  "tags": [
+    "輻射",
+    "神秘",
+    "汙染"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.456201",
+  "updated_at": "2026-03-16T22:57:30.456201"
+}

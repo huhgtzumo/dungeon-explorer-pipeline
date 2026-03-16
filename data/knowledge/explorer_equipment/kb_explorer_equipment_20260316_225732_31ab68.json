@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_31ab68",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "強力手電筒",
+  "name_en": "High-Power Flashlight",
+  "description": "2000流明的戰術手電筒，是黑暗中最可靠的夥伴。",
+  "tags": [
+    "照明",
+    "基本",
+    "戰術"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.097828",
+  "updated_at": "2026-03-16T22:57:32.097828"
+}

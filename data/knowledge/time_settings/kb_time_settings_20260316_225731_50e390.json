@@ -1,0 +1,18 @@
+{
+  "id": "kb_time_settings_20260316_225731_50e390",
+  "category": "time_settings",
+  "subcategory": "",
+  "name": "黃昏時分",
+  "name_en": "Dusk",
+  "description": "太陽即將落下，最後的光線在廢墟中投射出詭異的長影。",
+  "tags": [
+    "黃昏",
+    "過渡",
+    "影子"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.457121",
+  "updated_at": "2026-03-16T22:57:31.457121"
+}

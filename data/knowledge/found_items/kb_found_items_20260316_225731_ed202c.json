@@ -1,0 +1,18 @@
+{
+  "id": "kb_found_items_20260316_225731_ed202c",
+  "category": "found_items",
+  "subcategory": "文件記錄",
+  "name": "錄音帶",
+  "name_en": "Audio Cassette",
+  "description": "一盒未標記的錄音帶，帶子有些變形但可能還能播放。",
+  "tags": [
+    "音頻",
+    "記錄",
+    "過去"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.026668",
+  "updated_at": "2026-03-16T22:57:31.026668"
+}

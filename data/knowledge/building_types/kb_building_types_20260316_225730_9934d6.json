@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_9934d6",
+  "category": "building_types",
+  "subcategory": "居住設施",
+  "name": "廢棄旅館",
+  "name_en": "Abandoned Hotel",
+  "description": "停業的大型旅館，大廳的水晶燈搖搖欲墜，客房鑰匙整齊掛在櫃台後方。",
+  "tags": [
+    "居住",
+    "商業",
+    "閃靈"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.282499",
+  "updated_at": "2026-03-16T22:57:30.282499"
+}

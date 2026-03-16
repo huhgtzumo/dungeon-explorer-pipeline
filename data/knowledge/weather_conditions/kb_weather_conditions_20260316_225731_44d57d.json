@@ -1,0 +1,18 @@
+{
+  "id": "kb_weather_conditions_20260316_225731_44d57d",
+  "category": "weather_conditions",
+  "subcategory": "",
+  "name": "回南天",
+  "name_en": "Returning Moisture",
+  "description": "極度潮濕的天氣，牆壁和地板都在冒水珠，整棟建築像在流汗。",
+  "tags": [
+    "潮濕",
+    "水珠",
+    "詭異"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.636228",
+  "updated_at": "2026-03-16T22:57:31.636228"
+}

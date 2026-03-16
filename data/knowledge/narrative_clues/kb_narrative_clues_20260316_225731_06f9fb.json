@@ -1,0 +1,18 @@
+{
+  "id": "kb_narrative_clues_20260316_225731_06f9fb",
+  "category": "narrative_clues",
+  "subcategory": "",
+  "name": "監控畫面殘影",
+  "name_en": "Surveillance Footage Ghost",
+  "description": "仍在運作的監控螢幕，畫面中偶爾閃過不應該存在的人影。",
+  "tags": [
+    "監控",
+    "影像",
+    "證據"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.325871",
+  "updated_at": "2026-03-16T22:57:31.325871"
+}

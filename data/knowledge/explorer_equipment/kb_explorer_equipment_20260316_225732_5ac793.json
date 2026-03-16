@@ -1,0 +1,18 @@
+{
+  "id": "kb_explorer_equipment_20260316_225732_5ac793",
+  "category": "explorer_equipment",
+  "subcategory": "",
+  "name": "急救包",
+  "name_en": "First Aid Kit",
+  "description": "基本的急救用品——繃帶、消毒液、止痛藥，廢墟探索中受傷機率很高。",
+  "tags": [
+    "醫療",
+    "安全",
+    "基本"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:32.168639",
+  "updated_at": "2026-03-16T22:57:32.168639"
+}

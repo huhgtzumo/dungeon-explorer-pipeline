@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_2a5fcd",
+  "category": "building_types",
+  "subcategory": "公共設施",
+  "name": "廢棄購物中心",
+  "name_en": "Abandoned Shopping Mall",
+  "description": "倒閉的大型商場，自動手扶梯停止運轉，店鋪招牌七零八落。",
+  "tags": [
+    "商業",
+    "大型",
+    "消費"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.321536",
+  "updated_at": "2026-03-16T22:57:30.321536"
+}

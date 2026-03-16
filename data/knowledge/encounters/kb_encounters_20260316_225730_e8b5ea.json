@@ -1,0 +1,18 @@
+{
+  "id": "kb_encounters_20260316_225730_e8b5ea",
+  "category": "encounters",
+  "subcategory": "視覺異常",
+  "name": "不明光源",
+  "name_en": "Unknown Light Source",
+  "description": "在完全斷電的建築深處，遠處閃過一道微弱的光芒。",
+  "tags": [
+    "光源",
+    "遠處",
+    "引導"
+  ],
+  "examples": [],
+  "effectiveness_score": 7,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.925928",
+  "updated_at": "2026-03-16T22:57:30.925928"
+}

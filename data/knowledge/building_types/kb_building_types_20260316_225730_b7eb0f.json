@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_b7eb0f",
+  "category": "building_types",
+  "subcategory": "公共設施",
+  "name": "廢棄監獄",
+  "name_en": "Abandoned Prison",
+  "description": "關閉的監獄設施，牢房鐵門鏽蝕，放風場雜草蔓生，瞭望塔空無一人。",
+  "tags": [
+    "公共",
+    "壓迫",
+    "暴力"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.228370",
+  "updated_at": "2026-03-16T22:57:30.228370"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_ambient_triggers_20260316_230356_32e2f5",
+  "category": "ambient_triggers",
+  "subcategory": "",
+  "name": "異味飄散",
+  "name_en": "Strange Odor Wafting",
+  "description": "時有時無的化學藥劑氣味，混合著潮濕腐朽的味道。",
+  "tags": [
+    "嗅覺",
+    "化學",
+    "環境"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:03:56.335849",
+  "updated_at": "2026-03-16T23:03:56.335849"
+}

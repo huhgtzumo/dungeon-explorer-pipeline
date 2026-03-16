@@ -1,0 +1,18 @@
+{
+  "id": "kb_building_types_20260316_225730_53212e",
+  "category": "building_types",
+  "subcategory": "公共設施",
+  "name": "廢棄遊樂園",
+  "name_en": "Abandoned Amusement Park",
+  "description": "關閉的遊樂園，摩天輪靜止不動，旋轉木馬的馬匹掉漆斑駁。",
+  "tags": [
+    "公共",
+    "娛樂",
+    "反差"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.240283",
+  "updated_at": "2026-03-16T22:57:30.240283"
+}

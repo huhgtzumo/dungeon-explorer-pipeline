@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_225730_e31893",
+  "category": "exploration_zones",
+  "subcategory": "特殊區域",
+  "name": "停屍間",
+  "name_en": "Morgue",
+  "description": "冰冷的不鏽鋼空間，屍體冷藏櫃的把手磨損，排水溝有不明暗色痕跡。",
+  "tags": [
+    "死亡",
+    "恐怖",
+    "冰冷"
+  ],
+  "examples": [],
+  "effectiveness_score": 9,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:30.591810",
+  "updated_at": "2026-03-16T22:57:30.591810"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "kb_exploration_zones_20260316_235900_z11",
+  "category": "exploration_zones",
+  "subcategory": "功能房間",
+  "name": "化學實驗室",
+  "name_en": "Chemistry Lab",
+  "description": "燒杯、試管、蒸餾設備一應俱全，某些容器還殘留著不明的液體。",
+  "tags": [
+    "化學",
+    "實驗",
+    "危險"
+  ],
+  "examples": [],
+  "effectiveness_score": 8,
+  "usage_count": 0,
+  "created_at": "2026-03-16T23:06:11.666803",
+  "updated_at": "2026-03-16T23:06:11.666803"
+}

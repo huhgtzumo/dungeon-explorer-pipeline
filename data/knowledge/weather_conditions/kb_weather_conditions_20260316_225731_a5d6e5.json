@@ -1,0 +1,18 @@
+{
+  "id": "kb_weather_conditions_20260316_225731_a5d6e5",
+  "category": "weather_conditions",
+  "subcategory": "",
+  "name": "悶熱潮濕",
+  "name_en": "Humid and Muggy",
+  "description": "令人窒息的悶熱，空氣中水分飽和，衣服很快被汗水浸透。",
+  "tags": [
+    "悶熱",
+    "不適",
+    "夏季"
+  ],
+  "examples": [],
+  "effectiveness_score": 6,
+  "usage_count": 0,
+  "created_at": "2026-03-16T22:57:31.605834",
+  "updated_at": "2026-03-16T22:57:31.605834"
+}

@@ -1,12 +1,12 @@
-"""短劇自動化 Pipeline — 主入口
+"""廢墟探索短劇 Pipeline — 主入口
 
 用法：
-    python -m src.main --mode full      # 完整 pipeline
-    python -m src.main --mode crawl     # 只跑爬蟲
-    python -m src.main --mode script    # 只跑劇本生成（需要先有爬蟲結果）
-    python -m src.main --mode storyboard # 只跑分鏡
-    python -m src.main --mode assemble  # 只跑後製
-    python -m src.main --mode publish   # 只跑上傳
+    python -m src.main --mode kb-generate  # 從知識庫生成探索劇本（主要模式）
+    python -m src.main --mode kb-analyze   # 分析影片並入庫
+    python -m src.main --mode kb-stats     # 顯示知識庫統計
+    python -m src.main --mode storyboard   # 分鏡拆解
+    python -m src.main --mode assemble     # 後製（拼接 + 字幕）
+    python -m src.main --mode publish      # 上傳 YouTube
 """
 
 from __future__ import annotations
@@ -24,155 +24,6 @@ from rich.panel import Panel
 from .utils.config import load_config, PROJECT_ROOT
 
 console = Console()
-
-
-def stage_crawl(config: dict) -> list[dict]:
-    """Stage 1: 爬蟲 — 搜尋爆款短劇 + 提取字幕"""
-    from .crawler.youtube_search import batch_search, save_results
-    from .crawler.subtitle_extractor import batch_extract
-
-    console.print(Panel("🔍 Stage 1: 爬蟲 — 搜尋爆款短劇", style="bold cyan"))
-
-    # 搜尋爆款
-    results = batch_search()
-    console.print(f"  找到 {len(results)} 部爆款短劇")
-
-    if not results:
-        console.print("  [red]沒有找到符合條件的短劇[/red]")
-        return []
-
-    # 提取字幕
-    console.print("  提取字幕中...")
-    video_ids = [r["video_id"] for r in results[:10]]  # 先取前 10 部
-    subtitles = batch_extract(video_ids)
-
-    # 合併資料
-    for r in results:
-        for s in subtitles:
-            if s["video_id"] == r["video_id"]:
-                r["text"] = s["text"]
-                r["segments"] = s["segments"]
-                r["subtitle_method"] = s["method_used"]
-                break
-
-    save_results(results)
-    console.print(f"  [green]✓ 爬蟲完成，{len(results)} 部短劇已儲存[/green]")
-    return results
-
-
-def stage_script(config: dict, crawl_data: list[dict] | None = None) -> dict:
-    """Stage 2-4: 分析 + 生成劇本（單集向後兼容模式）"""
-    from .crawler.trending_analyzer import analyze_trending
-    from .scriptwriter.generator import generate_script
-
-    console.print(Panel("✍️ Stage 2-4: 劇本生成（單集模式）", style="bold cyan"))
-
-    # 載入爬蟲資料
-    if not crawl_data:
-        trending_path = PROJECT_ROOT / "data" / "scripts" / "trending.json"
-        if trending_path.exists():
-            with open(trending_path, "r", encoding="utf-8") as f:
-                crawl_data = json.load(f)
-        else:
-            crawl_data = []
-
-    # 分析爆款模式
-    analysis = {}
-    if crawl_data:
-        console.print("  分析爆款模式...")
-        analysis = analyze_trending(crawl_data)
-        console.print(f"  [green]✓ 分析完成[/green]")
-
-    # 生成新劇本
-    console.print("  生成新劇本...")
-    script = generate_script(trending_analysis=analysis)
-    console.print(f"  [green]✓ 劇本生成完成: {script.get('title', '?')}[/green]")
-
-    # 存劇本
-    drama_id = datetime.now().strftime("%Y%m%d_%H%M%S") + "_" + uuid.uuid4().hex[:6]
-    script["drama_id"] = drama_id
-    script_dir = PROJECT_ROOT / "data" / "scripts" / drama_id
-    script_dir.mkdir(parents=True, exist_ok=True)
-    with open(script_dir / "script.json", "w", encoding="utf-8") as f:
-        json.dump(script, f, ensure_ascii=False, indent=2)
-
-    return script
-
-
-def stage_series(config: dict, crawl_data: list[dict] | None = None,
-                 episode_count: int = 30, genre: str = "都市甜寵") -> dict:
-    """Stage 2-4 (Series): 分析 → 大綱 → 拆集 → 逐集劇本"""
-    from .crawler.trending_analyzer import analyze_trending
-    from .scriptwriter.generator import generate_series_outline, generate_episode_script
-
-    console.print(Panel(f"✍️ 連續劇模式: {episode_count} 集", style="bold cyan"))
-
-    # 載入爬蟲資料
-    if not crawl_data:
-        trending_path = PROJECT_ROOT / "data" / "scripts" / "trending.json"
-        if trending_path.exists():
-            with open(trending_path, "r", encoding="utf-8") as f:
-                crawl_data = json.load(f)
-        else:
-            crawl_data = []
-
-    # 分析爆款模式
-    analysis = {}
-    if crawl_data:
-        console.print("  分析爆款模式...")
-        analysis = analyze_trending(crawl_data)
-        console.print(f"  [green]✓ 分析完成[/green]")
-
-    # Step 1: 生成大綱
-    console.print(f"  生成 {episode_count} 集大綱...")
-    outline = generate_series_outline(
-        trending_analysis=analysis,
-        genre=genre,
-        episode_count=episode_count,
-    )
-    console.print(f"  [green]✓ 大綱完成: {outline.get('series_title', '?')}[/green]")
-    console.print(f"  角色: {', '.join(c['name'] for c in outline.get('characters', []))}")
-    console.print(f"  集數: {len(outline.get('episodes', []))}")
-
-    # 儲存大綱
-    series_id = datetime.now().strftime("%Y%m%d_%H%M%S") + "_" + uuid.uuid4().hex[:6]
-    outline["series_id"] = series_id
-    series_dir = PROJECT_ROOT / "data" / "series" / series_id
-    series_dir.mkdir(parents=True, exist_ok=True)
-    with open(series_dir / "outline.json", "w", encoding="utf-8") as f:
-        json.dump(outline, f, ensure_ascii=False, indent=2)
-
-    # Step 2: 逐集生成詳細劇本
-    episodes_dir = series_dir / "episodes"
-    episodes_dir.mkdir(exist_ok=True)
-    prev_synopsis = "（第一集，無前情）"
-
-    for ep in outline.get("episodes", []):
-        ep_num = ep["episode_number"]
-        console.print(f"  [{ep_num}/{len(outline['episodes'])}] 生成第 {ep_num} 集劇本: {ep.get('title', '')}...")
-        episode_script = generate_episode_script(outline, ep_num, prev_synopsis)
-
-        if episode_script.get("error"):
-            console.print(f"  [red]✗ 第 {ep_num} 集失敗: {episode_script['error']}[/red]")
-            continue
-
-        # 存單集劇本
-        episode_script["series_id"] = series_id
-        episode_script["drama_id"] = f"{series_id}_ep{ep_num:03d}"
-        with open(episodes_dir / f"ep{ep_num:03d}.json", "w", encoding="utf-8") as f:
-            json.dump(episode_script, f, ensure_ascii=False, indent=2)
-
-        # 同時存到 data/scripts/ 方便分鏡系統讀取
-        script_dir = PROJECT_ROOT / "data" / "scripts" / episode_script["drama_id"]
-        script_dir.mkdir(parents=True, exist_ok=True)
-        with open(script_dir / "script.json", "w", encoding="utf-8") as f:
-            json.dump(episode_script, f, ensure_ascii=False, indent=2)
-
-        prev_synopsis = ep.get("synopsis", "")
-        console.print(f"  [green]✓ 第 {ep_num} 集完成: {episode_script.get('title', '')}[/green]")
-
-    console.print(f"\n  [bold green]✓ 全部完成！{outline.get('series_title', '')} — {len(outline.get('episodes', []))} 集[/bold green]")
-    return outline
 
 
 def stage_storyboard(config: dict, script: dict | None = None) -> list[dict]:
@@ -328,48 +179,6 @@ def stage_publish(config: dict, video_path: str | Path | None = None, script: di
     return result
 
 
-def stage_kb_analyze(config: dict, keyword: str = "", crawl_id: str = "") -> dict:
-    """KB mode: 分析短劇並入庫"""
-    from .crawler.trending_analyzer import analyze_single_drama, extract_to_knowledge_base
-    from .utils.index_db import load_crawl_videos, list_entries
-
-    console.print(Panel("KB 分析入庫", style="bold cyan"))
-
-    # Load videos
-    if crawl_id:
-        videos = load_crawl_videos([crawl_id])
-    else:
-        crawls = list_entries("crawls")
-        if not crawls:
-            console.print("  [red]沒有爬蟲資料，請先跑 crawl[/red]")
-            return {}
-        videos = load_crawl_videos([c["id"] for c in crawls])
-
-    if not videos:
-        console.print("  [red]沒有視頻資料[/red]")
-        return {}
-
-    console.print(f"  共 {len(videos)} 部待分析")
-    total_added = 0
-    total_updated = 0
-
-    for i, video in enumerate(videos, 1):
-        title = video.get("title", video.get("video_id", "?"))
-        console.print(f"  [{i}/{len(videos)}] 分析: {title[:40]}...")
-        try:
-            analysis = analyze_single_drama(video)
-            if analysis.get("error"):
-                console.print(f"    [red]分析失敗，跳過[/red]")
-                continue
-            counts = extract_to_knowledge_base(analysis, video)
-            total_added += counts["added"]
-            total_updated += counts["updated"]
-            console.print(f"    [green]+{counts['added']} 新增, ~{counts['updated']} 更新[/green]")
-        except Exception as e:
-            console.print(f"    [red]錯誤: {e}[/red]")
-
-    console.print(f"\n  [bold green]入庫完成: +{total_added} 新增, ~{total_updated} 更新[/bold green]")
-    return {"added": total_added, "updated": total_updated}
 
 
 def stage_kb_generate(config: dict, episode_count: int = 30,
@@ -445,59 +254,38 @@ def stage_kb_stats() -> None:
         console.print(line)
 
 
-def run_pipeline(mode: str = "full", episode_count: int = 30, genre: str = "都市甜寵"):
+def run_pipeline(mode: str = "kb-generate", episode_count: int = 30, genre: str = "都市甜寵"):
     """執行 Pipeline"""
     config = load_config()
 
     console.print(Panel(
-        f"🎬 短劇自動化 Pipeline — {mode} mode",
+        f"🏚️ 廢墟探索 Pipeline — {mode} mode",
         style="bold magenta",
     ))
 
-    if mode == "crawl":
-        stage_crawl(config)
-    elif mode == "script":
-        stage_script(config)
-    elif mode == "series":
-        crawl_data = stage_crawl(config)
-        stage_series(config, crawl_data, episode_count=episode_count, genre=genre)
+    if mode == "kb-generate":
+        stage_kb_generate(config, episode_count=episode_count, genre=genre)
+    elif mode == "kb-stats":
+        stage_kb_stats()
     elif mode == "storyboard":
         stage_storyboard(config)
     elif mode == "assemble":
         stage_assemble(config)
     elif mode == "publish":
         stage_publish(config)
-    elif mode == "kb-analyze":
-        stage_kb_analyze(config)
-    elif mode == "kb-generate":
-        stage_kb_generate(config, episode_count=episode_count, genre=genre)
-    elif mode == "kb-stats":
-        stage_kb_stats()
-    elif mode == "full":
-        crawl_data = stage_crawl(config)
-        script = stage_script(config, crawl_data)
-        frames = stage_storyboard(config, script)
-        drama_id = script.get("drama_id", "")
-
-        # 圖片和視頻目前需要半手動
-        stage_image(config, frames, drama_id)
-        stage_video(config, frames, drama_id)
-
-        console.print("\n[yellow]⏸ 圖片和視頻需要手動生成。完成後再跑：[/yellow]")
-        console.print(f"[yellow]  python -m src.main --mode assemble --drama-id {drama_id}[/yellow]")
     else:
         console.print(f"[red]未知模式: {mode}[/red]")
         sys.exit(1)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="短劇自動化 Pipeline")
-    parser.add_argument("--mode", default="full",
-                        choices=["full", "crawl", "script", "series", "storyboard", "assemble", "publish",
-                                 "kb-analyze", "kb-generate", "kb-stats"])
+    parser = argparse.ArgumentParser(description="廢墟探索短劇 Pipeline")
+    parser.add_argument("--mode", default="kb-generate",
+                        choices=["kb-generate", "kb-stats",
+                                 "storyboard", "assemble", "publish"])
     parser.add_argument("--drama-id", default="", help="指定 drama ID（用於 assemble/publish）")
-    parser.add_argument("--episodes", type=int, default=30, help="連續劇集數（series 模式用）")
-    parser.add_argument("--genre", default="都市甜寵", help="類型（如 都市甜寵、復仇爽劇）")
+    parser.add_argument("--episodes", type=int, default=30, help="集數")
+    parser.add_argument("--genre", default="都市甜寵", help="類型")
     args = parser.parse_args()
 
     run_pipeline(args.mode, episode_count=args.episodes, genre=args.genre)
