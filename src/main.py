@@ -2,7 +2,6 @@
 
 用法：
     python -m src.main --mode kb-generate  # 從知識庫生成探索劇本（主要模式）
-    python -m src.main --mode kb-analyze   # 分析影片並入庫
     python -m src.main --mode kb-stats     # 顯示知識庫統計
     python -m src.main --mode storyboard   # 分鏡拆解
     python -m src.main --mode assemble     # 後製（拼接 + 字幕）
@@ -194,7 +193,7 @@ def stage_kb_generate(config: dict, episode_count: int = 30,
     console.print(f"  知識庫: {stats['total']} 條目")
 
     if stats["total"] == 0:
-        console.print("  [red]知識庫為空，請先跑 kb-analyze[/red]")
+        console.print("  [red]知識庫為空，請先新增知識庫條目[/red]")
         return {}
 
     kb_config = {

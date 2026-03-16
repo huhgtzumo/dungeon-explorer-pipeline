@@ -6,23 +6,6 @@ pipeline:
   max_retries: 3
   log_level: INFO
 
-crawler:
-  # YouTube 搜尋參數
-  search_queries:
-    - "廢棄建築探索"
-    - "廢棄醫院探索"
-    - "廢棄工廠探索"
-    - "廢墟探索"
-    - "都市探索"
-    - "abandoned building exploration"
-    - "urban exploration urbex"
-    - "abandoned hospital exploration"
-    - "abandoned factory urbex"
-  max_results: 20
-  min_views: 10000
-  language: zh
-  subtitle_method: auto  # auto | whisper | youtube
-
 scriptwriter:
   # Claude 劇本生成
   max_scenes: 10
