@@ -2,11 +2,15 @@
 
 from __future__ import annotations
 
+import logging
+import re
 import subprocess
 import tempfile
 from pathlib import Path
 
 from ..utils.config import load_config, PROJECT_ROOT
+
+logger = logging.getLogger(__name__)
 
 
 def concat_clips(
@@ -25,12 +29,31 @@ def concat_clips(
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    # Validate all input paths upfront
+    for cp in clip_paths:
+        _validate_clip_path(Path(cp), "concat_clips input")
+
     if transition == "none":
         return _concat_simple(clip_paths, output_path)
     elif transition == "fade":
         return _concat_with_fade(clip_paths, output_path)
     else:
         return _concat_simple(clip_paths, output_path)
+
+
+def _validate_clip_path(clip_path: Path, context: str = "") -> Path:
+    """Validate that a clip path is absolute and within the expected output directory."""
+    resolved = Path(clip_path).resolve()
+    project_root = PROJECT_ROOT.resolve()
+    if not resolved.is_relative_to(project_root):
+        raise ValueError(
+            f"Clip path is outside project directory: {resolved} "
+            f"(expected within {project_root}){' — ' + context if context else ''}"
+        )
+    # Sanitize: reject filenames with suspicious characters
+    if re.search(r'[;&|`$]', resolved.name):
+        raise ValueError(f"Clip filename contains unsafe characters: {resolved.name}")
+    return resolved
 
 
 def _concat_simple(clip_paths: list[str | Path], output_path: Path) -> Path:
@@ -40,16 +63,21 @@ def _concat_simple(clip_paths: list[str | Path], output_path: Path) -> Path:
     fps = config["postprod"]["fps"]
     codec = config["postprod"]["codec"]
 
+    # Validate all clip paths
+    validated_clips = []
+    for clip in clip_paths:
+        validated_clips.append(_validate_clip_path(Path(clip), "concat_simple input"))
+
     # 建立 concat list 檔案
     with tempfile.NamedTemporaryFile(mode="w", suffix=".txt", delete=False) as f:
-        for clip in clip_paths:
-            f.write(f"file '{Path(clip).resolve()}'\n")
+        for clip in validated_clips:
+            f.write(f"file '{clip}'\n")
         list_path = f.name
 
     normalized = []
     try:
         # 先統一所有片段的格式
-        for i, clip in enumerate(clip_paths):
+        for i, clip in enumerate(validated_clips):
             norm_path = output_path.parent / f"_norm_{i:03d}.mp4"
             cmd = [
                 "ffmpeg", "-y", "-i", str(clip),
@@ -58,7 +86,7 @@ def _concat_simple(clip_paths: list[str | Path], output_path: Path) -> Path:
                 "-c:v", codec,
                 "-c:a", "aac",
                 "-ar", "44100",
-                norm_path,
+                str(norm_path),
             ]
             subprocess.run(cmd, capture_output=True, check=True)
             normalized.append(norm_path)
@@ -71,7 +99,7 @@ def _concat_simple(clip_paths: list[str | Path], output_path: Path) -> Path:
         # 拼接
         cmd = [
             "ffmpeg", "-y",
-            "-f", "concat", "-safe", "0",
+            "-f", "concat", "-safe", "1",
             "-i", list_path,
             "-c", "copy",
             str(output_path),
@@ -98,7 +126,11 @@ def _get_clip_duration(clip_path: str | Path) -> float:
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
         return float(result.stdout.strip())
-    except (subprocess.CalledProcessError, ValueError, subprocess.TimeoutExpired):
+    except (subprocess.CalledProcessError, ValueError, subprocess.TimeoutExpired) as e:
+        logger.warning(
+            "Failed to get duration for clip %s (error: %s), falling back to default 6.0s",
+            clip_path, e,
+        )
         return 6.0  # 預設 6 秒
 
 
@@ -113,12 +145,15 @@ def _concat_with_fade(clip_paths: list[str | Path], output_path: Path) -> Path:
     if len(clip_paths) < 2:
         return _concat_simple(clip_paths, output_path)
 
+    # Validate all clip paths
+    validated_clips = [_validate_clip_path(Path(c), "concat_with_fade input") for c in clip_paths]
+
     # 先取得每個片段的長度以計算 offset
-    durations = [_get_clip_duration(p) for p in clip_paths]
+    durations = [_get_clip_duration(p) for p in validated_clips]
 
     # 用 filter_complex 做 crossfade
     inputs = []
-    for clip in clip_paths:
+    for clip in validated_clips:
         inputs.extend(["-i", str(clip)])
 
     # 建構 filter chain

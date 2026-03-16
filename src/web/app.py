@@ -10,23 +10,64 @@ import fcntl
 import json
 import logging
 import os
+import re
 import tempfile
 import traceback
 import uuid
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Any
+from typing import Any, Optional
 
 import uvicorn
 from fastapi import FastAPI, BackgroundTasks, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel, Field
+from slowapi import Limiter
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 
 from ..utils.config import load_config, PROJECT_ROOT
 from ..utils import index_db
 
 logger = logging.getLogger(__name__)
+
+# ──────────────────────────── Rate Limiter ──────────────────────────────────
+limiter = Limiter(key_func=get_remote_address)
+
+
+# ──────────────────────────── Pydantic Models ──────────────────────────────
+class GenerateRequest(BaseModel):
+    source_analysis_id: str = ""
+    human_requirements: str = Field(default="", max_length=5000)
+    genre: str = Field(default="都市甜寵", max_length=200)
+    style: str = Field(default="dramatic", max_length=200)
+
+
+class StoryboardRequest(BaseModel):
+    source_script_id: str = ""
+
+
+class GenerateImagesRequest(BaseModel):
+    storyboard_id: str = ""
+    style_prefix: str = Field(default="", max_length=500)
+
+
+class GenerateVideosRequest(BaseModel):
+    image_set_id: str = ""
+    duration_sec: int = Field(default=5, ge=1, le=30)
+    mode: str = Field(default="std", max_length=50)
+
+
+class GenerateKBRequest(BaseModel):
+    genre: str = Field(default="", max_length=200)
+    style: str = Field(default="", max_length=200)
+    episode_count: int = Field(default=1, ge=1, le=100)
+    duration_sec: int = Field(default=60, ge=10, le=600)
+    human_requirements: str = Field(default="", max_length=5000)
+    tags: list[str] = Field(default_factory=list)
+    selected_elements: Optional[dict] = None
 
 # ──────────────────────────── Thread Pool for CPU/IO-bound tasks ──────────────
 _executor = ThreadPoolExecutor(max_workers=4)
@@ -95,6 +136,16 @@ def _update_video_review(video_id: str, updates: dict) -> None:
             fcntl.flock(lock_f, fcntl.LOCK_UN)
 
 app = FastAPI(title="探索者計劃 Explorer Plan Dashboard", version="2.0.0")
+app.state.limiter = limiter
+
+
+@app.exception_handler(RateLimitExceeded)
+async def rate_limit_handler(request: Request, exc: RateLimitExceeded):
+    return JSONResponse(
+        {"error": "請求過於頻繁，請稍後再試", "detail": str(exc)},
+        status_code=429,
+    )
+
 
 # Static files
 STATIC_DIR = Path(__file__).parent / "static"
@@ -103,6 +154,7 @@ app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 # In-memory task store
 _tasks: dict[str, dict] = {}
 _MAX_TASKS = 200  # Keep at most this many tasks to prevent memory leak
+_TASK_TTL_HOURS = 24  # Tasks older than this will be cleaned up
 
 # Cached KnowledgeBase instance (lazy init)
 _kb_instance = None
@@ -131,7 +183,25 @@ def _now() -> str:
 
 
 def _cleanup_tasks() -> None:
-    """Remove oldest finished tasks when the store exceeds _MAX_TASKS."""
+    """Remove finished tasks older than _TASK_TTL_HOURS, and cap at _MAX_TASKS."""
+    now = datetime.now()
+    # TTL-based cleanup: remove any finished task older than 24 hours
+    expired = []
+    for tid, t in _tasks.items():
+        if t["status"] not in ("done", "error"):
+            continue
+        finished_at = t.get("finished_at")
+        if finished_at:
+            try:
+                finished_dt = datetime.strptime(finished_at, "%Y-%m-%d %H:%M:%S")
+                if now - finished_dt > timedelta(hours=_TASK_TTL_HOURS):
+                    expired.append(tid)
+            except ValueError:
+                expired.append(tid)  # malformed timestamp, remove
+    for tid in expired:
+        del _tasks[tid]
+
+    # Also cap total count
     if len(_tasks) <= _MAX_TASKS:
         return
     finished = [
@@ -221,21 +291,26 @@ async def get_script_detail(script_id: str):
 
 
 @app.post("/api/trigger/generate")
+@limiter.limit("20/hour")
 async def trigger_generate(request: Request):
     """觸發劇本生成：body={source_analysis_id, human_requirements, genre, style}"""
     try:
-        body = await request.json()
-    except Exception:
+        raw_body = await request.body()
+        if len(raw_body) > 50_000:  # 50KB body limit
+            return JSONResponse({"error": "請求內容過大"}, status_code=413)
+        body = json.loads(raw_body)
+    except (json.JSONDecodeError, Exception):
         body = {}
-    source_analysis_id = body.get("source_analysis_id", "")
-    human_requirements = body.get("human_requirements", "")
-    genre = body.get("genre", "都市甜寵")
-    style = body.get("style", "dramatic")
+
+    try:
+        validated = GenerateRequest(**body)
+    except Exception as e:
+        return JSONResponse({"error": f"參數驗證失敗: {e}"}, status_code=422)
 
     task_id = _create_task("generate")
     _run_in_thread(
-        _run_generate, task_id, source_analysis_id,
-        human_requirements, genre, style
+        _run_generate, task_id, validated.source_analysis_id,
+        validated.human_requirements, validated.genre, validated.style
     )
     return {"task_id": task_id, "status": "started"}
 
@@ -340,19 +415,24 @@ async def get_storyboard_detail(sb_id: str):
 
 
 @app.post("/api/trigger/storyboard")
+@limiter.limit("20/hour")
 async def trigger_storyboard(request: Request):
     """觸發分鏡：body={source_script_id}"""
     try:
         body = await request.json()
     except Exception:
         body = {}
-    source_script_id = body.get("source_script_id", "")
 
-    if not source_script_id:
+    try:
+        validated = StoryboardRequest(**body)
+    except Exception as e:
+        return JSONResponse({"error": f"參數驗證失敗: {e}"}, status_code=422)
+
+    if not validated.source_script_id:
         return JSONResponse({"error": "請指定劇本 ID"}, status_code=400)
 
     task_id = _create_task("storyboard")
-    _run_in_thread(_run_storyboard, task_id, source_script_id)
+    _run_in_thread(_run_storyboard, task_id, validated.source_script_id)
     return {"task_id": task_id, "status": "started"}
 
 
@@ -460,13 +540,19 @@ async def get_image_set_detail(set_id: str):
 async def serve_image(set_id: str, filename: str):
     """提供已生成的圖片檔案。"""
     from fastapi.responses import FileResponse
-    img_path = GENERATED_IMAGES_DIR / set_id / filename
+    # Path traversal protection
+    if ".." in filename or "/" in filename or ".." in set_id or "/" in set_id:
+        return JSONResponse({"error": "無效的檔案名稱"}, status_code=400)
+    img_path = (GENERATED_IMAGES_DIR / set_id / filename).resolve()
+    if not img_path.is_relative_to(GENERATED_IMAGES_DIR.resolve()):
+        return JSONResponse({"error": "無效的檔案路徑"}, status_code=400)
     if not img_path.exists() or not img_path.is_file():
         return JSONResponse({"error": "圖片不存在"}, status_code=404)
     return FileResponse(str(img_path), media_type="image/png")
 
 
 @app.post("/api/trigger/generate-images")
+@limiter.limit("20/hour")
 async def trigger_generate_images(request: Request):
     """觸發分鏡圖生成：body={storyboard_id, style_prefix?}"""
     try:
@@ -474,8 +560,13 @@ async def trigger_generate_images(request: Request):
     except Exception:
         body = {}
 
-    storyboard_id = body.get("storyboard_id", "")
-    style_prefix = body.get("style_prefix", "")
+    try:
+        validated = GenerateImagesRequest(**body)
+    except Exception as e:
+        return JSONResponse({"error": f"參數驗證失敗: {e}"}, status_code=422)
+
+    storyboard_id = validated.storyboard_id
+    style_prefix = validated.style_prefix
 
     if not storyboard_id:
         return JSONResponse({"error": "請指定分鏡 ID"}, status_code=400)
@@ -606,13 +697,19 @@ async def get_video_set(set_id: str):
 async def serve_video(set_id: str, filename: str):
     """提供已生成的視頻檔案。"""
     from fastapi.responses import FileResponse
-    vid_path = GENERATED_VIDEOS_DIR / set_id / filename
+    # Path traversal protection
+    if ".." in filename or "/" in filename or ".." in set_id or "/" in set_id:
+        return JSONResponse({"error": "無效的檔案名稱"}, status_code=400)
+    vid_path = (GENERATED_VIDEOS_DIR / set_id / filename).resolve()
+    if not vid_path.is_relative_to(GENERATED_VIDEOS_DIR.resolve()):
+        return JSONResponse({"error": "無效的檔案路徑"}, status_code=400)
     if not vid_path.exists() or not vid_path.is_file():
         return JSONResponse({"error": "視頻不存在"}, status_code=404)
     return FileResponse(str(vid_path), media_type="video/mp4")
 
 
 @app.post("/api/trigger/generate-videos")
+@limiter.limit("10/hour")
 async def trigger_generate_videos(request: Request):
     """觸發視頻生成：body={image_set_id, duration_sec?, mode?}"""
     try:
@@ -620,9 +717,14 @@ async def trigger_generate_videos(request: Request):
     except Exception:
         body = {}
 
-    image_set_id = body.get("image_set_id", "")
-    duration_sec = body.get("duration_sec", 5)
-    mode = body.get("mode", "std")
+    try:
+        validated = GenerateVideosRequest(**body)
+    except Exception as e:
+        return JSONResponse({"error": f"參數驗證失敗: {e}"}, status_code=422)
+
+    image_set_id = validated.image_set_id
+    duration_sec = validated.duration_sec
+    mode = validated.mode
 
     if not image_set_id:
         return JSONResponse({"error": "請指定圖片集 ID"}, status_code=400)
@@ -761,34 +863,37 @@ async def get_video_reviews():
 
 
 @app.post("/api/trigger/generate-kb")
+@limiter.limit("20/hour")
 async def trigger_generate_kb(request: Request):
     """Generate script from knowledge base.
     body={genre, style, episode_count, duration_sec, human_requirements, tags, selected_elements}
     selected_elements: dict mapping category name -> list of entry_id strings
     """
     try:
-        body = await request.json()
-    except Exception:
+        raw_body = await request.body()
+        if len(raw_body) > 50_000:  # 50KB body limit
+            return JSONResponse({"error": "請求內容過大"}, status_code=413)
+        body = json.loads(raw_body)
+    except (json.JSONDecodeError, Exception):
         body = {}
-    genre = body.get("genre", "")
-    style = body.get("style", "")
-    episode_count = int(body.get("episode_count", 1))
-    duration_sec = int(body.get("duration_sec", 60))
-    human_requirements = body.get("human_requirements", "")
-    tags = body.get("tags", [])
-    selected_elements = body.get("selected_elements", None)
+
+    try:
+        validated = GenerateKBRequest(**body)
+    except Exception as e:
+        return JSONResponse({"error": f"參數驗證失敗: {e}"}, status_code=422)
 
     task_id = _create_task("kb-generate")
     _run_in_thread(
-        _run_generate_kb, task_id, genre, style, episode_count, duration_sec,
-        human_requirements, tags, selected_elements
+        _run_generate_kb, task_id, validated.genre, validated.style,
+        validated.episode_count, validated.duration_sec,
+        validated.human_requirements, validated.tags, validated.selected_elements
     )
     return {"task_id": task_id, "status": "started"}
 
 
 def _run_generate_kb(task_id: str, genre: str, style: str, episode_count: int,
                      duration_sec: int, human_requirements: str, tags: list[str],
-                     selected_elements: dict | None = None):
+                     selected_elements: Optional[dict] = None):
     task = _tasks[task_id]
     try:
         task["logs"].append(f"[{_now()}] 從知識庫生成劇本...")
