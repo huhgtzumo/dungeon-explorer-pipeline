@@ -275,12 +275,14 @@ def _run_generate(task_id: str, source_analysis_id: str,
             task["logs"].append(f"[{_now()}] 用戶要求: {human_requirements[:100]}")
 
         from ..scriptwriter.generator import generate_script
+        task["logs"].append(f"[{_now()}] 呼叫 Claude 生成劇本...")
         script = generate_script(
             trending_analysis=analysis,
             genre=genre,
             style=style,
             human_requirements=human_requirements,
         )
+        task["logs"].append(f"[{_now()}] Claude 回應完成")
 
         # Validate response before saving
         if script.get("error"):
@@ -392,6 +394,7 @@ def _run_storyboard(task_id: str, source_script_id: str):
     task = _tasks[task_id]
     try:
         task["logs"].append(f"[{_now()}] 開始分鏡拆解...")
+        _set_progress(task, 0, 4, "載入劇本...")
 
         # Load script
         entry = index_db.get_entry("scripts", source_script_id)
@@ -404,11 +407,23 @@ def _run_storyboard(task_id: str, source_script_id: str):
         if script is None:
             raise ValueError(f"劇本檔案損壞: {fpath}")
 
+        script_title = entry.get("title", source_script_id)
+        scene_count = len(script.get("scenes", []))
+        task["logs"].append(f"[{_now()}] 劇本已載入: {script_title}（{scene_count} 場景）")
+
         drama_id = source_script_id
 
         from ..scriptwriter.storyboard import generate_storyboard, setup_characters, save_storyboard
+        _set_progress(task, 1, 4, "分析角色...")
         char_manager = setup_characters(script, drama_id)
+        task["logs"].append(f"[{_now()}] 角色分析完成")
+
+        _set_progress(task, 2, 4, "Claude 生成分鏡中...")
+        task["logs"].append(f"[{_now()}] 呼叫 Claude 生成分鏡...")
         frames = generate_storyboard(script, char_manager)
+        task["logs"].append(f"[{_now()}] Claude 回應完成，共 {len(frames)} 個分鏡畫面")
+
+        _set_progress(task, 3, 4, "儲存分鏡...")
         save_storyboard(frames, drama_id)
 
         # Update index
@@ -418,12 +433,13 @@ def _run_storyboard(task_id: str, source_script_id: str):
         rel_path = str(sb_file.relative_to(PROJECT_ROOT))
         index_db.add_storyboard(sb_id, source_script_id, len(frames), rel_path)
 
+        _set_progress(task, 4, 4, "完成")
         task["result"] = {
             "storyboard_id": sb_id,
             "source_script_id": source_script_id,
             "frame_count": len(frames),
         }
-        task["logs"].append(f"[{_now()}] 分鏡完成: {len(frames)} 個畫面")
+        task["logs"].append(f"[{_now()}] 分鏡完成: {len(frames)} 個畫面，已儲存至索引")
         task["status"] = "done"
     except Exception as e:
         task["status"] = "error"
@@ -564,6 +580,7 @@ def _run_generate_images(task_id: str, storyboard_id: str, style_prefix: str):
             task["logs"].append(f"[{_now()}] [{current}/{total_count}] {message}")
 
         from ..image_gen.flux_generator import batch_generate as flux_batch_generate
+        task["logs"].append(f"[{_now()}] 開始呼叫 Flux API 生成圖片...")
         results = flux_batch_generate(
             frames=frames,
             drama_id=image_set_id,
@@ -729,6 +746,7 @@ def _run_generate_videos(task_id: str, image_set_id: str, duration_sec: int, mod
             task["logs"].append(f"[{_now()}] [{current}/{total_count}] {message}")
 
         from ..video_gen.kling_video_client import batch_generate as kling_video_batch
+        task["logs"].append(f"[{_now()}] 開始呼叫 Kling API 生成視頻...")
         results = kling_video_batch(
             frames=frames,
             drama_id=video_set_id,
@@ -868,11 +886,13 @@ def _run_generate_kb(task_id: str, genre: str, style: str, episode_count: int,
                 task["logs"].append(f"[{_now()}] 其餘分類由 AI 自由發揮：{', '.join(free_cats)}")
 
         _set_progress(task, 1, 3, "Claude 生成大綱中...")
+        task["logs"].append(f"[{_now()}] 呼叫 Claude 生成大綱...")
         outline = generate_from_knowledge_base(kb, config, selected_elements=selected_elements)
 
         if outline.get("error"):
             raise ValueError(f"生成失敗: {outline.get('error')}")
 
+        task["logs"].append(f"[{_now()}] Claude 回應完成")
         task["logs"].append(
             f"[{_now()}] 大綱完成: {outline.get('series_title', '?')} "
             f"({len(outline.get('episodes', []))} 集)"
@@ -892,8 +912,10 @@ def _run_generate_kb(task_id: str, genre: str, style: str, episode_count: int,
 
         # Generate first episode as preview
         _set_progress(task, 2, 3, "生成第 1 集劇本...")
+        task["logs"].append(f"[{_now()}] 呼叫 Claude 生成第 1 集劇本...")
         if outline.get("episodes"):
             ep1 = generate_episode_script(outline, 1)
+            task["logs"].append(f"[{_now()}] Claude 回應完成，劇本已生成")
             ep1["script_id"] = script_id
             # 單集時，集數標題 = 系列標題
             if outline.get("total_episodes", 1) == 1 and outline.get("series_title"):

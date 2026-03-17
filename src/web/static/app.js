@@ -20,7 +20,7 @@ const STAGE_LABELS = {
 };
 
 let pollingTimer = null;
-let _pollInterval = 5000;
+let _pollInterval = 3000;
 let _pollFailCount = 0;
 let currentStep = 1;
 let currentView = 'pipeline'; // 'pipeline' or 'knowledge'
