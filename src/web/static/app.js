@@ -410,7 +410,7 @@ async function _loadKBCardRow(cat) {
   if (!container) return;
 
   try {
-    const resp = await fetch(cat.apiUrl);
+    const resp = await fetch(apiUrl(cat.apiUrl));
     const data = await resp.json();
     const entries = data.data || data.entries || data.items || (Array.isArray(data) ? data : []);
 
