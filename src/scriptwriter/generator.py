@@ -265,6 +265,9 @@ def generate_script(
     episode["series_title"] = outline.get("series_title", "")
     episode["genre"] = outline.get("genre", "")
     episode["logline"] = outline.get("logline", "")
+    # 單集時，集數標題 = 系列標題
+    if outline.get("total_episodes", 1) == 1 and episode.get("series_title"):
+        episode["title"] = episode["series_title"]
     return episode
 
 

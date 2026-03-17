@@ -849,6 +849,9 @@ def _run_generate_kb(task_id: str, genre: str, style: str, episode_count: int,
         if outline.get("episodes"):
             ep1 = generate_episode_script(outline, 1)
             ep1["script_id"] = script_id
+            # 單集時，集數標題 = 系列標題
+            if outline.get("total_episodes", 1) == 1 and outline.get("series_title"):
+                ep1["title"] = outline["series_title"]
             ep1_file = script_dir / "script.json"
             ep1_file.write_text(
                 json.dumps(ep1, ensure_ascii=False, indent=2), encoding="utf-8"
