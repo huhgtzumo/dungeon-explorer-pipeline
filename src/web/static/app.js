@@ -303,8 +303,11 @@ async function showScriptInLibrary(scriptId) {
     }
     const script = data.script || data;
     const meta = data.meta || {};
+    const displayTitle = meta.title || script.series_title || script.title || scriptId;
+    const episodeTitle = (script.title && script.title !== displayTitle) ? script.title : '';
     let html = `<div class="analyses-detail-header">
-      <h3>&#128221; ${esc(script.series_title || script.title || scriptId)}</h3>
+      <h3>&#128221; ${esc(displayTitle)}</h3>
+      ${episodeTitle ? `<div style="font-size:13px;color:var(--text-secondary);margin-bottom:2px">集數：${esc(episodeTitle)}</div>` : ''}
       <div style="font-size:12px;color:var(--text-muted)">${esc(meta.created_at || '')}</div>
     </div>`;
     html += _renderScriptContent(script, meta);
