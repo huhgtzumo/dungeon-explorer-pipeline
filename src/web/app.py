@@ -31,6 +31,23 @@ from ..utils import index_db
 
 logger = logging.getLogger(__name__)
 
+# ──────────────────────────── API Key Auth ──────────────────────────────────
+_API_KEY = os.environ.get("EXPLORER_API_KEY", "")
+
+
+async def _api_key_auth_middleware(request: Request, call_next):
+    """驗證 /api/ POST 請求的 X-API-Key header。未設定 EXPLORER_API_KEY 時跳過（開發模式）。"""
+    if (
+        _API_KEY
+        and request.url.path.startswith("/api/")
+        and request.method == "POST"
+    ):
+        provided = request.headers.get("X-API-Key", "")
+        if provided != _API_KEY:
+            return JSONResponse({"error": "未授權：API Key 無效"}, status_code=401)
+    return await call_next(request)
+
+
 # ──────────────────────────── Rate Limiter ──────────────────────────────────
 limiter = Limiter(key_func=get_remote_address)
 
@@ -80,6 +97,7 @@ def _run_in_thread(fn, *args):
 
 app = FastAPI(title="探索者計劃 Explorer Plan Dashboard", version="2.0.0")
 app.state.limiter = limiter
+app.middleware("http")(_api_key_auth_middleware)
 
 
 @app.exception_handler(RateLimitExceeded)
