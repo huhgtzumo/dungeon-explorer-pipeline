@@ -714,11 +714,11 @@ function _renderScriptContent(script, meta) {
   }
 
   if (script.scenes && script.scenes.length) {
-    html += '<h4 style="margin:16px 0 8px;color:var(--accent-light)">場景</h4>';
+    html += '<h4 style="margin:16px 0 8px;color:#ff6b81">場景</h4>';
     html += '<div class="scene-cards">';
     for (const s of script.scenes) {
       html += `<div class="scene-card">
-        <div class="scene-num">Scene ${s.scene_number} <span style="color:var(--text-muted)">(${s.duration_sec || '?'}s)</span></div>
+        <div class="scene-num">Scene ${s.scene_number} <span style="color:#aaaaaa">(${s.duration_sec || '?'}s)</span></div>
         <div class="scene-loc">${esc(s.location || '')} ${esc(s.location_en || '')}</div>
         <div class="scene-action">${esc(s.action_zh || '')}</div>
         ${s.dialogue_zh ? '<div class="scene-dialogue">' + esc(s.dialogue_zh) + '</div>' : ''}
@@ -1448,8 +1448,48 @@ function renderTasks(tasks) {
       <div class="task-logs">${[...(t.logs || [])].reverse().map(l => '<div>' + esc(l) + '</div>').join('')}</div>
       ${t.error ? '<div class="task-error">Error: ' + esc(t.error) + '</div>' : ''}
       ${t.result ? '<div class="task-result"><pre>' + esc(JSON.stringify(t.result, null, 2)) + '</pre></div>' : ''}
+      ${t.status === 'done' && t.result && t.result.script_id && (t.stage === 'kb-generate' || t.stage === 'generate')
+        ? `<button class="btn btn-accent" style="margin-top:8px;font-size:0.82rem" onclick="chainTriggerStoryboard('${esc(t.result.script_id)}',this)">繼續生成分鏡 →</button>` : ''}
+      ${t.status === 'done' && t.result && t.result.storyboard_id && t.stage === 'storyboard'
+        ? `<button class="btn btn-accent" style="margin-top:8px;font-size:0.82rem" onclick="chainTriggerImages('${esc(t.result.storyboard_id)}',this)">繼續生成場景圖 →</button>` : ''}
     </div>`;
   }).join('');
+}
+
+async function chainTriggerStoryboard(scriptId, btn) {
+  if (btn) btn.disabled = true;
+  try {
+    const resp = await fetch(apiUrl('/api/trigger/storyboard'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ source_script_id: scriptId }),
+    });
+    const data = await resp.json();
+    if (data.error) alert('Error: ' + data.error);
+    if (btn) btn.textContent = '已觸發 ✓';
+    refreshAll();
+  } catch (e) {
+    alert('Failed: ' + e.message);
+    if (btn) btn.disabled = false;
+  }
+}
+
+async function chainTriggerImages(storyboardId, btn) {
+  if (btn) btn.disabled = true;
+  try {
+    const resp = await fetch(apiUrl('/api/trigger/generate-images'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ storyboard_id: storyboardId }),
+    });
+    const data = await resp.json();
+    if (data.error) alert('Error: ' + data.error);
+    if (btn) btn.textContent = '已觸發 ✓';
+    refreshAll();
+  } catch (e) {
+    alert('Failed: ' + e.message);
+    if (btn) btn.disabled = false;
+  }
 }
 
 function toggleLogPanel() {
