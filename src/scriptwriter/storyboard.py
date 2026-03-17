@@ -19,8 +19,10 @@ logger = logging.getLogger(__name__)
 # Default exploration style prefix
 EXPLORATION_STYLE_PREFIX = (
     "dark abandoned building, first person POV, flashlight beam, "
-    "horror atmosphere, cinematic, hyper realistic, 9:16 vertical, "
-    "found footage style, dust particles in light beam"
+    "found footage style, old camcorder quality, low resolution, "
+    "film grain, VHS noise artifacts, slightly blurry, "
+    "night vision, dust particles in light beam, "
+    "security camera aesthetic, lens distortion, 9:16 vertical"
 )
 
 

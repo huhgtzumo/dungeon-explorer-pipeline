@@ -105,7 +105,9 @@ def generate_image(
 
 EXPLORER_STYLE_PREFIX = (
     "first person POV, flashlight illumination, abandoned building interior, "
-    "dark atmospheric, horror exploration, cinematic, 9:16 vertical"
+    "found footage, old camcorder quality, low resolution, film grain, "
+    "VHS noise, slightly blurry, grainy, night vision green tint, "
+    "dark atmospheric, horror exploration, 9:16 vertical"
 )
 
 
