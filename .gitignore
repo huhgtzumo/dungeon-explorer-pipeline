@@ -10,15 +10,18 @@ build/
 venv/
 env/
 
-# Data files (generated content)
-data/scripts/*.json
-data/storyboards/*.json
-data/images/*.png
-data/images/*.jpg
-data/videos/*.mp4
-data/output/*.mp4
-data/characters/*.json
-data/characters/*.png
+# Generated content (images, videos, scripts)
+data/generated_images/
+data/generated_videos/
+data/scripts/
+data/storyboards/
+data/images/
+data/videos/
+data/output/
+data/characters/
+
+# Legacy knowledge base data
+data/knowledge/_legacy/
 
 # Keep directory structure
 !data/*/.gitkeep
