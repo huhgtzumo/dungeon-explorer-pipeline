@@ -284,6 +284,17 @@ def _run_generate(task_id: str, source_analysis_id: str,
         }
         task["logs"].append(f"[{_now()}] 劇本生成完成: {task['result']['title']}")
         task["status"] = "done"
+
+        # Auto-chain: 腳本完成後自動觸發分鏡生成
+        try:
+            auto_task_id = _create_task("storyboard")
+            task["logs"].append(f"[{_now()}] 自動觸發分鏡生成...")
+            _run_in_thread(_run_storyboard, auto_task_id, script_id)
+            task["result"]["auto_storyboard_task"] = auto_task_id
+        except Exception as chain_err:
+            task["logs"].append(f"[{_now()}] 自動觸發分鏡失敗: {chain_err}")
+            logger.error(f"Auto-chain storyboard failed: {chain_err}")
+
     except Exception as e:
         task["status"] = "error"
         task["error"] = str(e)
@@ -879,6 +890,17 @@ def _run_generate_kb(task_id: str, genre: str, style: str, episode_count: int,
             "kb_user_selected": outline.get("_kb_user_selected", []),
         }
         task["status"] = "done"
+
+        # Auto-chain: 腳本完成後自動觸發分鏡生成
+        try:
+            auto_task_id = _create_task("storyboard")
+            task["logs"].append(f"[{_now()}] 自動觸發分鏡生成...")
+            _run_in_thread(_run_storyboard, auto_task_id, script_id)
+            task["result"]["auto_storyboard_task"] = auto_task_id
+        except Exception as chain_err:
+            task["logs"].append(f"[{_now()}] 自動觸發分鏡失敗: {chain_err}")
+            logger.error(f"Auto-chain storyboard failed: {chain_err}")
+
     except Exception as e:
         task["status"] = "error"
         task["error"] = str(e)

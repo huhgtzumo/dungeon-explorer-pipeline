@@ -1448,8 +1448,8 @@ function renderTasks(tasks) {
       <div class="task-logs">${[...(t.logs || [])].reverse().map(l => '<div>' + esc(l) + '</div>').join('')}</div>
       ${t.error ? '<div class="task-error">Error: ' + esc(t.error) + '</div>' : ''}
       ${t.result ? '<div class="task-result"><pre>' + esc(JSON.stringify(t.result, null, 2)) + '</pre></div>' : ''}
-      ${t.status === 'done' && t.result && t.result.script_id && (t.stage === 'kb-generate' || t.stage === 'generate')
-        ? `<button class="btn btn-accent" style="margin-top:8px;font-size:0.82rem" onclick="chainTriggerStoryboard('${esc(t.result.script_id)}',this)">繼續生成分鏡 →</button>` : ''}
+      ${t.status === 'done' && t.result && t.result.auto_storyboard_task && (t.stage === 'kb-generate' || t.stage === 'generate')
+        ? `<div style="margin-top:8px;font-size:0.82rem;color:var(--accent-light)">⚡ 已自動觸發分鏡生成</div>` : ''}
       ${t.status === 'done' && t.result && t.result.storyboard_id && t.stage === 'storyboard'
         ? `<button class="btn btn-accent" style="margin-top:8px;font-size:0.82rem" onclick="chainTriggerImages('${esc(t.result.storyboard_id)}',this)">繼續生成場景圖 →</button>` : ''}
     </div>`;
