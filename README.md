@@ -1,32 +1,29 @@
-# 🎬 YouTube 短劇自動化 Pipeline
+# 🏚️ 探索者計劃 — 廢墟探索影片自動化 Pipeline
 
-全自動短劇生產線：從搜集爆款短劇到生成新短劇並上傳 YouTube。
+從知識庫生成廢墟探索影片並上傳 YouTube。
 
 ## 架構概覽
 
 ```
-爬蟲層          分析層          生成層          指令層
-YouTube API ──→ 字幕提取 ──→ 劇本分析 ──→ 新劇本生成 ──→ 分鏡拆解
-                yt-dlp         Claude         Claude        角色卡+場景
-                Whisper
+生成層          指令層          圖片層          視頻層
+知識庫 ──→ 探索腳本生成 ──→ 分鏡拆解 ──→ 場景圖生成 ──→ 探索影片生成
+Claude         Claude        角色卡+場景    Flux/fal.ai    Kling AI
 
-圖片層          視頻層          後製層          發布層
-Gemini ──→ Veo 3.1/Flow ──→ FFmpeg拼接 ──→ YouTube上傳
-生分鏡圖      圖生視頻        +字幕燒錄       自動發布
+後製層          發布層
+FFmpeg拼接 ──→ YouTube上傳
++字幕燒錄       自動發布
 ```
 
-## Pipeline 流程
+## Pipeline 流程（6 步）
 
-| 層 | 功能 | 技術 | 狀態 |
-|---|------|------|------|
-| 1. 爬蟲層 | 搜尋爆款短劇、提取字幕 | YouTube Data API + yt-dlp + Whisper | ✅ 可用 |
-| 2. 分析層 | 分析劇本結構、歸納爆款模式 | Claude API (proxy) | ✅ 可用 |
-| 3. 生成層 | 生成新劇本 | Claude API (proxy) | ✅ 可用 |
-| 4. 指令層 | 分鏡拆解 + 角色卡 + Prompt 組裝 | Claude API (proxy) | ✅ 可用 |
-| 5. 圖片層 | 生成分鏡圖 | Gemini API / 網頁版 nano banana | ⏳ 免費方案 |
-| 6. 視頻層 | 分鏡圖生成視頻 | Veo 3.1 API / Flow 網頁版 | ⏳ 免費方案 |
-| 7. 後製層 | 拼接視頻 + 燒字幕 | FFmpeg | ✅ 可用 |
-| 8. 發布層 | 上傳 YouTube | YouTube Upload API | ✅ 可用 |
+| 步驟 | 功能 | 技術 | 狀態 |
+|------|------|------|------|
+| 1. 探索腳本生成 | 從知識庫生成探索劇本 | Claude API (proxy) | ✅ 可用 |
+| 2. 場景分鏡 | 分鏡拆解 + 角色卡 + Prompt 組裝 | Claude API (proxy) | ✅ 可用 |
+| 3. 場景圖生成 | 生成分鏡圖 | Flux Schnell (fal.ai) | ✅ 可用 |
+| 4. 探索影片生成 | 分鏡圖生成視頻 | Kling AI API | ✅ 可用 |
+| 5. 後製合成 | 拼接視頻 + 燒字幕 | FFmpeg | ⏳ 開發中 |
+| 6. 發布上傳 | 上傳 YouTube | YouTube Upload API | ⏳ 開發中 |
 
 ## 產出規格
 
@@ -45,26 +42,24 @@ pip install -r requirements.txt
 cp .env.example .env
 # 編輯 .env 填入 API keys
 
-# 3. 執行完整 pipeline
-python -m src.main --mode full
+# 3. 從知識庫生成劇本
+python -m src.main --mode kb-generate
 
-# 或單獨執行某一層
-python -m src.main --mode crawl      # 只跑爬蟲
-python -m src.main --mode script     # 只跑劇本生成
-python -m src.main --mode storyboard # 只跑分鏡
-python -m src.main --mode assemble   # 只跑後製
-python -m src.main --mode publish    # 只跑上傳
+# 或單獨執行某一步
+python -m src.main --mode kb-stats    # 顯示知識庫統計
+python -m src.main --mode storyboard  # 分鏡拆解
+python -m src.main --mode assemble    # 後製合成
+python -m src.main --mode publish     # 上傳 YouTube
+
+# 啟動 Web Dashboard
+python -m src.web.app
 ```
-
-## 設計參考
-
-- [火宝短剧 (huobao-drama)](https://github.com/chatfire-AI/huobao-drama) — 角色卡系統、全局風格一致性
-- [MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) — Pipeline 架構、多 LLM 整合
 
 ## 技術棧
 
 - Python 3.11+
 - Claude API（走 proxy localhost:3456）
-- Gemini（生圖）/ Veo 3.1（生視頻）
-- YouTube Data API + yt-dlp + Whisper
+- Flux Schnell / fal.ai（生圖）
+- Kling AI（生視頻）
 - FFmpeg
+- FastAPI（Web Dashboard）

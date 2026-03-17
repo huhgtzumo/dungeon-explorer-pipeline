@@ -1,4 +1,4 @@
-"""FFmpeg 視頻拼接 — 把多個視頻片段串成一部完整短劇"""
+"""FFmpeg 視頻拼接 — 把多個視頻片段串成一部完整影片"""
 
 from __future__ import annotations
 

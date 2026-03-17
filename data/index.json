@@ -80,6 +80,60 @@
       "type": "kb-series",
       "created_at": "2026-03-16 01:16:24",
       "file": "data/scripts/script_20260316_011502_34822a/script.json"
+    },
+    {
+      "id": "script_20260317_203457_1bfe94",
+      "title": "倒數病房",
+      "source_analysis_id": "knowledge_base",
+      "human_requirements": "",
+      "type": "kb-series",
+      "created_at": "2026-03-17 20:37:45",
+      "file": "data/scripts/script_20260317_203457_1bfe94/script.json"
+    },
+    {
+      "id": "script_20260317_220445_b804e5",
+      "title": "底片裡的商場",
+      "source_analysis_id": "knowledge_base",
+      "human_requirements": "",
+      "type": "kb-series",
+      "created_at": "2026-03-17 22:07:53",
+      "file": "data/scripts/script_20260317_220445_b804e5/script.json"
+    },
+    {
+      "id": "script_20260317_221702_1dc7e0",
+      "title": "神降之井",
+      "source_analysis_id": "knowledge_base",
+      "human_requirements": "",
+      "type": "kb-series",
+      "created_at": "2026-03-17 22:19:41",
+      "file": "data/scripts/script_20260317_221702_1dc7e0/script.json"
+    },
+    {
+      "id": "script_20260317_223506_7a3169",
+      "title": "聖所之下",
+      "source_analysis_id": "knowledge_base",
+      "human_requirements": "",
+      "type": "kb-series",
+      "created_at": "2026-03-17 22:38:18",
+      "file": "data/scripts/script_20260317_223506_7a3169/script.json"
+    },
+    {
+      "id": "script_20260317_225545_c21463",
+      "title": "末班車之後",
+      "source_analysis_id": "knowledge_base",
+      "human_requirements": "",
+      "type": "kb-series",
+      "created_at": "2026-03-17 23:00:53",
+      "file": "data/scripts/script_20260317_225545_c21463/script.json"
+    },
+    {
+      "id": "script_20260317_234901_707933",
+      "title": "鏽蝕迴圈",
+      "source_analysis_id": "knowledge_base",
+      "human_requirements": "",
+      "type": "kb-series",
+      "created_at": "2026-03-17 23:51:34",
+      "file": "data/scripts/script_20260317_234901_707933/script.json"
     }
   ],
   "storyboards": [
@@ -103,6 +157,20 @@
       "frame_count": 16,
       "created_at": "2026-03-16 01:19:34",
       "file": "data/storyboards/script_20260316_011502_34822a/storyboard.json"
+    },
+    {
+      "id": "sb_20260317_224725_45896d",
+      "source_script_id": "script_20260317_223506_7a3169",
+      "frame_count": 18,
+      "created_at": "2026-03-17 22:47:25",
+      "file": "data/storyboards/script_20260317_223506_7a3169/storyboard.json"
+    },
+    {
+      "id": "sb_20260317_233825_8672c6",
+      "source_script_id": "script_20260317_225545_c21463",
+      "frame_count": 32,
+      "created_at": "2026-03-17 23:38:25",
+      "file": "data/storyboards/script_20260317_225545_c21463/storyboard.json"
     }
   ]
 }

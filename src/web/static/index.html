@@ -327,16 +327,17 @@
     <!-- Step 5: Post-Production -->
     <div class="content-area step-panel" id="step5">
       <div class="panel-left">
+        <div class="wip-banner">🚧 開發中 — 此功能尚未完成，敬請期待</div>
         <div class="panel-title"><span class="title-icon">&#9986;</span> 後製合成</div>
         <div class="form-group">
           <label class="form-label">選擇視頻片段組</label>
-          <select class="form-select" id="pp-video-select">
+          <select class="form-select" id="pp-video-select" disabled>
             <option value="">-- 選擇已生成的視頻 --</option>
           </select>
         </div>
         <div class="form-group">
           <label class="form-label">字幕樣式</label>
-          <select class="form-select" id="pp-subtitle-style">
+          <select class="form-select" id="pp-subtitle-style" disabled>
             <option value="bottom-center">底部居中（經典）</option>
             <option value="top-center">頂部居中</option>
             <option value="dramatic">戲劇化（大字+描邊）</option>
@@ -345,7 +346,7 @@
         </div>
         <div class="form-group">
           <label class="form-label">背景音樂</label>
-          <select class="form-select" id="pp-bgm">
+          <select class="form-select" id="pp-bgm" disabled>
             <option value="auto">自動匹配（根據劇情類型）</option>
             <option value="tense">緊張懸疑</option>
             <option value="romantic">浪漫甜蜜</option>
@@ -355,7 +356,7 @@
         </div>
         <div class="form-group">
           <label class="form-label">輸出格式</label>
-          <select class="form-select" id="pp-format">
+          <select class="form-select" id="pp-format" disabled>
             <option value="mp4-1080p">MP4 1080p（YouTube 推薦）</option>
             <option value="mp4-4k">MP4 4K</option>
             <option value="shorts-9x16">Shorts 9:16（直式）</option>
@@ -387,35 +388,36 @@
     <!-- Step 6: Publish -->
     <div class="content-area step-panel" id="step6">
       <div class="panel-left">
+        <div class="wip-banner">🚧 開發中 — 此功能尚未完成，敬請期待</div>
         <div class="panel-title"><span class="title-icon">&#128228;</span> 發布上傳</div>
         <div class="form-group">
           <label class="form-label">選擇成品視頻</label>
-          <select class="form-select" id="pub-video-select">
+          <select class="form-select" id="pub-video-select" disabled>
             <option value="">-- 選擇已合成的視頻 --</option>
           </select>
         </div>
         <div class="form-group">
           <label class="form-label">YouTube 頻道</label>
-          <select class="form-select" id="pub-channel">
+          <select class="form-select" id="pub-channel" disabled>
             <option value="">-- 待設定 --</option>
           </select>
           <div class="helper-text">需要先完成 YouTube OAuth 授權</div>
         </div>
         <div class="form-group">
           <label class="form-label">標題</label>
-          <input type="text" class="form-input" id="pub-title" placeholder="自動從劇本生成，可手動修改">
+          <input type="text" class="form-input" id="pub-title" placeholder="自動從劇本生成，可手動修改" disabled>
         </div>
         <div class="form-group">
           <label class="form-label">描述</label>
-          <textarea class="form-textarea" id="pub-description" placeholder="自動生成 SEO 描述..." rows="3"></textarea>
+          <textarea class="form-textarea" id="pub-description" placeholder="自動生成 SEO 描述..." rows="3" disabled></textarea>
         </div>
         <div class="form-group">
           <label class="form-label">Tags</label>
-          <input type="text" class="form-input" id="pub-tags" placeholder="廢墟探索, 都市傳說, 探險...">
+          <input type="text" class="form-input" id="pub-tags" placeholder="廢墟探索, 都市傳說, 探險..." disabled>
         </div>
         <div class="form-group">
           <label class="form-label">排程發布</label>
-          <select class="form-select" id="pub-schedule">
+          <select class="form-select" id="pub-schedule" disabled>
             <option value="now">立即發布</option>
             <option value="schedule">排程（選擇時間）</option>
             <option value="draft">存為草稿</option>

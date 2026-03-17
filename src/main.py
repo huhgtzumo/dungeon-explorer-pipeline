@@ -1,4 +1,4 @@
-"""廢墟探索短劇 Pipeline — 主入口
+"""廢墟探索 Pipeline — 主入口
 
 用法：
     python -m src.main --mode kb-generate  # 從知識庫生成探索劇本（主要模式）
@@ -62,15 +62,9 @@ def stage_storyboard(config: dict, script: dict | None = None) -> list[dict]:
 
 def stage_image(config: dict, frames: list[dict] | None = None, drama_id: str = "") -> list[dict]:
     """Stage 5: 生圖（目前尚未實作自動化）"""
-    from .image_gen.gemini_client import batch_generate
-
     console.print(Panel("🖼️ Stage 5: 生成分鏡圖", style="bold cyan"))
     console.print("  [yellow]⚠ 生圖功能尚未完全自動化（免費方案限制）[/yellow]")
     console.print("  [yellow]  請手動在 Google AI Studio 用 nano banana 生圖[/yellow]")
-
-    if frames:
-        results = batch_generate(frames, drama_id or "unknown")
-        return results
     return []
 
 
@@ -169,7 +163,7 @@ def stage_publish(config: dict, video_path: str | Path | None = None, script: di
         console.print("  [red]找不到最終視頻[/red]")
         return None
 
-    title = script.get("title", "短劇") if script else "短劇"
+    title = script.get("title", "廢墟探索") if script else "廢墟探索"
     description = script.get("logline", "") if script else ""
 
     console.print(f"  上傳: {title}")
@@ -181,7 +175,7 @@ def stage_publish(config: dict, video_path: str | Path | None = None, script: di
 
 
 def stage_kb_generate(config: dict, episode_count: int = 30,
-                      genre: str = "都市甜寵") -> dict:
+                      genre: str = "廢墟探索") -> dict:
     """KB mode: 從知識庫生成劇本"""
     from .knowledge.knowledge_base import KnowledgeBase
     from .scriptwriter.generator import generate_from_knowledge_base, generate_episode_script
@@ -244,7 +238,7 @@ def stage_kb_stats() -> None:
 
     console.print(Panel("知識庫統計", style="bold cyan"))
     console.print(f"  總條目: [bold]{stats['total']}[/bold]")
-    console.print(f"  已分析劇目: [bold]{stats.get('dramas', 0)}[/bold]")
+    console.print(f"  已分析影片: [bold]{stats.get('dramas', 0)}[/bold]")
     for cat, info in stats.get("categories", {}).items():
         line = f"  {cat}: {info['count']}"
         if "subcategories" in info:
@@ -253,7 +247,7 @@ def stage_kb_stats() -> None:
         console.print(line)
 
 
-def run_pipeline(mode: str = "kb-generate", episode_count: int = 30, genre: str = "都市甜寵"):
+def run_pipeline(mode: str = "kb-generate", episode_count: int = 30, genre: str = "廢墟探索"):
     """執行 Pipeline"""
     config = load_config()
 
@@ -278,13 +272,13 @@ def run_pipeline(mode: str = "kb-generate", episode_count: int = 30, genre: str 
 
 
 def main():
-    parser = argparse.ArgumentParser(description="廢墟探索短劇 Pipeline")
+    parser = argparse.ArgumentParser(description="廢墟探索 Pipeline")
     parser.add_argument("--mode", default="kb-generate",
                         choices=["kb-generate", "kb-stats",
                                  "storyboard", "assemble", "publish"])
     parser.add_argument("--drama-id", default="", help="指定 drama ID（用於 assemble/publish）")
     parser.add_argument("--episodes", type=int, default=30, help="集數")
-    parser.add_argument("--genre", default="都市甜寵", help="類型")
+    parser.add_argument("--genre", default="廢墟探索", help="類型")
     args = parser.parse_args()
 
     run_pipeline(args.mode, episode_count=args.episodes, genre=args.genre)

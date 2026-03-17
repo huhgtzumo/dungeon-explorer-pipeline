@@ -47,7 +47,7 @@ class TestGenerate:
 
         script = generate_script(
             trending_analysis="測試用，跳過分析",
-            genre="都市甜寵",
+            genre="廢墟探索",
         )
         assert isinstance(script, dict)
 
