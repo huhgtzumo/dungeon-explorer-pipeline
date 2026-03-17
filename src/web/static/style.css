@@ -1344,7 +1344,7 @@ input[type="checkbox"].video-cb {
 }
 
 .char-card .char-name { font-weight: 700; font-size: 1rem; margin-bottom: 6px; color: var(--accent-light); }
-.char-card .char-detail { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+.char-card .char-detail { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; }
 
 .scene-cards { display: flex; flex-direction: column; gap: 10px; }
 
@@ -1356,9 +1356,9 @@ input[type="checkbox"].video-cb {
 }
 
 .scene-card .scene-num { font-weight: 700; color: var(--accent-light); font-size: 0.85rem; }
-.scene-card .scene-loc { color: var(--blue); font-size: 0.8rem; }
-.scene-card .scene-action { margin-top: 6px; font-size: 0.85rem; color: var(--text-secondary); }
-.scene-card .scene-dialogue { margin-top: 4px; font-style: italic; color: var(--text-muted); font-size: 0.85rem; }
+.scene-card .scene-loc { color: #5b9bd5; font-size: 0.8rem; }
+.scene-card .scene-action { margin-top: 6px; font-size: 0.85rem; color: var(--text-primary); }
+.scene-card .scene-dialogue { margin-top: 4px; font-style: italic; color: var(--text-secondary); font-size: 0.85rem; }
 
 /* ══════════════════════════════════════════
    DATA TABLE (in overlay)
