@@ -10,6 +10,7 @@ import json
 import logging
 import os
 import re
+import threading
 import traceback
 import uuid
 from concurrent.futures import ThreadPoolExecutor
@@ -114,6 +115,7 @@ app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 
 # In-memory task store
 _tasks: dict[str, dict] = {}
+_tasks_lock = threading.Lock()
 _MAX_TASKS = 200  # Keep at most this many tasks to prevent memory leak
 _TASK_TTL_HOURS = 24  # Tasks older than this will be cleaned up
 
@@ -145,34 +147,35 @@ def _now() -> str:
 
 def _cleanup_tasks() -> None:
     """Remove finished tasks older than _TASK_TTL_HOURS, and cap at _MAX_TASKS."""
-    now = datetime.now()
-    # TTL-based cleanup: remove any finished task older than 24 hours
-    expired = []
-    for tid, t in _tasks.items():
-        if t["status"] not in ("done", "error"):
-            continue
-        finished_at = t.get("finished_at")
-        if finished_at:
-            try:
-                finished_dt = datetime.strptime(finished_at, "%Y-%m-%d %H:%M:%S")
-                if now - finished_dt > timedelta(hours=_TASK_TTL_HOURS):
-                    expired.append(tid)
-            except ValueError:
-                expired.append(tid)  # malformed timestamp, remove
-    for tid in expired:
-        del _tasks[tid]
+    with _tasks_lock:
+        now = datetime.now()
+        # TTL-based cleanup: remove any finished task older than 24 hours
+        expired = []
+        for tid, t in _tasks.items():
+            if t["status"] not in ("done", "error"):
+                continue
+            finished_at = t.get("finished_at")
+            if finished_at:
+                try:
+                    finished_dt = datetime.strptime(finished_at, "%Y-%m-%d %H:%M:%S")
+                    if now - finished_dt > timedelta(hours=_TASK_TTL_HOURS):
+                        expired.append(tid)
+                except ValueError:
+                    expired.append(tid)  # malformed timestamp, remove
+        for tid in expired:
+            del _tasks[tid]
 
-    # Also cap total count
-    if len(_tasks) <= _MAX_TASKS:
-        return
-    finished = [
-        (tid, t) for tid, t in _tasks.items()
-        if t["status"] in ("done", "error")
-    ]
-    finished.sort(key=lambda x: x[1].get("finished_at") or "")
-    to_remove = len(_tasks) - _MAX_TASKS
-    for tid, _ in finished[:to_remove]:
-        del _tasks[tid]
+        # Also cap total count
+        if len(_tasks) <= _MAX_TASKS:
+            return
+        finished = [
+            (tid, t) for tid, t in _tasks.items()
+            if t["status"] in ("done", "error")
+        ]
+        finished.sort(key=lambda x: x[1].get("finished_at") or "")
+        to_remove = len(_tasks) - _MAX_TASKS
+        for tid, _ in finished[:to_remove]:
+            del _tasks[tid]
 
 
 # ──────────────────────────── Pages ────────────────────────────
@@ -1360,12 +1363,14 @@ async def storyboard_media_status(storyboard_id: str):
 
 @app.get("/api/tasks")
 async def list_tasks():
-    return list(_tasks.values())
+    with _tasks_lock:
+        return list(_tasks.values())
 
 
 @app.get("/api/task/{task_id}")
 async def get_task(task_id: str):
-    task = _tasks.get(task_id)
+    with _tasks_lock:
+        task = _tasks.get(task_id)
     if not task:
         return JSONResponse({"error": "任務不存在"}, status_code=404)
     return task
@@ -1389,9 +1394,10 @@ async def get_config():
 
 def _has_running_task(stage: str) -> str | None:
     """Return task_id if there's already a running task of the same stage."""
-    for tid, t in _tasks.items():
-        if t["stage"] == stage and t["status"] == "running":
-            return tid
+    with _tasks_lock:
+        for tid, t in _tasks.items():
+            if t["stage"] == stage and t["status"] == "running":
+                return tid
     return None
 
 
@@ -1410,7 +1416,8 @@ def _create_task(stage: str, **extra) -> str:
         "progress": {"current": 0, "total": 0, "percent": 0, "step": ""},
         **extra,
     }
-    _tasks[task_id] = task
+    with _tasks_lock:
+        _tasks[task_id] = task
     return task_id
 
 
