@@ -75,6 +75,102 @@ SUBCATEGORIES = {
     "traps_hazards": ("結構危險", "環境危險", "機關陷阱", "其他"),
 }
 
+# Universal zones compatible with ALL building types
+_UNIVERSAL_ZONES = {
+    "陰暗走廊", "Dark Corridor",
+    "地下室", "Basement",
+    "密室", "Hidden Room",
+    "屋頂", "Rooftop",
+    "配電室", "Electrical Room", "配電間",
+    "控制室", "Control Room",
+    "鍋爐房", "Boiler Room",
+    "緊急逃生通道", "Emergency Escape Route",
+    "通風管道", "Ventilation Duct",
+    "電梯井", "Elevator Shaft",
+    "爬行空間", "Crawl Space", "爬行通道",
+    "檔案室", "Archive Room",
+}
+
+# Building subcategory → additional compatible zone names
+BUILDING_ZONE_COMPATIBILITY: dict[str, set[str]] = {
+    "醫療設施": {
+        "病房", "Patient Ward", "手術室", "Operating Room",
+        "X光室", "X-Ray Room", "X 光室",
+        "藥品儲藏室", "Pharmaceutical Storage",
+        "解剖室", "Autopsy Room", "停屍間", "Morgue",
+        "隔離區", "Quarantine Zone", "禁閉病房", "Padded Room",
+        "實驗室", "Laboratory", "化學實驗室", "Chemistry Lab",
+        "淋浴間", "Shower Block", "淋浴間群",
+        "焚化室", "Cremation Room", "火化爐間",
+        "洗衣房", "Laundry Room",
+        "廚房/食堂", "Kitchen/Cafeteria",
+        "監控中心", "Surveillance Center",
+    },
+    "軍事設施": {
+        "彈藥庫", "Ammunition Storage",
+        "監控中心", "Surveillance Center",
+        "隔離牢房", "Isolation Cell", "隔離囚室",
+        "警衛塔", "Guard Tower", "瞭望塔",
+        "地下隧道", "Underground Tunnel",
+        "淋浴間", "Shower Block", "淋浴間群",
+        "廣播控制室", "Broadcasting Room",
+        "廚房/食堂", "Kitchen/Cafeteria",
+        "伺服器機房", "Server Room", "機房",
+    },
+    "教育設施": {
+        "實驗室", "Laboratory", "化學實驗室", "Chemistry Lab",
+        "廚房/食堂", "Kitchen/Cafeteria",
+        "游泳池區", "Pool Area",
+        "廣播控制室", "Broadcasting Room",
+        "伺服器機房", "Server Room", "機房",
+        "洗衣房", "Laundry Room",
+        "鐘塔", "Bell Tower",
+    },
+    "工業設施": {
+        "實驗室", "Laboratory", "化學實驗室", "Chemistry Lab",
+        "地下隧道", "Underground Tunnel",
+        "地下停車場", "Underground Parking",
+        "伺服器機房", "Server Room", "機房",
+        "監控中心", "Surveillance Center",
+        "地下儲水池", "Underground Cistern",
+        "蓄水池", "Water Cistern",
+    },
+    "宗教設施": {
+        "禮拜堂", "Chapel",
+        "地下教堂", "Underground Chapel", "地下禮拜堂",
+        "鐘塔", "Bell Tower",
+        "亂葬崗", "Mass Grave Site",
+    },
+    "居住設施": {
+        "廚房/食堂", "Kitchen/Cafeteria",
+        "洗衣房", "Laundry Room",
+        "淋浴間", "Shower Block", "淋浴間群",
+        "地下停車場", "Underground Parking",
+        "游泳池區", "Pool Area",
+    },
+    "地下設施": {
+        "地下隧道", "Underground Tunnel",
+        "地下停車場", "Underground Parking",
+        "地下儲水池", "Underground Cistern",
+        "蓄水池", "Water Cistern",
+        "實驗室", "Laboratory", "化學實驗室", "Chemistry Lab",
+        "監控中心", "Surveillance Center",
+        "伺服器機房", "Server Room", "機房",
+        "地下教堂", "Underground Chapel", "地下禮拜堂",
+        "淋浴間群", "Shower Block",
+    },
+    "公共設施": {
+        "廚房/食堂", "Kitchen/Cafeteria",
+        "監控中心", "Surveillance Center",
+        "地下停車場", "Underground Parking",
+        "廣播控制室", "Broadcasting Room",
+        "游泳池區", "Pool Area",
+        "隔離牢房", "Isolation Cell", "隔離囚室",
+        "警衛塔", "Guard Tower", "瞭望塔",
+        "洗衣房", "Laundry Room",
+    },
+}
+
 
 def _generate_kb_id(category: str) -> str:
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -329,13 +425,14 @@ class KnowledgeBase:
             {category}_count: int -- override pick count per category
 
         Selection is weighted by effectiveness_score.
+        Exploration zones are filtered by building type compatibility.
         """
         config = config or {}
         filter_tags = config.get("tags")
         duration_sec = config.get("duration_sec", 60)
 
-        def _pick(category: str, count: int) -> list[dict]:
-            entries = self.get_entries(category, tags=filter_tags)
+        def _pick(category: str, count: int, entry_pool: list[dict] | None = None) -> list[dict]:
+            entries = entry_pool if entry_pool is not None else self.get_entries(category, tags=filter_tags)
             if not entries:
                 return []
             # Weighted random by effectiveness_score
@@ -396,10 +493,48 @@ class KnowledgeBase:
                 "explorer_equipment": random.randint(3, 5),
             }
 
-        return {
-            cat: _pick(cat, config.get(f"{cat}_count", default))
-            for cat, default in defaults.items()
-        }
+        # Step 1: Pick building type first
+        result: dict[str, list[dict]] = {}
+        if "building_types" in defaults:
+            bt_count = config.get("building_types_count", defaults["building_types"])
+            result["building_types"] = _pick("building_types", bt_count)
+
+        # Step 2: Filter exploration zones by building compatibility
+        if "exploration_zones" in defaults and result.get("building_types"):
+            building = result["building_types"][0]
+            building_sub = building.get("subcategory", "")
+            # Build compatible zone name set: universal + building-specific
+            compatible_names = set(_UNIVERSAL_ZONES)
+            if building_sub in BUILDING_ZONE_COMPATIBILITY:
+                compatible_names |= BUILDING_ZONE_COMPATIBILITY[building_sub]
+            # Also add "其他" subcategory compatibility as fallback
+            if building_sub not in BUILDING_ZONE_COMPATIBILITY:
+                # Unknown building subcategory — allow all zones
+                compatible_names = None
+
+            all_zones = self.get_entries("exploration_zones", tags=filter_tags)
+            if compatible_names is not None:
+                filtered_zones = [
+                    z for z in all_zones
+                    if z.get("name") in compatible_names
+                    or z.get("name_en") in compatible_names
+                ]
+                # Fallback: if filtering is too aggressive (<3 zones), use all
+                if len(filtered_zones) < 3:
+                    filtered_zones = all_zones
+            else:
+                filtered_zones = all_zones
+
+            ez_count = config.get("exploration_zones_count", defaults["exploration_zones"])
+            result["exploration_zones"] = _pick("exploration_zones", ez_count, entry_pool=filtered_zones)
+
+        # Step 3: Pick remaining categories normally
+        for cat, default in defaults.items():
+            if cat in ("building_types", "exploration_zones"):
+                continue
+            result[cat] = _pick(cat, config.get(f"{cat}_count", default))
+
+        return result
 
     def find_similar(self, category: str, name: str) -> dict | None:
         """Find an existing entry with the same or very similar name."""
