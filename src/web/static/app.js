@@ -1,16 +1,22 @@
 /* ── 探索者計劃 — 廢墟探索影片生成器 ── */
 
+// Detect base path for gateway proxy compatibility (e.g. /explorer/)
+const _basePath = (() => {
+  const p = window.location.pathname;
+  const idx = p.indexOf('/static/');
+  if (idx > 0) return p.substring(0, idx);
+  // If loaded from /explorer/ or / root
+  const match = p.match(/^(\/[^/]+\/)/);
+  return (match && match[1] !== '/static/') ? match[1].replace(/\/$/, '') : '';
+})();
+function apiUrl(path) { return _basePath + path; }
+
 const STAGE_LABELS = {
-  crawl: '探索素材搜尋',
-  analyze: '素材分析',
   generate: '探索腳本生成',
   storyboard: '場景分鏡',
   'generate-images': '場景圖生成（Flux）',
   'generate-videos': '探索影片生成（Kling AI）',
-  'kb-analyze-single': '知識庫分析（單部）',
-  'kb-analyze-batch': '知識庫分析（批量）',
   'kb-generate': '知識庫生成',
-  'analyze-preview': '預覽分析（審核）',
 };
 
 let pollingTimer = null;
@@ -19,21 +25,17 @@ let _pollFailCount = 0;
 let currentStep = 1;
 let currentView = 'pipeline'; // 'pipeline' or 'knowledge'
 let currentKBCategory = 'building_types';
-let _currentCrawlId = null;
 let _logExpanded = false;
 
 // Cached data
-let _crawls = [];
-let _analyses = [];
 let _scripts = [];
 let _storyboards = [];
 let _imageSets = [];
-let _allVideos = []; // Step 2 all-videos cache
 
-// Step 3: KB card selections — category -> single selected entry id (or null)
+// Step 1: KB card selections — category -> single selected entry id (or null)
 const _kbCardSelections = {};
 
-// Step 3: generation mode — 'single' (default) or 'series'
+// Step 1: generation mode — 'single' (default) or 'series'
 let _genMode = 'single';
 let _durationSec = 60;
 
@@ -82,8 +84,6 @@ function navTo(view) {
   currentView = view;
   document.getElementById('view-pipeline').style.display = view === 'pipeline' ? '' : 'none';
   document.getElementById('view-knowledge').style.display = view === 'knowledge' ? '' : 'none';
-  const analysesView = document.getElementById('view-analyses');
-  if (analysesView) analysesView.style.display = view === 'analyses' ? '' : 'none';
   const scriptsView = document.getElementById('view-scripts');
   if (scriptsView) scriptsView.style.display = view === 'scripts' ? '' : 'none';
 
@@ -95,9 +95,6 @@ function navTo(view) {
 
   if (view === 'knowledge') {
     refreshKB();
-  }
-  if (view === 'analyses') {
-    loadAnalysesView();
   }
   if (view === 'scripts') {
     loadScriptsView();
@@ -145,10 +142,7 @@ function goStep(step) {
   });
 
   // Load step-specific data
-  if (step === 2) {
-    loadStep2Videos();
-  }
-  if (step === 3) {
+  if (step === 1) {
     loadStep3KBCards();
   }
 }
@@ -175,17 +169,13 @@ function _resetPolling(interval) {
 
 async function refreshAll() {
   try {
-    const [crawlsResp, analysesResp, scriptsResp, sbResp, imgResp, vidResp, tasksResp] = await Promise.all([
-      fetch('/api/crawls'),
-      fetch('/api/analyses'),
-      fetch('/api/scripts'),
-      fetch('/api/storyboards'),
-      fetch('/api/image-sets'),
-      fetch('/api/video-sets'),
-      fetch('/api/tasks'),
+    const [scriptsResp, sbResp, imgResp, vidResp, tasksResp] = await Promise.all([
+      fetch(apiUrl('/api/scripts')),
+      fetch(apiUrl('/api/storyboards')),
+      fetch(apiUrl('/api/image-sets')),
+      fetch(apiUrl('/api/video-sets')),
+      fetch(apiUrl('/api/tasks')),
     ]);
-    _crawls = (await crawlsResp.json()).data || [];
-    _analyses = (await analysesResp.json()).data || [];
     _scripts = (await scriptsResp.json()).data || [];
     _storyboards = (await sbResp.json()).data || [];
     _imageSets = (await imgResp.json()).data || [];
@@ -193,31 +183,23 @@ async function refreshAll() {
     const tasks = await tasksResp.json();
 
     // Update sidebar badges
-    document.getElementById('badge-crawls').textContent = _crawls.length;
-    document.getElementById('badge-analyses').textContent = _analyses.length;
     document.getElementById('badge-scripts').textContent = _scripts.length;
     document.getElementById('badge-storyboards').textContent = _storyboards.length;
     document.getElementById('badge-images').textContent = _imageSets.length;
     document.getElementById('badge-videos').textContent = _videoSets.length;
 
     // Step 1
-    renderCrawlHistory(_crawls);
-
-    // Step 2
-    renderAnalysisHistory(_analyses);
-
-    // Step 3
     renderScriptHistory(_scripts);
 
-    // Step 4
+    // Step 2
     populateScriptSelect(_scripts);
     renderStoryboardHistory(_storyboards);
 
-    // Step 5
+    // Step 3
     populateStoryboardSelect(_storyboards);
     renderImageHistory(_imageSets);
 
-    // Step 6
+    // Step 4
     populateImageSelect(_imageSets);
     renderVideoHistory(_videoSets);
 
@@ -243,466 +225,6 @@ async function refreshAll() {
   }
 }
 
-// ══════════════════════════════════════════
-// Step 1: Crawl
-// ══════════════════════════════════════════
-
-async function doCrawl() {
-  const btn = document.getElementById('btn-crawl');
-  if (btn && btn.disabled) return;
-  _setBusy(btn, true);
-
-  const keyword = document.getElementById('crawl-keyword').value.trim();
-  const tagsStr = document.getElementById('crawl-tags').value.trim();
-  const tags = tagsStr ? tagsStr.split(',').map(t => t.trim()).filter(Boolean) : [];
-
-  try {
-    const resp = await fetch('/api/trigger/crawl', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ keyword, tags }),
-    });
-    const data = await resp.json();
-    if (data.error) alert('Error: ' + data.error);
-    refreshAll();
-  } catch (e) {
-    alert('Failed: ' + e.message);
-  } finally {
-    _setBusy(btn, false);
-  }
-}
-
-function renderCrawlHistory(crawls) {
-  const el = document.getElementById('crawl-history');
-  if (!crawls.length) {
-    el.innerHTML = '<div class="preview-empty" style="padding:12px 0;font-size:12px">尚無搜尋紀錄</div>';
-    return;
-  }
-  el.innerHTML = crawls.slice().reverse().map(c => `
-    <div class="history-item" onclick="showCrawlDetail('${esc(c.id)}')">
-      <div class="hi-top">
-        <div class="hi-main">
-          <div class="hi-title">${esc(c.keyword || '預設搜尋')}</div>
-          <div class="hi-meta">${c.count} 部 · ${esc(c.created_at)}</div>
-        </div>
-        <div class="hi-actions">
-          <button class="trace-btn" onclick="event.stopPropagation();showTrace('crawls','${esc(c.id)}')">追溯</button>
-        </div>
-      </div>
-      ${(c.tags || []).length ? '<div class="hi-tags">' + c.tags.map(t => '<span class="tag tag-sm">' + esc(t) + '</span>').join('') + '</div>' : ''}
-    </div>
-  `).join('');
-}
-
-async function showCrawlDetail(crawlId) {
-  _currentCrawlId = crawlId;
-  const el = document.getElementById('crawl-results');
-  el.innerHTML = '<div class="preview-empty">載入中...</div>';
-
-  try {
-    const [videosResp, reviewsResp, subResp] = await Promise.all([
-      fetch('/api/crawls/' + crawlId + '/videos'),
-      fetch('/api/video-reviews'),
-      fetch('/api/crawls/' + crawlId + '/subtitle-status'),
-    ]);
-    const data = (await videosResp.json()).data || [];
-    const reviews = await reviewsResp.json();
-    const subStatus = (await subResp.json()).data || {};
-
-    if (!data.length) {
-      el.innerHTML = '<div class="empty-state"><div class="empty-icon">&#128269;</div><p>無視頻資料</p></div>';
-      document.getElementById('crawl-results-meta').textContent = '';
-      return;
-    }
-
-    document.getElementById('crawl-results-meta').textContent = `共 ${data.length} 筆結果`;
-    el.innerHTML = _renderCrawlVideoTable(data, reviews, crawlId, subStatus);
-    _updateSelectionBar();
-  } catch (e) {
-    el.innerHTML = '<div class="empty-state"><div class="empty-icon">&#128683;</div><p>載入失敗</p></div>';
-  }
-}
-
-function _renderCrawlVideoTable(videos, reviews, crawlId, subStatus) {
-  subStatus = subStatus || {};
-  // Check if any video needs subtitle extraction
-  const needsSub = videos.some(r => {
-    const ss = subStatus[r.video_id];
-    return !ss || ss.status === 'none';
-  });
-  const allDone = videos.every(r => {
-    const ss = subStatus[r.video_id];
-    return ss && ss.status === 'done';
-  });
-  const extractingCount = videos.filter(r => { const ss = subStatus[r.video_id]; return ss && ss.status === 'extracting'; }).length;
-  const extractBar = allDone ? `
-    <div style="margin-bottom:10px;color:var(--text-success,#4ade80);font-size:12px;">✅ 所有視頻字幕已提取完畢</div>` :
-    extractingCount > 0 ? `
-    <div style="margin-bottom:10px;color:var(--text-accent,#a78bfa);font-size:12px;">⏳ 字幕提取中... (${extractingCount} 部)</div>` : '';
-
-  return extractBar + `
-    <table class="results-table">
-      <thead>
-        <tr>
-          <th style="width:36px"><input type="checkbox" onchange="toggleAllVideoCb(this.checked)" /></th>
-          <th>影片</th>
-          <th>頻道</th>
-          <th>觀看次數</th>
-          <th>時長</th>
-          <th>字幕</th>
-          <th>狀態</th>
-          <th>操作</th>
-        </tr>
-      </thead>
-      <tbody>${videos.map((r, i) => {
-        const vid = r.video_id || '';
-        const status = _getVideoStatus(vid, reviews);
-        const checked = status === 'confirmed' ? 'disabled' : '';
-        const thumbClass = 'thumbnail t' + ((i % 5) + 1);
-        const ss = subStatus[vid] || { status: 'none' };
-        const subCell = _subtitleStatusCell(ss, crawlId, vid);
-        return `
-          <tr>
-            <td><input type="checkbox" class="video-cb" value="${esc(vid)}" ${checked} onchange="_updateSelectionBar()" /></td>
-            <td>
-              <div class="result-row">
-                <div class="${thumbClass}"></div>
-                <div>
-                  <div class="video-title">${esc(r.title)}</div>
-                  <div class="video-channel">${esc(r.channel || '')}</div>
-                </div>
-              </div>
-            </td>
-            <td style="color:var(--text-secondary)">${esc(r.channel || '')}</td>
-            <td class="views-count">${(r.views || 0).toLocaleString()}</td>
-            <td><span class="duration-badge">${formatDuration(r.duration)}</span></td>
-            <td>${subCell}</td>
-            <td>${_statusBadge(status)}</td>
-            <td class="video-actions">
-              ${r.url ? '<a href="' + esc(r.url) + '" target="_blank" rel="noopener" class="video-link" style="margin-right:6px">YouTube &#8599;</a>' : ''}
-              <button class="btn btn-sm btn-danger" onclick="event.stopPropagation();doDeleteVideo('${esc(crawlId)}','${esc(vid)}','${esc(r.title)}')">刪除</button>
-            </td>
-          </tr>`;
-      }).join('')}
-      </tbody>
-    </table>`;
-}
-
-function _subtitleStatusCell(ss, crawlId, videoId) {
-  if (ss.status === 'done') {
-    const langLabel = ss.language ? ` [${ss.language}]` : '';
-    return `<span class="sub-status sub-done sub-expandable" onclick="event.stopPropagation();toggleSubtitleText('${esc(crawlId)}','${esc(videoId)}',this)" title="點擊展開字幕">✅ ${ss.char_count.toLocaleString()} 字${langLabel} ▾</span>`;
-  }
-  if (ss.status === 'extracting') {
-    return `<span class="sub-status sub-extracting">⏳ 轉錄中...</span>`;
-  }
-  if (ss.status === 'pending') {
-    return `<span class="sub-status sub-pending">⏸ 待處理</span> <button class="btn-whisper" onclick="event.stopPropagation();doWhisperExtract('${esc(crawlId)}','${esc(videoId)}',this)" title="${esc(ss.note || '無內建字幕')}">🎤 Whisper</button>`;
-  }
-  if (ss.status === 'failed') {
-    return `<span class="sub-status sub-failed" title="${esc(ss.error || '提取失敗')}">❌ 失敗</span> <button class="btn-whisper" onclick="event.stopPropagation();doWhisperExtract('${esc(crawlId)}','${esc(videoId)}',this)">🎤 重試</button>`;
-  }
-  return `<span class="sub-status sub-none">—</span>`;
-}
-
-async function toggleSubtitleText(crawlId, videoId, el) {
-  const row = el.closest('tr');
-  const existingRow = row.nextElementSibling;
-  if (existingRow && existingRow.classList.contains('subtitle-text-row')) {
-    existingRow.remove();
-    el.innerHTML = el.innerHTML.replace('▴', '▾');
-    return;
-  }
-  el.innerHTML = el.innerHTML.replace('▾', '▴');
-  const tr = document.createElement('tr');
-  tr.className = 'subtitle-text-row';
-  tr.innerHTML = '<td colspan="8"><div class="subtitle-text-box" style="max-height:200px;overflow-y:auto;padding:8px 12px;background:var(--bg-tertiary,#1a1a2e);border-radius:6px;margin:4px 0;font-size:12px;line-height:1.6;color:var(--text-secondary,#aaa);white-space:pre-wrap;">載入中...</div></td>';
-  row.after(tr);
-  try {
-    const resp = await fetch('/api/crawls/' + crawlId + '/subtitle-text/' + videoId);
-    const data = await resp.json();
-    tr.querySelector('.subtitle-text-box').textContent = data.text || '（無字幕內容）';
-  } catch (e) {
-    tr.querySelector('.subtitle-text-box').textContent = '載入失敗: ' + e.message;
-  }
-}
-
-async function doWhisperExtract(crawlId, videoId, btn) {
-  btn.disabled = true;
-  btn.textContent = '⏳ 轉錄中...';
-  try {
-    const resp = await fetch('/api/trigger/whisper-extract', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ crawl_id: crawlId, video_id: videoId }),
-    });
-    const data = await resp.json();
-    if (data.task_id) {
-      // Poll subtitle status every 5 seconds until done
-      const poll = setInterval(async () => {
-        try {
-          const sr = await fetch('/api/crawls/' + crawlId + '/subtitle-status');
-          const sd = await sr.json();
-          const vs = (sd.data || {})[videoId];
-          if (vs && (vs.status === 'done' || vs.status === 'failed')) {
-            clearInterval(poll);
-            // Re-render the crawl detail to update subtitle status
-            const detailEl = btn.closest('.crawl-detail-content');
-            if (detailEl) {
-              const crawlIdAttr = detailEl.dataset.crawlId || crawlId;
-              showCrawlDetail(crawlIdAttr);
-            }
-          }
-        } catch (e) { /* ignore poll errors */ }
-      }, 5000);
-    }
-  } catch (e) {
-    btn.textContent = '❌ 失敗';
-    btn.disabled = false;
-  }
-}
-
-async function doExtractSubtitles(crawlId) {
-  const btn = event.target;
-  _setBusy(btn, true);
-  try {
-    const resp = await fetch('/api/trigger/extract-subtitles', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ crawl_id: crawlId }),
-    });
-    const data = await resp.json();
-    if (data.error) {
-      alert('Error: ' + data.error);
-      return;
-    }
-    // Poll for subtitle status updates
-    _pollSubtitleExtract(data.task_id, crawlId);
-  } catch (e) {
-    alert('Failed: ' + e.message);
-  } finally {
-    _setBusy(btn, false);
-  }
-}
-
-function _pollSubtitleExtract(taskId, crawlId) {
-  const poll = async () => {
-    try {
-      const resp = await fetch('/api/task/' + taskId);
-      const task = await resp.json();
-      // Refresh the crawl detail to show updated subtitle status
-      showCrawlDetail(crawlId);
-      if (task.status === 'done' || task.status === 'error') {
-        return;
-      }
-      setTimeout(poll, 5000);
-    } catch (e) {
-      setTimeout(poll, 5000);
-    }
-  };
-  setTimeout(poll, 3000);
-}
-
-function _updateSelectionBar() {
-  const count = _getSelectedVideoIds().length;
-  const bar = document.getElementById('crawl-selection-bar');
-  const countEl = document.getElementById('crawl-selected-count');
-  if (bar && countEl) {
-    if (count > 0) {
-      bar.style.display = 'flex';
-      countEl.textContent = count;
-    } else {
-      bar.style.display = 'none';
-    }
-  }
-}
-
-function _getVideoStatus(videoId, reviews) {
-  const r = reviews[videoId];
-  if (!r) return 'none';
-  return r.status || 'none';
-}
-
-function _statusBadge(status) {
-  const map = {
-    none:           '<span class="video-status vs-none">待審核</span>',
-    pending_review: '<span class="video-status vs-pending-review">待確認</span>',
-    analyzing:      '<span class="video-status vs-analyzing">分析中</span>',
-    confirmed:      '<span class="video-status vs-confirmed">已入庫</span>',
-    rejected:       '<span class="video-status vs-rejected">已拒絕</span>',
-  };
-  return map[status] || map.none;
-}
-
-function toggleAllVideoCb(checked) {
-  document.querySelectorAll('.video-cb:not(:disabled)').forEach(cb => cb.checked = checked);
-  _updateSelectionBar();
-}
-
-function _getSelectedVideoIds() {
-  return [...document.querySelectorAll('.video-cb:checked')].map(cb => cb.value);
-}
-
-async function doBatchAnalyzeSelected() {
-  const btn = document.getElementById('btn-batch-analyze');
-  const videoIds = _getSelectedVideoIds();
-  if (!videoIds.length) {
-    alert('請先勾選要分析的視頻');
-    return;
-  }
-  if (!_currentCrawlId) {
-    alert('請先選擇一個搜尋結果');
-    return;
-  }
-  if (!confirm(`確認批量分析 ${videoIds.length} 部視頻並入庫？`)) return;
-
-  _setBusy(btn, true);
-  try {
-    const resp = await fetch('/api/trigger/analyze-batch', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ source_crawl_ids: [_currentCrawlId], video_ids: videoIds }),
-    });
-    const data = await resp.json();
-    if (!resp.ok || data.error) {
-      alert(data.error || '觸發失敗');
-      return;
-    }
-    alert('批量分析已啟動，系統會逐個分析並自動入庫。可在任務紀錄查看進度。');
-    refreshAll();
-  } catch (e) {
-    alert('Failed: ' + e.message);
-  } finally {
-    _setBusy(btn, false);
-  }
-}
-
-async function doDeleteVideo(crawlId, videoId, title) {
-  if (!confirm(`確認刪除「${title}」？此操作不可恢復。`)) return;
-  try {
-    const resp = await fetch(`/api/crawls/${crawlId}/videos/${videoId}`, { method: 'DELETE' });
-    const data = await resp.json();
-    if (data.error) {
-      alert('Error: ' + data.error);
-      return;
-    }
-    showCrawlDetail(crawlId);
-  } catch (e) {
-    alert('Failed: ' + e.message);
-  }
-}
-
-async function doAnalyzePreview(videoId, crawlId) {
-  try {
-    const resp = await fetch('/api/trigger/analyze-preview', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ source_crawl_ids: [crawlId], video_id: videoId }),
-    });
-    const data = await resp.json();
-    if (data.error) {
-      alert('Error: ' + data.error);
-      return;
-    }
-    _pollAnalyzePreview(data.task_id, videoId, crawlId);
-  } catch (e) {
-    alert('Failed: ' + e.message);
-  }
-}
-
-async function _pollAnalyzePreview(taskId, videoId, crawlId) {
-  const poll = async () => {
-    try {
-      const resp = await fetch('/api/task/' + taskId);
-      const task = await resp.json();
-      if (task.status === 'done') {
-        showCrawlDetail(crawlId);
-        return;
-      }
-      if (task.status === 'error') {
-        alert('分析失敗: ' + (task.error || '未知錯誤'));
-        showCrawlDetail(crawlId);
-        return;
-      }
-      setTimeout(poll, 2000);
-    } catch (e) {
-      setTimeout(poll, 3000);
-    }
-  };
-  showCrawlDetail(crawlId);
-  setTimeout(poll, 2000);
-}
-
-async function showAnalysisPreview(videoId) {
-  openDetail('分析預覽: ' + videoId);
-  const el = document.getElementById('detail-content');
-  el.innerHTML = '<div class="preview-empty">載入中...</div>';
-  try {
-    const resp = await fetch('/api/analyses/pending/' + encodeURIComponent(videoId));
-    if (!resp.ok) {
-      el.innerHTML = '<div class="preview-empty">找不到分析結果</div>';
-      return;
-    }
-    const data = await resp.json();
-    let html = renderAnalysisReport(data);
-    html += `
-      <div class="review-actions">
-        <button class="btn btn-accent review-confirm-btn" onclick="doConfirmKB('${esc(videoId)}')">確認入庫</button>
-        <button class="btn btn-danger review-reject-btn" onclick="doRejectVideo('${esc(videoId)}')">不符合探索主題</button>
-      </div>`;
-    el.innerHTML = html;
-  } catch (e) {
-    el.innerHTML = '<div class="preview-empty">載入失敗: ' + esc(e.message) + '</div>';
-  }
-}
-
-async function doConfirmKB(videoId) {
-  if (!confirm('確認將此分析結果入庫？')) return;
-  try {
-    const resp = await fetch('/api/trigger/confirm-kb', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ video_id: videoId }),
-    });
-    const data = await resp.json();
-    if (data.error) {
-      alert('Error: ' + data.error);
-      return;
-    }
-    alert(`入庫成功！新增 ${data.entries_added} 條，更新 ${data.entries_updated} 條`);
-    if (_currentCrawlId) {
-      showCrawlDetail(_currentCrawlId);
-    } else {
-      closeDetail();
-    }
-  } catch (e) {
-    alert('Failed: ' + e.message);
-  }
-}
-
-async function doRejectVideo(videoId) {
-  const reason = prompt('拒絕原因（選填）：', '不符合廢棄建築探索主題');
-  if (reason === null) return;
-  try {
-    const resp = await fetch('/api/trigger/reject-video', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ video_id: videoId, reason: reason }),
-    });
-    const data = await resp.json();
-    if (data.error) {
-      alert('Error: ' + data.error);
-      return;
-    }
-    if (_currentCrawlId) {
-      showCrawlDetail(_currentCrawlId);
-    } else {
-      closeDetail();
-    }
-  } catch (e) {
-    alert('Failed: ' + e.message);
-  }
-}
 
 function formatDuration(input) {
   if (!input) return '-';
@@ -727,256 +249,6 @@ function formatDuration(input) {
   return m + ':' + String(s).padStart(2, '0');
 }
 
-// ══════════════════════════════════════════
-// Step 2: Analyze — Unified Video Table (Redesigned)
-// ══════════════════════════════════════════
-
-async function loadStep2Videos() {
-  const el = document.getElementById('step2-video-table');
-  if (!el) return;
-  el.innerHTML = '<div class="preview-empty" style="padding:20px 0">載入中...</div>';
-
-  try {
-    const resp = await fetch('/api/all-videos');
-    const data = (await resp.json()).data || [];
-    _allVideos = data;
-    renderStep2VideoTable(data);
-  } catch (e) {
-    el.innerHTML = '<div class="preview-empty" style="padding:20px 0">載入失敗</div>';
-  }
-}
-
-function filterStep2Videos() {
-  renderStep2VideoTable(_allVideos);
-}
-
-function renderStep2VideoTable(videos) {
-  const el = document.getElementById('step2-video-table');
-  if (!el) return;
-
-  const filter = (document.getElementById('step2-filter') || {}).value || 'ready';
-  let filtered = videos;
-  const _hasSub = v => v.subtitle && v.subtitle.status === 'done' && v.subtitle.text;
-  if (filter === 'ready') filtered = videos.filter(v => !v.kb_analyzed && _hasSub(v));
-  else if (filter === 'unanalyzed') filtered = videos.filter(v => !v.kb_analyzed);
-  else if (filter === 'analyzed') filtered = videos.filter(v => v.kb_analyzed);
-  else if (filter === 'no-subtitle') filtered = videos.filter(v => !v.kb_analyzed && !_hasSub(v));
-
-  const countEl = document.getElementById('step2-video-count');
-  if (countEl) countEl.textContent = `共 ${filtered.length} 部`;
-
-  if (!filtered.length) {
-    el.innerHTML = '<div class="empty-state"><div class="empty-icon">&#128200;</div><p>暫無視頻</p></div>';
-    _updateStep2BulkBar();
-    return;
-  }
-
-  let html = `
-    <table class="step2-table">
-      <thead>
-        <tr>
-          <th style="width:32px"></th>
-          <th>影片</th>
-          <th>頻道</th>
-          <th style="width:100px">字幕</th>
-          <th style="width:80px">狀態</th>
-          <th style="width:60px">操作</th>
-        </tr>
-      </thead>
-      <tbody>`;
-
-  for (const v of filtered) {
-    const vid = v.video_id || '';
-    const ytUrl = v.url || (vid ? `https://www.youtube.com/watch?v=${vid}` : '');
-    const analyzed = !!v.kb_analyzed;
-    html += `
-      <tr>
-        <td>${analyzed ? '' : `<input type="checkbox" class="step2-video-cb" value="${esc(vid)}" onchange="_updateStep2BulkBar()">`}</td>
-        <td>
-          <div class="step2-video-title">${esc(v.title || vid)}</div>
-          ${ytUrl ? `<a href="${esc(ytUrl)}" target="_blank" rel="noopener" class="step2-yt-link">YouTube &#8599;</a>` : ''}
-        </td>
-        <td class="step2-channel">${esc(v.channel || '')}</td>
-        <td>${(() => {
-          const sub = v.subtitle;
-          if (sub && sub.status === 'done' && sub.text) {
-            const len = sub.text.length;
-            const lang = sub.language ? ` [${sub.language}]` : '';
-            return `<span class="step2-badge" style="background:#1a3a2a;color:#4ade80;font-size:11px">✅ ${len.toLocaleString()}字${lang}</span>`;
-          } else if (sub && sub.status === 'pending') {
-            return '<span class="step2-badge" style="background:#3a2a1a;color:#f59e0b;font-size:11px">⏸ 待處理</span>';
-          } else {
-            return '<span class="step2-badge" style="background:#2a1a1a;color:#888;font-size:11px">—</span>';
-          }
-        })()}</td>
-        <td>${analyzed
-          ? '<span class="step2-badge step2-badge-analyzed">已分析</span>'
-          : '<span class="step2-badge step2-badge-unanalyzed">未分析</span>'
-        }</td>
-        <td>${analyzed ? '' : `<button class="btn btn-sm btn-danger" onclick="doStep2DeleteVideo('${esc(vid)}','${esc(v.title || '')}')">刪除</button>`}</td>
-      </tr>`;
-  }
-
-  html += '</tbody></table>';
-  el.innerHTML = html;
-  _updateStep2BulkBar();
-}
-
-function _updateStep2BulkBar() {
-  const cbs = [...document.querySelectorAll('.step2-video-cb')];
-  const checked = cbs.filter(cb => cb.checked);
-  const bulkBar = document.getElementById('step2-bulk-bar');
-  const countEl = document.getElementById('step2-selected-count');
-  const allCb = document.getElementById('step2-select-all-cb');
-
-  if (!bulkBar) return;
-
-  if (cbs.length > 0) {
-    bulkBar.style.display = 'flex';
-  } else {
-    bulkBar.style.display = 'none';
-  }
-
-  if (countEl) countEl.textContent = `已選 ${checked.length} / ${cbs.length} 部`;
-  if (allCb) {
-    allCb.checked = cbs.length > 0 && checked.length === cbs.length;
-    allCb.indeterminate = checked.length > 0 && checked.length < cbs.length;
-  }
-}
-
-function step2ToggleSelectAll(checked) {
-  document.querySelectorAll('.step2-video-cb').forEach(cb => cb.checked = checked);
-  _updateStep2BulkBar();
-}
-
-async function doStep2KBBatchAnalyze() {
-  const btn = document.getElementById('btn-step2-kb-batch');
-  const cbs = [...document.querySelectorAll('.step2-video-cb:checked')];
-  if (!cbs.length) {
-    alert('請先勾選要分析的視頻');
-    return;
-  }
-  const videoIds = cbs.map(cb => cb.value);
-  if (!confirm(`確認批量分析入庫 ${videoIds.length} 部視頻？`)) return;
-  _setBusy(btn, true);
-
-  try {
-    const resp = await fetch('/api/trigger/kb-analyze-batch', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ video_ids: videoIds }),
-    });
-    const data = await resp.json();
-    if (!resp.ok || data.error) {
-      alert(data.error || '觸發失敗');
-      return;
-    }
-    alert('批量分析入庫已啟動！可在日誌面板查看進度。');
-    refreshAll();
-    setTimeout(() => loadStep2Videos(), 2000);
-  } catch (e) {
-    alert('Failed: ' + e.message);
-  } finally {
-    _setBusy(btn, false);
-  }
-}
-
-async function doStep2DeleteVideo(videoId, title) {
-  if (!confirm(`確認刪除「${title}」？將從所有搜尋結果中刪除，此操作不可恢復。`)) return;
-  const video = _allVideos.find(v => v.video_id === videoId);
-  const crawlIds = (video && video._crawl_ids) || _crawls.map(c => c.id);
-  try {
-    for (const crawlId of crawlIds) {
-      await fetch(`/api/crawls/${crawlId}/videos/${videoId}`, { method: 'DELETE' });
-    }
-    loadStep2Videos();
-  } catch (e) {
-    alert('刪除失敗: ' + e.message);
-  }
-}
-
-async function doStep2GenerateReport() {
-  const btn = document.getElementById('btn-step2-report');
-  const name = document.getElementById('analysis-name').value.trim();
-  _setBusy(btn, true);
-  try {
-    const resp = await fetch('/api/trigger/analyze', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name }),
-    });
-    const data = await resp.json();
-    if (data.error) alert('Error: ' + data.error);
-    else alert('分析報告生成中，可在日誌面板查看進度。');
-    refreshAll();
-  } catch (e) {
-    alert('Failed: ' + e.message);
-  } finally {
-    _setBusy(btn, false);
-  }
-}
-
-// ══════════════════════════════════════════
-// Analyses View (sidebar nav)
-// ══════════════════════════════════════════
-
-async function loadAnalysesView() {
-  const listEl = document.getElementById('analyses-list');
-  const countEl = document.getElementById('analyses-count');
-  if (!listEl) return;
-  listEl.innerHTML = '<div class="preview-empty">載入中...</div>';
-
-  try {
-    const resp = await fetch('/api/analyses');
-    const analyses = (await resp.json()).data || [];
-    if (countEl) countEl.textContent = `共 ${analyses.length} 筆`;
-
-    if (!analyses.length) {
-      listEl.innerHTML = '<div class="empty-state" style="padding:40px 20px"><div class="empty-icon">&#128200;</div><p>尚無分析報告</p><p style="font-size:12px;color:var(--text-muted);margin-top:8px">請先完成爬蟲，然後在步驟 2 生成分析報告</p></div>';
-      return;
-    }
-
-    listEl.innerHTML = analyses.slice().reverse().map(a => `
-      <div class="analyses-list-item" onclick="showAnalysisInView('${esc(a.id)}')">
-        <div class="ali-title">${esc(a.name || a.id)}</div>
-        <div class="ali-meta">
-          <span>來源 ${(a.source_crawl_ids || []).length} 批爬蟲</span>
-          <span>${esc(a.created_at || '')}</span>
-        </div>
-      </div>
-    `).join('');
-  } catch (e) {
-    listEl.innerHTML = '<div class="preview-empty">載入失敗</div>';
-  }
-}
-
-async function showAnalysisInView(analysisId) {
-  // Highlight selected
-  document.querySelectorAll('.analyses-list-item').forEach(el => el.classList.remove('active'));
-  const clickedEl = document.querySelector(`.analyses-list-item[onclick*="${analysisId}"]`);
-  if (clickedEl) clickedEl.classList.add('active');
-
-  const detailEl = document.getElementById('analyses-detail');
-  if (!detailEl) return;
-  detailEl.innerHTML = '<div class="preview-empty">載入中...</div>';
-
-  try {
-    const resp = await fetch('/api/analyses/' + analysisId);
-    const data = (await resp.json()).data;
-    if (!data) {
-      detailEl.innerHTML = '<div class="empty-state"><div class="empty-icon">&#128200;</div><p>無資料</p></div>';
-      return;
-    }
-    detailEl.innerHTML = `
-      <div class="analyses-detail-header">
-        <h3>&#128200; ${esc(data.name || analysisId)}</h3>
-        <div style="font-size:12px;color:var(--text-muted)">${esc(data.created_at || '')}</div>
-      </div>
-      ${renderAnalysisReport(data)}`;
-  } catch (e) {
-    detailEl.innerHTML = '<div class="empty-state"><div class="empty-icon">&#128683;</div><p>載入失敗</p></div>';
-  }
-}
 
 // ══════════════════════════════════════════
 // Scripts Library View
@@ -989,7 +261,7 @@ async function loadScriptsView() {
   listEl.innerHTML = '<div class="preview-empty">載入中...</div>';
 
   try {
-    const resp = await fetch('/api/scripts');
+    const resp = await fetch(apiUrl('/api/scripts'));
     const scripts = (await resp.json()).data || [];
     if (countEl) countEl.textContent = `共 ${scripts.length} 筆`;
 
@@ -1023,7 +295,7 @@ async function showScriptInLibrary(scriptId) {
   detailEl.innerHTML = '<div class="preview-empty">載入中...</div>';
 
   try {
-    const resp = await fetch('/api/scripts/' + scriptId);
+    const resp = await fetch(apiUrl('/api/scripts/' + scriptId));
     const data = (await resp.json()).data;
     if (!data) {
       detailEl.innerHTML = '<div class="empty-state"><div class="empty-icon">&#128221;</div><p>無資料</p></div>';
@@ -1043,150 +315,9 @@ async function showScriptInLibrary(scriptId) {
   }
 }
 
-// ══════════════════════════════════════════
-// Step 2: Analysis History (kept)
-// ══════════════════════════════════════════
-
-function renderAnalysisHistory(analyses) {
-  const el = document.getElementById('analysis-history-sidebar');
-  if (!analyses.length) {
-    el.innerHTML = '<div class="preview-empty" style="padding:12px 0;font-size:12px">尚無分析紀錄</div>';
-    return;
-  }
-  el.innerHTML = analyses.slice().reverse().map(a => `
-    <div class="history-item" onclick="showAnalysisInPanel('${esc(a.id)}')">
-      <div class="hi-top">
-        <div class="hi-main">
-          <div class="hi-title">${esc(a.name || a.id)}</div>
-          <div class="hi-meta">來源: ${(a.source_crawl_ids || []).length} 批 · ${esc(a.created_at)}</div>
-        </div>
-        <div class="hi-actions">
-          <button class="trace-btn" onclick="event.stopPropagation();showTrace('analyses','${esc(a.id)}')">追溯</button>
-        </div>
-      </div>
-    </div>
-  `).join('');
-}
-
-async function showAnalysisInPanel(analysisId) {
-  // Step 2 redesign removed the inline panel — delegate to overlay view
-  showAnalysisDetail(analysisId);
-}
-
-async function showAnalysisDetail(analysisId) {
-  openDetail('分析結果: ' + analysisId);
-  const el = document.getElementById('detail-content');
-  el.innerHTML = '<div class="preview-empty">載入中...</div>';
-  try {
-    const resp = await fetch('/api/analyses/' + analysisId);
-    const data = (await resp.json()).data;
-    if (!data) {
-      el.innerHTML = '<div class="preview-empty">無資料</div>';
-      return;
-    }
-    el.innerHTML = renderAnalysisReport(data);
-  } catch (e) {
-    el.innerHTML = '<div class="preview-empty">載入失敗</div>';
-  }
-}
-
-function renderAnalysisReport(data) {
-  let html = '';
-
-  if (data.summary) {
-    html += `<div class="analysis-summary">${esc(data.summary)}</div>`;
-  }
-
-  if (data.narrative_structure) {
-    const ns = data.narrative_structure;
-    html += '<div class="analysis-section"><h4>&#128214; 劇情結構分析</h4>';
-    if (ns.opening_hook) html += `<div style="margin-bottom:8px"><strong>開場鉤子：</strong>${esc(ns.opening_hook)}</div>`;
-    if (ns.rising_action) html += `<div style="margin-bottom:8px"><strong>上升動作：</strong>${esc(ns.rising_action)}</div>`;
-    if (ns.climax) html += `<div style="margin-bottom:8px"><strong>高潮：</strong>${esc(ns.climax)}</div>`;
-    if (ns.resolution) html += `<div style="margin-bottom:8px"><strong>結局：</strong>${esc(ns.resolution)}</div>`;
-    if (ns.mini_climaxes && ns.mini_climaxes.length) {
-      html += '<div style="margin-top:8px"><strong>小高潮：</strong><ul>';
-      ns.mini_climaxes.forEach(mc => html += `<li>${esc(mc)}</li>`);
-      html += '</ul></div>';
-    }
-    html += '</div>';
-  }
-
-  if (data.pacing) {
-    html += '<div class="analysis-section"><h4>&#127928; 節奏分析</h4>';
-    if (data.pacing.overall_tempo) html += `<div style="margin-bottom:8px"><strong>整體節奏：</strong>${esc(data.pacing.overall_tempo)}</div>`;
-    if (data.pacing.tension_curve) html += `<div style="margin-bottom:8px"><strong>張力曲線：</strong>${esc(data.pacing.tension_curve)}</div>`;
-    if (data.pacing.scene_rhythm) html += `<div style="margin-bottom:8px"><strong>場景節奏：</strong>${esc(data.pacing.scene_rhythm)}</div>`;
-    if (data.pacing.cliffhanger_pattern) html += `<div><strong>懸念模式：</strong>${esc(data.pacing.cliffhanger_pattern)}</div>`;
-    html += '</div>';
-  }
-
-  if (data.plot_twists && data.plot_twists.length) {
-    html += '<div class="analysis-section"><h4>&#128260; 反轉與轉折</h4><ul>';
-    data.plot_twists.forEach(t => html += `<li>${esc(typeof t === 'string' ? t : t.description || JSON.stringify(t))}</li>`);
-    html += '</ul></div>';
-  }
-
-  if (data.common_themes && data.common_themes.length) {
-    html += '<div class="analysis-section"><h4>&#127919; 共同主題</h4><ul>';
-    data.common_themes.forEach(t => html += `<li>${esc(t)}</li>`);
-    html += '</ul></div>';
-  }
-
-  if (data.hook_patterns && data.hook_patterns.length) {
-    html += '<div class="analysis-section"><h4>&#129693; 鉤子模式</h4><ul>';
-    data.hook_patterns.forEach(h => html += `<li>${esc(h)}</li>`);
-    html += '</ul></div>';
-  }
-
-  if (data.emotional_arcs && data.emotional_arcs.length) {
-    html += '<div class="analysis-section"><h4>&#128147; 情感曲線</h4><ul>';
-    data.emotional_arcs.forEach(a => html += `<li>${esc(a)}</li>`);
-    html += '</ul></div>';
-  }
-
-  if (data.character_archetypes && data.character_archetypes.length) {
-    html += '<div class="analysis-section"><h4>&#128100; 角色原型</h4><ul>';
-    data.character_archetypes.forEach(c => html += `<li>${esc(c)}</li>`);
-    html += '</ul></div>';
-  }
-
-  if (data.story_structures && data.story_structures.length) {
-    html += '<div class="analysis-section"><h4>&#128218; 故事結構模式</h4><ul>';
-    data.story_structures.forEach(s => html += `<li>${esc(s)}</li>`);
-    html += '</ul></div>';
-  }
-
-  if (data.dialogue_patterns && data.dialogue_patterns.length) {
-    html += '<div class="analysis-section"><h4>&#128172; 對白模式</h4><ul>';
-    data.dialogue_patterns.forEach(d => html += `<li>${esc(d)}</li>`);
-    html += '</ul></div>';
-  }
-
-  if (data.recommended_elements && data.recommended_elements.length) {
-    html += '<div class="analysis-section"><h4>&#128161; 建議元素</h4><ul>';
-    data.recommended_elements.forEach(r => html += `<li>${esc(r)}</li>`);
-    html += '</ul></div>';
-  }
-
-  if (data.benchmark) {
-    html += '<div class="analysis-section"><h4>&#128202; 基準數據</h4>';
-    const b = data.benchmark;
-    if (b.avg_scene_count) html += `<div>平均場景數: ${b.avg_scene_count}</div>`;
-    if (b.avg_duration_sec) html += `<div>平均時長: ${formatDuration(b.avg_duration_sec)}</div>`;
-    if (b.avg_dialogue_ratio) html += `<div>對白佔比: ${b.avg_dialogue_ratio}</div>`;
-    html += '</div>';
-  }
-
-  if (!html) {
-    html = '<div class="json-block">' + esc(JSON.stringify(data, null, 2)) + '</div>';
-  }
-
-  return html;
-}
 
 // ══════════════════════════════════════════
-// Step 3: Generate Script — KB Cards (NEW)
+// Step 1: Generate Script — KB Cards
 // ══════════════════════════════════════════
 
 // All KB categories to show as card rows
@@ -1217,7 +348,7 @@ async function loadStep3KBCards() {
 
   // First check if KB has any data
   try {
-    const statsResp = await fetch('/api/knowledge/stats');
+    const statsResp = await fetch(apiUrl('/api/knowledge/stats'));
     const stats = await statsResp.json();
     if ((stats.total || 0) === 0) {
       _kbSkeletonBuilt = false;
@@ -1314,7 +445,7 @@ async function expandKBCard(catKey, entryId, event) {
   // Map card keys to actual KB category names
   const apiCat = catKey;
   try {
-    const resp = await fetch('/api/knowledge/' + apiCat + '/' + encodeURIComponent(entryId));
+    const resp = await fetch(apiUrl('/api/knowledge/' + apiCat + '/' + encodeURIComponent(entryId)));
     if (!resp.ok) return;
     const entry = (await resp.json()).data;
     if (!entry) return;
@@ -1423,7 +554,7 @@ async function doGenerateKB() {
   const selected_elements = _getSelectedElements();
 
   try {
-    const resp = await fetch('/api/trigger/generate-kb', {
+    const resp = await fetch(apiUrl('/api/trigger/generate-kb'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -1475,7 +606,7 @@ async function showScriptInPanel(scriptId) {
   document.getElementById('script-results-meta').textContent = '';
 
   try {
-    const resp = await fetch('/api/scripts/' + scriptId);
+    const resp = await fetch(apiUrl('/api/scripts/' + scriptId));
     const json = await resp.json();
     const script = json.data;
     const meta = json.meta;
@@ -1496,7 +627,7 @@ async function showScriptDetail(scriptId) {
   const el = document.getElementById('detail-content');
   el.innerHTML = '<div class="preview-empty">載入中...</div>';
   try {
-    const resp = await fetch('/api/scripts/' + scriptId);
+    const resp = await fetch(apiUrl('/api/scripts/' + scriptId));
     const json = await resp.json();
     const script = json.data;
     const meta = json.meta;
@@ -1608,7 +739,7 @@ function populateScriptSelect(scripts) {
 }
 
 // ══════════════════════════════════════════
-// Step 4: Storyboard
+// Step 2: Storyboard
 // ══════════════════════════════════════════
 
 async function doStoryboard() {
@@ -1623,7 +754,7 @@ async function doStoryboard() {
 
   _setBusy(btn, true);
   try {
-    const resp = await fetch('/api/trigger/storyboard', {
+    const resp = await fetch(apiUrl('/api/trigger/storyboard'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ source_script_id: scriptId }),
@@ -1665,7 +796,7 @@ async function showStoryboardInPanel(sbId) {
   document.getElementById('storyboard-results-meta').textContent = '';
 
   try {
-    const resp = await fetch('/api/storyboards/' + sbId);
+    const resp = await fetch(apiUrl('/api/storyboards/' + sbId));
     const json = await resp.json();
     const frames = json.data || [];
     if (!frames.length) {
@@ -1684,7 +815,7 @@ async function showStoryboardDetail(sbId) {
   const el = document.getElementById('detail-content');
   el.innerHTML = '<div class="preview-empty">載入中...</div>';
   try {
-    const resp = await fetch('/api/storyboards/' + sbId);
+    const resp = await fetch(apiUrl('/api/storyboards/' + sbId));
     const json = await resp.json();
     const frames = json.data || [];
     if (!frames.length) {
@@ -1727,7 +858,7 @@ function _renderStoryboardGrid(frames) {
 }
 
 // ══════════════════════════════════════════
-// Step 5: Image Generation
+// Step 3: Image Generation
 // ══════════════════════════════════════════
 
 function populateStoryboardSelect(storyboards) {
@@ -1762,7 +893,7 @@ async function doGenerateImages() {
   _updateImageProgress(0, 0, '準備中...');
 
   try {
-    const resp = await fetch('/api/trigger/generate-images', {
+    const resp = await fetch(apiUrl('/api/trigger/generate-images'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ storyboard_id: storyboardId, style_prefix: stylePrefix }),
@@ -1788,7 +919,7 @@ async function doGenerateImages() {
 function _pollImageTask(taskId) {
   const poll = async () => {
     try {
-      const resp = await fetch('/api/task/' + taskId);
+      const resp = await fetch(apiUrl('/api/task/' + taskId));
       const task = await resp.json();
 
       // Update progress
@@ -1859,7 +990,7 @@ async function showImageSetInPanel(setId) {
   document.getElementById('image-results-meta').textContent = '';
 
   try {
-    const resp = await fetch('/api/image-sets/' + encodeURIComponent(setId));
+    const resp = await fetch(apiUrl('/api/image-sets/' + encodeURIComponent(setId)));
     const json = await resp.json();
     const meta = json.data || {};
     const frames = meta.frames || [];
@@ -1875,7 +1006,7 @@ async function showImageSetInPanel(setId) {
       ${frames.map((f, i) => {
         const num = f.frame_number || (i + 1);
         if (f.status === 'ok' && f.image_path) {
-          const imgUrl = '/api/images/' + encodeURIComponent(setId) + '/frame_' + String(num).padStart(3, '0') + '.png';
+          const imgUrl = apiUrl('/api/images/' + encodeURIComponent(setId) + '/frame_' + String(num).padStart(3, '0') + '.png');
           return `
             <div class="frame-card">
               <div class="frame-card-img">
@@ -1906,7 +1037,7 @@ async function showImageSetInPanel(setId) {
 }
 
 // ══════════════════════════════════════════
-// Step 6: Video Generation
+// Step 4: Video Generation
 // ══════════════════════════════════════════
 
 let _videoSets = [];
@@ -1955,7 +1086,7 @@ async function doGenerateVideos() {
   _updateVideoProgress(0, 0, '準備中...');
 
   try {
-    const resp = await fetch('/api/trigger/generate-videos', {
+    const resp = await fetch(apiUrl('/api/trigger/generate-videos'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -1982,7 +1113,7 @@ async function doGenerateVideos() {
 function _pollVideoTask(taskId) {
   const poll = async () => {
     try {
-      const resp = await fetch('/api/task/' + taskId);
+      const resp = await fetch(apiUrl('/api/task/' + taskId));
       const task = await resp.json();
 
       if (task.progress) {
@@ -2054,7 +1185,7 @@ async function showVideoSetInPanel(setId) {
   document.getElementById('video-results-meta').textContent = '';
 
   try {
-    const resp = await fetch('/api/video-sets/' + encodeURIComponent(setId));
+    const resp = await fetch(apiUrl('/api/video-sets/' + encodeURIComponent(setId)));
     const json = await resp.json();
     const meta = json.data || {};
     const clips = meta.clips || [];
@@ -2070,7 +1201,7 @@ async function showVideoSetInPanel(setId) {
       ${clips.map((c, i) => {
         const num = c.frame_number || (i + 1);
         if (c.status === 'ok' && c.video_path) {
-          const vidUrl = '/api/videos/' + encodeURIComponent(setId) + '/clip_' + String(num).padStart(3, '0') + '.mp4';
+          const vidUrl = apiUrl('/api/videos/' + encodeURIComponent(setId) + '/clip_' + String(num).padStart(3, '0') + '.mp4');
           return `
             <div class="frame-card">
               <div class="frame-card-img" style="background:#111;display:flex;align-items:center;justify-content:center">
@@ -2123,7 +1254,7 @@ const KB_CAT_LABELS = {
 
 async function refreshKB() {
   try {
-    const statsResp = await fetch('/api/knowledge/stats');
+    const statsResp = await fetch(apiUrl('/api/knowledge/stats'));
     const stats = await statsResp.json();
     renderKBStats(stats);
     document.getElementById('badge-kb').textContent = stats.total || 0;
@@ -2172,7 +1303,7 @@ async function loadKBCategory(category) {
   const el = document.getElementById('kb-entries');
   el.innerHTML = '<div class="preview-empty">載入中...</div>';
   try {
-    const resp = await fetch('/api/knowledge/' + category);
+    const resp = await fetch(apiUrl('/api/knowledge/' + category));
     const data = (await resp.json()).data || [];
     if (!data.length) {
       el.innerHTML = '<div class="preview-empty">此分類尚無條目。請先分析探索影片入庫。</div>';
@@ -2214,7 +1345,7 @@ async function showKBDetail(category, entryId) {
   const el = document.getElementById('detail-content');
   el.innerHTML = '<div class="preview-empty">載入中...</div>';
   try {
-    const resp = await fetch('/api/knowledge/' + category + '/' + encodeURIComponent(entryId));
+    const resp = await fetch(apiUrl('/api/knowledge/' + category + '/' + encodeURIComponent(entryId)));
     if (!resp.ok) {
       el.innerHTML = '<div class="preview-empty">找不到條目</div>';
       return;
@@ -2264,7 +1395,7 @@ async function doKBSearch() {
   const el = document.getElementById('kb-search-results');
   el.innerHTML = '<div class="preview-empty">搜尋中...</div>';
   try {
-    const resp = await fetch('/api/knowledge/search?q=' + encodeURIComponent(q));
+    const resp = await fetch(apiUrl('/api/knowledge/search?q=' + encodeURIComponent(q)));
     const data = (await resp.json()).data || [];
     if (!data.length) {
       el.innerHTML = '<div class="preview-empty">無結果</div>';
@@ -2346,7 +1477,7 @@ async function showTrace(itemType, itemId) {
   content.innerHTML = '<div class="preview-empty">載入中...</div>';
 
   try {
-    const resp = await fetch(`/api/trace/${itemType}/${itemId}`);
+    const resp = await fetch(apiUrl(`/api/trace/${itemType}/${itemId}`));
     const chain = await resp.json();
 
     let html = '<div class="trace-chain">';
@@ -2393,8 +1524,6 @@ async function showTrace(itemType, itemId) {
 function onTraceNodeClick(type, id) {
   if (type === 'knowledge_base') return; // KB trace detail is shown inline
   const detailFns = {
-    crawls: showCrawlDetail,
-    analyses: showAnalysisDetail,
     scripts: showScriptDetail,
     storyboards: showStoryboardDetail,
   };
