@@ -6,12 +6,10 @@
 from __future__ import annotations
 
 import asyncio
-import fcntl
 import json
 import logging
 import os
 import re
-import tempfile
 import traceback
 import uuid
 from concurrent.futures import ThreadPoolExecutor
@@ -41,7 +39,7 @@ limiter = Limiter(key_func=get_remote_address)
 class GenerateRequest(BaseModel):
     source_analysis_id: str = ""
     human_requirements: str = Field(default="", max_length=5000)
-    genre: str = Field(default="都市甜寵", max_length=200)
+    genre: str = Field(default="廢墟探索", max_length=200)
     style: str = Field(default="dramatic", max_length=200)
 
 
@@ -79,61 +77,6 @@ def _run_in_thread(fn, *args):
     t = threading.Thread(target=fn, args=args, daemon=True)
     t.start()
 
-
-# ──────────────────────────── Video Reviews Helper ────────────────────────────
-
-VIDEO_REVIEWS_PATH = PROJECT_ROOT / "data" / "video_reviews.json"
-PENDING_DIR = PROJECT_ROOT / "data" / "analyses" / "pending"
-
-
-def _read_video_reviews() -> dict:
-    """Read video_reviews.json with shared lock."""
-    VIDEO_REVIEWS_PATH.parent.mkdir(parents=True, exist_ok=True)
-    if not VIDEO_REVIEWS_PATH.exists():
-        return {}
-    with open(VIDEO_REVIEWS_PATH, "r", encoding="utf-8") as f:
-        fcntl.flock(f, fcntl.LOCK_SH)
-        try:
-            data = json.load(f)
-        except json.JSONDecodeError:
-            data = {}
-        finally:
-            fcntl.flock(f, fcntl.LOCK_UN)
-    return data
-
-
-def _write_video_reviews(data: dict) -> None:
-    """Write video_reviews.json atomically: temp file + rename."""
-    VIDEO_REVIEWS_PATH.parent.mkdir(parents=True, exist_ok=True)
-    tmp_fd, tmp_path = tempfile.mkstemp(
-        dir=VIDEO_REVIEWS_PATH.parent, suffix=".tmp", prefix=".reviews_"
-    )
-    try:
-        with os.fdopen(tmp_fd, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-        os.replace(tmp_path, VIDEO_REVIEWS_PATH)
-    except BaseException:
-        try:
-            os.unlink(tmp_path)
-        except OSError:
-            pass
-        raise
-
-
-def _update_video_review(video_id: str, updates: dict) -> None:
-    """Atomic read-modify-write for a single video review entry."""
-    VIDEO_REVIEWS_PATH.parent.mkdir(parents=True, exist_ok=True)
-    lock_path = VIDEO_REVIEWS_PATH.with_suffix(".lock")
-    with open(lock_path, "w") as lock_f:
-        fcntl.flock(lock_f, fcntl.LOCK_EX)
-        try:
-            data = _read_video_reviews()
-            if video_id not in data:
-                data[video_id] = {}
-            data[video_id].update(updates)
-            _write_video_reviews(data)
-        finally:
-            fcntl.flock(lock_f, fcntl.LOCK_UN)
 
 app = FastAPI(title="探索者計劃 Explorer Plan Dashboard", version="2.0.0")
 app.state.limiter = limiter
@@ -233,43 +176,6 @@ async def get_index():
 async def get_collection(collection: str):
     """回傳某個 collection 的所有條目"""
     return {"data": index_db.list_entries(collection)}
-
-
-# ── Crawl API removed (src/crawler module deprecated) ──
-
-
-# ──────────────────────────── Analyze API ────────────────────────────
-
-@app.get("/api/analyses")
-async def list_analyses():
-    return {"data": index_db.list_entries("analyses")}
-
-
-@app.get("/api/analyses/pending/{video_id}")
-async def get_pending_analysis(video_id: str):
-    """Return the pending analysis result for preview."""
-    PENDING_DIR.mkdir(parents=True, exist_ok=True)
-    fpath = PENDING_DIR / f"{video_id}.json"
-    if not fpath.exists():
-        return JSONResponse({"error": "尚無待審分析"}, status_code=404)
-    data = _safe_read_json(fpath)
-    if data is None:
-        return JSONResponse({"error": "分析資料損壞"}, status_code=500)
-    return data
-
-
-@app.get("/api/analyses/{analysis_id}")
-async def get_analysis(analysis_id: str):
-    entry = index_db.get_entry("analyses", analysis_id)
-    if not entry:
-        return JSONResponse({"error": "分析不存在"}, status_code=404)
-    fpath = PROJECT_ROOT / entry["file"]
-    if not fpath.exists():
-        return {"data": None}
-    return {"data": _safe_read_json(fpath)}
-
-
-# ── trigger/analyze removed (src/crawler.trending_analyzer deprecated) ──
 
 
 # ──────────────────────────── Script API ────────────────────────────
@@ -848,20 +754,6 @@ async def kb_list_category(category: str, subcategory: str = ""):
     return {"data": _get_kb().get_entries(category, subcategory=subcategory or None)}
 
 
-# ── KB analyze endpoints removed (src/crawler.trending_analyzer deprecated) ──
-
-
-# ──────────────────────────── Video Review Flow API ────────────────────────────
-
-@app.get("/api/video-reviews")
-async def get_video_reviews():
-    """Return full video_reviews.json content."""
-    return _read_video_reviews()
-
-
-# ── Video review analyze/confirm/reject endpoints removed (src/crawler deprecated) ──
-
-
 @app.post("/api/trigger/generate-kb")
 @limiter.limit("20/hour")
 async def trigger_generate_kb(request: Request):
@@ -900,6 +792,7 @@ def _run_generate_kb(task_id: str, genre: str, style: str, episode_count: int,
         _set_progress(task, 0, 3, "抽取知識庫元素...")
 
         from ..scriptwriter.generator import generate_from_knowledge_base, generate_episode_script
+        from ..knowledge.knowledge_base import CATEGORIES
 
         kb = _get_kb()
         stats = kb.get_stats()
@@ -923,7 +816,7 @@ def _run_generate_kb(task_id: str, genre: str, style: str, episode_count: int,
             sel_cats = [k for k, v in selected_elements.items() if isinstance(v, list) and v]
             task["logs"].append(f"[{_now()}] 使用用戶選擇的 {sel_count} 個知識庫元素（{', '.join(sel_cats)}）")
             # Log which categories are left for Claude to decide freely
-            all_cats = ["structures", "hooks", "elements", "payoffs", "pacing", "dialogues", "visual_scenes", "ending_hooks", "tension_actions", "genres", "styles"]
+            all_cats = list(CATEGORIES)
             free_cats = [c for c in all_cats if c not in sel_cats]
             if free_cats:
                 task["logs"].append(f"[{_now()}] 其餘分類由 AI 自由發揮：{', '.join(free_cats)}")

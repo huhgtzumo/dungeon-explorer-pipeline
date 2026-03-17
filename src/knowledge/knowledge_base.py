@@ -352,52 +352,49 @@ class KnowledgeBase:
                 pool = [(e, w) for e, w in pool if e["id"] != chosen["id"]]
             return selected
 
-        # Scale element counts by duration
+        # Duration-based category tiers:
+        # Short (≤90s): only core categories — keep it tight
+        # Medium (91-210s): add supporting categories for richer exploration
+        # Long (>210s): all categories for full narrative arc
         if duration_sec <= 90:
-            # Short (60s): tight and compact
-            zones = random.randint(2, 3)
-            encounters = random.randint(2, 3)
-            items = random.randint(1, 2)
-            traps = 1
-            clues = random.randint(1, 2)
-            ambients = random.randint(1, 2)
-            equipment = random.randint(2, 3)
+            defaults = {
+                "building_types": 1,
+                "exploration_zones": random.randint(2, 3),
+                "encounters": random.randint(2, 3),
+                "found_items": random.randint(1, 2),
+                "ending_types": 1,
+            }
         elif duration_sec <= 210:
-            # Medium (180s): multi-zone exploration
-            zones = random.randint(4, 6)
-            encounters = random.randint(4, 6)
-            items = random.randint(2, 4)
-            traps = random.randint(1, 3)
-            clues = random.randint(2, 4)
-            ambients = random.randint(2, 4)
-            equipment = random.randint(3, 4)
+            defaults = {
+                "building_types": 1,
+                "building_backstories": 1,
+                "exploration_zones": random.randint(4, 6),
+                "route_paths": 1,
+                "encounters": random.randint(4, 6),
+                "found_items": random.randint(2, 4),
+                "traps_hazards": random.randint(1, 3),
+                "narrative_clues": random.randint(2, 4),
+                "ambient_triggers": random.randint(2, 4),
+                "tension_curves": 1,
+            }
         else:
-            # Long (300s+): full arc with rich detail
-            zones = random.randint(6, 8)
-            encounters = random.randint(6, 8)
-            items = random.randint(3, 5)
-            traps = random.randint(2, 4)
-            clues = random.randint(3, 5)
-            ambients = random.randint(3, 5)
-            equipment = random.randint(3, 5)
-
-        defaults = {
-            "building_types": 1,
-            "building_backstories": 1,
-            "exploration_zones": zones,
-            "route_paths": 1,
-            "encounters": encounters,
-            "found_items": items,
-            "traps_hazards": traps,
-            "narrative_clues": clues,
-            "time_settings": 1,
-            "weather_conditions": 1,
-            "ambient_triggers": ambients,
-            "tension_curves": 1,
-            "ending_types": 1,
-            "exploration_motives": 1,
-            "explorer_equipment": equipment,
-        }
+            defaults = {
+                "building_types": 1,
+                "building_backstories": 1,
+                "exploration_zones": random.randint(6, 8),
+                "route_paths": 1,
+                "encounters": random.randint(6, 8),
+                "found_items": random.randint(3, 5),
+                "traps_hazards": random.randint(2, 4),
+                "narrative_clues": random.randint(3, 5),
+                "time_settings": 1,
+                "weather_conditions": 1,
+                "ambient_triggers": random.randint(3, 5),
+                "tension_curves": 1,
+                "ending_types": 1,
+                "exploration_motives": 1,
+                "explorer_equipment": random.randint(3, 5),
+            }
 
         return {
             cat: _pick(cat, config.get(f"{cat}_count", default))
