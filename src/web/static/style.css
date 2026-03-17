@@ -2160,3 +2160,17 @@ input[type="checkbox"].video-cb {
   color: var(--accent-light);
   border-color: var(--accent);
 }
+
+/* ── WIP Banner (Step 5 & 6) ── */
+.wip-banner {
+  background: linear-gradient(135deg, rgba(233, 168, 70, 0.15), rgba(233, 69, 96, 0.10));
+  border: 1.5px solid var(--warning);
+  color: var(--warning);
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
