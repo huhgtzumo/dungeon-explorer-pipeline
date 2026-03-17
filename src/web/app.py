@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Any, Optional
 
 import uvicorn
-from fastapi import FastAPI, BackgroundTasks, Request
+from fastapi import FastAPI, BackgroundTasks, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
@@ -199,11 +199,24 @@ async def get_collection(collection: str):
     return {"data": index_db.list_entries(collection)}
 
 
+# ──────────────────────────── Pagination Helper ────────────────────────────
+
+def _paginate(items: list, page: int, per_page: int) -> dict:
+    """Apply pagination to a list and return standardised envelope."""
+    total = len(items)
+    page = max(1, page)
+    per_page = max(1, min(per_page, 100))
+    start = (page - 1) * per_page
+    end = start + per_page
+    return {"items": items[start:end], "total": total, "page": page, "per_page": per_page}
+
+
 # ──────────────────────────── Script API ────────────────────────────
 
 @app.get("/api/scripts")
-async def list_scripts():
-    return {"data": index_db.list_entries("scripts")}
+async def list_scripts(page: int = Query(1, ge=1), per_page: int = Query(20, ge=1, le=100)):
+    entries = index_db.list_entries("scripts")
+    return _paginate(entries, page, per_page)
 
 
 @app.get("/api/scripts/{script_id}")
@@ -329,7 +342,7 @@ def _run_generate(task_id: str, source_analysis_id: str,
 # ──────────────────────────── Storyboard API ────────────────────────────
 
 @app.get("/api/storyboards")
-async def list_storyboards():
+async def list_storyboards(page: int = Query(1, ge=1), per_page: int = Query(20, ge=1, le=100)):
     storyboards = index_db.list_entries("storyboards")
     # Enrich with script title
     scripts = {s["id"]: s for s in index_db.list_entries("scripts")}
@@ -339,7 +352,7 @@ async def list_storyboards():
             sb["script_title"] = scripts[sid].get("title") or scripts[sid].get("series_title", sid)
         else:
             sb["script_title"] = sid
-    return {"data": storyboards}
+    return _paginate(storyboards, page, per_page)
 
 
 @app.get("/api/storyboards/{sb_id}")
@@ -427,10 +440,10 @@ GENERATED_IMAGES_DIR = PROJECT_ROOT / "data" / "generated_images"
 
 
 @app.get("/api/image-sets")
-async def list_image_sets():
+async def list_image_sets(page: int = Query(1, ge=1), per_page: int = Query(20, ge=1, le=100)):
     """列出所有已生成的圖片集。"""
     if not GENERATED_IMAGES_DIR.exists():
-        return {"data": []}
+        return _paginate([], page, per_page)
     sets = []
     for d in sorted(GENERATED_IMAGES_DIR.iterdir(), reverse=True):
         if not d.is_dir():
@@ -450,7 +463,7 @@ async def list_image_sets():
                 "success_count": len(pngs),
                 "error_count": 0,
             })
-    return {"data": sets}
+    return _paginate(sets, page, per_page)
 
 
 @app.get("/api/image-sets/{set_id}")

@@ -176,9 +176,12 @@ async function refreshAll() {
       fetch(apiUrl('/api/video-sets')),
       fetch(apiUrl('/api/tasks')),
     ]);
-    _scripts = (await scriptsResp.json()).data || [];
-    _storyboards = (await sbResp.json()).data || [];
-    _imageSets = (await imgResp.json()).data || [];
+    const scriptsData = await scriptsResp.json();
+    _scripts = scriptsData.items || scriptsData.data || [];
+    const sbData = await sbResp.json();
+    _storyboards = sbData.items || sbData.data || [];
+    const imgData = await imgResp.json();
+    _imageSets = imgData.items || imgData.data || [];
     _videoSets = (await vidResp.json()).data || [];
     const tasks = await tasksResp.json();
 
@@ -262,7 +265,8 @@ async function loadScriptsView() {
 
   try {
     const resp = await fetch(apiUrl('/api/scripts'));
-    const scripts = (await resp.json()).data || [];
+    const d = await resp.json();
+    const scripts = d.items || d.data || [];
     if (countEl) countEl.textContent = `共 ${scripts.length} 筆`;
 
     if (!scripts.length) {
