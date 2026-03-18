@@ -211,12 +211,11 @@
         <div class="form-group">
           <label class="form-label">生圖引擎</label>
           <select class="form-select" id="img-engine">
-            <option value="flux" selected>Flux Schnell（fal.ai）</option>
-            <option value="kling" disabled>Kling AI（僅限視頻）</option>
+            <option value="kling" selected>Kling AI（~$0.0035/張）</option>
             <option value="storyboarder" disabled>Storyboarder.ai（即將支援）</option>
             <option value="sd-lora" disabled>Stable Diffusion + LoRA（即將支援）</option>
           </select>
-          <div class="helper-text">Flux Schnell：透過 fal.ai API 生成 9:16 豎版分鏡圖（~$0.003/張）</div>
+          <div class="helper-text">Kling AI：生成 9:16 豎版分鏡圖，與視頻生成使用同一引擎，風格一致性更高</div>
         </div>
         <div class="form-group">
           <label class="form-label">風格 Prefix（選填）</label>
@@ -250,8 +249,7 @@
                 <table class="data-table">
                   <thead><tr><th>引擎</th><th>畫質</th><th>角色一致性</th><th>費用</th><th>狀態</th></tr></thead>
                   <tbody>
-                    <tr style="color:var(--accent)"><td>Flux Schnell</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;</td><td>~$0.003/張</td><td>&#9989; 可用</td></tr>
-                    <tr><td>FLUX 1.1 Pro</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;</td><td>按量計費</td><td>可升級</td></tr>
+                    <tr style="color:var(--accent)"><td>Kling AI</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>~$0.0035/張</td><td>&#9989; 使用中</td></tr>
                     <tr><td>SD + LoRA</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td><td>免費（需 GPU）</td><td>即將支援</td></tr>
                     <tr><td>Storyboarder.ai</td><td>&#11088;&#11088;&#11088;&#11088;</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td><td>付費</td><td>即將支援</td></tr>
                   </tbody>

@@ -532,8 +532,10 @@ async def list_image_sets(page: int = Query(1, ge=1), per_page: int = Query(20, 
             meta["id"] = d.name
             sets.append(meta)
         else:
-            # Directory exists but no meta — count PNGs
+            # Directory exists but no meta — count PNGs; skip if empty (still generating)
             pngs = list(d.glob("*.png"))
+            if not pngs:
+                continue
             sets.append({
                 "id": d.name,
                 "image_set_id": d.name,
@@ -543,6 +545,8 @@ async def list_image_sets(page: int = Query(1, ge=1), per_page: int = Query(20, 
             })
     # Enrich with script title via storyboard→script chain
     _enrich_sets_with_titles(sets)
+    # Sort by generated_at descending (newest first)
+    sets.sort(key=lambda s: s.get("generated_at", ""), reverse=True)
     return _paginate(sets, page, per_page)
 
 
