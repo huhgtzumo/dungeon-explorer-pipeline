@@ -1305,15 +1305,24 @@ def _run_storyboard_generate_videos(task_id: str, storyboard_id: str, duration_s
             prompt = frame.get("video_prompt", frame.get("image_prompt", ""))
             out_path = output_dir / f"clip_{num:03d}.mp4"
 
-            _set_progress(task, i, total, f"生成視頻片段 #{num} ({i+1}/{total})...")
-            task["logs"].append(f"[{_now()}] [{i+1}/{total}] 生成視頻片段 #{num}...")
+            # 取下一幀作為尾幀（一鏡到底銜接）
+            tail_url = ""
+            if i < total - 1:
+                tail_url = eligible[i + 1].get("image_url", "")
+
+            has_tail = bool(tail_url)
+            tail_info = " → 銜接下一幀" if has_tail else " (最後一段)"
+            _set_progress(task, i, total, f"生成視頻片段 #{num}{tail_info} ({i+1}/{total})...")
+            task["logs"].append(f"[{_now()}] [{i+1}/{total}] 生成視頻片段 #{num}{tail_info}...")
 
             try:
                 video_url = generate_video_url(
                     image_url=image_url,
+                    image_tail_url=tail_url,
                     prompt=prompt,
                     duration=str(duration_sec),
                     mode=mode,
+                    model="kling-v1",
                 )
 
                 # Download to local

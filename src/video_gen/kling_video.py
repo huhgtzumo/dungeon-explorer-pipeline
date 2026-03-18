@@ -3,10 +3,11 @@
 此模組是 kling_video_client 的輕量封裝，提供以下功能：
 - generate_video_url(): 從圖片 URL 或本地路徑生成視頻，回傳視頻 URL
 - generate_video(): 生成並下載視頻到本地路徑
-- batch_generate(): 批次從分鏡圖生成視頻片段
+- batch_generate(): 批次從分鏡圖生成視頻片段（支援前後幀銜接）
 
-model 預設使用 kling-v1-6（Kling V1.6），duration 預設 "10"（10 秒），mode 預設 "std"（標準品質）。
-每段 10s 標準視頻消耗 4 個 API 單位。
+model 預設使用 kling-v1（最便宜），duration 預設 "10"（10 秒），mode 預設 "std"（標準品質）。
+每段 10s 標準視頻消耗 2 個 API 單位（kling-v1）。
+支援 image_tail 參數實現一鏡到底的連貫效果。
 """
 
 from __future__ import annotations
@@ -64,11 +65,13 @@ def _api_headers() -> dict:
 def generate_video_url(
     image_url: str = "",
     image_path: str | Path = "",
+    image_tail_url: str = "",
+    image_tail_path: str | Path = "",
     prompt: str = "",
     negative_prompt: str = "",
     duration: str = "10",
     mode: str = "std",
-    model: str = "kling-v1-6",
+    model: str = "kling-v1",
     cfg_scale: float = 0.5,
     poll_interval: int = 10,
     max_wait: int = 600,
@@ -76,13 +79,15 @@ def generate_video_url(
     """用 Kling API 從圖片生成視頻，回傳視頻 URL（不下載）。
 
     Args:
-        image_url: 來源圖片 URL（與 image_path 二選一）
-        image_path: 來源圖片本地路徑（與 image_url 二選一）
+        image_url: 首幀圖片 URL（與 image_path 二選一）
+        image_path: 首幀圖片本地路徑（與 image_url 二選一）
+        image_tail_url: 尾幀圖片 URL（可選，用於銜接下一段）
+        image_tail_path: 尾幀圖片本地路徑（可選）
         prompt: 動態描述 prompt
         negative_prompt: 負向 prompt
         duration: 視頻時長字串 "5" 或 "10"
         mode: "std"（標準）或 "pro"（高品質）
-        model: 模型名稱，預設 kling-v1-5
+        model: 模型名稱，預設 kling-v1（最便宜）
         cfg_scale: CFG 比例，預設 0.5
         poll_interval: 輪詢間隔（秒）
         max_wait: 最大等待時間（秒）
@@ -105,6 +110,7 @@ def generate_video_url(
         "duration": str(duration),
     }
 
+    # 首幀圖片
     if image_url:
         req_body["image_url"] = image_url
     elif image_path:
@@ -118,7 +124,20 @@ def generate_video_url(
     else:
         raise ValueError("必須提供 image_url 或 image_path 其中之一")
 
-    logger.info("提交 Kling 視頻生成任務 (duration=%s, mode=%s, model=%s)...", duration, mode, model)
+    # 尾幀圖片（可選，用於一鏡到底銜接）
+    if image_tail_url:
+        req_body["image_tail_url"] = image_tail_url
+    elif image_tail_path:
+        image_tail_path = Path(image_tail_path)
+        if not image_tail_path.is_absolute():
+            image_tail_path = PROJECT_ROOT / image_tail_path
+        if not image_tail_path.exists():
+            raise FileNotFoundError(f"尾幀圖片不存在: {image_tail_path}")
+        tail_data = image_tail_path.read_bytes()
+        req_body["image_tail"] = base64.b64encode(tail_data).decode("utf-8")
+
+    has_tail = bool(image_tail_url or image_tail_path)
+    logger.info("提交 Kling 視頻生成任務 (duration=%s, mode=%s, model=%s, tail=%s)...", duration, mode, model, has_tail)
     resp = httpx.post(
         f"{BASE_URL}/v1/videos/image2video",
         headers=headers,
@@ -173,12 +192,14 @@ def generate_video_url(
 def generate_video(
     image_url: str = "",
     image_path: str | Path = "",
+    image_tail_url: str = "",
+    image_tail_path: str | Path = "",
     prompt: str = "",
     negative_prompt: str = "",
     duration: str = "10",
     output_path: str | Path = "",
     mode: str = "std",
-    model: str = "kling-v1-6",
+    model: str = "kling-v1",
     poll_interval: int = 10,
     max_wait: int = 600,
 ) -> Path:
@@ -214,6 +235,8 @@ def generate_video(
     video_url = generate_video_url(
         image_url=image_url,
         image_path=image_path or "",
+        image_tail_url=image_tail_url,
+        image_tail_path=image_tail_path or "",
         prompt=prompt,
         negative_prompt=negative_prompt,
         duration=duration,
@@ -237,7 +260,7 @@ def generate_text2video(
     duration: str = "5",
     output_path: str | Path = "",
     mode: str = "std",
-    model: str = "kling-v1-6",
+    model: str = "kling-v1",
     cfg_scale: float = 0.5,
     aspect_ratio: str = "9:16",
     poll_interval: int = 10,
@@ -338,7 +361,11 @@ def batch_generate(
     mode: str = "std",
     on_progress=None,
 ) -> list[dict]:
-    """批次從分鏡圖生成視頻片段，回傳包含 video_url 的結果列表。
+    """批次從分鏡圖生成視頻片段，支援前後幀銜接（一鏡到底效果）。
+
+    每段視頻的首幀是當前分鏡圖，尾幀是下一張分鏡圖，
+    這樣拼接後畫面連貫，像攝影機一直在走。
+    最後一段沒有尾幀（自然結束）。
 
     Args:
         frames: list of {frame_number, image_url?, image_path?, video_prompt?, duration_sec?}
@@ -365,13 +392,25 @@ def batch_generate(
         dur = str(frame.get("duration_sec", duration_sec))
         out_path = output_dir / f"clip_{num:03d}.mp4"
 
+        # 取下一幀作為尾幀（一鏡到底銜接）
+        tail_url = ""
+        tail_path = ""
+        if i < total - 1:
+            next_frame = frames[i + 1]
+            tail_url = next_frame.get("image_url", "")
+            tail_path = next_frame.get("image_path", "")
+
+        has_tail = bool(tail_url or tail_path)
         if on_progress:
-            on_progress(i, total, f"生成視頻片段 #{num}...")
+            tail_info = " → 銜接下一幀" if has_tail else " (最後一段)"
+            on_progress(i, total, f"生成視頻片段 #{num}{tail_info}...")
 
         try:
             video_url = generate_video_url(
                 image_url=image_url,
                 image_path=image_path,
+                image_tail_url=tail_url,
+                image_tail_path=tail_path,
                 prompt=prompt,
                 negative_prompt=negative_prompt,
                 duration=dur,
@@ -388,9 +427,10 @@ def batch_generate(
                 "video_path": str(out_path.relative_to(PROJECT_ROOT)),
                 "video_prompt": prompt,
                 "duration_sec": int(dur),
+                "has_tail_frame": has_tail,
                 "status": "ok",
             })
-            logger.info("[%d/%d] 視頻片段 #%d 生成成功: %s", i + 1, total, num, video_url[:60])
+            logger.info("[%d/%d] 視頻片段 #%d 生成成功 (tail=%s): %s", i + 1, total, num, has_tail, video_url[:60])
         except Exception as e:
             results.append({
                 "frame_number": num,
@@ -417,6 +457,7 @@ def batch_generate(
         "error_count": sum(1 for r in results if r["status"] == "error"),
         "duration_sec": duration_sec,
         "mode": mode,
+        "chained_frames": True,
         "clips": results,
     }
     meta_path = output_dir / "meta.json"
