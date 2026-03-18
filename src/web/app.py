@@ -6,10 +6,14 @@
 from __future__ import annotations
 
 import asyncio
+import base64
+import hashlib
+import hmac
 import json
 import logging
 import os
 import re
+import secrets
 import threading
 import traceback
 import uuid
@@ -32,12 +36,44 @@ from ..utils import index_db
 
 logger = logging.getLogger(__name__)
 
-# ──────────────────────────── API Key Auth ──────────────────────────────────
+# Load .env before reading env vars
+from dotenv import load_dotenv
+load_dotenv(PROJECT_ROOT / ".env")
+
+# ──────────────────────────── Auth ──────────────────────────────────────────
 _API_KEY = os.environ.get("EXPLORER_API_KEY", "")
+_BASIC_USER = os.environ.get("EXPLORER_USER", "")
+_BASIC_PASS = os.environ.get("EXPLORER_PASS", "")
 
 
-async def _api_key_auth_middleware(request: Request, call_next):
-    """驗證 /api/ POST 請求的 X-API-Key header。未設定 EXPLORER_API_KEY 時跳過（開發模式）。"""
+def _check_basic_auth(request: Request) -> bool:
+    """Check HTTP Basic Auth credentials. Returns True if valid or if auth is not configured."""
+    if not _BASIC_USER or not _BASIC_PASS:
+        return True  # 沒設定帳密 = 開發模式，跳過
+    auth_header = request.headers.get("Authorization", "")
+    if not auth_header.startswith("Basic "):
+        return False
+    try:
+        decoded = base64.b64decode(auth_header[6:]).decode("utf-8")
+        user, pwd = decoded.split(":", 1)
+        return (
+            hmac.compare_digest(user, _BASIC_USER)
+            and hmac.compare_digest(pwd, _BASIC_PASS)
+        )
+    except Exception:
+        return False
+
+
+async def _auth_middleware(request: Request, call_next):
+    """Combined auth: Basic Auth for all requests + API Key for POST /api/."""
+    # Basic Auth check
+    if not _check_basic_auth(request):
+        return JSONResponse(
+            {"error": "未授權"},
+            status_code=401,
+            headers={"WWW-Authenticate": 'Basic realm="Explorer Plan"'},
+        )
+    # API Key check for POST requests
     if (
         _API_KEY
         and request.url.path.startswith("/api/")
@@ -98,7 +134,7 @@ def _run_in_thread(fn, *args):
 
 app = FastAPI(title="探索者計劃 Explorer Plan Dashboard", version="2.0.0")
 app.state.limiter = limiter
-app.middleware("http")(_api_key_auth_middleware)
+app.middleware("http")(_auth_middleware)
 
 
 @app.exception_handler(RateLimitExceeded)
