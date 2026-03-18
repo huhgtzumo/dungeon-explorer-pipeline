@@ -1,2759 +1,14 @@
 [
   {
-    "id": "kb_building_types_20260316_225730_6ca394",
-    "category": "building_types",
-    "subcategory": "醫療設施",
-    "name": "廢棄精神病院",
-    "tags": [
-      "恐怖",
-      "醫療",
-      "經典"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.111914"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_ce1db1",
-    "category": "building_types",
-    "subcategory": "醫療設施",
-    "name": "廢棄醫院",
-    "tags": [
-      "醫療",
-      "城市",
-      "常見"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.121246"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_a22890",
-    "category": "building_types",
-    "subcategory": "軍事設施",
-    "name": "蘇聯地下碉堡",
-    "tags": [
-      "軍事",
-      "地下",
-      "冷戰"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.129794"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_1be51a",
-    "category": "building_types",
-    "subcategory": "軍事設施",
-    "name": "廢棄軍營",
-    "tags": [
-      "軍事",
-      "戶外",
-      "大型"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.139046"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_469c60",
-    "category": "building_types",
-    "subcategory": "教育設施",
-    "name": "荒廢學校",
-    "tags": [
-      "教育",
-      "懷舊",
-      "日常"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.148278"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_016bb3",
-    "category": "building_types",
-    "subcategory": "教育設施",
-    "name": "廢棄大學",
-    "tags": [
-      "教育",
-      "大型",
-      "學術"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.157515"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_5faf35",
-    "category": "building_types",
-    "subcategory": "工業設施",
-    "name": "廢棄工廠",
-    "tags": [
-      "工業",
-      "大型",
-      "機械"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.166758"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_b0cf7a",
-    "category": "building_types",
-    "subcategory": "工業設施",
-    "name": "廢棄發電廠",
-    "tags": [
-      "工業",
-      "能源",
-      "壯觀"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.173979"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_5639d9",
-    "category": "building_types",
-    "subcategory": "工業設施",
-    "name": "廢棄礦坑",
-    "tags": [
-      "地下",
-      "危險",
-      "幽閉"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.183230"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_979eb6",
-    "category": "building_types",
-    "subcategory": "宗教設施",
-    "name": "廢棄教堂",
-    "tags": [
-      "宗教",
-      "哥德",
-      "神聖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.192660"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_ab7c1e",
-    "category": "building_types",
-    "subcategory": "宗教設施",
-    "name": "廢棄神社",
-    "tags": [
-      "宗教",
-      "日式",
-      "自然"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.197417"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_bd6f0a",
-    "category": "building_types",
-    "subcategory": "居住設施",
-    "name": "廢棄豪宅",
-    "tags": [
-      "居住",
-      "豪華",
-      "鬼屋"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.200657"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_2fdb01",
-    "category": "building_types",
-    "subcategory": "居住設施",
-    "name": "廢棄公寓大樓",
-    "tags": [
-      "居住",
-      "城市",
-      "多層"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.207054"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_3ed056",
-    "category": "building_types",
-    "subcategory": "地下設施",
-    "name": "地下防空洞",
-    "tags": [
-      "地下",
-      "戰爭",
-      "歷史"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.209014"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_398e2b",
-    "category": "building_types",
-    "subcategory": "地下設施",
-    "name": "廢棄地鐵站",
-    "tags": [
-      "地下",
-      "城市",
-      "交通"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.218748"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_5a5002",
-    "category": "building_types",
-    "subcategory": "地下設施",
-    "name": "廢棄下水道系統",
-    "tags": [
-      "地下",
-      "城市",
-      "潮濕"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.221400"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_b7eb0f",
-    "category": "building_types",
-    "subcategory": "公共設施",
-    "name": "廢棄監獄",
-    "tags": [
-      "公共",
-      "壓迫",
-      "暴力"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.228370"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_dec8c1",
-    "category": "building_types",
-    "subcategory": "公共設施",
-    "name": "廢棄游泳池",
-    "tags": [
-      "公共",
-      "運動",
-      "詭異"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:30.230622"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_53212e",
-    "category": "building_types",
-    "subcategory": "公共設施",
-    "name": "廢棄遊樂園",
-    "tags": [
-      "公共",
-      "娛樂",
-      "反差"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.240283"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_7efc25",
-    "category": "building_types",
-    "subcategory": "公共設施",
-    "name": "廢棄戲院",
-    "tags": [
-      "公共",
-      "藝術",
-      "華麗"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.250153"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_31d2af",
-    "category": "building_types",
-    "subcategory": "其他",
-    "name": "廢棄實驗室",
-    "tags": [
-      "科學",
-      "神秘",
-      "危險"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.260212"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_72897a",
-    "category": "building_types",
-    "subcategory": "其他",
-    "name": "廢棄水壩",
-    "tags": [
-      "水利",
-      "壯觀",
-      "戶外"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.267012"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_1def49",
-    "category": "building_types",
-    "subcategory": "其他",
-    "name": "廢棄船塢",
-    "tags": [
-      "港口",
-      "工業",
-      "大型"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.270279"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_ce6f64",
-    "category": "building_types",
-    "subcategory": "其他",
-    "name": "切爾諾貝利隔離區",
-    "tags": [
-      "核災",
-      "傳奇",
-      "輻射"
-    ],
-    "effectiveness_score": 10,
-    "created_at": "2026-03-16T22:57:30.278169"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_9934d6",
-    "category": "building_types",
-    "subcategory": "居住設施",
-    "name": "廢棄旅館",
-    "tags": [
-      "居住",
-      "商業",
-      "閃靈"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.282499"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_9f8194",
-    "category": "building_types",
-    "subcategory": "醫療設施",
-    "name": "廢棄療養院",
-    "tags": [
-      "醫療",
-      "山區",
-      "歷史"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.292498"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_8142ed",
-    "category": "building_types",
-    "subcategory": "醫療設施",
-    "name": "廢棄太平間",
-    "tags": [
-      "醫療",
-      "恐怖",
-      "地下"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.302188"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_2b6226",
-    "category": "building_types",
-    "subcategory": "地下設施",
-    "name": "廢棄地下實驗設施",
-    "tags": [
-      "地下",
-      "政府",
-      "機密"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.308281"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_809e15",
-    "category": "building_types",
-    "subcategory": "公共設施",
-    "name": "廢棄火車站",
-    "tags": [
-      "交通",
-      "懷舊",
-      "開放"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.310829"
-  },
-  {
-    "id": "kb_building_types_20260316_225730_2a5fcd",
-    "category": "building_types",
-    "subcategory": "公共設施",
-    "name": "廢棄購物中心",
-    "tags": [
-      "商業",
-      "大型",
-      "消費"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.321536"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_32f8d6",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "神秘火災",
-    "tags": [
-      "火災",
-      "神秘",
-      "調查"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.327117"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_561260",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "連環失蹤",
-    "tags": [
-      "失蹤",
-      "恐怖",
-      "未解"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.330258"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_15f425",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "瘟疫爆發",
-    "tags": [
-      "疾病",
-      "隔離",
-      "生物"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.339001"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_a4c6ca",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "實驗失控",
-    "tags": [
-      "實驗",
-      "科學",
-      "政府"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.346319"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_d3b74a",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "兇殺案",
-    "tags": [
-      "犯罪",
-      "暴力",
-      "詛咒"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.359721"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_cc45de",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "政府封鎖",
-    "tags": [
-      "政府",
-      "機密",
-      "陰謀"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.370067"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_57ceaf",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "自然災害",
-    "tags": [
-      "災害",
-      "結構",
-      "天災"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:30.374466"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_69ad9b",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "經營破產",
-    "tags": [
-      "經濟",
-      "日常",
-      "突然"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:30.380051"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_20a419",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "核洩漏",
-    "tags": [
-      "核災",
-      "輻射",
-      "永久"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.384310"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_ecc4df",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "邪教活動",
-    "tags": [
-      "邪教",
-      "儀式",
-      "犯罪"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.388644"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_450858",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "結構老化",
-    "tags": [
-      "老化",
-      "危險",
-      "時間"
-    ],
-    "effectiveness_score": 5,
-    "created_at": "2026-03-16T22:57:30.399147"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_2b2b6b",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "戰爭遺留",
-    "tags": [
-      "戰爭",
-      "歷史",
-      "軍事"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.409148"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_c22912",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "集體自殺",
-    "tags": [
-      "死亡",
-      "禁忌",
-      "心理"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.419459"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_2ee9ba",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "毒氣外洩",
-    "tags": [
-      "化學",
-      "危險",
-      "工業"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.421930"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_1a3ebe",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "都市更新失敗",
-    "tags": [
-      "城市",
-      "政策",
-      "經濟"
-    ],
-    "effectiveness_score": 5,
-    "created_at": "2026-03-16T22:57:30.430682"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_6f5594",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "鬧鬼傳說",
-    "tags": [
-      "超自然",
-      "傳說",
-      "恐怖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.435709"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_dee816",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "醫療醜聞",
-    "tags": [
-      "醫療",
-      "醜聞",
-      "犯罪"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.445732"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_754809",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "洪水淹沒",
-    "tags": [
-      "洪水",
-      "水害",
-      "反覆"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.451173"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_56634b",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "輻射汙染",
-    "tags": [
-      "輻射",
-      "神秘",
-      "汙染"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.456201"
-  },
-  {
-    "id": "kb_building_backstories_20260316_225730_16b69b",
-    "category": "building_backstories",
-    "subcategory": "",
-    "name": "產權糾紛",
-    "tags": [
-      "法律",
-      "時間",
-      "日常"
-    ],
-    "effectiveness_score": 4,
-    "created_at": "2026-03-16T22:57:30.466057"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_5724f1",
-    "category": "exploration_zones",
-    "subcategory": "走廊通道",
-    "name": "陰暗走廊",
-    "tags": [
-      "基本",
-      "連接",
-      "壓迫"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.473405"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_256408",
-    "category": "exploration_zones",
-    "subcategory": "走廊通道",
-    "name": "緊急逃生通道",
-    "tags": [
-      "狹窄",
-      "垂直",
-      "金屬"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.480052"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_1420e4",
-    "category": "exploration_zones",
-    "subcategory": "走廊通道",
-    "name": "通風管道",
-    "tags": [
-      "幽閉",
-      "爬行",
-      "金屬"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.486856"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_179fce",
-    "category": "exploration_zones",
-    "subcategory": "走廊通道",
-    "name": "地下隧道",
-    "tags": [
-      "地下",
-      "潮濕",
-      "連接"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.495343"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_f0cb08",
-    "category": "exploration_zones",
-    "subcategory": "功能房間",
-    "name": "手術室",
-    "tags": [
-      "醫療",
-      "恐怖",
-      "器具"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.499662"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_30ad4e",
-    "category": "exploration_zones",
-    "subcategory": "功能房間",
-    "name": "檔案室",
-    "tags": [
-      "文件",
-      "線索",
-      "搜索"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.502076"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_1571c1",
-    "category": "exploration_zones",
-    "subcategory": "功能房間",
-    "name": "控制室",
-    "tags": [
-      "科技",
-      "監控",
-      "核心"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.510252"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_3081c9",
-    "category": "exploration_zones",
-    "subcategory": "功能房間",
-    "name": "廚房/食堂",
-    "tags": [
-      "日常",
-      "食物",
-      "生活"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:30.516377"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_077b65",
-    "category": "exploration_zones",
-    "subcategory": "功能房間",
-    "name": "實驗室",
-    "tags": [
-      "科學",
-      "化學",
-      "危險"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.523756"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_5ac12e",
-    "category": "exploration_zones",
-    "subcategory": "功能房間",
-    "name": "病房",
-    "tags": [
-      "醫療",
-      "個人",
-      "悲傷"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.533814"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_ded1d2",
-    "category": "exploration_zones",
-    "subcategory": "地下空間",
-    "name": "地下室",
-    "tags": [
-      "地下",
-      "潮濕",
-      "未知"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.541616"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_98633f",
-    "category": "exploration_zones",
-    "subcategory": "地下空間",
-    "name": "鍋爐房",
-    "tags": [
-      "工業",
-      "機械",
-      "悶熱"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.545639"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_f9b40b",
-    "category": "exploration_zones",
-    "subcategory": "地下空間",
-    "name": "地下儲水池",
-    "tags": [
-      "地下",
-      "水域",
-      "壯觀"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.551997"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_b6ab23",
-    "category": "exploration_zones",
-    "subcategory": "特殊區域",
-    "name": "密室",
-    "tags": [
-      "隱藏",
-      "發現",
-      "機關"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.560739"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_73a13e",
-    "category": "exploration_zones",
-    "subcategory": "特殊區域",
-    "name": "隔離區",
-    "tags": [
-      "醫療",
-      "危險",
-      "封鎖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.571065"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_96e6b6",
-    "category": "exploration_zones",
-    "subcategory": "特殊區域",
-    "name": "監控中心",
-    "tags": [
-      "監控",
-      "科技",
-      "窺視"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.581565"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_e31893",
-    "category": "exploration_zones",
-    "subcategory": "特殊區域",
-    "name": "停屍間",
-    "tags": [
-      "死亡",
-      "恐怖",
-      "冰冷"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.591810"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_3fe9cc",
-    "category": "exploration_zones",
-    "subcategory": "頂層空間",
-    "name": "屋頂",
-    "tags": [
-      "高處",
-      "開闊",
-      "危險"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.595956"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_1a0308",
-    "category": "exploration_zones",
-    "subcategory": "頂層空間",
-    "name": "鐘塔",
-    "tags": [
-      "高處",
-      "垂直",
-      "標誌"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.606254"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_104592",
-    "category": "exploration_zones",
-    "subcategory": "其他",
-    "name": "電梯井",
-    "tags": [
-      "垂直",
-      "危險",
-      "深淵"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.612112"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_e98415",
-    "category": "exploration_zones",
-    "subcategory": "特殊區域",
-    "name": "禮拜堂",
-    "tags": [
-      "宗教",
-      "靜謐",
-      "神聖"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.615664"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_2156c5",
-    "category": "exploration_zones",
-    "subcategory": "功能房間",
-    "name": "洗衣房",
-    "tags": [
-      "日常",
-      "潮濕",
-      "氣味"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:30.625167"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_5424dc",
-    "category": "exploration_zones",
-    "subcategory": "特殊區域",
-    "name": "彈藥庫",
-    "tags": [
-      "軍事",
-      "危險",
-      "封鎖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.627226"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_d5e0c9",
-    "category": "exploration_zones",
-    "subcategory": "其他",
-    "name": "游泳池區",
-    "tags": [
-      "水域",
-      "空間",
-      "詭異"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.631713"
-  },
-  {
-    "id": "kb_exploration_zones_20260316_225730_d4854c",
-    "category": "exploration_zones",
-    "subcategory": "地下空間",
-    "name": "地下停車場",
-    "tags": [
-      "地下",
-      "車輛",
-      "開闊"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.639345"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_95c08e",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "正門突入",
-    "tags": [
-      "正面",
-      "基本",
-      "大膽"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:30.647638"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_30bd1e",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "窗戶翻入",
-    "tags": [
-      "攀爬",
-      "碎玻璃",
-      "隱蔽"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.657715"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_b9b0e8",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "地下通道",
-    "tags": [
-      "地下",
-      "隱蔽",
-      "潮濕"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.667557"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_f525f6",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "屋頂垂降",
-    "tags": [
-      "高處",
-      "動作",
-      "刺激"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.677200"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_34d16f",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "排水管道",
-    "tags": [
-      "幽閉",
-      "潮濕",
-      "管道"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.686825"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_6c0184",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "貨物入口",
-    "tags": [
-      "後方",
-      "工業",
-      "大型"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:30.696721"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_8de42f",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "消防梯",
-    "tags": [
-      "攀爬",
-      "外牆",
-      "金屬"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.706419"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_aa18da",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "圍牆缺口",
-    "tags": [
-      "戶外",
-      "隱蔽",
-      "接近"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:30.713801"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_564e16",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "通風口",
-    "tags": [
-      "幽閉",
-      "管道",
-      "困難"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.723881"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_80db9c",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "水路進入",
-    "tags": [
-      "水域",
-      "地下",
-      "冒險"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.733988"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_fe68ea",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "電梯維修口",
-    "tags": [
-      "垂直",
-      "技術",
-      "危險"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.744038"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_50e1ca",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "隱藏側門",
-    "tags": [
-      "隱蔽",
-      "發現",
-      "側面"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.751135"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_0dc173",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "屋頂天窗",
-    "tags": [
-      "高處",
-      "垂降",
-      "危險"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.761597"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_47973d",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "停車場入口",
-    "tags": [
-      "地下",
-      "車輛",
-      "漸進"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:30.765722"
-  },
-  {
-    "id": "kb_route_paths_20260316_225730_c132f4",
-    "category": "route_paths",
-    "subcategory": "",
-    "name": "管道間",
-    "tags": [
-      "技術",
-      "管道",
-      "狹窄"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.770684"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_80e52b",
-    "category": "encounters",
-    "subcategory": "物理異常",
-    "name": "門自動關上",
-    "tags": [
-      "突然",
-      "門",
-      "驚嚇"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.779420"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_f6325e",
-    "category": "encounters",
-    "subcategory": "物理異常",
-    "name": "手電筒閃爍",
-    "tags": [
-      "燈光",
-      "設備",
-      "不安"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.781462"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_aa4e26",
-    "category": "encounters",
-    "subcategory": "聽覺異常",
-    "name": "遠處腳步聲",
-    "tags": [
-      "聲音",
-      "腳步",
-      "接近"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.785741"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_d9e227",
-    "category": "encounters",
-    "subcategory": "視覺異常",
-    "name": "影子移動",
-    "tags": [
-      "視覺",
-      "影子",
-      "短暫"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.793458"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_a56bcf",
-    "category": "encounters",
-    "subcategory": "環境異常",
-    "name": "溫度驟降",
-    "tags": [
-      "溫度",
-      "寒冷",
-      "區域"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.800474"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_4ed96d",
-    "category": "encounters",
-    "subcategory": "物理異常",
-    "name": "設備突然啟動",
-    "tags": [
-      "設備",
-      "電力",
-      "詭異"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.805654"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_1c378f",
-    "category": "encounters",
-    "subcategory": "聽覺異常",
-    "name": "收音機雜訊",
-    "tags": [
-      "聲音",
-      "電子",
-      "人聲"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.815668"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_2009bb",
-    "category": "encounters",
-    "subcategory": "物理異常",
-    "name": "椅子自行轉動",
-    "tags": [
-      "物品",
-      "移動",
-      "詭異"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.826006"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_361bff",
-    "category": "encounters",
-    "subcategory": "視覺異常",
-    "name": "鏡中異象",
-    "tags": [
-      "鏡子",
-      "視覺",
-      "自我"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.835897"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_99b577",
-    "category": "encounters",
-    "subcategory": "聽覺異常",
-    "name": "不明敲擊聲",
-    "tags": [
-      "聲音",
-      "節奏",
-      "牆壁"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.838704"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_9a04be",
-    "category": "encounters",
-    "subcategory": "視覺異常",
-    "name": "走廊盡頭的人影",
-    "tags": [
-      "人影",
-      "遠處",
-      "消失"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.843870"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_15c828",
-    "category": "encounters",
-    "subcategory": "聽覺異常",
-    "name": "電話突然響起",
-    "tags": [
-      "電話",
-      "聲音",
-      "詭異"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.853985"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_28764e",
-    "category": "encounters",
-    "subcategory": "視覺異常",
-    "name": "血跡滴落",
-    "tags": [
-      "血跡",
-      "天花板",
-      "噁心"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.856048"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_99d698",
-    "category": "encounters",
-    "subcategory": "聽覺異常",
-    "name": "呼吸聲",
-    "tags": [
-      "呼吸",
-      "近距離",
-      "恐怖"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.863792"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_65a32a",
-    "category": "encounters",
-    "subcategory": "物理異常",
-    "name": "玻璃自行破碎",
-    "tags": [
-      "玻璃",
-      "聲音",
-      "幻覺"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.869304"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_54cf6d",
-    "category": "encounters",
-    "subcategory": "視覺異常",
-    "name": "文字出現在牆上",
-    "tags": [
-      "文字",
-      "牆壁",
-      "警告"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.875799"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_11a9bb",
-    "category": "encounters",
-    "subcategory": "環境異常",
-    "name": "電磁干擾",
-    "tags": [
-      "設備",
-      "電磁",
-      "偵測"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.885899"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_525375",
-    "category": "encounters",
-    "subcategory": "物理異常",
-    "name": "東西從架上掉落",
-    "tags": [
-      "物品",
-      "墜落",
-      "驚嚇"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.893917"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_c77622",
-    "category": "encounters",
-    "subcategory": "環境異常",
-    "name": "指南針異常",
-    "tags": [
-      "設備",
-      "方向",
-      "迷失"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.902602"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_18621d",
-    "category": "encounters",
-    "subcategory": "聽覺異常",
-    "name": "兒童笑聲",
-    "tags": [
-      "兒童",
-      "笑聲",
-      "經典恐怖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.905854"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_066a07",
-    "category": "encounters",
-    "subcategory": "物理異常",
-    "name": "被移動的物品",
-    "tags": [
-      "物品",
-      "改變",
-      "不安"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.917337"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_e8b5ea",
-    "category": "encounters",
-    "subcategory": "視覺異常",
-    "name": "不明光源",
-    "tags": [
-      "光源",
-      "遠處",
-      "引導"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.925928"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_539a09",
-    "category": "encounters",
-    "subcategory": "環境異常",
-    "name": "腐臭味突然出現",
-    "tags": [
-      "氣味",
-      "腐臭",
-      "短暫"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.936223"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_b9c66c",
-    "category": "encounters",
-    "subcategory": "物理異常",
-    "name": "鎖上的門自行開啟",
-    "tags": [
-      "門",
-      "解鎖",
-      "邀請"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.946360"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_1176ce",
-    "category": "encounters",
-    "subcategory": "心理異常",
-    "name": "恐慌感突然襲來",
-    "tags": [
-      "心理",
-      "恐慌",
-      "直覺"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.956530"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_1aa22e",
-    "category": "encounters",
-    "subcategory": "心理異常",
-    "name": "時間感錯亂",
-    "tags": [
-      "時間",
-      "心理",
-      "詭異"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.966759"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_844d0b",
-    "category": "encounters",
-    "subcategory": "心理異常",
-    "name": "既視感",
-    "tags": [
-      "心理",
-      "記憶",
-      "循環"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:30.976677"
-  },
-  {
-    "id": "kb_encounters_20260316_225730_ff917d",
-    "category": "encounters",
-    "subcategory": "環境異常",
-    "name": "相機異常",
-    "tags": [
-      "攝影",
-      "設備",
-      "證據"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.981411"
-  },
-  {
-    "id": "kb_found_items_20260316_225730_c9e578",
-    "category": "found_items",
-    "subcategory": "文件記錄",
-    "name": "泛黃日記",
-    "tags": [
-      "文字",
-      "個人",
-      "線索"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:30.989389"
-  },
-  {
-    "id": "kb_found_items_20260316_225730_f6990b",
-    "category": "found_items",
-    "subcategory": "工具設備",
-    "name": "生鏽鑰匙",
-    "tags": [
-      "鑰匙",
-      "謎題",
-      "進展"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:30.995930"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_48e26b",
-    "category": "found_items",
-    "subcategory": "文件記錄",
-    "name": "醫療記錄",
-    "tags": [
-      "醫療",
-      "文件",
-      "真相"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.006255"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_c303b0",
-    "category": "found_items",
-    "subcategory": "神秘物件",
-    "name": "神秘符號",
-    "tags": [
-      "符號",
-      "神秘",
-      "儀式"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.016460"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_ed202c",
-    "category": "found_items",
-    "subcategory": "文件記錄",
-    "name": "錄音帶",
-    "tags": [
-      "音頻",
-      "記錄",
-      "過去"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.026668"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_772869",
-    "category": "found_items",
-    "subcategory": "個人物品",
-    "name": "褪色照片",
-    "tags": [
-      "照片",
-      "過去",
-      "對比"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.036707"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_01c35c",
-    "category": "found_items",
-    "subcategory": "個人物品",
-    "name": "藥瓶",
-    "tags": [
-      "醫療",
-      "藥物",
-      "個人"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:31.046585"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_a79072",
-    "category": "found_items",
-    "subcategory": "文件記錄",
-    "name": "手繪地圖",
-    "tags": [
-      "地圖",
-      "標記",
-      "指引"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.056735"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_b89e58",
-    "category": "found_items",
-    "subcategory": "個人物品",
-    "name": "兒童玩具",
-    "tags": [
-      "兒童",
-      "詭異",
-      "情感"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.065020"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_2c1a9b",
-    "category": "found_items",
-    "subcategory": "個人物品",
-    "name": "斷裂的身分證",
-    "tags": [
-      "身分",
-      "工作人員",
-      "線索"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.070905"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_364923",
-    "category": "found_items",
-    "subcategory": "神秘物件",
-    "name": "宗教護身符",
-    "tags": [
-      "宗教",
-      "保護",
-      "信仰"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.075838"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_f0d1fb",
-    "category": "found_items",
-    "subcategory": "文件記錄",
-    "name": "監控錄影帶",
-    "tags": [
-      "監控",
-      "證據",
-      "真相"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.084007"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_bdd529",
-    "category": "found_items",
-    "subcategory": "文件記錄",
-    "name": "實驗報告",
-    "tags": [
-      "實驗",
-      "機密",
-      "塗黑"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.093164"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_ed98b0",
-    "category": "found_items",
-    "subcategory": "工具設備",
-    "name": "手電筒（他人的）",
-    "tags": [
-      "裝備",
-      "他人",
-      "疑問"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.102865"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_7d03f1",
-    "category": "found_items",
-    "subcategory": "神秘物件",
-    "name": "壁畫/塗鴉",
-    "tags": [
-      "藝術",
-      "訊息",
-      "前人"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.109248"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_b78056",
-    "category": "found_items",
-    "subcategory": "文件記錄",
-    "name": "密碼鎖提示",
-    "tags": [
-      "密碼",
-      "謎題",
-      "解鎖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.119049"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_0d2989",
-    "category": "found_items",
-    "subcategory": "神秘物件",
-    "name": "骨頭",
-    "tags": [
-      "骨骼",
-      "恐怖",
-      "發現"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.125886"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_50d9bb",
-    "category": "found_items",
-    "subcategory": "文件記錄",
-    "name": "求救信",
-    "tags": [
-      "求救",
-      "情感",
-      "絕望"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.136065"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_e8e765",
-    "category": "found_items",
-    "subcategory": "個人物品",
-    "name": "過期罐頭",
-    "tags": [
-      "食物",
-      "生存",
-      "躲藏"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.141605"
-  },
-  {
-    "id": "kb_found_items_20260316_225731_2b5adf",
-    "category": "found_items",
-    "subcategory": "工具設備",
-    "name": "老式收音機",
-    "tags": [
-      "電子",
-      "通訊",
-      "頻率"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.151642"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_3c8535",
-    "category": "traps_hazards",
-    "subcategory": "結構危險",
-    "name": "地板塌陷",
-    "tags": [
-      "墜落",
-      "結構",
-      "突然"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.161669"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_288c2d",
-    "category": "traps_hazards",
-    "subcategory": "機關陷阱",
-    "name": "鐵門鎖死",
-    "tags": [
-      "困住",
-      "門",
-      "恐慌"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.171843"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_4e1413",
-    "category": "traps_hazards",
-    "subcategory": "環境危險",
-    "name": "有毒氣體",
-    "tags": [
-      "化學",
-      "窒息",
-      "緊急"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.175060"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_80fd56",
-    "category": "traps_hazards",
-    "subcategory": "環境危險",
-    "name": "積水陷阱",
-    "tags": [
-      "水",
-      "淹沒",
-      "緊急"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.185059"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_e89c0f",
-    "category": "traps_hazards",
-    "subcategory": "結構危險",
-    "name": "結構不穩",
-    "tags": [
-      "坍塌",
-      "結構",
-      "持續"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.195355"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_a419cb",
-    "category": "traps_hazards",
-    "subcategory": "環境危險",
-    "name": "野生動物",
-    "tags": [
-      "動物",
-      "威脅",
-      "聲音"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.199313"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_95f177",
-    "category": "traps_hazards",
-    "subcategory": "環境危險",
-    "name": "完全斷電",
-    "tags": [
-      "黑暗",
-      "設備",
-      "恐慌"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.209178"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_b84cd2",
-    "category": "traps_hazards",
-    "subcategory": "環境危險",
-    "name": "石棉暴露",
-    "tags": [
-      "健康",
-      "隱形",
-      "長期"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:31.215902"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_10e31e",
-    "category": "traps_hazards",
-    "subcategory": "結構危險",
-    "name": "電擊危險",
-    "tags": [
-      "電擊",
-      "水",
-      "隱蔽"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.226131"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_7e71c5",
-    "category": "traps_hazards",
-    "subcategory": "環境危險",
-    "name": "玻璃碎片區",
-    "tags": [
-      "玻璃",
-      "地面",
-      "噪音"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:31.231606"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_2de626",
-    "category": "traps_hazards",
-    "subcategory": "機關陷阱",
-    "name": "升降梯突然啟動",
-    "tags": [
-      "電梯",
-      "機械",
-      "驚嚇"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.239466"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_49f4b5",
-    "category": "traps_hazards",
-    "subcategory": "結構危險",
-    "name": "天花板崩落",
-    "tags": [
-      "崩落",
-      "緊急",
-      "逃跑"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.245829"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_f6c16b",
-    "category": "traps_hazards",
-    "subcategory": "環境危險",
-    "name": "化學品洩漏",
-    "tags": [
-      "化學",
-      "危險",
-      "迴避"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.253871"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_78b8c6",
-    "category": "traps_hazards",
-    "subcategory": "結構危險",
-    "name": "隱藏的深坑",
-    "tags": [
-      "陷阱",
-      "隱藏",
-      "墜落"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.262197"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_e4b2aa",
-    "category": "traps_hazards",
-    "subcategory": "環境危險",
-    "name": "鐵絲網纏繞",
-    "tags": [
-      "鐵絲",
-      "束縛",
-      "割傷"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:31.264648"
-  },
-  {
-    "id": "kb_traps_hazards_20260316_225731_61fcef",
-    "category": "traps_hazards",
-    "subcategory": "機關陷阱",
-    "name": "防盜警報觸發",
-    "tags": [
-      "警報",
-      "噪音",
-      "暴露"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.274054"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_fc2143",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "牆上的倒數",
-    "tags": [
-      "數字",
-      "倒數",
-      "未完成"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.284180"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_400469",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "最後的廣播",
-    "tags": [
-      "音頻",
-      "循環",
-      "緊急"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.294169"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_e4f497",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "失蹤者照片牆",
-    "tags": [
-      "照片",
-      "失蹤",
-      "累積"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.304215"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_4358b2",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "實驗受試者編號",
-    "tags": [
-      "編號",
-      "實驗",
-      "系統性"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.310232"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_fc594f",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "日記中的精神崩潰",
-    "tags": [
-      "文字",
-      "瘋狂",
-      "漸進"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.315871"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_96e9fd",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "密碼門",
-    "tags": [
-      "密碼",
-      "門",
-      "互動"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.322306"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_06f9fb",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "監控畫面殘影",
-    "tags": [
-      "監控",
-      "影像",
-      "證據"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.325871"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_a48b54",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "孩子的畫",
-    "tags": [
-      "兒童",
-      "藝術",
-      "暗示"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.331388"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_2bed00",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "逃生路線圖",
-    "tags": [
-      "地圖",
-      "逃生",
-      "失敗"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.335839"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_0c7305",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "錄音機留言",
-    "tags": [
-      "音頻",
-      "個人",
-      "記錄"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.345953"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_f0e8fc",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "新鮮的痕跡",
-    "tags": [
-      "痕跡",
-      "近期",
-      "他人"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.354056"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_6e2f23",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "被釘死的門",
-    "tags": [
-      "門",
-      "封鎖",
-      "警告"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.364411"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_3df012",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "舊報紙剪報",
-    "tags": [
-      "報紙",
-      "歷史",
-      "蒐集"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.374461"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_e78c5d",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "地上的拖曳痕跡",
-    "tags": [
-      "痕跡",
-      "暴力",
-      "推理"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.384281"
-  },
-  {
-    "id": "kb_narrative_clues_20260316_225731_ad465d",
-    "category": "narrative_clues",
-    "subcategory": "",
-    "name": "反覆出現的符號",
-    "tags": [
-      "符號",
-      "反覆",
-      "意義"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.427785"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_d802b7",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "深夜兩點",
-    "tags": [
-      "深夜",
-      "安靜",
-      "經典"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.438296"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_85e0e8",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "凌晨三點",
-    "tags": [
-      "深夜",
-      "超自然",
-      "高峰"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.449225"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_50e390",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "黃昏時分",
-    "tags": [
-      "黃昏",
-      "過渡",
-      "影子"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.457121"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_4bb769",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "午夜",
-    "tags": [
-      "午夜",
-      "交替",
-      "標誌"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.463765"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_710576",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "破曉前",
-    "tags": [
-      "黎明前",
-      "寒冷",
-      "期待"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.472594"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_eef406",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "白天（反差恐怖）",
-    "tags": [
-      "白天",
-      "反差",
-      "真實"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.479167"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_a65898",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "月蝕之夜",
-    "tags": [
-      "月蝕",
-      "紅光",
-      "特殊"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.484402"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_17a523",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "暴風雨夜",
-    "tags": [
-      "暴風雨",
-      "動態",
-      "聲音"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.493552"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_cc5a4f",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "停電之後",
-    "tags": [
-      "停電",
-      "黑暗",
-      "孤立"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.497626"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_0fdf2e",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "大霧清晨",
-    "tags": [
-      "霧",
-      "清晨",
-      "迷幻"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.507296"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_70038d",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "日落時分",
-    "tags": [
-      "日落",
-      "過渡",
-      "漸變"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.515896"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_e6d67a",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "萬聖節夜",
-    "tags": [
-      "節日",
-      "特殊",
-      "氣氛"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.525566"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_858bdf",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "新年倒數時",
-    "tags": [
-      "節日",
-      "反差",
-      "孤獨"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.534443"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_3d268b",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "颱風前夕",
-    "tags": [
-      "颱風",
-      "不安",
-      "壓力"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.543033"
-  },
-  {
-    "id": "kb_time_settings_20260316_225731_faf55c",
-    "category": "time_settings",
-    "subcategory": "",
-    "name": "冬至深夜",
-    "tags": [
-      "冬季",
-      "最長夜",
-      "寒冷"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.546857"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_fb85b0",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "暴雨傾盆",
-    "tags": [
-      "雨",
-      "潮濕",
-      "聲音"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.553727"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_5f2d46",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "濃霧",
-    "tags": [
-      "霧",
-      "視覺",
-      "朦朧"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.563516"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_d77675",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "寂靜無風",
-    "tags": [
-      "安靜",
-      "無風",
-      "壓迫"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.572327"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_0117f5",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "冷到結霜",
-    "tags": [
-      "寒冷",
-      "結霜",
-      "不適"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.580425"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_bfe6af",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "遠處雷聲",
-    "tags": [
-      "雷聲",
-      "閃電",
-      "接近"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.582817"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_f42807",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "毛毛雨",
-    "tags": [
-      "小雨",
-      "潮濕",
-      "陰鬱"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:31.584949"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_270a8a",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "狂風呼嘯",
-    "tags": [
-      "風",
-      "聲音",
-      "動態"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.587275"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_29b60f",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "冰雹",
-    "tags": [
-      "冰雹",
-      "噪音",
-      "暴力"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.596202"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_a5d6e5",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "悶熱潮濕",
-    "tags": [
-      "悶熱",
-      "不適",
-      "夏季"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:31.605834"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_d2cdf9",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "萬里無雲",
-    "tags": [
-      "晴朗",
-      "星光",
-      "寧靜"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:31.611426"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_e268a7",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "雪",
-    "tags": [
-      "雪",
-      "白色",
-      "痕跡"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.619068"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_3b156d",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "沙塵暴",
-    "tags": [
-      "沙塵",
-      "能見度",
-      "惡劣"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.623609"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_373cec",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "間歇性閃電",
-    "tags": [
-      "閃電",
-      "間歇",
-      "揭示"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.631938"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_44d57d",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "回南天",
-    "tags": [
-      "潮濕",
-      "水珠",
-      "詭異"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.636228"
-  },
-  {
-    "id": "kb_weather_conditions_20260316_225731_a2b9de",
-    "category": "weather_conditions",
-    "subcategory": "",
-    "name": "起霧散去循環",
-    "tags": [
-      "霧",
-      "循環",
-      "不穩定"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.645384"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_2c089e",
+    "id": "kb_ambient_triggers_20260316_225731_093983",
     "category": "ambient_triggers",
     "subcategory": "",
-    "name": "持續滴水聲",
-    "tags": [
-      "水",
-      "規律",
-      "背景"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.655010"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_2f4330",
-    "category": "ambient_triggers",
-    "subcategory": "",
-    "name": "金屬碰撞",
-    "tags": [
-      "金屬",
-      "碰撞",
-      "風"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.658774"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_330c96",
-    "category": "ambient_triggers",
-    "subcategory": "",
-    "name": "風灌入裂縫",
-    "tags": [
-      "風",
-      "呻吟",
-      "建築"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.664523"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_c02e6f",
-    "category": "ambient_triggers",
-    "subcategory": "",
-    "name": "燈泡明滅",
-    "tags": [
-      "燈光",
-      "電力",
-      "閃爍"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.669661"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_faa375",
-    "category": "ambient_triggers",
-    "subcategory": "",
-    "name": "玻璃碎裂",
-    "tags": [
-      "玻璃",
-      "突然",
-      "遠處"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.679938"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_9ee0df",
-    "category": "ambient_triggers",
-    "subcategory": "",
-    "name": "管線嘎吱聲",
+    "name": "暖氣管突然膨脹",
     "tags": [
       "管線",
-      "聲音",
-      "金屬"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.690153"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_504fb7",
-    "category": "ambient_triggers",
-    "subcategory": "",
-    "name": "老鼠竄逃",
-    "tags": [
-      "動物",
       "突然",
-      "地面"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:31.700158"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_3cacbd",
-    "category": "ambient_triggers",
-    "subcategory": "",
-    "name": "門的吱嘎聲",
-    "tags": [
-      "門",
-      "搖擺",
-      "經典"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.710234"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_cb4ee4",
-    "category": "ambient_triggers",
-    "subcategory": "",
-    "name": "回音放大",
-    "tags": [
-      "回音",
-      "放大",
-      "模仿"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.718731"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_0df4bd",
-    "category": "ambient_triggers",
-    "subcategory": "",
-    "name": "電磁嗡嗡聲",
-    "tags": [
-      "低頻",
-      "電磁",
-      "不適"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.728421"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_2b98ef",
-    "category": "ambient_triggers",
-    "subcategory": "",
-    "name": "窗簾飄動",
-    "tags": [
-      "窗簾",
-      "風",
-      "影子"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.734314"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_98a983",
-    "category": "ambient_triggers",
-    "subcategory": "",
-    "name": "天花板灰塵掉落",
-    "tags": [
-      "灰塵",
-      "上方",
-      "移動"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.743547"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_2246ba",
-    "category": "ambient_triggers",
-    "subcategory": "",
-    "name": "遠處的警笛",
-    "tags": [
-      "外部",
-      "警笛",
-      "對比"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:31.752594"
+      "膨脹"
+    ]
   },
   {
     "id": "kb_ambient_triggers_20260316_225731_0cad03",
@@ -2764,48 +19,18 @@
       "自然",
       "接管",
       "生命"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:31.761143"
+    ]
   },
   {
-    "id": "kb_ambient_triggers_20260316_225731_e877bc",
+    "id": "kb_ambient_triggers_20260316_225731_0df4bd",
     "category": "ambient_triggers",
     "subcategory": "",
-    "name": "不明振動",
+    "name": "電磁嗡嗡聲",
     "tags": [
-      "振動",
-      "地底",
-      "機械"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.769771"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_6c2d11",
-    "category": "ambient_triggers",
-    "subcategory": "",
-    "name": "時鐘滴答聲",
-    "tags": [
-      "時鐘",
-      "計時",
-      "詭異"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.779370"
-  },
-  {
-    "id": "kb_ambient_triggers_20260316_225731_093983",
-    "category": "ambient_triggers",
-    "subcategory": "",
-    "name": "暖氣管突然膨脹",
-    "tags": [
-      "管線",
-      "突然",
-      "膨脹"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.788970"
+      "低頻",
+      "電磁",
+      "不適"
+    ]
   },
   {
     "id": "kb_ambient_triggers_20260316_225731_200385",
@@ -2816,9 +41,18 @@
       "木頭",
       "斷裂",
       "結構"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.794897"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_225731_2246ba",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "遠處的警笛",
+    "tags": [
+      "外部",
+      "警笛",
+      "對比"
+    ]
   },
   {
     "id": "kb_ambient_triggers_20260316_225731_251e4c",
@@ -2829,9 +63,84 @@
       "鳥",
       "突然",
       "驚嚇"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.802673"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_225731_2b98ef",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "窗簾飄動",
+    "tags": [
+      "窗簾",
+      "風",
+      "影子"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_225731_2c089e",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "持續滴水聲",
+    "tags": [
+      "水",
+      "規律",
+      "背景"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_225731_2f4330",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "金屬碰撞",
+    "tags": [
+      "金屬",
+      "碰撞",
+      "風"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_225731_330c96",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "風灌入裂縫",
+    "tags": [
+      "風",
+      "呻吟",
+      "建築"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_225731_3cacbd",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "門的吱嘎聲",
+    "tags": [
+      "門",
+      "搖擺",
+      "經典"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_225731_504fb7",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "老鼠竄逃",
+    "tags": [
+      "動物",
+      "突然",
+      "地面"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_225731_6c2d11",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "時鐘滴答聲",
+    "tags": [
+      "時鐘",
+      "計時",
+      "詭異"
+    ]
   },
   {
     "id": "kb_ambient_triggers_20260316_225731_76a7d5",
@@ -2842,789 +151,1261 @@
       "水管",
       "突然",
       "噴射"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.812350"
+    ]
   },
   {
-    "id": "kb_tension_curves_20260316_225731_00964e",
-    "category": "tension_curves",
+    "id": "kb_ambient_triggers_20260316_225731_98a983",
+    "category": "ambient_triggers",
     "subcategory": "",
-    "name": "漸進升高",
+    "name": "天花板灰塵掉落",
     "tags": [
-      "穩定",
-      "漸進",
-      "爆發"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.815946"
-  },
-  {
-    "id": "kb_tension_curves_20260316_225731_7ccd9e",
-    "category": "tension_curves",
-    "subcategory": "",
-    "name": "先平後爆",
-    "tags": [
-      "反差",
-      "突然",
-      "衝擊"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.825926"
-  },
-  {
-    "id": "kb_tension_curves_20260316_225731_925536",
-    "category": "tension_curves",
-    "subcategory": "",
-    "name": "波浪式",
-    "tags": [
-      "波浪",
-      "起伏",
-      "節奏"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.828709"
-  },
-  {
-    "id": "kb_tension_curves_20260316_225731_584255",
-    "category": "tension_curves",
-    "subcategory": "",
-    "name": "持續高壓",
-    "tags": [
-      "高壓",
-      "持續",
-      "窒息"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.836482"
-  },
-  {
-    "id": "kb_tension_curves_20260316_225731_788708",
-    "category": "tension_curves",
-    "subcategory": "",
-    "name": "假結局反轉",
-    "tags": [
-      "反轉",
-      "假結局",
-      "驚喜"
-    ],
-    "effectiveness_score": 10,
-    "created_at": "2026-03-16T22:57:31.845088"
-  },
-  {
-    "id": "kb_tension_curves_20260316_225731_0ea77f",
-    "category": "tension_curves",
-    "subcategory": "",
-    "name": "雙高潮",
-    "tags": [
-      "雙峰",
-      "遞進",
-      "加倍"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.851836"
-  },
-  {
-    "id": "kb_tension_curves_20260316_225731_2cf550",
-    "category": "tension_curves",
-    "subcategory": "",
-    "name": "倒敘緊張",
-    "tags": [
-      "倒敘",
-      "懸念",
-      "解謎"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.856522"
-  },
-  {
-    "id": "kb_tension_curves_20260316_225731_e4bcb4",
-    "category": "tension_curves",
-    "subcategory": "",
-    "name": "螺旋下降",
-    "tags": [
-      "螺旋",
-      "加深",
-      "不歸路"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.866104"
-  },
-  {
-    "id": "kb_tension_curves_20260316_225731_93d033",
-    "category": "tension_curves",
-    "subcategory": "",
-    "name": "平靜中的異常",
-    "tags": [
-      "細微",
-      "累積",
-      "恐怖谷"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.868579"
-  },
-  {
-    "id": "kb_tension_curves_20260316_225731_0b2ce8",
-    "category": "tension_curves",
-    "subcategory": "",
-    "name": "心跳節奏",
-    "tags": [
-      "心跳",
-      "加速",
-      "生理"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.878636"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_8dc1d1",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "安全撤離",
-    "tags": [
-      "逃出",
-      "安全",
-      "喘息"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.888511"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_dc5ce3",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "被迫逃跑",
-    "tags": [
-      "逃跑",
-      "恐慌",
-      "遺失"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.897221"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_601d93",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "發現真相",
-    "tags": [
-      "真相",
-      "揭示",
-      "震撼"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.904933"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_909bce",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "迷失更深",
-    "tags": [
-      "迷失",
-      "深入",
-      "未知"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.909556"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_3ac293",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "懸念結尾",
-    "tags": [
-      "懸念",
-      "中斷",
-      "續集"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.911495"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_87a5b7",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "循環結局",
-    "tags": [
-      "循環",
-      "詭異",
-      "時間"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.918502"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_5f018b",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "監控視角",
-    "tags": [
-      "監控",
-      "第三人",
-      "餘韻"
-    ],
-    "effectiveness_score": 10,
-    "created_at": "2026-03-16T22:57:31.921367"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_c34891",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "失去畫面",
-    "tags": [
-      "技術",
-      "中斷",
-      "失蹤"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.926960"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_464406",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "平靜離開但...",
-    "tags": [
-      "平靜",
-      "反差",
-      "暗示"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.940656"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_1a314f",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "發現不是獨自一人",
-    "tags": [
-      "回放",
-      "發現",
-      "恐怖"
-    ],
-    "effectiveness_score": 10,
-    "created_at": "2026-03-16T22:57:31.944208"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_9b185d",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "設備回收",
-    "tags": [
-      "找到片段",
-      "失蹤",
-      "偽紀錄"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.953370"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_68b742",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "照片證據",
-    "tags": [
-      "照片",
-      "放大",
-      "發現"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.959156"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_9e7e65",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "電話留言",
-    "tags": [
-      "語音",
-      "失聯",
-      "偽紀錄"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.969198"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_e2b8c9",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "清晨回望",
-    "tags": [
-      "清晨",
-      "平靜",
-      "反差"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.976459"
-  },
-  {
-    "id": "kb_ending_types_20260316_225731_03d70d",
-    "category": "ending_types",
-    "subcategory": "",
-    "name": "續集預告",
-    "tags": [
-      "續集",
-      "預告",
-      "系列"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:31.983101"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225731_d2a69e",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "都市傳說驗證",
-    "tags": [
-      "傳說",
-      "驗證",
-      "好奇"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:31.985470"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225731_8dc56b",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "失蹤者搜索",
-    "tags": [
-      "失蹤",
-      "搜索",
-      "個人"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:31.992459"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225732_c2c2b5",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "網友挑戰",
-    "tags": [
-      "挑戰",
-      "社群",
-      "勇氣"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.002435"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225732_dfe34e",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "職業廢墟探索",
-    "tags": [
-      "專業",
-      "記錄",
-      "保存"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.011033"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225732_fa92b5",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "尋寶",
-    "tags": [
-      "寶藏",
-      "貪婪",
-      "回報"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.017801"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225732_a57543",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "記者調查",
-    "tags": [
-      "記者",
-      "調查",
-      "真相"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:32.027792"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225732_67bfae",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "攝影創作",
-    "tags": [
-      "攝影",
-      "藝術",
-      "美感"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:32.036809"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225732_76d0c5",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "回憶追尋",
-    "tags": [
-      "個人",
-      "回憶",
-      "情感"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:32.046857"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225732_304aa7",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "科學研究",
-    "tags": [
-      "科學",
-      "設備",
-      "理性"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.056840"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225732_db6275",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "打賭",
-    "tags": [
-      "賭注",
-      "朋友",
-      "壓力"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.063750"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225732_cbb5a5",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "逃避現實",
-    "tags": [
-      "逃避",
-      "心理",
-      "自由"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:32.067144"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225732_dd8eba",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "接到匿名訊息",
-    "tags": [
-      "匿名",
-      "邀請",
-      "神秘"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:32.072587"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225732_cf8304",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "續集探索",
-    "tags": [
-      "重返",
-      "續集",
-      "決心"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:32.076840"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225732_36bc82",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "夢境指引",
-    "tags": [
-      "夢境",
-      "超自然",
-      "命運"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:32.085453"
-  },
-  {
-    "id": "kb_exploration_motives_20260316_225732_414d5a",
-    "category": "exploration_motives",
-    "subcategory": "",
-    "name": "直播內容製作",
-    "tags": [
-      "直播",
-      "內容",
-      "觀眾"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.095142"
-  },
-  {
-    "id": "kb_explorer_equipment_20260316_225732_31ab68",
-    "category": "explorer_equipment",
-    "subcategory": "",
-    "name": "強力手電筒",
-    "tags": [
-      "照明",
-      "基本",
-      "戰術"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:32.097828"
-  },
-  {
-    "id": "kb_explorer_equipment_20260316_225732_a16c8a",
-    "category": "explorer_equipment",
-    "subcategory": "",
-    "name": "GoPro攝影機",
-    "tags": [
-      "攝影",
-      "POV",
-      "記錄"
-    ],
-    "effectiveness_score": 9,
-    "created_at": "2026-03-16T22:57:32.101865"
-  },
-  {
-    "id": "kb_explorer_equipment_20260316_225732_0a6abb",
-    "category": "explorer_equipment",
-    "subcategory": "",
-    "name": "EMF探測器",
-    "tags": [
-      "偵測",
-      "科學",
-      "超自然"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.109002"
-  },
-  {
-    "id": "kb_explorer_equipment_20260316_225732_2be207",
-    "category": "explorer_equipment",
-    "subcategory": "",
-    "name": "對講機",
-    "tags": [
-      "通訊",
-      "夥伴",
-      "信號"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.118766"
-  },
-  {
-    "id": "kb_explorer_equipment_20260316_225732_73eb10",
-    "category": "explorer_equipment",
-    "subcategory": "",
-    "name": "攀爬繩索",
-    "tags": [
-      "攀爬",
-      "垂降",
+      "灰塵",
+      "上方",
       "移動"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.128764"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_8457dc",
-    "category": "explorer_equipment",
+    "id": "kb_ambient_triggers_20260316_225731_9ee0df",
+    "category": "ambient_triggers",
     "subcategory": "",
-    "name": "撬棍",
+    "name": "管線嘎吱聲",
     "tags": [
-      "工具",
-      "力量",
-      "多用"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:32.135588"
+      "管線",
+      "聲音",
+      "金屬"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_2f0f5e",
-    "category": "explorer_equipment",
+    "id": "kb_ambient_triggers_20260316_225731_c02e6f",
+    "category": "ambient_triggers",
     "subcategory": "",
-    "name": "防毒面具",
+    "name": "燈泡明滅",
     "tags": [
-      "防護",
-      "呼吸",
-      "安全"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.138112"
+      "燈光",
+      "電力",
+      "閃爍"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_9484f2",
-    "category": "explorer_equipment",
+    "id": "kb_ambient_triggers_20260316_225731_cb4ee4",
+    "category": "ambient_triggers",
     "subcategory": "",
-    "name": "夜視儀",
+    "name": "回音放大",
     "tags": [
-      "夜視",
-      "科技",
-      "軍事"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:32.146397"
+      "回音",
+      "放大",
+      "模仿"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_a78f9e",
-    "category": "explorer_equipment",
+    "id": "kb_ambient_triggers_20260316_225731_e877bc",
+    "category": "ambient_triggers",
     "subcategory": "",
-    "name": "紅外線溫度計",
+    "name": "不明振動",
+    "tags": [
+      "振動",
+      "地底",
+      "機械"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_225731_faa375",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "玻璃碎裂",
+    "tags": [
+      "玻璃",
+      "突然",
+      "遠處"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_230356_067012",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "日光燈殘響",
+    "tags": [
+      "聲音",
+      "光線",
+      "衰敗"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_230356_254717",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "自動門感應",
+    "tags": [
+      "機械",
+      "門",
+      "異常"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_230356_30f5ea",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "紙張翻動",
+    "tags": [
+      "聲音",
+      "紙張",
+      "異常"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_230356_32e2f5",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "異味飄散",
+    "tags": [
+      "嗅覺",
+      "化學",
+      "環境"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_230356_38e23b",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "無線電雜訊",
+    "tags": [
+      "聲音",
+      "通訊",
+      "異常"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_230356_61b24b",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "水龍頭自轉",
+    "tags": [
+      "水",
+      "機械",
+      "突發"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_230356_632b2a",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "電梯自動開關",
+    "tags": [
+      "機械",
+      "電梯",
+      "異常"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_230356_68d78d",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "鐵鏈拖曳聲",
+    "tags": [
+      "聲音",
+      "金屬",
+      "驚悚"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_230356_6f7859",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "突然的寂靜",
+    "tags": [
+      "寂靜",
+      "反差",
+      "心理"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_230356_7b57f3",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "地板震動",
+    "tags": [
+      "觸覺",
+      "震動",
+      "地下"
+    ]
+  },
+  {
+    "id": "kb_ambient_triggers_20260316_230356_96364c",
+    "category": "ambient_triggers",
+    "subcategory": "",
+    "name": "溫度驟降",
     "tags": [
       "溫度",
-      "偵測",
-      "科學"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:32.152407"
+      "體感",
+      "環境"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_d2b1a7",
-    "category": "explorer_equipment",
+    "id": "kb_ambient_triggers_20260316_230356_9ec73a",
+    "category": "ambient_triggers",
     "subcategory": "",
-    "name": "備用電池",
+    "name": "EMF讀數飆升",
     "tags": [
-      "電力",
-      "備份",
-      "實用"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.162128"
+      "設備",
+      "電磁",
+      "偵測"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_5ac793",
-    "category": "explorer_equipment",
+    "id": "kb_ambient_triggers_20260316_230356_a23c1e",
+    "category": "ambient_triggers",
     "subcategory": "",
-    "name": "急救包",
+    "name": "鏡面反射異常",
     "tags": [
-      "醫療",
-      "安全",
-      "基本"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:32.168639"
+      "視覺",
+      "鏡子",
+      "異常"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_53d181",
-    "category": "explorer_equipment",
+    "id": "kb_ambient_triggers_20260316_230356_b227ae",
+    "category": "ambient_triggers",
     "subcategory": "",
-    "name": "粉筆/噴漆",
+    "name": "呼吸般的氣流",
     "tags": [
-      "標記",
-      "導航",
-      "記錄"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.171807"
+      "空氣",
+      "聲音",
+      "心理"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_dac75e",
-    "category": "explorer_equipment",
+    "id": "kb_ambient_triggers_20260316_230356_b32b17",
+    "category": "ambient_triggers",
     "subcategory": "",
-    "name": "收音機/掃描器",
+    "name": "電話鈴聲",
     "tags": [
-      "通訊",
-      "掃描",
-      "發現"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.179002"
+      "聲音",
+      "電話",
+      "突發"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_b31b08",
-    "category": "explorer_equipment",
+    "id": "kb_ambient_triggers_20260316_230356_b843ae",
+    "category": "ambient_triggers",
     "subcategory": "",
-    "name": "金屬探測器",
+    "name": "腳步聲回音",
     "tags": [
-      "偵測",
-      "隱藏",
-      "尋寶"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:32.185966"
+      "聲音",
+      "回音",
+      "心理"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_084aad",
-    "category": "explorer_equipment",
+    "id": "kb_ambient_triggers_20260316_230356_be7f5b",
+    "category": "ambient_triggers",
     "subcategory": "",
-    "name": "雷射測距儀",
+    "name": "影子移動",
     "tags": [
-      "測量",
-      "科技",
-      "評估"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:32.191689"
+      "視覺",
+      "影子",
+      "驚悚"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_360c68",
-    "category": "explorer_equipment",
+    "id": "kb_ambient_triggers_20260316_230356_c3605a",
+    "category": "ambient_triggers",
     "subcategory": "",
-    "name": "無人機",
+    "name": "塵埃光柱",
     "tags": [
-      "空中",
-      "偵察",
-      "科技"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.193334"
+      "視覺",
+      "光線",
+      "氛圍"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_1a55da",
-    "category": "explorer_equipment",
+    "id": "kb_ambient_triggers_20260316_230356_e85004",
+    "category": "ambient_triggers",
     "subcategory": "",
-    "name": "防刺手套",
+    "name": "油漆剝落聲",
     "tags": [
-      "防護",
-      "手部",
-      "實用"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:32.200050"
+      "聲音",
+      "視覺",
+      "衰敗"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_d6b1e1",
-    "category": "explorer_equipment",
+    "id": "kb_ambient_triggers_20260316_230356_f7d653",
+    "category": "ambient_triggers",
     "subcategory": "",
-    "name": "頭燈",
+    "name": "牆壁滲水",
     "tags": [
-      "照明",
-      "免持",
-      "基本"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T22:57:32.210872"
+      "視覺",
+      "水",
+      "氛圍"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_f9ce87",
-    "category": "explorer_equipment",
+    "id": "kb_building_backstories_20260316_225730_15f425",
+    "category": "building_backstories",
     "subcategory": "",
-    "name": "指南針+紙質地圖",
+    "name": "瘟疫爆發",
     "tags": [
-      "導航",
-      "類比",
-      "備份"
-    ],
-    "effectiveness_score": 6,
-    "created_at": "2026-03-16T22:57:32.217746"
+      "疾病",
+      "隔離",
+      "生物"
+    ]
   },
   {
-    "id": "kb_explorer_equipment_20260316_225732_b6e3bb",
-    "category": "explorer_equipment",
+    "id": "kb_building_backstories_20260316_225730_16b69b",
+    "category": "building_backstories",
     "subcategory": "",
-    "name": "靈魂盒",
+    "name": "產權糾紛",
+    "tags": [
+      "法律",
+      "時間",
+      "日常"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_1a3ebe",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "都市更新失敗",
+    "tags": [
+      "城市",
+      "政策",
+      "經濟"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_20a419",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "核洩漏",
+    "tags": [
+      "核災",
+      "輻射",
+      "永久"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_2b2b6b",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "戰爭遺留",
+    "tags": [
+      "戰爭",
+      "歷史",
+      "軍事"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_2ee9ba",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "毒氣外洩",
+    "tags": [
+      "化學",
+      "危險",
+      "工業"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_32f8d6",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "神秘火災",
+    "tags": [
+      "火災",
+      "神秘",
+      "調查"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_450858",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "結構老化",
+    "tags": [
+      "老化",
+      "危險",
+      "時間"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_561260",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "連環失蹤",
+    "tags": [
+      "失蹤",
+      "恐怖",
+      "未解"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_56634b",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "輻射汙染",
+    "tags": [
+      "輻射",
+      "神秘",
+      "汙染"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_57ceaf",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "自然災害",
+    "tags": [
+      "災害",
+      "結構",
+      "天災"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_69ad9b",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "經營破產",
+    "tags": [
+      "經濟",
+      "日常",
+      "突然"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_6f5594",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "鬧鬼傳說",
     "tags": [
       "超自然",
-      "掃描",
-      "爭議"
-    ],
-    "effectiveness_score": 7,
-    "created_at": "2026-03-16T22:57:32.221643"
+      "傳說",
+      "恐怖"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_754809",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "洪水淹沒",
+    "tags": [
+      "洪水",
+      "水害",
+      "反覆"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_a4c6ca",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "實驗失控",
+    "tags": [
+      "實驗",
+      "科學",
+      "政府"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_c22912",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "集體自殺",
+    "tags": [
+      "死亡",
+      "禁忌",
+      "心理"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_cc45de",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "政府封鎖",
+    "tags": [
+      "政府",
+      "機密",
+      "陰謀"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_d3b74a",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "兇殺案",
+    "tags": [
+      "犯罪",
+      "暴力",
+      "詛咒"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_dee816",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "醫療醜聞",
+    "tags": [
+      "醫療",
+      "醜聞",
+      "犯罪"
+    ]
+  },
+  {
+    "id": "kb_building_backstories_20260316_225730_ecc4df",
+    "category": "building_backstories",
+    "subcategory": "",
+    "name": "邪教活動",
+    "tags": [
+      "邪教",
+      "儀式",
+      "犯罪"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_016bb3",
+    "category": "building_types",
+    "subcategory": "教育設施",
+    "name": "廢棄大學",
+    "tags": [
+      "教育",
+      "大型",
+      "學術"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_1be51a",
+    "category": "building_types",
+    "subcategory": "軍事設施",
+    "name": "廢棄軍營",
+    "tags": [
+      "軍事",
+      "戶外",
+      "大型"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_1def49",
+    "category": "building_types",
+    "subcategory": "其他",
+    "name": "廢棄船塢",
+    "tags": [
+      "港口",
+      "工業",
+      "大型"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_2a5fcd",
+    "category": "building_types",
+    "subcategory": "公共設施",
+    "name": "廢棄購物中心",
+    "tags": [
+      "商業",
+      "大型",
+      "消費"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_2b6226",
+    "category": "building_types",
+    "subcategory": "地下設施",
+    "name": "廢棄地下實驗設施",
+    "tags": [
+      "地下",
+      "政府",
+      "機密"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_2fdb01",
+    "category": "building_types",
+    "subcategory": "居住設施",
+    "name": "廢棄公寓大樓",
+    "tags": [
+      "居住",
+      "城市",
+      "多層"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_31d2af",
+    "category": "building_types",
+    "subcategory": "其他",
+    "name": "廢棄實驗室",
+    "tags": [
+      "科學",
+      "神秘",
+      "危險"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_398e2b",
+    "category": "building_types",
+    "subcategory": "地下設施",
+    "name": "廢棄地鐵站",
+    "tags": [
+      "地下",
+      "城市",
+      "交通"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_3ed056",
+    "category": "building_types",
+    "subcategory": "地下設施",
+    "name": "地下防空洞",
+    "tags": [
+      "地下",
+      "戰爭",
+      "歷史"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_469c60",
+    "category": "building_types",
+    "subcategory": "教育設施",
+    "name": "荒廢學校",
+    "tags": [
+      "教育",
+      "懷舊",
+      "日常"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_53212e",
+    "category": "building_types",
+    "subcategory": "公共設施",
+    "name": "廢棄遊樂園",
+    "tags": [
+      "公共",
+      "娛樂",
+      "反差"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_5639d9",
+    "category": "building_types",
+    "subcategory": "工業設施",
+    "name": "廢棄礦坑",
+    "tags": [
+      "地下",
+      "危險",
+      "幽閉"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_5a5002",
+    "category": "building_types",
+    "subcategory": "地下設施",
+    "name": "廢棄下水道系統",
+    "tags": [
+      "地下",
+      "城市",
+      "潮濕"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_5faf35",
+    "category": "building_types",
+    "subcategory": "工業設施",
+    "name": "廢棄工廠",
+    "tags": [
+      "工業",
+      "大型",
+      "機械"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_6ca394",
+    "category": "building_types",
+    "subcategory": "醫療設施",
+    "name": "廢棄精神病院",
+    "tags": [
+      "恐怖",
+      "醫療",
+      "經典"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_72897a",
+    "category": "building_types",
+    "subcategory": "其他",
+    "name": "廢棄水壩",
+    "tags": [
+      "水利",
+      "壯觀",
+      "戶外"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_7efc25",
+    "category": "building_types",
+    "subcategory": "公共設施",
+    "name": "廢棄戲院",
+    "tags": [
+      "公共",
+      "藝術",
+      "華麗"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_809e15",
+    "category": "building_types",
+    "subcategory": "公共設施",
+    "name": "廢棄火車站",
+    "tags": [
+      "交通",
+      "懷舊",
+      "開放"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_8142ed",
+    "category": "building_types",
+    "subcategory": "醫療設施",
+    "name": "廢棄太平間",
+    "tags": [
+      "醫療",
+      "恐怖",
+      "地下"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_979eb6",
+    "category": "building_types",
+    "subcategory": "宗教設施",
+    "name": "廢棄教堂",
+    "tags": [
+      "宗教",
+      "哥德",
+      "神聖"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_9934d6",
+    "category": "building_types",
+    "subcategory": "居住設施",
+    "name": "廢棄旅館",
+    "tags": [
+      "居住",
+      "商業",
+      "閃靈"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_9f8194",
+    "category": "building_types",
+    "subcategory": "醫療設施",
+    "name": "廢棄療養院",
+    "tags": [
+      "醫療",
+      "山區",
+      "歷史"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_a22890",
+    "category": "building_types",
+    "subcategory": "軍事設施",
+    "name": "蘇聯地下碉堡",
+    "tags": [
+      "軍事",
+      "地下",
+      "冷戰"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_ab7c1e",
+    "category": "building_types",
+    "subcategory": "宗教設施",
+    "name": "廢棄神社",
+    "tags": [
+      "宗教",
+      "日式",
+      "自然"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_b0cf7a",
+    "category": "building_types",
+    "subcategory": "工業設施",
+    "name": "廢棄發電廠",
+    "tags": [
+      "工業",
+      "能源",
+      "壯觀"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_b7eb0f",
+    "category": "building_types",
+    "subcategory": "公共設施",
+    "name": "廢棄監獄",
+    "tags": [
+      "公共",
+      "壓迫",
+      "暴力"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_bd6f0a",
+    "category": "building_types",
+    "subcategory": "居住設施",
+    "name": "廢棄豪宅",
+    "tags": [
+      "居住",
+      "豪華",
+      "鬼屋"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_ce1db1",
+    "category": "building_types",
+    "subcategory": "醫療設施",
+    "name": "廢棄醫院",
+    "tags": [
+      "醫療",
+      "城市",
+      "常見"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_ce6f64",
+    "category": "building_types",
+    "subcategory": "其他",
+    "name": "切爾諾貝利隔離區",
+    "tags": [
+      "核災",
+      "傳奇",
+      "輻射"
+    ]
+  },
+  {
+    "id": "kb_building_types_20260316_225730_dec8c1",
+    "category": "building_types",
+    "subcategory": "公共設施",
+    "name": "廢棄游泳池",
+    "tags": [
+      "公共",
+      "運動",
+      "詭異"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_066a07",
+    "category": "encounters",
+    "subcategory": "物理異常",
+    "name": "被移動的物品",
+    "tags": [
+      "物品",
+      "改變",
+      "不安"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_1176ce",
+    "category": "encounters",
+    "subcategory": "心理異常",
+    "name": "恐慌感突然襲來",
+    "tags": [
+      "心理",
+      "恐慌",
+      "直覺"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_11a9bb",
+    "category": "encounters",
+    "subcategory": "環境異常",
+    "name": "電磁干擾",
+    "tags": [
+      "設備",
+      "電磁",
+      "偵測"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_18621d",
+    "category": "encounters",
+    "subcategory": "聽覺異常",
+    "name": "兒童笑聲",
+    "tags": [
+      "兒童",
+      "笑聲",
+      "經典恐怖"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_1aa22e",
+    "category": "encounters",
+    "subcategory": "心理異常",
+    "name": "時間感錯亂",
+    "tags": [
+      "時間",
+      "心理",
+      "詭異"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_1c378f",
+    "category": "encounters",
+    "subcategory": "聽覺異常",
+    "name": "收音機雜訊",
+    "tags": [
+      "聲音",
+      "電子",
+      "人聲"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_2009bb",
+    "category": "encounters",
+    "subcategory": "物理異常",
+    "name": "椅子自行轉動",
+    "tags": [
+      "物品",
+      "移動",
+      "詭異"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_28764e",
+    "category": "encounters",
+    "subcategory": "視覺異常",
+    "name": "血跡滴落",
+    "tags": [
+      "血跡",
+      "天花板",
+      "噁心"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_361bff",
+    "category": "encounters",
+    "subcategory": "視覺異常",
+    "name": "鏡中異象",
+    "tags": [
+      "鏡子",
+      "視覺",
+      "自我"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_4ed96d",
+    "category": "encounters",
+    "subcategory": "物理異常",
+    "name": "設備突然啟動",
+    "tags": [
+      "設備",
+      "電力",
+      "詭異"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_525375",
+    "category": "encounters",
+    "subcategory": "物理異常",
+    "name": "東西從架上掉落",
+    "tags": [
+      "物品",
+      "墜落",
+      "驚嚇"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_539a09",
+    "category": "encounters",
+    "subcategory": "環境異常",
+    "name": "腐臭味突然出現",
+    "tags": [
+      "氣味",
+      "腐臭",
+      "短暫"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_54cf6d",
+    "category": "encounters",
+    "subcategory": "視覺異常",
+    "name": "文字出現在牆上",
+    "tags": [
+      "文字",
+      "牆壁",
+      "警告"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_65a32a",
+    "category": "encounters",
+    "subcategory": "物理異常",
+    "name": "玻璃自行破碎",
+    "tags": [
+      "玻璃",
+      "聲音",
+      "幻覺"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_80e52b",
+    "category": "encounters",
+    "subcategory": "物理異常",
+    "name": "門自動關上",
+    "tags": [
+      "突然",
+      "門",
+      "驚嚇"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_844d0b",
+    "category": "encounters",
+    "subcategory": "心理異常",
+    "name": "既視感",
+    "tags": [
+      "心理",
+      "記憶",
+      "循環"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_99b577",
+    "category": "encounters",
+    "subcategory": "聽覺異常",
+    "name": "不明敲擊聲",
+    "tags": [
+      "聲音",
+      "節奏",
+      "牆壁"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_99d698",
+    "category": "encounters",
+    "subcategory": "聽覺異常",
+    "name": "呼吸聲",
+    "tags": [
+      "呼吸",
+      "近距離",
+      "恐怖"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_9a04be",
+    "category": "encounters",
+    "subcategory": "視覺異常",
+    "name": "走廊盡頭的人影",
+    "tags": [
+      "人影",
+      "遠處",
+      "消失"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_a56bcf",
+    "category": "encounters",
+    "subcategory": "環境異常",
+    "name": "溫度驟降",
+    "tags": [
+      "溫度",
+      "寒冷",
+      "區域"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_aa4e26",
+    "category": "encounters",
+    "subcategory": "聽覺異常",
+    "name": "遠處腳步聲",
+    "tags": [
+      "聲音",
+      "腳步",
+      "接近"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_b9c66c",
+    "category": "encounters",
+    "subcategory": "物理異常",
+    "name": "鎖上的門自行開啟",
+    "tags": [
+      "門",
+      "解鎖",
+      "邀請"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_d9e227",
+    "category": "encounters",
+    "subcategory": "視覺異常",
+    "name": "影子移動",
+    "tags": [
+      "視覺",
+      "影子",
+      "短暫"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_e8b5ea",
+    "category": "encounters",
+    "subcategory": "視覺異常",
+    "name": "不明光源",
+    "tags": [
+      "光源",
+      "遠處",
+      "引導"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_225730_f6325e",
+    "category": "encounters",
+    "subcategory": "物理異常",
+    "name": "手電筒閃爍",
+    "tags": [
+      "燈光",
+      "設備",
+      "不安"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_230000_0d1e2f",
+    "category": "encounters",
+    "subcategory": "視覺異常",
+    "name": "霧鏡上出現文字",
+    "tags": [
+      "鏡子",
+      "文字",
+      "訊息"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_230000_0e1f2a",
+    "category": "encounters",
+    "subcategory": "物理異常",
+    "name": "門把溫度異常",
+    "tags": [
+      "門把",
+      "溫度",
+      "燙"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_230000_1a2b3c",
+    "category": "encounters",
+    "subcategory": "視覺異常",
+    "name": "影子人影過門口",
+    "tags": [
+      "影子",
+      "人形",
+      "門口"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_230000_1b2c3d",
+    "category": "encounters",
+    "subcategory": "聽覺異常",
+    "name": "收音機雜訊中的人聲",
+    "tags": [
+      "收音機",
+      "雜訊",
+      "人聲"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_230000_2e3f4a",
+    "category": "encounters",
+    "subcategory": "嗅覺異常",
+    "name": "腐爛氣味",
+    "tags": [
+      "腐爛",
+      "氣味",
+      "無源"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_230000_3b4c5d",
+    "category": "encounters",
+    "subcategory": "視覺異常",
+    "name": "影子不同步",
+    "tags": [
+      "影子",
+      "延遲",
+      "不同步"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_230000_5a6b7c",
+    "category": "encounters",
+    "subcategory": "聽覺異常",
+    "name": "腳步聲跟隨",
+    "tags": [
+      "腳步",
+      "跟蹤",
+      "走廊"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_230000_6e7f8a",
+    "category": "encounters",
+    "subcategory": "物理異常",
+    "name": "蟲群突然出現",
+    "tags": [
+      "昆蟲",
+      "群聚",
+      "突然"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_230000_7b8c9d",
+    "category": "encounters",
+    "subcategory": "物理異常",
+    "name": "地板震動",
+    "tags": [
+      "地板",
+      "震動",
+      "地下"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_230000_8d9e0f",
+    "category": "encounters",
+    "subcategory": "物理異常",
+    "name": "窗戶自行開關",
+    "tags": [
+      "窗戶",
+      "自動",
+      "風"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_230000_9b0c1d",
+    "category": "encounters",
+    "subcategory": "電子干擾",
+    "name": "無線電干擾",
+    "tags": [
+      "無線電",
+      "干擾",
+      "通訊"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_230000_a2b3c4",
+    "category": "encounters",
+    "subcategory": "視覺異常",
+    "name": "牆壁滲血",
+    "tags": [
+      "牆壁",
+      "液體",
+      "紅色"
+    ]
+  },
+  {
+    "id": "kb_encounters_20260316_230000_d5e6f7",
+    "category": "encounters",
+    "subcategory": "電子干擾",
+    "name": "電梯自行運作",
+    "tags": [
+      "電梯",
+      "自動",
+      "斷電"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e01",
@@ -3635,9 +1416,7 @@
       "電磁",
       "異常",
       "恐怖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e02",
@@ -3648,9 +1427,7 @@
       "溫度",
       "異常",
       "寒冷"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e03",
@@ -3661,22 +1438,7 @@
       "影子",
       "視覺",
       "驚嚇"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
-  },
-  {
-    "id": "kb_encounters_20260316_235900_e04",
-    "category": "encounters",
-    "subcategory": "物理異常",
-    "name": "手機電量驟降",
-    "tags": [
-      "電子",
-      "電池",
-      "異常"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e05",
@@ -3687,9 +1449,7 @@
       "電磁",
       "方向",
       "異常"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e06",
@@ -3700,9 +1460,7 @@
       "鏡子",
       "文字",
       "恐怖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e07",
@@ -3713,9 +1471,7 @@
       "哭聲",
       "聽覺",
       "恐怖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e08",
@@ -3726,9 +1482,7 @@
       "氣味",
       "嗅覺",
       "異常"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e09",
@@ -3739,9 +1493,7 @@
       "時鐘",
       "時間",
       "詭異"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e10",
@@ -3752,9 +1504,7 @@
       "人偶",
       "移動",
       "恐怖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e11",
@@ -3765,9 +1515,7 @@
       "敲擊",
       "牆壁",
       "聽覺"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e12",
@@ -3778,9 +1526,7 @@
       "地板",
       "震動",
       "不安"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e13",
@@ -3791,9 +1537,7 @@
       "心理",
       "監視",
       "恐懼"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e14",
@@ -3804,9 +1548,7 @@
       "收音機",
       "電子",
       "詭異"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e15",
@@ -3817,9 +1559,7 @@
       "門",
       "物理",
       "恐怖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e16",
@@ -3830,22 +1570,7 @@
       "空氣",
       "壓迫",
       "環境"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
-  },
-  {
-    "id": "kb_encounters_20260316_235900_e17",
-    "category": "encounters",
-    "subcategory": "視覺異常",
-    "name": "相機拍出異常影像",
-    "tags": [
-      "相機",
-      "影像",
-      "詭異"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e18",
@@ -3856,9 +1581,7 @@
       "蠟燭",
       "火焰",
       "異常"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e19",
@@ -3869,9 +1592,7 @@
       "電話",
       "聲音",
       "詭異"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e20",
@@ -3882,9 +1603,7 @@
       "溫度",
       "冷點",
       "異常"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e21",
@@ -3895,9 +1614,7 @@
       "鏡子",
       "延遲",
       "恐怖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_encounters_20260316_235900_e22",
@@ -3908,451 +1625,623 @@
       "呼喚",
       "幻聽",
       "恐怖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
-    "id": "kb_found_items_20260316_235900_f01",
-    "category": "found_items",
-    "subcategory": "醫療設備",
-    "name": "外科手術手套",
+    "id": "kb_ending_types_20260316_225731_03d70d",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "續集預告",
     "tags": [
-      "醫療",
-      "手套",
-      "血跡"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "續集",
+      "預告",
+      "系列"
+    ]
   },
   {
-    "id": "kb_found_items_20260316_235900_f02",
-    "category": "found_items",
-    "subcategory": "個人物品",
-    "name": "病患手環",
+    "id": "kb_ending_types_20260316_225731_1a314f",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "發現不是獨自一人",
     "tags": [
-      "醫療",
-      "身份",
-      "失蹤"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
-  },
-  {
-    "id": "kb_found_items_20260316_235900_f03",
-    "category": "found_items",
-    "subcategory": "個人物品",
-    "name": "兒童的塗鴉",
-    "tags": [
-      "兒童",
-      "塗鴉",
-      "詭異"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
-  },
-  {
-    "id": "kb_found_items_20260316_235900_f04",
-    "category": "found_items",
-    "subcategory": "文件記錄",
-    "name": "加密的筆記本",
-    "tags": [
-      "加密",
-      "筆記",
-      "謎題"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
-  },
-  {
-    "id": "kb_found_items_20260316_235900_f05",
-    "category": "found_items",
-    "subcategory": "個人物品",
-    "name": "軍用身份牌",
-    "tags": [
-      "軍事",
-      "身份",
-      "神秘"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
-  },
-  {
-    "id": "kb_found_items_20260316_235900_f06",
-    "category": "found_items",
-    "subcategory": "文件記錄",
-    "name": "舊報紙",
-    "tags": [
-      "報紙",
-      "歷史",
-      "線索"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
-  },
-  {
-    "id": "kb_found_items_20260316_235900_f07",
-    "category": "found_items",
-    "subcategory": "神秘物件",
-    "name": "損壞的舊相機",
-    "tags": [
-      "相機",
-      "底片",
-      "謎團"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
-  },
-  {
-    "id": "kb_found_items_20260316_235900_f08",
-    "category": "found_items",
-    "subcategory": "文件記錄",
-    "name": "實驗記錄板",
-    "tags": [
-      "實驗",
-      "記錄",
-      "科學"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
-  },
-  {
-    "id": "kb_found_items_20260316_235900_f09",
-    "category": "found_items",
-    "subcategory": "神秘物件",
-    "name": "宗教符號",
-    "tags": [
-      "宗教",
-      "符號",
-      "詭異"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
-  },
-  {
-    "id": "kb_found_items_20260316_235900_f10",
-    "category": "found_items",
-    "subcategory": "文件記錄",
-    "name": "失蹤者的最後記事",
-    "tags": [
-      "失蹤",
-      "筆記",
-      "謎題"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
-  },
-  {
-    "id": "kb_found_items_20260316_235900_f11",
-    "category": "found_items",
-    "subcategory": "工具設備",
-    "name": "血跡斑斑的工具袋",
-    "tags": [
-      "工具",
-      "血跡",
+      "回放",
+      "發現",
       "恐怖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
-    "id": "kb_found_items_20260316_235900_f12",
-    "category": "found_items",
-    "subcategory": "神秘物件",
-    "name": "滴蠟的舊燭台",
+    "id": "kb_ending_types_20260316_225731_3ac293",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "懸念結尾",
     "tags": [
-      "蠟燭",
-      "儀式",
-      "神秘"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "懸念",
+      "中斷",
+      "續集"
+    ]
   },
   {
-    "id": "kb_found_items_20260316_235900_f13",
-    "category": "found_items",
-    "subcategory": "文件記錄",
-    "name": "監視影像殘片",
+    "id": "kb_ending_types_20260316_225731_464406",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "平靜離開但...",
+    "tags": [
+      "平靜",
+      "反差",
+      "暗示"
+    ]
+  },
+  {
+    "id": "kb_ending_types_20260316_225731_5f018b",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "監控視角",
     "tags": [
       "監控",
-      "影像",
-      "證據"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "第三人",
+      "餘韻"
+    ]
   },
   {
-    "id": "kb_found_items_20260316_235900_f14",
-    "category": "found_items",
-    "subcategory": "個人物品",
-    "name": "兒童的布娃娃",
+    "id": "kb_ending_types_20260316_225731_601d93",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "發現真相",
     "tags": [
-      "玩具",
-      "兒童",
-      "恐怖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "真相",
+      "揭示",
+      "震撼"
+    ]
   },
   {
-    "id": "kb_found_items_20260316_235900_f15",
-    "category": "found_items",
-    "subcategory": "工具設備",
-    "name": "廢棄急救箱",
+    "id": "kb_ending_types_20260316_225731_68b742",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "照片證據",
     "tags": [
-      "醫療",
-      "急救",
-      "謎題"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "照片",
+      "放大",
+      "發現"
+    ]
   },
   {
-    "id": "kb_found_items_20260316_235900_f16",
-    "category": "found_items",
-    "subcategory": "神秘物件",
-    "name": "倒數計時的計時器",
+    "id": "kb_ending_types_20260316_225731_87a5b7",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "循環結局",
     "tags": [
-      "計時",
-      "謎題",
-      "緊張"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "循環",
+      "詭異",
+      "時間"
+    ]
   },
   {
-    "id": "kb_found_items_20260316_235900_f17",
-    "category": "found_items",
-    "subcategory": "文件記錄",
-    "name": "撕碎的信件",
+    "id": "kb_ending_types_20260316_225731_8dc1d1",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "安全撤離",
     "tags": [
-      "信件",
-      "謎題",
-      "情感"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "逃出",
+      "安全",
+      "喘息"
+    ]
   },
   {
-    "id": "kb_found_items_20260316_235900_f18",
-    "category": "found_items",
-    "subcategory": "個人物品",
-    "name": "鑰匙串",
+    "id": "kb_ending_types_20260316_225731_909bce",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "迷失更深",
     "tags": [
-      "鑰匙",
-      "謎題",
-      "線索"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "迷失",
+      "深入",
+      "未知"
+    ]
   },
   {
-    "id": "kb_found_items_20260316_235900_f19",
-    "category": "found_items",
-    "subcategory": "神秘物件",
-    "name": "DNA 試管架",
+    "id": "kb_ending_types_20260316_225731_9b185d",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "設備回收",
     "tags": [
-      "DNA",
-      "實驗",
+      "找到片段",
+      "失蹤",
+      "偽紀錄"
+    ]
+  },
+  {
+    "id": "kb_ending_types_20260316_225731_9e7e65",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "電話留言",
+    "tags": [
+      "語音",
+      "失聯",
+      "偽紀錄"
+    ]
+  },
+  {
+    "id": "kb_ending_types_20260316_225731_c34891",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "失去畫面",
+    "tags": [
+      "技術",
+      "中斷",
       "失蹤"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
-    "id": "kb_found_items_20260316_235900_f20",
-    "category": "found_items",
-    "subcategory": "工具設備",
-    "name": "夜視儀",
+    "id": "kb_ending_types_20260316_225731_dc5ce3",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "被迫逃跑",
     "tags": [
-      "夜視",
-      "軍事",
-      "恐怖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "逃跑",
+      "恐慌",
+      "遺失"
+    ]
   },
   {
-    "id": "kb_traps_hazards_20260316_235900_h01",
-    "category": "traps_hazards",
-    "subcategory": "結構危險",
-    "name": "天花板坍塌",
+    "id": "kb_ending_types_20260316_225731_e2b8c9",
+    "category": "ending_types",
+    "subcategory": "",
+    "name": "清晨回望",
     "tags": [
-      "天花板",
-      "結構",
-      "危險"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "清晨",
+      "平靜",
+      "反差"
+    ]
   },
   {
-    "id": "kb_traps_hazards_20260316_235900_h02",
-    "category": "traps_hazards",
-    "subcategory": "結構危險",
-    "name": "碎玻璃地板",
+    "id": "kb_exploration_motives_20260316_225731_8dc56b",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "失蹤者搜索",
     "tags": [
-      "玻璃",
-      "地板",
-      "割傷"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "失蹤",
+      "搜索",
+      "個人"
+    ]
   },
   {
-    "id": "kb_traps_hazards_20260316_235900_h03",
-    "category": "traps_hazards",
-    "subcategory": "環境危險",
-    "name": "放射性材料",
+    "id": "kb_exploration_motives_20260316_225731_d2a69e",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "都市傳說驗證",
     "tags": [
-      "輻射",
+      "傳說",
+      "驗證",
+      "好奇"
+    ]
+  },
+  {
+    "id": "kb_exploration_motives_20260316_225732_304aa7",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "科學研究",
+    "tags": [
+      "科學",
+      "設備",
+      "理性"
+    ]
+  },
+  {
+    "id": "kb_exploration_motives_20260316_225732_36bc82",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "夢境指引",
+    "tags": [
+      "夢境",
+      "超自然",
+      "命運"
+    ]
+  },
+  {
+    "id": "kb_exploration_motives_20260316_225732_414d5a",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "直播內容製作",
+    "tags": [
+      "直播",
+      "內容",
+      "觀眾"
+    ]
+  },
+  {
+    "id": "kb_exploration_motives_20260316_225732_67bfae",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "攝影創作",
+    "tags": [
+      "攝影",
+      "藝術",
+      "美感"
+    ]
+  },
+  {
+    "id": "kb_exploration_motives_20260316_225732_76d0c5",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "回憶追尋",
+    "tags": [
+      "個人",
+      "回憶",
+      "情感"
+    ]
+  },
+  {
+    "id": "kb_exploration_motives_20260316_225732_a57543",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "記者調查",
+    "tags": [
+      "記者",
+      "調查",
+      "真相"
+    ]
+  },
+  {
+    "id": "kb_exploration_motives_20260316_225732_c2c2b5",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "網友挑戰",
+    "tags": [
+      "挑戰",
+      "社群",
+      "勇氣"
+    ]
+  },
+  {
+    "id": "kb_exploration_motives_20260316_225732_cbb5a5",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "逃避現實",
+    "tags": [
+      "逃避",
+      "心理",
+      "自由"
+    ]
+  },
+  {
+    "id": "kb_exploration_motives_20260316_225732_cf8304",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "續集探索",
+    "tags": [
+      "重返",
+      "續集",
+      "決心"
+    ]
+  },
+  {
+    "id": "kb_exploration_motives_20260316_225732_db6275",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "打賭",
+    "tags": [
+      "賭注",
+      "朋友",
+      "壓力"
+    ]
+  },
+  {
+    "id": "kb_exploration_motives_20260316_225732_dd8eba",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "接到匿名訊息",
+    "tags": [
+      "匿名",
+      "邀請",
+      "神秘"
+    ]
+  },
+  {
+    "id": "kb_exploration_motives_20260316_225732_dfe34e",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "職業廢墟探索",
+    "tags": [
+      "專業",
+      "記錄",
+      "保存"
+    ]
+  },
+  {
+    "id": "kb_exploration_motives_20260316_225732_fa92b5",
+    "category": "exploration_motives",
+    "subcategory": "",
+    "name": "尋寶",
+    "tags": [
+      "寶藏",
+      "貪婪",
+      "回報"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_225730_077b65",
+    "category": "exploration_zones",
+    "subcategory": "功能房間",
+    "name": "實驗室",
+    "tags": [
+      "科學",
       "化學",
       "危險"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
-    "id": "kb_traps_hazards_20260316_235900_h04",
-    "category": "traps_hazards",
-    "subcategory": "心理危險",
-    "name": "幽閉空間",
+    "id": "kb_exploration_zones_20260316_225730_104592",
+    "category": "exploration_zones",
+    "subcategory": "其他",
+    "name": "電梯井",
+    "tags": [
+      "垂直",
+      "危險",
+      "深淵"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_225730_1420e4",
+    "category": "exploration_zones",
+    "subcategory": "走廊通道",
+    "name": "通風管道",
     "tags": [
       "幽閉",
-      "心理",
-      "狹窄"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "爬行",
+      "金屬"
+    ]
   },
   {
-    "id": "kb_traps_hazards_20260316_235900_h05",
-    "category": "traps_hazards",
-    "subcategory": "機關陷阱",
-    "name": "假地板",
+    "id": "kb_exploration_zones_20260316_225730_1571c1",
+    "category": "exploration_zones",
+    "subcategory": "功能房間",
+    "name": "控制室",
     "tags": [
-      "地板",
-      "陷阱",
-      "墜落"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "科技",
+      "監控",
+      "核心"
+    ]
   },
   {
-    "id": "kb_traps_hazards_20260316_235900_h06",
-    "category": "traps_hazards",
-    "subcategory": "環境危險",
-    "name": "大量鼠群",
+    "id": "kb_exploration_zones_20260316_225730_179fce",
+    "category": "exploration_zones",
+    "subcategory": "走廊通道",
+    "name": "地下隧道",
     "tags": [
-      "老鼠",
-      "動物",
-      "恐慌"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "地下",
+      "潮濕",
+      "連接"
+    ]
   },
   {
-    "id": "kb_traps_hazards_20260316_235900_h07",
-    "category": "traps_hazards",
-    "subcategory": "環境危險",
-    "name": "蝙蝠群棲息地",
+    "id": "kb_exploration_zones_20260316_225730_1a0308",
+    "category": "exploration_zones",
+    "subcategory": "頂層空間",
+    "name": "鐘塔",
     "tags": [
-      "蝙蝠",
-      "動物",
-      "黑暗"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "高處",
+      "垂直",
+      "標誌"
+    ]
   },
   {
-    "id": "kb_traps_hazards_20260316_235900_h08",
-    "category": "traps_hazards",
-    "subcategory": "環境危險",
-    "name": "石棉粉塵",
+    "id": "kb_exploration_zones_20260316_225730_2156c5",
+    "category": "exploration_zones",
+    "subcategory": "功能房間",
+    "name": "洗衣房",
     "tags": [
-      "石棉",
-      "毒素",
-      "肺部"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "日常",
+      "潮濕",
+      "氣味"
+    ]
   },
   {
-    "id": "kb_traps_hazards_20260316_235900_h09",
-    "category": "traps_hazards",
-    "subcategory": "結構危險",
-    "name": "電梯井墜落風險",
+    "id": "kb_exploration_zones_20260316_225730_256408",
+    "category": "exploration_zones",
+    "subcategory": "走廊通道",
+    "name": "緊急逃生通道",
     "tags": [
-      "電梯",
-      "墜落",
-      "致命"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "狹窄",
+      "垂直",
+      "金屬"
+    ]
   },
   {
-    "id": "kb_traps_hazards_20260316_235900_h10",
-    "category": "traps_hazards",
-    "subcategory": "機關陷阱",
-    "name": "鐵鏈封閉出口",
+    "id": "kb_exploration_zones_20260316_225730_3081c9",
+    "category": "exploration_zones",
+    "subcategory": "功能房間",
+    "name": "廚房/食堂",
     "tags": [
-      "鐵鏈",
-      "被困",
-      "逃脫"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "日常",
+      "食物",
+      "生活"
+    ]
   },
   {
-    "id": "kb_traps_hazards_20260316_235900_h11",
-    "category": "traps_hazards",
-    "subcategory": "環境危險",
-    "name": "積水電線危險",
+    "id": "kb_exploration_zones_20260316_225730_30ad4e",
+    "category": "exploration_zones",
+    "subcategory": "功能房間",
+    "name": "檔案室",
     "tags": [
-      "積水",
-      "電力",
-      "觸電"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "文件",
+      "線索",
+      "搜索"
+    ]
   },
   {
-    "id": "kb_traps_hazards_20260316_235900_h12",
-    "category": "traps_hazards",
-    "subcategory": "結構危險",
-    "name": "鏽蝕金屬尖刺",
+    "id": "kb_exploration_zones_20260316_225730_3fe9cc",
+    "category": "exploration_zones",
+    "subcategory": "頂層空間",
+    "name": "屋頂",
     "tags": [
-      "金屬",
-      "鏽蝕",
-      "刺傷"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "高處",
+      "開闊",
+      "危險"
+    ]
   },
   {
-    "id": "kb_traps_hazards_20260316_235900_h13",
-    "category": "traps_hazards",
-    "subcategory": "環境危險",
-    "name": "有毒黴菌孢子",
+    "id": "kb_exploration_zones_20260316_225730_5424dc",
+    "category": "exploration_zones",
+    "subcategory": "特殊區域",
+    "name": "彈藥庫",
     "tags": [
-      "黴菌",
-      "毒素",
-      "呼吸"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "軍事",
+      "危險",
+      "封鎖"
+    ]
   },
   {
-    "id": "kb_traps_hazards_20260316_235900_h14",
-    "category": "traps_hazards",
-    "subcategory": "機關陷阱",
-    "name": "觸發式警報",
+    "id": "kb_exploration_zones_20260316_225730_5724f1",
+    "category": "exploration_zones",
+    "subcategory": "走廊通道",
+    "name": "陰暗走廊",
     "tags": [
-      "警報",
-      "觸發",
-      "暴露"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+      "基本",
+      "連接",
+      "壓迫"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_225730_5ac12e",
+    "category": "exploration_zones",
+    "subcategory": "功能房間",
+    "name": "病房",
+    "tags": [
+      "醫療",
+      "個人",
+      "悲傷"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_225730_73a13e",
+    "category": "exploration_zones",
+    "subcategory": "特殊區域",
+    "name": "隔離區",
+    "tags": [
+      "醫療",
+      "危險",
+      "封鎖"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_225730_96e6b6",
+    "category": "exploration_zones",
+    "subcategory": "特殊區域",
+    "name": "監控中心",
+    "tags": [
+      "監控",
+      "科技",
+      "窺視"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_225730_98633f",
+    "category": "exploration_zones",
+    "subcategory": "地下空間",
+    "name": "鍋爐房",
+    "tags": [
+      "工業",
+      "機械",
+      "悶熱"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_225730_b6ab23",
+    "category": "exploration_zones",
+    "subcategory": "特殊區域",
+    "name": "密室",
+    "tags": [
+      "隱藏",
+      "發現",
+      "機關"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_225730_d4854c",
+    "category": "exploration_zones",
+    "subcategory": "地下空間",
+    "name": "地下停車場",
+    "tags": [
+      "地下",
+      "車輛",
+      "開闊"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_225730_d5e0c9",
+    "category": "exploration_zones",
+    "subcategory": "其他",
+    "name": "游泳池區",
+    "tags": [
+      "水域",
+      "空間",
+      "詭異"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_225730_ded1d2",
+    "category": "exploration_zones",
+    "subcategory": "地下空間",
+    "name": "地下室",
+    "tags": [
+      "地下",
+      "潮濕",
+      "未知"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_225730_e31893",
+    "category": "exploration_zones",
+    "subcategory": "特殊區域",
+    "name": "停屍間",
+    "tags": [
+      "死亡",
+      "恐怖",
+      "冰冷"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_225730_e98415",
+    "category": "exploration_zones",
+    "subcategory": "特殊區域",
+    "name": "禮拜堂",
+    "tags": [
+      "宗教",
+      "靜謐",
+      "神聖"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_225730_f0cb08",
+    "category": "exploration_zones",
+    "subcategory": "功能房間",
+    "name": "手術室",
+    "tags": [
+      "醫療",
+      "恐怖",
+      "器具"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_225730_f9b40b",
+    "category": "exploration_zones",
+    "subcategory": "地下空間",
+    "name": "地下儲水池",
+    "tags": [
+      "地下",
+      "水域",
+      "壯觀"
+    ]
+  },
+  {
+    "id": "kb_exploration_zones_20260316_230000_4a5b6d",
+    "category": "exploration_zones",
+    "subcategory": "特殊區域",
+    "name": "禁閉病房",
+    "tags": [
+      "精神",
+      "禁閉",
+      "軟墊"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z01",
@@ -4363,9 +2252,7 @@
       "解剖",
       "醫療",
       "陰暗"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z02",
@@ -4376,9 +2263,7 @@
       "隔離",
       "精神病",
       "囚禁"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z03",
@@ -4389,9 +2274,7 @@
       "藥品",
       "儲藏",
       "醫療"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z04",
@@ -4402,9 +2285,7 @@
       "電力",
       "配電",
       "危險"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z05",
@@ -4415,9 +2296,7 @@
       "機房",
       "電腦",
       "詭異"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z06",
@@ -4428,9 +2307,7 @@
       "爬行",
       "狹窄",
       "黑暗"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z07",
@@ -4441,9 +2318,7 @@
       "水",
       "地下",
       "迴響"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z08",
@@ -4454,9 +2329,7 @@
       "瞭望",
       "高處",
       "視野"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z09",
@@ -4467,9 +2340,7 @@
       "禮拜堂",
       "宗教",
       "地下"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z10",
@@ -4480,9 +2351,7 @@
       "墓地",
       "死亡",
       "恐怖"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z11",
@@ -4493,9 +2362,7 @@
       "化學",
       "實驗",
       "危險"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z12",
@@ -4506,9 +2373,7 @@
       "X光",
       "醫療",
       "輻射"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z13",
@@ -4519,9 +2384,7 @@
       "火化",
       "死亡",
       "煙燻"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z14",
@@ -4532,9 +2395,7 @@
       "淋浴",
       "集體",
       "詭異"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
   },
   {
     "id": "kb_exploration_zones_20260316_235900_z15",
@@ -4545,8 +2406,2030 @@
       "廣播",
       "電子",
       "詭異"
-    ],
-    "effectiveness_score": 8,
-    "created_at": "2026-03-16T23:06:11.666803"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_084aad",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "雷射測距儀",
+    "tags": [
+      "測量",
+      "科技",
+      "評估"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_0a6abb",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "EMF探測器",
+    "tags": [
+      "偵測",
+      "科學",
+      "超自然"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_1a55da",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "防刺手套",
+    "tags": [
+      "防護",
+      "手部",
+      "實用"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_2be207",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "對講機",
+    "tags": [
+      "通訊",
+      "夥伴",
+      "信號"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_2f0f5e",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "防毒面具",
+    "tags": [
+      "防護",
+      "呼吸",
+      "安全"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_31ab68",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "強力手電筒",
+    "tags": [
+      "照明",
+      "基本",
+      "戰術"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_360c68",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "無人機",
+    "tags": [
+      "空中",
+      "偵察",
+      "科技"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_53d181",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "粉筆/噴漆",
+    "tags": [
+      "標記",
+      "導航",
+      "記錄"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_5ac793",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "急救包",
+    "tags": [
+      "醫療",
+      "安全",
+      "基本"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_73eb10",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "攀爬繩索",
+    "tags": [
+      "攀爬",
+      "垂降",
+      "移動"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_8457dc",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "撬棍",
+    "tags": [
+      "工具",
+      "力量",
+      "多用"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_9484f2",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "夜視儀",
+    "tags": [
+      "夜視",
+      "科技",
+      "軍事"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_a78f9e",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "紅外線溫度計",
+    "tags": [
+      "溫度",
+      "偵測",
+      "科學"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_b31b08",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "金屬探測器",
+    "tags": [
+      "偵測",
+      "隱藏",
+      "尋寶"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_b6e3bb",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "靈魂盒",
+    "tags": [
+      "超自然",
+      "掃描",
+      "爭議"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_d2b1a7",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "備用電池",
+    "tags": [
+      "電力",
+      "備份",
+      "實用"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_d6b1e1",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "頭燈",
+    "tags": [
+      "照明",
+      "免持",
+      "基本"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_dac75e",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "收音機/掃描器",
+    "tags": [
+      "通訊",
+      "掃描",
+      "發現"
+    ]
+  },
+  {
+    "id": "kb_explorer_equipment_20260316_225732_f9ce87",
+    "category": "explorer_equipment",
+    "subcategory": "",
+    "name": "指南針+紙質地圖",
+    "tags": [
+      "導航",
+      "類比",
+      "備份"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225730_c9e578",
+    "category": "found_items",
+    "subcategory": "文件記錄",
+    "name": "泛黃日記",
+    "tags": [
+      "文字",
+      "個人",
+      "線索"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225730_f6990b",
+    "category": "found_items",
+    "subcategory": "工具設備",
+    "name": "生鏽鑰匙",
+    "tags": [
+      "鑰匙",
+      "謎題",
+      "進展"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_01c35c",
+    "category": "found_items",
+    "subcategory": "個人物品",
+    "name": "藥瓶",
+    "tags": [
+      "醫療",
+      "藥物",
+      "個人"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_0d2989",
+    "category": "found_items",
+    "subcategory": "神秘物件",
+    "name": "骨頭",
+    "tags": [
+      "骨骼",
+      "恐怖",
+      "發現"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_2b5adf",
+    "category": "found_items",
+    "subcategory": "工具設備",
+    "name": "老式收音機",
+    "tags": [
+      "電子",
+      "通訊",
+      "頻率"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_2c1a9b",
+    "category": "found_items",
+    "subcategory": "個人物品",
+    "name": "斷裂的身分證",
+    "tags": [
+      "身分",
+      "工作人員",
+      "線索"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_364923",
+    "category": "found_items",
+    "subcategory": "神秘物件",
+    "name": "宗教護身符",
+    "tags": [
+      "宗教",
+      "保護",
+      "信仰"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_48e26b",
+    "category": "found_items",
+    "subcategory": "文件記錄",
+    "name": "醫療記錄",
+    "tags": [
+      "醫療",
+      "文件",
+      "真相"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_50d9bb",
+    "category": "found_items",
+    "subcategory": "文件記錄",
+    "name": "求救信",
+    "tags": [
+      "求救",
+      "情感",
+      "絕望"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_772869",
+    "category": "found_items",
+    "subcategory": "個人物品",
+    "name": "褪色照片",
+    "tags": [
+      "照片",
+      "過去",
+      "對比"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_7d03f1",
+    "category": "found_items",
+    "subcategory": "神秘物件",
+    "name": "壁畫/塗鴉",
+    "tags": [
+      "藝術",
+      "訊息",
+      "前人"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_a79072",
+    "category": "found_items",
+    "subcategory": "文件記錄",
+    "name": "手繪地圖",
+    "tags": [
+      "地圖",
+      "標記",
+      "指引"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_b78056",
+    "category": "found_items",
+    "subcategory": "文件記錄",
+    "name": "密碼鎖提示",
+    "tags": [
+      "密碼",
+      "謎題",
+      "解鎖"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_b89e58",
+    "category": "found_items",
+    "subcategory": "個人物品",
+    "name": "兒童玩具",
+    "tags": [
+      "兒童",
+      "詭異",
+      "情感"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_bdd529",
+    "category": "found_items",
+    "subcategory": "文件記錄",
+    "name": "實驗報告",
+    "tags": [
+      "實驗",
+      "機密",
+      "塗黑"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_c303b0",
+    "category": "found_items",
+    "subcategory": "神秘物件",
+    "name": "神秘符號",
+    "tags": [
+      "符號",
+      "神秘",
+      "儀式"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_e8e765",
+    "category": "found_items",
+    "subcategory": "個人物品",
+    "name": "過期罐頭",
+    "tags": [
+      "食物",
+      "生存",
+      "躲藏"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_ed202c",
+    "category": "found_items",
+    "subcategory": "文件記錄",
+    "name": "錄音帶",
+    "tags": [
+      "音頻",
+      "記錄",
+      "過去"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_225731_ed98b0",
+    "category": "found_items",
+    "subcategory": "工具設備",
+    "name": "手電筒（他人的）",
+    "tags": [
+      "裝備",
+      "他人",
+      "疑問"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_230000_0a1b2c",
+    "category": "found_items",
+    "subcategory": "文件記錄",
+    "name": "監獄日記",
+    "tags": [
+      "日記",
+      "囚禁",
+      "絕望"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_230000_1c2d3e",
+    "category": "found_items",
+    "subcategory": "神秘物件",
+    "name": "裂開的鏡子",
+    "tags": [
+      "鏡子",
+      "破損",
+      "反射"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_230000_1d2e3f",
+    "category": "found_items",
+    "subcategory": "神秘物件",
+    "name": "牆上摩斯密碼",
+    "tags": [
+      "摩斯密碼",
+      "牆壁",
+      "訊息"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_230000_2f3a4b",
+    "category": "found_items",
+    "subcategory": "工具設備",
+    "name": "化學試管",
+    "tags": [
+      "化學",
+      "試管",
+      "液體"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_230000_3d4e5f",
+    "category": "found_items",
+    "subcategory": "個人物品",
+    "name": "碎裂的眼鏡",
+    "tags": [
+      "眼鏡",
+      "碎裂",
+      "指紋"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_230000_4f5a6b",
+    "category": "found_items",
+    "subcategory": "工具設備",
+    "name": "防毒面具",
+    "tags": [
+      "面具",
+      "軍事",
+      "防護"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_230000_5c6d7e",
+    "category": "found_items",
+    "subcategory": "神秘物件",
+    "name": "上鎖保險箱",
+    "tags": [
+      "保險箱",
+      "鎖",
+      "神秘"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_230000_6a7b8c",
+    "category": "found_items",
+    "subcategory": "文件記錄",
+    "name": "未發送的信件",
+    "tags": [
+      "信件",
+      "遺書",
+      "未寄"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_230000_78a9b0",
+    "category": "found_items",
+    "subcategory": "個人物品",
+    "name": "兒童繪畫",
+    "tags": [
+      "繪畫",
+      "兒童",
+      "警告"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_230000_7c8d9e",
+    "category": "found_items",
+    "subcategory": "工具設備",
+    "name": "生鏽鑰匙圈",
+    "tags": [
+      "鑰匙",
+      "房間",
+      "生鏽"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_230000_7d8e9f",
+    "category": "found_items",
+    "subcategory": "醫療用品",
+    "name": "手術刀組",
+    "tags": [
+      "手術",
+      "器械",
+      "醫療"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_230000_9d0e1f",
+    "category": "found_items",
+    "subcategory": "工具設備",
+    "name": "防輻射徽章",
+    "tags": [
+      "輻射",
+      "徽章",
+      "危險"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f01",
+    "category": "found_items",
+    "subcategory": "醫療設備",
+    "name": "外科手術手套",
+    "tags": [
+      "醫療",
+      "手套",
+      "血跡"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f02",
+    "category": "found_items",
+    "subcategory": "個人物品",
+    "name": "病患手環",
+    "tags": [
+      "醫療",
+      "身份",
+      "失蹤"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f04",
+    "category": "found_items",
+    "subcategory": "文件記錄",
+    "name": "加密的筆記本",
+    "tags": [
+      "加密",
+      "筆記",
+      "謎題"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f05",
+    "category": "found_items",
+    "subcategory": "個人物品",
+    "name": "軍用身份牌",
+    "tags": [
+      "軍事",
+      "身份",
+      "神秘"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f06",
+    "category": "found_items",
+    "subcategory": "文件記錄",
+    "name": "舊報紙",
+    "tags": [
+      "報紙",
+      "歷史",
+      "線索"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f08",
+    "category": "found_items",
+    "subcategory": "文件記錄",
+    "name": "實驗記錄板",
+    "tags": [
+      "實驗",
+      "記錄",
+      "科學"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f09",
+    "category": "found_items",
+    "subcategory": "神秘物件",
+    "name": "宗教符號",
+    "tags": [
+      "宗教",
+      "符號",
+      "詭異"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f10",
+    "category": "found_items",
+    "subcategory": "文件記錄",
+    "name": "失蹤者的最後記事",
+    "tags": [
+      "失蹤",
+      "筆記",
+      "謎題"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f11",
+    "category": "found_items",
+    "subcategory": "工具設備",
+    "name": "血跡斑斑的工具袋",
+    "tags": [
+      "工具",
+      "血跡",
+      "恐怖"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f12",
+    "category": "found_items",
+    "subcategory": "神秘物件",
+    "name": "滴蠟的舊燭台",
+    "tags": [
+      "蠟燭",
+      "儀式",
+      "神秘"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f14",
+    "category": "found_items",
+    "subcategory": "個人物品",
+    "name": "兒童的布娃娃",
+    "tags": [
+      "玩具",
+      "兒童",
+      "恐怖"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f15",
+    "category": "found_items",
+    "subcategory": "工具設備",
+    "name": "廢棄急救箱",
+    "tags": [
+      "醫療",
+      "急救",
+      "謎題"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f16",
+    "category": "found_items",
+    "subcategory": "神秘物件",
+    "name": "倒數計時的計時器",
+    "tags": [
+      "計時",
+      "謎題",
+      "緊張"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f17",
+    "category": "found_items",
+    "subcategory": "文件記錄",
+    "name": "撕碎的信件",
+    "tags": [
+      "信件",
+      "謎題",
+      "情感"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f18",
+    "category": "found_items",
+    "subcategory": "個人物品",
+    "name": "鑰匙串",
+    "tags": [
+      "鑰匙",
+      "謎題",
+      "線索"
+    ]
+  },
+  {
+    "id": "kb_found_items_20260316_235900_f19",
+    "category": "found_items",
+    "subcategory": "神秘物件",
+    "name": "DNA 試管架",
+    "tags": [
+      "DNA",
+      "實驗",
+      "失蹤"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_06f9fb",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "監控畫面殘影",
+    "tags": [
+      "監控",
+      "影像",
+      "證據"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_0c7305",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "錄音機留言",
+    "tags": [
+      "音頻",
+      "個人",
+      "記錄"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_2bed00",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "逃生路線圖",
+    "tags": [
+      "地圖",
+      "逃生",
+      "失敗"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_3df012",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "舊報紙剪報",
+    "tags": [
+      "報紙",
+      "歷史",
+      "蒐集"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_400469",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "最後的廣播",
+    "tags": [
+      "音頻",
+      "循環",
+      "緊急"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_4358b2",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "實驗受試者編號",
+    "tags": [
+      "編號",
+      "實驗",
+      "系統性"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_6e2f23",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "被釘死的門",
+    "tags": [
+      "門",
+      "封鎖",
+      "警告"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_96e9fd",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "密碼門",
+    "tags": [
+      "密碼",
+      "門",
+      "互動"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_a48b54",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "孩子的畫",
+    "tags": [
+      "兒童",
+      "藝術",
+      "暗示"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_ad465d",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "反覆出現的符號",
+    "tags": [
+      "符號",
+      "反覆",
+      "意義"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_e4f497",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "失蹤者照片牆",
+    "tags": [
+      "照片",
+      "失蹤",
+      "累積"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_e78c5d",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "地上的拖曳痕跡",
+    "tags": [
+      "痕跡",
+      "暴力",
+      "推理"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_f0e8fc",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "新鮮的痕跡",
+    "tags": [
+      "痕跡",
+      "近期",
+      "他人"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_fc2143",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "牆上的倒數",
+    "tags": [
+      "數字",
+      "倒數",
+      "未完成"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_225731_fc594f",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "日記中的精神崩潰",
+    "tags": [
+      "文字",
+      "瘋狂",
+      "漸進"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_0a36e5",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "血跡指引",
+    "tags": [
+      "血跡",
+      "路線",
+      "驚悚"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_1d34cb",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "倒數刻痕",
+    "tags": [
+      "計數",
+      "囚禁",
+      "時間"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_206c44",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "求救字條",
+    "tags": [
+      "求救",
+      "警告",
+      "紙條"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_2b2051",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "密碼鎖提示",
+    "tags": [
+      "密碼",
+      "解謎",
+      "互動"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_31355c",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "錄影帶殘片",
+    "tags": [
+      "錄影",
+      "影像",
+      "殘片"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_4ef483",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "地圖上的標記",
+    "tags": [
+      "地圖",
+      "標記",
+      "路線"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_53fae3",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "未寄出的信件",
+    "tags": [
+      "信件",
+      "心理",
+      "記錄"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_581e81",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "保全巡邏日誌",
+    "tags": [
+      "保全",
+      "日誌",
+      "異常"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_64c889",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "兒童塗鴉日記",
+    "tags": [
+      "兒童",
+      "日記",
+      "心理"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_77df0d",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "異常溫度計",
+    "tags": [
+      "溫度",
+      "異常",
+      "科學"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_8455a9",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "員工證件",
+    "tags": [
+      "證件",
+      "身份",
+      "線索"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_a5bfeb",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "被撕毀的藍圖",
+    "tags": [
+      "藍圖",
+      "建築",
+      "隱藏"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_b30092",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "失蹤者遺物",
+    "tags": [
+      "失蹤",
+      "遺物",
+      "懸疑"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_dad2d9",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "實驗記錄表",
+    "tags": [
+      "實驗",
+      "文件",
+      "機密"
+    ]
+  },
+  {
+    "id": "kb_narrative_clues_20260316_230356_e05eff",
+    "category": "narrative_clues",
+    "subcategory": "",
+    "name": "牆上塗鴉",
+    "tags": [
+      "文字",
+      "警告",
+      "線索"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_0dc173",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "屋頂天窗",
+    "tags": [
+      "高處",
+      "垂降",
+      "危險"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_30bd1e",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "窗戶翻入",
+    "tags": [
+      "攀爬",
+      "碎玻璃",
+      "隱蔽"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_34d16f",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "排水管道",
+    "tags": [
+      "幽閉",
+      "潮濕",
+      "管道"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_47973d",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "停車場入口",
+    "tags": [
+      "地下",
+      "車輛",
+      "漸進"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_50e1ca",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "隱藏側門",
+    "tags": [
+      "隱蔽",
+      "發現",
+      "側面"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_564e16",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "通風口",
+    "tags": [
+      "幽閉",
+      "管道",
+      "困難"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_6c0184",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "貨物入口",
+    "tags": [
+      "後方",
+      "工業",
+      "大型"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_80db9c",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "水路進入",
+    "tags": [
+      "水域",
+      "地下",
+      "冒險"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_8de42f",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "消防梯",
+    "tags": [
+      "攀爬",
+      "外牆",
+      "金屬"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_95c08e",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "正門突入",
+    "tags": [
+      "正面",
+      "基本",
+      "大膽"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_aa18da",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "圍牆缺口",
+    "tags": [
+      "戶外",
+      "隱蔽",
+      "接近"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_b9b0e8",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "地下通道",
+    "tags": [
+      "地下",
+      "隱蔽",
+      "潮濕"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_c132f4",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "管道間",
+    "tags": [
+      "技術",
+      "管道",
+      "狹窄"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_f525f6",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "屋頂垂降",
+    "tags": [
+      "高處",
+      "動作",
+      "刺激"
+    ]
+  },
+  {
+    "id": "kb_route_paths_20260316_225730_fe68ea",
+    "category": "route_paths",
+    "subcategory": "",
+    "name": "電梯維修口",
+    "tags": [
+      "垂直",
+      "技術",
+      "危險"
+    ]
+  },
+  {
+    "id": "kb_tension_curves_20260316_225731_00964e",
+    "category": "tension_curves",
+    "subcategory": "",
+    "name": "漸進升高",
+    "tags": [
+      "穩定",
+      "漸進",
+      "爆發"
+    ]
+  },
+  {
+    "id": "kb_tension_curves_20260316_225731_0b2ce8",
+    "category": "tension_curves",
+    "subcategory": "",
+    "name": "心跳節奏",
+    "tags": [
+      "心跳",
+      "加速",
+      "生理"
+    ]
+  },
+  {
+    "id": "kb_tension_curves_20260316_225731_0ea77f",
+    "category": "tension_curves",
+    "subcategory": "",
+    "name": "雙高潮",
+    "tags": [
+      "雙峰",
+      "遞進",
+      "加倍"
+    ]
+  },
+  {
+    "id": "kb_tension_curves_20260316_225731_2cf550",
+    "category": "tension_curves",
+    "subcategory": "",
+    "name": "倒敘緊張",
+    "tags": [
+      "倒敘",
+      "懸念",
+      "解謎"
+    ]
+  },
+  {
+    "id": "kb_tension_curves_20260316_225731_584255",
+    "category": "tension_curves",
+    "subcategory": "",
+    "name": "持續高壓",
+    "tags": [
+      "高壓",
+      "持續",
+      "窒息"
+    ]
+  },
+  {
+    "id": "kb_tension_curves_20260316_225731_788708",
+    "category": "tension_curves",
+    "subcategory": "",
+    "name": "假結局反轉",
+    "tags": [
+      "反轉",
+      "假結局",
+      "驚喜"
+    ]
+  },
+  {
+    "id": "kb_tension_curves_20260316_225731_7ccd9e",
+    "category": "tension_curves",
+    "subcategory": "",
+    "name": "先平後爆",
+    "tags": [
+      "反差",
+      "突然",
+      "衝擊"
+    ]
+  },
+  {
+    "id": "kb_tension_curves_20260316_225731_925536",
+    "category": "tension_curves",
+    "subcategory": "",
+    "name": "波浪式",
+    "tags": [
+      "波浪",
+      "起伏",
+      "節奏"
+    ]
+  },
+  {
+    "id": "kb_tension_curves_20260316_225731_93d033",
+    "category": "tension_curves",
+    "subcategory": "",
+    "name": "平靜中的異常",
+    "tags": [
+      "細微",
+      "累積",
+      "恐怖谷"
+    ]
+  },
+  {
+    "id": "kb_tension_curves_20260316_225731_e4bcb4",
+    "category": "tension_curves",
+    "subcategory": "",
+    "name": "螺旋下降",
+    "tags": [
+      "螺旋",
+      "加深",
+      "不歸路"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_0fdf2e",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "大霧清晨",
+    "tags": [
+      "霧",
+      "清晨",
+      "迷幻"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_17a523",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "暴風雨夜",
+    "tags": [
+      "暴風雨",
+      "動態",
+      "聲音"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_3d268b",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "颱風前夕",
+    "tags": [
+      "颱風",
+      "不安",
+      "壓力"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_4bb769",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "午夜",
+    "tags": [
+      "午夜",
+      "交替",
+      "標誌"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_50e390",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "黃昏時分",
+    "tags": [
+      "黃昏",
+      "過渡",
+      "影子"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_70038d",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "日落時分",
+    "tags": [
+      "日落",
+      "過渡",
+      "漸變"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_710576",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "破曉前",
+    "tags": [
+      "黎明前",
+      "寒冷",
+      "期待"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_858bdf",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "新年倒數時",
+    "tags": [
+      "節日",
+      "反差",
+      "孤獨"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_85e0e8",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "凌晨三點",
+    "tags": [
+      "深夜",
+      "超自然",
+      "高峰"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_a65898",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "月蝕之夜",
+    "tags": [
+      "月蝕",
+      "紅光",
+      "特殊"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_cc5a4f",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "停電之後",
+    "tags": [
+      "停電",
+      "黑暗",
+      "孤立"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_d802b7",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "深夜兩點",
+    "tags": [
+      "深夜",
+      "安靜",
+      "經典"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_e6d67a",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "萬聖節夜",
+    "tags": [
+      "節日",
+      "特殊",
+      "氣氛"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_eef406",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "白天（反差恐怖）",
+    "tags": [
+      "白天",
+      "反差",
+      "真實"
+    ]
+  },
+  {
+    "id": "kb_time_settings_20260316_225731_faf55c",
+    "category": "time_settings",
+    "subcategory": "",
+    "name": "冬至深夜",
+    "tags": [
+      "冬季",
+      "最長夜",
+      "寒冷"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_10e31e",
+    "category": "traps_hazards",
+    "subcategory": "結構危險",
+    "name": "電擊危險",
+    "tags": [
+      "電擊",
+      "水",
+      "隱蔽"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_288c2d",
+    "category": "traps_hazards",
+    "subcategory": "機關陷阱",
+    "name": "鐵門鎖死",
+    "tags": [
+      "困住",
+      "門",
+      "恐慌"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_2de626",
+    "category": "traps_hazards",
+    "subcategory": "機關陷阱",
+    "name": "升降梯突然啟動",
+    "tags": [
+      "電梯",
+      "機械",
+      "驚嚇"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_3c8535",
+    "category": "traps_hazards",
+    "subcategory": "結構危險",
+    "name": "地板塌陷",
+    "tags": [
+      "墜落",
+      "結構",
+      "突然"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_49f4b5",
+    "category": "traps_hazards",
+    "subcategory": "結構危險",
+    "name": "天花板崩落",
+    "tags": [
+      "崩落",
+      "緊急",
+      "逃跑"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_4e1413",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "有毒氣體",
+    "tags": [
+      "化學",
+      "窒息",
+      "緊急"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_61fcef",
+    "category": "traps_hazards",
+    "subcategory": "機關陷阱",
+    "name": "防盜警報觸發",
+    "tags": [
+      "警報",
+      "噪音",
+      "暴露"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_78b8c6",
+    "category": "traps_hazards",
+    "subcategory": "結構危險",
+    "name": "隱藏的深坑",
+    "tags": [
+      "陷阱",
+      "隱藏",
+      "墜落"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_7e71c5",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "玻璃碎片區",
+    "tags": [
+      "玻璃",
+      "地面",
+      "噪音"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_80fd56",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "積水陷阱",
+    "tags": [
+      "水",
+      "淹沒",
+      "緊急"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_95f177",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "完全斷電",
+    "tags": [
+      "黑暗",
+      "設備",
+      "恐慌"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_a419cb",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "野生動物",
+    "tags": [
+      "動物",
+      "威脅",
+      "聲音"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_b84cd2",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "石棉暴露",
+    "tags": [
+      "健康",
+      "隱形",
+      "長期"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_e4b2aa",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "鐵絲網纏繞",
+    "tags": [
+      "鐵絲",
+      "束縛",
+      "割傷"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_e89c0f",
+    "category": "traps_hazards",
+    "subcategory": "結構危險",
+    "name": "結構不穩",
+    "tags": [
+      "坍塌",
+      "結構",
+      "持續"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_225731_f6c16b",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "化學品洩漏",
+    "tags": [
+      "化學",
+      "危險",
+      "迴避"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_230000_7788ab",
+    "category": "traps_hazards",
+    "subcategory": "生物威脅",
+    "name": "犬吠警報聲",
+    "tags": [
+      "犬吠",
+      "警報",
+      "接近"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_230000_ab78cd",
+    "category": "traps_hazards",
+    "subcategory": "心理威脅",
+    "name": "鏡迷宮",
+    "tags": [
+      "鏡子",
+      "迷宮",
+      "迷失"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_230000_ef56ab",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "毒氣洩漏",
+    "tags": [
+      "毒氣",
+      "洩漏",
+      "化學"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_235900_h01",
+    "category": "traps_hazards",
+    "subcategory": "結構危險",
+    "name": "天花板坍塌",
+    "tags": [
+      "天花板",
+      "結構",
+      "危險"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_235900_h02",
+    "category": "traps_hazards",
+    "subcategory": "結構危險",
+    "name": "碎玻璃地板",
+    "tags": [
+      "玻璃",
+      "地板",
+      "割傷"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_235900_h03",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "放射性材料",
+    "tags": [
+      "輻射",
+      "化學",
+      "危險"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_235900_h04",
+    "category": "traps_hazards",
+    "subcategory": "心理危險",
+    "name": "幽閉空間",
+    "tags": [
+      "幽閉",
+      "心理",
+      "狹窄"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_235900_h05",
+    "category": "traps_hazards",
+    "subcategory": "機關陷阱",
+    "name": "假地板",
+    "tags": [
+      "地板",
+      "陷阱",
+      "墜落"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_235900_h06",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "大量鼠群",
+    "tags": [
+      "老鼠",
+      "動物",
+      "恐慌"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_235900_h07",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "蝙蝠群棲息地",
+    "tags": [
+      "蝙蝠",
+      "動物",
+      "黑暗"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_235900_h08",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "石棉粉塵",
+    "tags": [
+      "石棉",
+      "毒素",
+      "肺部"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_235900_h09",
+    "category": "traps_hazards",
+    "subcategory": "結構危險",
+    "name": "電梯井墜落風險",
+    "tags": [
+      "電梯",
+      "墜落",
+      "致命"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_235900_h10",
+    "category": "traps_hazards",
+    "subcategory": "機關陷阱",
+    "name": "鐵鏈封閉出口",
+    "tags": [
+      "鐵鏈",
+      "被困",
+      "逃脫"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_235900_h11",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "積水電線危險",
+    "tags": [
+      "積水",
+      "電力",
+      "觸電"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_235900_h12",
+    "category": "traps_hazards",
+    "subcategory": "結構危險",
+    "name": "鏽蝕金屬尖刺",
+    "tags": [
+      "金屬",
+      "鏽蝕",
+      "刺傷"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_235900_h13",
+    "category": "traps_hazards",
+    "subcategory": "環境危險",
+    "name": "有毒黴菌孢子",
+    "tags": [
+      "黴菌",
+      "毒素",
+      "呼吸"
+    ]
+  },
+  {
+    "id": "kb_traps_hazards_20260316_235900_h14",
+    "category": "traps_hazards",
+    "subcategory": "機關陷阱",
+    "name": "觸發式警報",
+    "tags": [
+      "警報",
+      "觸發",
+      "暴露"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_0117f5",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "冷到結霜",
+    "tags": [
+      "寒冷",
+      "結霜",
+      "不適"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_270a8a",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "狂風呼嘯",
+    "tags": [
+      "風",
+      "聲音",
+      "動態"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_29b60f",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "冰雹",
+    "tags": [
+      "冰雹",
+      "噪音",
+      "暴力"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_373cec",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "間歇性閃電",
+    "tags": [
+      "閃電",
+      "間歇",
+      "揭示"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_3b156d",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "沙塵暴",
+    "tags": [
+      "沙塵",
+      "能見度",
+      "惡劣"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_44d57d",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "回南天",
+    "tags": [
+      "潮濕",
+      "水珠",
+      "詭異"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_5f2d46",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "濃霧",
+    "tags": [
+      "霧",
+      "視覺",
+      "朦朧"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_a2b9de",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "起霧散去循環",
+    "tags": [
+      "霧",
+      "循環",
+      "不穩定"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_a5d6e5",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "悶熱潮濕",
+    "tags": [
+      "悶熱",
+      "不適",
+      "夏季"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_bfe6af",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "遠處雷聲",
+    "tags": [
+      "雷聲",
+      "閃電",
+      "接近"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_d2cdf9",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "萬里無雲",
+    "tags": [
+      "晴朗",
+      "星光",
+      "寧靜"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_d77675",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "寂靜無風",
+    "tags": [
+      "安靜",
+      "無風",
+      "壓迫"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_e268a7",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "雪",
+    "tags": [
+      "雪",
+      "白色",
+      "痕跡"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_f42807",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "毛毛雨",
+    "tags": [
+      "小雨",
+      "潮濕",
+      "陰鬱"
+    ]
+  },
+  {
+    "id": "kb_weather_conditions_20260316_225731_fb85b0",
+    "category": "weather_conditions",
+    "subcategory": "",
+    "name": "暴雨傾盆",
+    "tags": [
+      "雨",
+      "潮濕",
+      "聲音"
+    ]
   }
 ]

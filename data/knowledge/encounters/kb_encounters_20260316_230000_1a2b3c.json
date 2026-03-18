@@ -4,8 +4,12 @@
   "subcategory": "視覺異常",
   "name": "影子人影過門口",
   "name_en": "Shadow Figure Passes Doorway",
-  "description": "門口一閃而過的黑色人影，轉頭看去卻空無一人，攝影機回放時影子清晰可見。",
-  "tags": ["影子", "人形", "門口"],
+  "description": "門口一閃而過的黑色人影，轉頭看去卻空無一人，回頭查看時影子清晰可見。",
+  "tags": [
+    "影子",
+    "人形",
+    "門口"
+  ],
   "examples": [],
   "effectiveness_score": 9,
   "usage_count": 0,
