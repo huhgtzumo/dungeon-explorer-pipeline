@@ -191,6 +191,16 @@ def generate_image(
     return output_path
 
 
+EXPLORER_STYLE_PREFIX = (
+    "real photograph taken with old Sony Handycam, 480p low resolution, "
+    "first person POV, handheld camera, single flashlight beam in darkness, "
+    "abandoned building interior, film grain, motion blur, "
+    "dirty lens, found footage, "
+    "photorealistic, raw unedited footage, not illustration, not digital art, "
+    "9:16 vertical"
+)
+
+
 def batch_generate(
     frames: list[dict],
     drama_id: str,
@@ -215,11 +225,16 @@ def batch_generate(
     results = []
     total = len(frames)
 
+    # Always prepend explorer style prefix
+    effective_prefix = EXPLORER_STYLE_PREFIX
+    if style_prefix:
+        effective_prefix = f"{EXPLORER_STYLE_PREFIX}, {style_prefix}"
+
     for i, frame in enumerate(frames):
         num = frame.get("frame_number", i + 1)
         raw_prompt = frame.get("image_prompt", "")
         negative_prompt = frame.get("negative_prompt", "")
-        prompt = f"{style_prefix}, {raw_prompt}" if style_prefix else raw_prompt
+        prompt = f"{effective_prefix}, {raw_prompt}" if raw_prompt else effective_prefix
         out_path = output_dir / f"frame_{num:03d}.png"
 
         if on_progress:

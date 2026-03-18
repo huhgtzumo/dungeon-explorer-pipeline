@@ -211,6 +211,32 @@ def _paginate(items: list, page: int, per_page: int) -> dict:
     return {"items": items[start:end], "total": total, "page": page, "per_page": per_page}
 
 
+def _enrich_sets_with_titles(sets: list):
+    """Enrich image/video sets with script_title and generated_at via storyboard→script chain."""
+    import re
+    storyboards = {s["id"]: s for s in index_db.list_entries("storyboards")}
+    scripts = {s["id"]: s for s in index_db.list_entries("scripts")}
+    for s in sets:
+        set_id = s.get("image_set_id") or s.get("video_set_id") or s.get("id", "")
+        # Parse storyboard_id and timestamp from set_id
+        # Format: imgset_{sb_id}_{YYYYMMDD_HHMMSS} or vidset_{sb_id}_{YYYYMMDD_HHMMSS}
+        m = re.match(r'(?:imgset|vidset)_(sb_\d{8}_\d{6}_[a-f0-9]+)_(\d{8}_\d{6})', set_id)
+        if m:
+            sb_id = m.group(1)
+            ts_raw = m.group(2)  # YYYYMMDD_HHMMSS
+            s["storyboard_id"] = sb_id
+            s["generated_at"] = f"{ts_raw[:4]}-{ts_raw[4:6]}-{ts_raw[6:8]} {ts_raw[9:11]}:{ts_raw[11:13]}:{ts_raw[13:15]}"
+            sb = storyboards.get(sb_id, {})
+            sid = sb.get("source_script_id", "")
+            if sid in scripts:
+                s["script_title"] = scripts[sid].get("title", sid)
+            else:
+                s["script_title"] = sb_id
+        else:
+            s.setdefault("generated_at", "")
+            s.setdefault("script_title", set_id)
+
+
 # ──────────────────────────── Script API ────────────────────────────
 
 @app.get("/api/scripts")
@@ -479,6 +505,8 @@ async def list_image_sets(page: int = Query(1, ge=1), per_page: int = Query(20, 
                 "success_count": len(pngs),
                 "error_count": 0,
             })
+    # Enrich with script title via storyboard→script chain
+    _enrich_sets_with_titles(sets)
     return _paginate(sets, page, per_page)
 
 
@@ -579,9 +607,9 @@ def _run_generate_images(task_id: str, storyboard_id: str, style_prefix: str):
             _set_progress(task, current, total_count, message)
             task["logs"].append(f"[{_now()}] [{current}/{total_count}] {message}")
 
-        from ..image_gen.flux_generator import batch_generate as flux_batch_generate
-        task["logs"].append(f"[{_now()}] 開始呼叫 Flux API 生成圖片...")
-        results = flux_batch_generate(
+        from ..image_gen.kling_generator import batch_generate as kling_batch_generate
+        task["logs"].append(f"[{_now()}] 開始呼叫 Kling API 生成圖片...")
+        results = kling_batch_generate(
             frames=frames,
             drama_id=image_set_id,
             style_prefix=style_prefix,
@@ -637,6 +665,7 @@ async def list_video_sets():
                 "video_set_id": d.name,
                 "total_clips": len(mp4s),
             })
+    _enrich_sets_with_titles(sets)
     return {"data": sets}
 
 
@@ -1108,7 +1137,7 @@ def _run_storyboard_generate_images(task_id: str, storyboard_id: str, style_pref
         task["logs"].append(f"[{_now()}] 共 {total} 個分鏡需要生圖")
         _set_progress(task, 0, total, "準備中...")
 
-        from ..image_gen.flux_generator import generate_image_url
+        from ..image_gen.kling_generator import generate_image_url, EXPLORER_STYLE_PREFIX
 
         image_set_id = f"imgset_{storyboard_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
         output_dir = GENERATED_IMAGES_DIR / image_set_id
@@ -1119,10 +1148,15 @@ def _run_storyboard_generate_images(task_id: str, storyboard_id: str, style_pref
         success_count = 0
         error_count = 0
 
+        # Always prepend explorer style prefix
+        effective_prefix = EXPLORER_STYLE_PREFIX
+        if style_prefix:
+            effective_prefix = f"{EXPLORER_STYLE_PREFIX}, {style_prefix}"
+
         for i, frame in enumerate(frames):
             num = frame.get("frame_number", i + 1)
             raw_prompt = frame.get("image_prompt", "")
-            prompt = f"{style_prefix}, {raw_prompt}" if style_prefix else raw_prompt
+            prompt = f"{effective_prefix}, {raw_prompt}" if raw_prompt else effective_prefix
             out_path = output_dir / f"frame_{num:03d}.png"
 
             _set_progress(task, i, total, f"生成分鏡 #{num} ({i+1}/{total})...")

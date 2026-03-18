@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""端到端測試：Step 3 腳本 → Step 4 分鏡 → Step 5 Flux 生圖"""
+"""端到端測試：Step 3 腳本 → Step 4 分鏡 → Step 5 Kling 生圖"""
 
 import json
 import sys
@@ -13,7 +13,7 @@ os.chdir(Path(__file__).parent)
 from src.utils.config import load_config, PROJECT_ROOT
 from src.scriptwriter.generator import generate_script
 from src.scriptwriter.storyboard import generate_storyboard, save_storyboard, setup_characters
-from src.image_gen.flux_generator import batch_generate
+from src.image_gen.kling_generator import batch_generate
 
 def main():
     print("=" * 60)
@@ -62,7 +62,7 @@ def main():
         print(f"   Frame #{f.frame_number}: {f.image_prompt[:80]}...")
 
     # ── Step 5: Flux 生圖 ──
-    print(f"\n🖼️ Step 5: Flux 生圖（{len(frames)} 張）...")
+    print(f"\n🖼️ Step 5: Kling 生圖（{len(frames)} 張）...")
     from dataclasses import asdict
     frames_data = [asdict(f) for f in frames]
 
@@ -88,7 +88,7 @@ def main():
     print(f"   腳本: {script.get('title', 'N/A')} ({scene_count} 場景)")
     print(f"   分鏡: {len(frames)} 個畫面")
     print(f"   生圖: {ok_count} 成功 / {err_count} 失敗")
-    print(f"   費用: ~${ok_count * 0.003:.3f} (Flux)")
+    print(f"   費用: ~${ok_count * 0.0035:.4f} (Kling)")
     print("=" * 60)
 
 
