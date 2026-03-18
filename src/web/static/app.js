@@ -983,8 +983,8 @@ function renderImageHistory(imageSets) {
     <div class="history-item" onclick="showImageSetInPanel('${esc(s.id || s.image_set_id)}')">
       <div class="hi-top">
         <div class="hi-main">
-          <div class="hi-title">${esc(s.image_set_id || s.id)}</div>
-          <div class="hi-meta">${s.success_count || 0}/${s.total_frames || 0} 張成功${s.style_prefix ? ' · ' + esc(s.style_prefix.substring(0, 30)) : ''}</div>
+          <div class="hi-title">${esc(s.script_title || s.image_set_id || s.id)}</div>
+          <div class="hi-meta">${s.success_count || 0}/${s.total_frames || 0} 張成功${s.generated_at ? ' · ' + esc(s.generated_at) : ''}</div>
         </div>
       </div>
     </div>
@@ -1069,7 +1069,8 @@ function populateImageSelect(imageSets) {
   let html = '<option value="">-- 選擇已生成的分鏡圖 --</option>';
   for (const s of (imageSets || []).slice().reverse()) {
     const id = s.id || s.image_set_id;
-    const label = `${id} (${s.success_count || 0}/${s.total_frames || 0} 張)`;
+    const title = s.script_title || id;
+    const label = `${title} (${s.success_count || 0}/${s.total_frames || 0} 張)`;
     html += `<option value="${esc(id)}">${esc(label)}</option>`;
   }
   sel.innerHTML = html;
@@ -1178,8 +1179,8 @@ function renderVideoHistory(videoSets) {
       <div class="history-item" onclick="showVideoSetInPanel('${esc(id)}')">
         <div class="hi-top">
           <div class="hi-main">
-            <div class="hi-title">${esc(id)}</div>
-            <div class="hi-meta">${s.success_count || 0}/${s.total_clips || 0} 段 · ${s.duration_sec || 5}s/${s.mode || 'std'}</div>
+            <div class="hi-title">${esc(s.script_title || id)}</div>
+            <div class="hi-meta">${s.success_count || 0}/${s.total_clips || 0} 段 · ${s.duration_sec || 5}s${s.generated_at ? ' · ' + esc(s.generated_at) : ''}</div>
           </div>
         </div>
       </div>`;
