@@ -64,24 +64,6 @@
   ],
   "scripts": [
     {
-      "id": "script_20260315_165338_5a33f6",
-      "title": "最後一道菜",
-      "source_analysis_id": "knowledge_base",
-      "human_requirements": "",
-      "type": "kb-series",
-      "created_at": "2026-03-15 16:54:46",
-      "file": "data/scripts/script_20260315_165338_5a33f6/script.json"
-    },
-    {
-      "id": "script_20260316_011502_34822a",
-      "title": "最後三分鐘",
-      "source_analysis_id": "knowledge_base",
-      "human_requirements": "",
-      "type": "kb-series",
-      "created_at": "2026-03-16 01:16:24",
-      "file": "data/scripts/script_20260316_011502_34822a/script.json"
-    },
-    {
       "id": "script_20260317_203457_1bfe94",
       "title": "倒數病房",
       "source_analysis_id": "knowledge_base",
@@ -134,30 +116,27 @@
       "type": "kb-series",
       "created_at": "2026-03-17 23:51:34",
       "file": "data/scripts/script_20260317_234901_707933/script.json"
+    },
+    {
+      "id": "script_20260318_165108_4de4ef",
+      "title": "鏽潮",
+      "source_analysis_id": "knowledge_base",
+      "human_requirements": "",
+      "type": "kb-series",
+      "created_at": "2026-03-18 16:54:49",
+      "file": "data/scripts/script_20260318_165108_4de4ef/script.json"
+    },
+    {
+      "id": "script_20260318_174705_56c58d",
+      "title": "最後一排的觀眾",
+      "source_analysis_id": "knowledge_base",
+      "human_requirements": "",
+      "type": "kb-series",
+      "created_at": "2026-03-18 17:50:48",
+      "file": "data/scripts/script_20260318_174705_56c58d/script.json"
     }
   ],
   "storyboards": [
-    {
-      "id": "sb_20260315_181915_1fee20",
-      "source_script_id": "script_20260315_165338_5a33f6",
-      "frame_count": 17,
-      "created_at": "2026-03-15 18:19:15",
-      "file": "data/storyboards/script_20260315_165338_5a33f6/storyboard.json"
-    },
-    {
-      "id": "sb_20260316_011303_0a75cd",
-      "source_script_id": "script_20260315_165338_5a33f6",
-      "frame_count": 16,
-      "created_at": "2026-03-16 01:13:03",
-      "file": "data/storyboards/script_20260315_165338_5a33f6/storyboard.json"
-    },
-    {
-      "id": "sb_20260316_011934_a3155e",
-      "source_script_id": "script_20260316_011502_34822a",
-      "frame_count": 16,
-      "created_at": "2026-03-16 01:19:34",
-      "file": "data/storyboards/script_20260316_011502_34822a/storyboard.json"
-    },
     {
       "id": "sb_20260317_224725_45896d",
       "source_script_id": "script_20260317_223506_7a3169",
@@ -171,6 +150,14 @@
       "frame_count": 32,
       "created_at": "2026-03-17 23:38:25",
       "file": "data/storyboards/script_20260317_225545_c21463/storyboard.json"
+    },
+    {
+      "id": "sb_20260318_165808_6fc10f",
+      "source_script_id": "script_20260318_165108_4de4ef",
+      "frame_count": 19,
+      "created_at": "2026-03-18 16:58:08",
+      "file": "data/storyboards/script_20260318_165108_4de4ef/storyboard.json"
     }
-  ]
+  ],
+  "analyses": []
 }
