@@ -14,7 +14,7 @@ function apiUrl(path) { return _basePath + path; }
 const STAGE_LABELS = {
   generate: '探索腳本生成',
   storyboard: '場景分鏡',
-  'generate-images': '場景圖生成（Flux）',
+  'generate-images': '場景圖生成（Kling AI）',
   'generate-videos': '探索影片生成（Kling AI）',
   'kb-generate': '知識庫生成',
 };

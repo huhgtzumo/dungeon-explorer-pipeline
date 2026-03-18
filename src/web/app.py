@@ -581,7 +581,7 @@ def _run_generate_images(task_id: str, storyboard_id: str, style_prefix: str):
     """Background task: generate images for a storyboard using Kling API."""
     task = _tasks[task_id]
     try:
-        task["logs"].append(f"[{_now()}] 開始生成分鏡圖（Flux via fal.ai）...")
+        task["logs"].append(f"[{_now()}] 開始生成分鏡圖（Kling AI）...")
 
         # Load storyboard
         entry = index_db.get_entry("storyboards", storyboard_id)
@@ -1122,7 +1122,7 @@ def _run_storyboard_generate_images(task_id: str, storyboard_id: str, style_pref
     """Background task: generate images for each frame in a storyboard using Kling AI."""
     task = _tasks[task_id]
     try:
-        task["logs"].append(f"[{_now()}] 開始分鏡圖生成（Flux via fal.ai, 9:16）...")
+        task["logs"].append(f"[{_now()}] 開始分鏡圖生成（Kling AI, 9:16）...")
 
         frames = index_db.get_frames_by_storyboard(storyboard_id)
         if not frames:
