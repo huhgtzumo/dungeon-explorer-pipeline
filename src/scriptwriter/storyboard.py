@@ -18,11 +18,14 @@ logger = logging.getLogger(__name__)
 
 # Default exploration style prefix
 EXPLORATION_STYLE_PREFIX = (
-    "real photograph taken with old Sony Handycam, 480p low resolution, "
-    "first person POV, handheld camera, single flashlight beam in darkness, "
-    "abandoned building interior, film grain, motion blur, "
-    "dirty lens, timestamp overlay 2024, found footage, "
-    "photorealistic, raw unedited footage, not illustration, not digital art, "
+    "photorealistic raw photograph, NOT illustration, NOT digital art, NOT painting, NOT 3D render, "
+    "captured on old Sony Handycam CCD camcorder from 2003, 480p low resolution, "
+    "first person POV, handheld shaky camera, single flashlight beam cutting through darkness, "
+    "abandoned building interior, real concrete walls real dust real debris, "
+    "CCD sensor bloom on highlights, interlaced video artifact, "
+    "chromatic aberration, barrel lens distortion, "
+    "dirty scratched lens, "
+    "natural shadows and real light physics, "
     "9:16 vertical"
 )
 
